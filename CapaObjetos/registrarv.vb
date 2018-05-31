@@ -28,6 +28,7 @@ Namespace BO
         Private mestado As Integer
         Private mfecha_doc_ori As Date
         Private mserie_doc_ori As String
+        Private mcodigo_doc_ori As String
         Private mnumero_doc_ori As Integer
         Private msigno As String
         Private mserie As String
@@ -39,6 +40,8 @@ Namespace BO
         Private mcod_ass As Integer
         Private mmes As Integer
         Private manio As Integer
+
+
 
         Public Property codigo_per() As Long
             Get
@@ -184,6 +187,17 @@ Namespace BO
             End Set
         End Property
 
+        Public Property codigo_doc_ori() As String
+            Get
+                Return mcodigo_doc_ori
+            End Get
+            Set(ByVal value As String)
+                mcodigo_doc_ori = value
+            End Set
+        End Property
+
+
+
         Public Property serie_doc_ori() As String
             Get
                 Return mserie_doc_ori
@@ -291,6 +305,8 @@ Namespace BO
                 manio = value
             End Set
         End Property
+
+
     End Class
 End Namespace
 

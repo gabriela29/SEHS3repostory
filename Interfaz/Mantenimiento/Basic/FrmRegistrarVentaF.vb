@@ -302,7 +302,21 @@ Public Class FrmRegistrarVentaF
                 End If
 
                 .emision = fechae
+                .nombre_corto = txtnombrec.Text.Trim & ""
+                .codigo_sunat = txtcodigosu.Text.Trim & ""
+                .numero = txtnumerop.Text.Trim & ""
+                .tipo_doc_per = txtdocumentot.Text.Trim & ""
+                .numero_doc_per = txtdocumenton.Text.Trim & ""
+                .persona = txtpersona.Text.Trim & ""
+                .afecto = txtafecto.Text.Trim & ""
+                .noafecto = txtnoafecto.Text.Trim & ""
+                .igv = txtigv.Text.Trim & ""
+                .descuento = txtdescuento.Text.Trim & ""
+                .total = txtcantidadtotal.Text.Trim & ""
                 .fecha_doc_ori = fechao
+                .codigo_doc_ori = txtcodigoo.Text.Trim & ""
+                .serie_doc_ori = txtserieo.Text.Trim & ""
+
 
 
             End With
