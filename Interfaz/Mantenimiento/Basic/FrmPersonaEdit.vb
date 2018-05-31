@@ -566,6 +566,7 @@ Public Class FrmPersonaEdit
                     Else
                         ErrorProvider1.SetError(txtDNI, Nothing)
                     End If
+
                     If Trim(txtApe_Pat.Text) = "" Or txtApe_Mat.Text.Trim = "" Or TxtNombre.Text.Trim = "" Then
                         valido = False
                         ErrorProvider1.SetError(txtApe_Pat, "Debe tener datos personales")
@@ -573,12 +574,16 @@ Public Class FrmPersonaEdit
                     Else
                         ErrorProvider1.SetError(txtApe_Pat, Nothing)
                     End If
+
+
+
                     If Not IsDate(cboNacimiento.Value) Then
                         valido = False
                         ErrorProvider1.SetError(cboNacimiento, "Fecha de nacimiento no válido")
                         camposConError.Add("FECHA")
                     Else
                         ErrorProvider1.SetError(cboNacimiento, Nothing)
+
                     End If
                     If txtDNI.Text.Length = 8 Then
                         If Not vDNIok And vPersonaId = 0 Then
@@ -691,9 +696,10 @@ Public Class FrmPersonaEdit
         .nacimiento = fNac
         If chkPN.Checked Then
           .tipo = "N"
-          .titulo = txtTitulo.Text.Trim & ""
-          .ape_pat = txtApe_Pat.Text.Trim & ""
-          .ape_mat = txtApe_Mat.Text.Trim & ""
+
+                    .titulo = txtTitulo.Text.Trim & ""
+                    .ape_pat = txtApe_Pat.Text.Trim & ""
+                    .ape_mat = txtApe_Mat.Text.Trim & ""
           .nombre = TxtNombre.Text.Trim
           .dni = txtDNI.Text.Trim & ""
           .pernat_ruc = txtRUC_PN.Text & ""

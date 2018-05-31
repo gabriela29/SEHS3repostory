@@ -18,6 +18,7 @@ Public Class FrmRegistrar_VentaLis
     Public _codigo As Integer
     Public ListadoRegistros As DataTable
 
+
     Private Sub FrmRegistrar_VentaLis_KeyPress(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles Me.KeyPress
         If e.KeyChar = Chr(Keys.Enter) Then
             SendKeys.Send("{tab}")
