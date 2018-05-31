@@ -1,0 +1,17 @@
+mes_ano	String	250	
+dia	integer
+fecha	Date
+numero_doc	String	120	
+numero_doc_per	String	120	
+persona	String	255	
+producto	String	255
+familia	String	250	
+cantidad	Number		
+precio	Number
+dcto	Number
+subtotal	Number
+igv	Number
+total	Number
+moneda	String	15
+simbolo_moneda	String	15
+condicion	String	250

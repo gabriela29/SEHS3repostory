@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="dtConsigVeta" targetNamespace="http://tempuri.org/dtConsigVeta.xsd" xmlns:mstns="http://tempuri.org/dtConsigVeta.xsd" xmlns="http://tempuri.org/dtConsigVeta.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="dtConsigVeta" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_DataSetName="dtConsigVeta" msprop:Generator_UserDSName="dtConsigVeta" msprop:EnableTableAdapterManager="true">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="dtListadoDzmo" msprop:Generator_UserTableName="dtListadoDzmo" msprop:Generator_RowDeletedName="dtListadoDzmoRowDeleted" msprop:Generator_TableClassName="dtListadoDzmoDataTable" msprop:Generator_RowChangedName="dtListadoDzmoRowChanged" msprop:Generator_RowClassName="dtListadoDzmoRow" msprop:Generator_RowChangingName="dtListadoDzmoRowChanging" msprop:Generator_RowEvArgName="dtListadoDzmoRowChangeEvent" msprop:Generator_RowEvHandlerName="dtListadoDzmoRowChangeEventHandler" msprop:Generator_TablePropName="dtListadoDzmo" msprop:Generator_TableVarName="tabledtListadoDzmo" msprop:Generator_RowDeletingName="dtListadoDzmoRowDeleting">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="personaid" msprop:Generator_UserColumnName="personaid" msprop:Generator_ColumnPropNameInRow="personaid" msprop:Generator_ColumnVarNameInTable="columnpersonaid" msprop:Generator_ColumnPropNameInTable="personaidColumn" type="xs:float" minOccurs="0" />
+              <xs:element name="dniruc" msprop:Generator_UserColumnName="dniruc" msprop:Generator_ColumnPropNameInRow="dniruc" msprop:Generator_ColumnVarNameInTable="columndniruc" msprop:Generator_ColumnPropNameInTable="dnirucColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="persona" msprop:Generator_UserColumnName="persona" msprop:Generator_ColumnPropNameInRow="persona" msprop:Generator_ColumnVarNameInTable="columnpersona" msprop:Generator_ColumnPropNameInTable="personaColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="importe" msprop:Generator_UserColumnName="importe" msprop:Generator_ColumnPropNameInRow="importe" msprop:Generator_ColumnVarNameInTable="columnimporte" msprop:Generator_ColumnPropNameInTable="importeColumn" type="xs:float" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

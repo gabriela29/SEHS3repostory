@@ -1,0 +1,3 @@
+codigo	Long		
+concepto	String	150	
+importe	Currency

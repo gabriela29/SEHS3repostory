@@ -1,0 +1,8 @@
+codigo	Long		
+codigo_pro	Long		
+cantidad	Long		
+producto	String	100	
+precio	Currency
+dcto	Currency
+subtotal	Currency		
+unidad	String	50

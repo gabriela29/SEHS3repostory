@@ -1,0 +1,155 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="12.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{4CD8BDF4-7EF1-4958-9150-245D208A072C}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>CapaObjetosNegocio</RootNamespace>
+    <AssemblyName>CapaObjetosNegocio</AssemblyName>
+    <MyType>Windows</MyType>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>CapaObjetosNegocio.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>CapaObjetosNegocio.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Diagnostics" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="registrarv.vb" />
+    <Compile Include="basic\rol.vb" />
+    <Compile Include="bonificacion\destino_bonificacion.vb" />
+    <Compile Include="caja\arqueo_fondo_fijo.vb" />
+    <Compile Include="caja\arqueo_ingresos.vb" />
+    <Compile Include="catalogo\categoria.vb" />
+    <Compile Include="catalogo\marca.vb" />
+    <Compile Include="catalogo\grupo.vb" />
+    <Compile Include="catalogo\unidad_medida.vb" />
+    <Compile Include="catalogo\subcategoria.vb" />
+    <Compile Include="categoria_persona.vb" />
+    <Compile Include="clsAuxiliar.vb" />
+    <Compile Include="concepto_gasto.vb" />
+    <Compile Include="consignacion\bonificacion\bonificacion_destino.vb" />
+    <Compile Include="consignacion\bonificacion\bonificacion_tipo.vb" />
+    <Compile Include="consignacion\consignacion.vb" />
+    <Compile Include="consignacion\personas_campania.vb" />
+    <Compile Include="consignacion\productos_campania.vb" />
+    <Compile Include="contable\lote.vb" />
+    <Compile Include="control_mes.vb" />
+    <Compile Include="centro_costo.vb" />
+    <Compile Include="clave.vb" />
+    <Compile Include="almacen.vb" />
+    <Compile Include="finanzas\lista_negra.vb" />
+    <Compile Include="finanzas\porcobrar_gestion.vb" />
+    <Compile Include="finanzas\por_pagar.vb" />
+    <Compile Include="inventarios\importacion\importacion.vb" />
+    <Compile Include="lote_gasto\detalle_lote_gasto.vb" />
+    <Compile Include="lote_gasto\lote_gasto.vb" />
+    <Compile Include="finanzas\registro_mb.vb" />
+    <Compile Include="suscripcion\material.vb" />
+    <Compile Include="suscripcion\material_grupo.vb" />
+    <Compile Include="suscripcion\material_subgrupo.vb" />
+    <Compile Include="suscripcion\Suscripcion.vb" />
+    <Compile Include="venta_guia.vb" />
+    <Compile Include="productotmp.vb" />
+    <Compile Include="inventarios\salida\salida_mercaderia.vb" />
+    <Compile Include="datos_guia.vb" />
+    <Compile Include="rucdni\datos_ruc.vb" />
+    <Compile Include="inventarios\det_mov_mercaderia.vb" />
+    <Compile Include="distrito.vb" />
+    <Compile Include="empresa.vb" />
+    <Compile Include="inventarios\ingreso\ingreso_mercaderia.vb" />
+    <Compile Include="finanzas\movimiento_bancario.vb" />
+    <Compile Include="permisos_impresion.vb" />
+    <Compile Include="permisos_modulo.vb" />
+    <Compile Include="detalle_lote_gastos.vb" />
+    <Compile Include="lote_gastos.vb" />
+    <Compile Include="persona.vb" />
+    <Compile Include="plan_cuentas.vb" />
+    <Compile Include="finanzas\por_cobrar.vb" />
+    <Compile Include="catalogo\producto.vb" />
+    <Compile Include="serie.vb" />
+    <Compile Include="tabla_virtual.vb" />
+    <Compile Include="documento.vb" />
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="inventarios\ventas\venta.vb" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

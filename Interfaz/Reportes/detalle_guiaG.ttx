@@ -1,0 +1,10 @@
+codigo	Long		
+codigo_pro	Long		
+cantidad	Long		
+producto	String	250	
+linea	String	250	
+precio	Number		
+dscto	Number		
+dzmo	Number		
+importe	Number		
+unidad	String	250	

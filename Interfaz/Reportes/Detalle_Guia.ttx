@@ -1,0 +1,7 @@
+codigo	Long		
+codigo_pro	Long		
+cantidad	Long		
+producto	String	100	
+peso	Currency
+serie		String	50	
+unidad	String	50

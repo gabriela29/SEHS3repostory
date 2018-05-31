@@ -1,0 +1,5 @@
+codigo	Long		
+fecha	Date		
+nombre	String	250	
+importe	Number		
+estado	Boolean		

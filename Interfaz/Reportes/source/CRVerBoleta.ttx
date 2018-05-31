@@ -1,0 +1,25 @@
+Documento	String	100	
+apoderado	String	250	
+Direccion	String	200	
+DNI	String	50	
+FechaEmision	Date		
+CodAlumno	String	50	
+NombAlumno	String	250	
+Grado	String	50	
+CodRubro	Number		
+NombreRubro	String	250	
+ImporteIni	Number		
+DescIni	Number		
+son	String	250	
+documento	String	250
+impresiones	number	
+caja	String	250
+usuario	String	250
+estado	boolean	
+signo	String	50
+empresa	String	250	
+direccion_emp	String	250	
+ruc	String	50	
+unidad_negocio	String	250	
+direccion_un	String	250	
+telefono_un	String	150

@@ -1,0 +1,22 @@
+almacen_origen	String	250	
+direccion_origen	String	250	
+ruc_origen	String	50	
+fono_origen	String	50	
+nombre_cliente	String	250	
+direccion_cliente	String	250	
+ruc_cliente	String	50	
+fono_cliente	String	50	
+empresa_transporte	String	250	
+chofer	String	250	
+licencia	String	150	
+constancia	String	150	
+marca_placa	String	150	
+codigo	Long		
+numero	String	20	
+fecha_emision	Date		
+fecha_traslado	Date		
+condicion	string	50
+total	Number
+usuario	String	20	
+caja	String	50	
+observacion	String	250	

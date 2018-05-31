@@ -1,0 +1,208 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="12.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{69942C33-CC16-4620-85F8-BD3B13BE7B2C}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>CapaDatos</RootNamespace>
+    <AssemblyName>CapaDatos</AssemblyName>
+    <MyType>Windows</MyType>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>CapaDatos.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>CapaDatos.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Mono.Security, Version=2.0.0.0, Culture=neutral, PublicKeyToken=0738eb9f132ed756, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Interfaz\bin\Debug\Mono.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="Npgsql, Version=2.0.2.0, Culture=neutral, PublicKeyToken=5d8b90d52f46fda7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Interfaz\bin\Debug\Npgsql.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Diagnostics" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Basic\gestion_accesoBD.vb" />
+    <Compile Include="Basic\registrarVBD.vb" />
+    <Compile Include="Basic\unidad_negocioBD.vb" />
+    <Compile Include="Basic\rolBD.vb" />
+    <Compile Include="caja\arqueo_fondo_fBD.vb" />
+    <Compile Include="caja\arqueo_ingresosBD.vb" />
+    <Compile Include="catalogo\categoriaBD.vb" />
+    <Compile Include="catalogo\unidad_medidaBD.vb" />
+    <Compile Include="catalogo\grupoBD.vb" />
+    <Compile Include="catalogo\marcaBD.vb" />
+    <Compile Include="catalogo\subcategoriaBD.vb" />
+    <Compile Include="Basic\categoria_personaBD.vb" />
+    <Compile Include="Basic\clsClaveBD.vb" />
+    <Compile Include="clsAuxiliar.vb" />
+    <Compile Include="comision_sp.vb" />
+    <Compile Include="clsConexion.vb" />
+    <Compile Include="clsStored_Procedure.vb" />
+    <Compile Include="concepto_gastoBD.vb" />
+    <Compile Include="configuracion\det_mov_mercaderiaBD.vb" />
+    <Compile Include="configuracion\tipo_mov_mercaderiaBD.vb" />
+    <Compile Include="configuracion\modulo_sistemaBD.vb" />
+    <Compile Include="consignacion\bonificacion\bonificacionBD.vb" />
+    <Compile Include="consignacion\bonificacion\tipo_bonificacionBD.vb" />
+    <Compile Include="consignacion\bonificacion\destino_bonificacionBD.vb" />
+    <Compile Include="consignacion\campaniaBD.vb" />
+    <Compile Include="consignacion\consignacionBD.vb" />
+    <Compile Include="consignacion\control_asistenteBD.vb" />
+    <Compile Include="Basic\personaBD.vb" />
+    <Compile Include="consignacion\pedidoweb\depositocolpwebBD.vb" />
+    <Compile Include="consignacion\pedidoweb\devolucionasiswebBD.vb" />
+    <Compile Include="consignacion\pedidoweb\pedidocolpwebBD.vb" />
+    <Compile Include="consignacion\productos_campaniaBD.vb" />
+    <Compile Include="Basic\lista_negraBD.vb" />
+    <Compile Include="Basic\monedaBD.vb" />
+    <Compile Include="consignacion\tipopersonacampaniaBD.vb" />
+    <Compile Include="contable\loteBD.vb" />
+    <Compile Include="contable\tipo_loteBD.vb" />
+    <Compile Include="finanzas\porcobrar_gestionBD.vb" />
+    <Compile Include="finanzas\persona_limite_creditoBD.vb" />
+    <Compile Include="finanzas\por_pagarBD.vb" />
+    <Compile Include="Inventarios\Importacion\importacionBD.vb" />
+    <Compile Include="Inventarios\inventariosBD.vb" />
+    <Compile Include="Lote_Gasto\detalle_lote_gastoBD.vb" />
+    <Compile Include="Lote_Gasto\lote_gastoBD.vb" />
+    <Compile Include="lote_ingreso\lote_ingresoBD.vb" />
+    <Compile Include="finanzas\regitro_mbBD.vb" />
+    <Compile Include="reportes\reportes_colpotajewebBD.vb" />
+    <Compile Include="reportes\reportes_gerencialesBD.vb" />
+    <Compile Include="reportes\reportes_pedidosBD.vb" />
+    <Compile Include="reportes\reportes_suscripcionBD.vb" />
+    <Compile Include="reportes\reportes_variosBD.vb" />
+    <Compile Include="suscripcion\depositoBD.vb" />
+    <Compile Include="suscripcion\distrito_misioneroBD.vb" />
+    <Compile Include="suscripcion\materialBD.vb" />
+    <Compile Include="suscripcion\iglesiaBD.vb" />
+    <Compile Include="suscripcion\material_grupoBD.vb" />
+    <Compile Include="suscripcion\material_subgrupoBD.vb" />
+    <Compile Include="suscripcion\misionBD.vb" />
+    <Compile Include="Inventarios\Venta\venta_guiaBD.vb" />
+    <Compile Include="productotmpBD.vb" />
+    <Compile Include="reportes\reportes_consignacionBD.vb" />
+    <Compile Include="control_mesBD.vb" />
+    <Compile Include="contable\centro_costoBD.vb" />
+    <Compile Include="Inventarios\AlmacenBD.vb" />
+    <Compile Include="reportes\Reportes_SalidasBD.vb" />
+    <Compile Include="Inventarios\Salida\salida_mercaderiaBD.vb" />
+    <Compile Include="datos_guiaBD.vb" />
+    <Compile Include="cursoresBD.vb" />
+    <Compile Include="distritoBD.vb" />
+    <Compile Include="empresaBD.vb" />
+    <Compile Include="Inventarios\Ingreso\ingreso_mercaderiaBD.vb" />
+    <Compile Include="finanzas\movimiento_bancarioBD.vb" />
+    <Compile Include="utilidades\migracionBD.vb" />
+    <Compile Include="utilidades\permisos_impresionBD.vb" />
+    <Compile Include="permisos_moduloBD.vb" />
+    <Compile Include="contable\plan_cuentasBD.vb" />
+    <Compile Include="finanzas\por_cobrarBD.vb" />
+    <Compile Include="catalogo\productoBD.vb" />
+    <Compile Include="ReportesBD.vb" />
+    <Compile Include="DataReaderAdapter.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DataTableDesvinculado.vb" />
+    <Compile Include="detalle_lote_gastosBD.vb" />
+    <Compile Include="documentoBD.vb" />
+    <Compile Include="GestionConexionBD.vb" />
+    <Compile Include="Lote_Gasto\lote_gastosBD.vb" />
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="reportes\Reportes_ComprasBD.vb" />
+    <Compile Include="reportes\reportes_VentasBD.vb" />
+    <Compile Include="serieBD.vb" />
+    <Compile Include="Inventarios\Venta\ventaBD.vb" />
+    <Compile Include="suscripcion\pedidoBD.vb" />
+    <Compile Include="suscripcion\peridoBD.vb" />
+    <Compile Include="suscripcion\suscripcionBD.vb" />
+    <Compile Include="utilidades\transferir_stockBD.vb" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CapaObjetos\CapaObjetosNegocio.vbproj">
+      <Project>{4CD8BDF4-7EF1-4958-9150-245D208A072C}</Project>
+      <Name>CapaObjetosNegocio</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

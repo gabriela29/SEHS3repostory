@@ -1,0 +1,24 @@
+codigo	Long		
+numero	String	50	
+fecha	date
+codigo_alu	Long		
+alumno	String	250	
+usuario	String	250	
+caja	String	250	
+importe	Currency		
+lugar_pago	String	250	
+info_adicional	String	250	
+importe_letras	String	250	
+apoderado	String	250	
+direccion_apoderado	String	250	
+dni_apoderado	String	250	
+paga	Currency		
+vuelto	Currency		
+forma_pago	String	150	
+estado	boolean
+empresa	String	250	
+direccion_emp	String	250	
+ruc	String	50	
+unidad_negocio	String	250	
+direccion_un	String	250	
+telefono_un	String	150	

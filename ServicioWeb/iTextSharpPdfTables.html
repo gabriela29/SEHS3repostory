@@ -1,0 +1,494 @@
+<!--------------------------------------------------------------------------->  
+<!--                           INTRODUCTION                                
+
+ The Code Project article submission template (HTML version)
+
+Using this template will help us post your article sooner. To use, just 
+follow the 3 easy steps below:
+ 
+     1. Fill in the article description details
+     2. Add links to your images and downloads
+     3. Include the main article text
+
+That's all there is to it! All formatting will be done by our submission
+scripts and style sheets. 
+
+-->  
+<!--------------------------------------------------------------------------->  
+<!--                        IGNORE THIS SECTION                            -->
+<html>
+<head>
+<title>The Code Project</title>
+<Style>
+BODY, P, TD { font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 10pt }
+H2,H3,H4,H5 { color: #ff9900; font-weight: bold; }
+H2 { font-size: 13pt; }
+H3 { font-size: 12pt; }
+H4 { font-size: 10pt; color: black; }
+PRE { BACKGROUND-COLOR: #FBEDBB; FONT-FAMILY: "Courier New", Courier, mono; WHITE-SPACE: pre; }
+CODE { COLOR: #990000; FONT-FAMILY: "Courier New", Courier, mono; }
+</style>
+<link rel="stylesheet" type=text/css href="http://www.codeproject.com/styles/global.css">
+</head>
+<body bgcolor="#FFFFFF" color=#000000>
+<!--------------------------------------------------------------------------->  
+
+
+<!-------------------------------     STEP 1      --------------------------->
+<!--  Fill in the details (CodeProject will reformat this section for you) 
+
+<pre>
+Title:       Creating PDF Tables using C# (.NET 2.0) and iTextSharp
+Author:      VVX 
+Email:       
+Environment: WinForm, C#, VS2005
+Keywords:    C#, PDF, Tutorial, iTextSharp, Adobe, PDF, Table
+Level:       Intermediate
+Description: Creating PDF Tables using C# (.NET 2.0) and iTextSharp
+Section      General C#
+SubSection   C# Samples: CodeProject Utilities
+</pre>
+
+-->
+<!-------------------------------     STEP 2      --------------------------->
+<!--  Include download and sample image information.                       
+
+<ul class=download>
+<li><a href="iTextSharpPdfTables.zip">Download source - 200 Kb</a></li>
+</ul>
+
+<p><img src="iTextSharpPdfTables.png" alt="Application Screen Shot"></p>
+
+--> 
+
+<!-------------------------------     STEP 3      --------------------------->
+<!--  Add the article text. Please use simple formatting (<h2>, <p> etc)   --> 
+
+
+
+
+
+<h2>Creating PDF Tables using C# (.NET 2.0) and iTextSharp</h2>
+
+<p><img src="iTextSharpPdfTables.png" alt="Application Screen Shot"></p>
+
+<h3>Introduction</h3>
+The <A HREF="http://www.codeproject.com/cs/library/iTextSharpTutorial.asp"><b>Tutorials on Creating PDF files using C# (.NET 2.0) and iTextSharp</b></A> provide insights to a fairly wide variety of PDF files you can create.
+The focus of this article is on a relatively small, yet very interesting, subset of iTextSharp; 
+the ability to create PDF files in which the data are presented in a table, like the one shown in the picture.
+
+<h3>Complication</h3>
+There are three challenges one faces, even with the narrow mission of creating a PDF Table.
+<h4>1: The PDF Specification</h4>
+<p>One of the challenges in creating PDFs, of any kind and not just tabular data, is digesting its many options.
+These options are <A HREF="http://www.adobe.com/devnet/pdf/pdf_reference.html"><B>described in great detail</B></A> in free documents available from Adobe, the owner of the PDF formats. (The latest version is over 1,300 pages long!)
+The picture below shows some of the more common ones.
+</p>
+<ul>
+	<img src="iTextSharpPdfTables_Selections.png" alt="Application Screen Shot - Selection">
+</ul>
+<p>
+</p>
+
+<h4>2: iTextSharp Documentation</h4>
+<p>iTextSharp does a great deal to ease the burden of creating PDFs using C# (.NET 2.0). 
+It largely obviates the need to understand all the minute details of the PDF specifications. 
+However, despite the <A HREF="http://itextsharp.sourceforge.net/tutorial/">many examples available</A>, 
+creating non-trivial PDFs with iTextSharp can be bit of a steep climb.
+A recently released book, <A HREF="http://itext.ugent.be/itext-in-action/"><b>iText in Action</b></A> by the author, 
+is <I>half</I> as long as Adobe's latest specification document. 
+The book is invaluable if you plan to seriously rely on iTextSharp, but you will still have to do some of the heavy lifting.
+You not only have to glean the concepts underlying Adobe's PDF specifications, 
+but also figure out how iTextSharp is organized to address them. 
+For example, the simple exercise of numbering pages requires you to create an event handler and then make sure you construct and write
+the appropriate string on the right canvas/layer.
+</p>
+<p>Some additional useful links: 
+	<ul>
+		<LI> <A HREF="http://www.manning.com/lowagie/sample-ch01_Lowagie.pdf">Interesting historical information</A> 
+		<LI> <A HREF="http://www.lowagie.com/iText/">iText Home Page</A>
+		<LI> <A HREF="http://www.lowagie.com/iText/links.html">Related resources</A>
+		<LI> <A HREF="http://itextsharp.sourceforge.net/">iTextSharp HomePage</A>
+	</ul>
+</p>
+
+
+<h4>3: Vast variety of data and tables</h4>
+<p>Tabular data are stored in databases of all kinds (SQL Server, Oracle, Access, MySQL, etc.), in proprietary binaries, 
+in spreadsheets, in text files (tab-delimited, XML), etc.
+So, no one solution, at least not a simple one like mine, will work for all. 
+Put another way, until some bright soul comes along to save us, we will have to build our own solutions for each variant
+(of data source and PDF layout) we need to address.
+
+<h4>Therefore ...</h4>
+<p>The net result of these complications is -- it may be useful to have working code that meets a few simple objectives
+<ul>
+	<li>uses a simple but often used data source
+	<li>has a simple UI to easily experiment with the many combinations of selections one can make while creating a PDF (see picture above)
+	<li>contains code to illustrate <I>one way</I> of harnessing iTextSharp 
+	(recognizing that one will have to write a fair amount of code to address the various specific combinations of data sources and PDF layouts)
+</ul>
+</p>
+<p>This article attempts to do just that.
+</p>
+
+ <h3>WARNING:</h3>
+<p>Creating simple PDFs is easy once you grasp iTextSharp. 
+But, creating useful, practical, decent-looking PDFs can be harder than it looks at first.
+</p> 
+
+<h3>Solution</h3>
+
+In its elemental form, tabular data looks like this:
+<ul>
+<table border="1">
+	<tr><th>ReleaseDate</th><th>Track</th><th>Title</th><th>Artist</th><th>Album</th></tr>
+	<tr><td>11/22/1968</td><td>29</td><td>Revolution 9</td><td>Beatles</td><td>The Beatles [White Album]</td></tr>
+	<tr><td>1960</td><td>6</td><td>Fools Rush In</td><td>Frank Sinatra</td><td>Nice 'N' Easy</td></tr>
+	<tr><td>11/11/1971</td><td>1</td><td>One of These Days</td><td>Pink Floyd</td><td>Meddle</td></tr>
+	<tr><td>1988</td><td>7</td><td>Where Is My Mind?</td><td>Pixies</td><td>Surfer Rosa</td></tr>
+	<tr><td>5/1981</td><td>9</td><td>Can't Find My Mind</td><td>Cramps</td><td>Psychedelic Jungle</td></tr>
+	<tr><td>6/10/2003</td><td>13</td><td>Scatterbrain. (As Dead As Leaves.)</td><td>Radiohead</td><td>Hail to the Thief</td></tr>
+	<tr><td>6/30/1992</td><td>3</td><td>Dress</td><td>P J Harvey</td><td>Dry</td></tr>
+</table>
+</ul>
+
+<p>Such a table can come from a database, spreadsheet, DataGridView, DataGrid, GridView, etc. 
+It is simply a collections of rows of <I>records</I> and columns of <I>fields</I>.
+</p>
+As XML is widely understood and requires no special databases, this article uses two simple types of XML data sources 
+to represent the data table shown above.
+
+<h4>Plain Vanilla XML</h4>
+<P>In the XML shown below, each row (record) is represented in a single <B>node</B> called <code>song</code> and 
+each column (field) in an <B>attribute</B> of the node. 
+<br><I>Notice that there is only one level of nodes below the root, i.e., they do not have any child nodes</I>.
+</P>
+<PRE lang=xml>
+&lt;?xml version="1.0" encoding="utf-8"?&gt;
+&lt;root&gt;
+  &lt;song ReleaseDate="11/22/1968" Track="29" Title="Revolution 9" 
+			Artist="Beatles" Album="The Beatles [White Album]" /&gt;
+  &lt;song ReleaseDate="1960" Track="6" Title="Fools Rush In" 
+			Artist="Frank Sinatra" Album="Nice 'N' Easy" /&gt;
+  &lt;song ReleaseDate="11/11/1971" Track="1" Title="One of These Days" 
+			Artist="Pink Floyd" Album="Meddle" /&gt;
+  &lt;song ReleaseDate="1988" Track="7" Title="Where Is My Mind?" 
+			Artist="Pixies" Album="Surfer Rosa" /&gt;
+  &lt;song ReleaseDate="5/1981" Track="9" Title="Can't Find My Mind" 
+			Artist="Cramps" Album="Psychedelic Jungle" /&gt;
+  &lt;song ReleaseDate="6/10/2003" Track="13" Title="Scatterbrain. (As Dead As Leaves.)" 
+			Artist="Radiohead" Album="Hail to the Thief" /&gt;
+  &lt;song ReleaseDate="6/30/1992" Track="3" Title="Dress" 
+			Artist="P J Harvey" Album="Dry" /&gt;
+&lt;/root&gt;
+</PRE>
+
+<h4>XmlStore</h4>
+<P>The XmlStore file shown below contains exactly the same data as the <I>plain vanilla</I> XML above, 
+but with a few differences:
+<ul>
+	<li> The <code>root</code> is named <code>xmlStore</code>
+	<li> It has an additional node called <code>schema</code>
+	<li> The <code>schema</code> has one <code>field</code> node for each <B>attribute</B> of the data row (record), e.g. <code>song</code>
+	<li> Each <code>field</code> node contains information about 
+		<ul>
+			<li> the <code>name</code> of the <B>attribute</B> of the data row (record)
+			<li> the <code>title</code> displayed in a column header 
+			<li> the relative <code>width</code> of the displayed column
+		</ul>
+</ul>
+
+<PRE>
+&lt;?xml version="1.0" encoding="utf-8"?&gt;
+&lt;xmlStore version="1.0"&gt;
+  &lt;schema datanodename="song"&gt;
+    &lt;field name="ReleaseDate" title="Release Date"  width="9"/&gt;
+    &lt;field name="Track"       title="Track"         width="5"/&gt;
+    &lt;field name="Title"       title="Title"         width="40"/&gt;
+    &lt;field name="Artist"      title="Artist"        width="15"/&gt;
+    &lt;field name="Album"       title="Album"         width="25"/&gt;
+  &lt;/schema&gt;
+  &lt;song ReleaseDate="11/22/1968" Track="29" Title="Revolution 9" 
+			Artist="Beatles" Album="The Beatles [White Album]" /&gt;
+  &lt;song ReleaseDate="1960" Track="6" Title="Fools Rush In" 
+			Artist="Frank Sinatra" Album="Nice 'N' Easy" /&gt;
+  &lt;song ReleaseDate="11/11/1971" Track="1" Title="One of These Days" 
+			Artist="Pink Floyd" Album="Meddle" /&gt;
+  &lt;song ReleaseDate="1988" Track="7" Title="Where Is My Mind?" 
+			Artist="Pixies" Album="Surfer Rosa" /&gt;
+  &lt;song ReleaseDate="5/1981" Track="9" Title="Can't Find My Mind" 
+			Artist="Cramps" Album="Psychedelic Jungle" /&gt;
+  &lt;song ReleaseDate="6/10/2003" Track="13" Title="Scatterbrain. (As Dead As Leaves.)" 
+			Artist="Radiohead" Album="Hail to the Thief" /&gt;
+  &lt;song ReleaseDate="6/30/1992" Track="3" Title="Dress" 
+			Artist="P J Harvey" Album="Dry" /&gt;
+&lt;/xmlStore&gt;
+</PRE>
+
+<p>
+For more information on XmlStore see <a href="http://www.codeproject.com/useritems/XmlStore.asp">A utility to read, edit, encrypt, decrypt, write XmlStore files</a>.
+</p>
+
+<h3>DISCLAIMER</h3>
+<p>I undertook this project to learn a few things about Visual Studio 2005, C#, XML, DataGridView, PDFs, etc. 
+Caveat Emptor: <b>Nothing has been properly or adequately tested</b>. 
+More important, there is a good chance, you or someone else can do this better.
+So, if you do use this code and cannot produce what you expect, there may be little I can do to help you.
+On the bright side, though, you have the source code and all the technical references in the world <I>you will ever need</I>
+from Adobe and the good people at iTextSharp.
+</p>
+
+<p>This solution contains three examples from the <A HREF="http://itextsharp.sourceforge.net/tutorial/"><B>iTextSharp tutorial web site</B></A> 
+two of which were not covered in my
+<A HREF="http://www.codeproject.com/cs/library/iTextSharpTutorial.asp">
+  <b>Tutorials on Creating PDF files using C# (.NET 2.0) and iTextSharp</b>
+</A>.
+</p>
+<p>This solution also contains code that reflects my somewhat limited understanding of C#, iTextSharp and PDFs.
+It is <B>merely a learning device</B> and does not purport to be anything more.
+</p>
+<p>IMPORTANT: 
+The XML files in the project's Data folder were the only ones used to actually test the code. These are:
+<UL>
+	<LI> BogusData.xml -- which is an XML version of the data used in <A HREF="http://itextsharp.sourceforge.net/examples/Chap0518.cs">Chap 5 Example 18</A> 
+	     of the iTextSharp tutorial
+	<LI> Passwords_NoSchema.xml -- which is from another <A HREF="http://www.codeproject.com/useritems/XmlStore.asp">XmlStore project</A>
+	<LI> PlayList_Small.xml and PlayList.xml, also from the same project
+</UL>
+There is no provision for other <I>kinds</I> of XML files. Most <I>plain vanilla</I> XMLs <I>may</I> work without new code.
+Chances are, however, you will not be able to create a PDF without modifying the code to accomodate other kinds XML files. 
+</p> The file Watermark.jpg file came from the iTextSharp Tutorial web site.
+
+
+
+<h2>Using the application</h2>
+Be sure to read the DISCLAIMER above before you do anything.
+
+<h3>Main Window</h3>
+<p>The solution contains a tab control with three tabs
+<UL>
+	<LI> <B>Information</B> displays 
+		<UL>
+			<LI> web pages and PDF's in response to <B>Help</B> menu requests
+			<LI> the XmlStore file used (via the Selections tab) to successfully generate a PDF Table
+		</UL>
+	<LI> <B>Selections</B> displays the button to select an <B>XmlStore</B> 
+	     (or a <I>plain vanilla</I> XML) file from which the PDF is generated. 
+			 It also displays all the options shown in the picture above. These are described below.
+	<LI> <B>Resulting PDF</B> displays the PDF created based on your <B>Selections</B>.
+</UL>
+</p>
+
+<h3>The Selections tab</h3>
+The <B>Selections</B> tab contains the facilities needed to create the desired PDF from an XML file. 
+These are briefly described below.
+
+<h4>XmlStore File ... button</h4> 
+<P>Use this button to select an <B>XmlStore</B> or a <I>plain vanilla</I> XML file, like the ones shown above. 
+The PDF file is generated immediately, based on the options you've selected (see picture below). 
+</P>
+<ul>
+	<img src="iTextSharpPdfTables_Options.png" alt="Application Screen Shot - Selection">
+</ul>
+<p>
+The options are described very briefly below. (For more detailed information, you will need to read the documentation provided by Adobe and iTextSharp, via the Help menu or some of the links above, or the recently released book by the creator of iText.)
+</p>
+
+<h4>PDF Document Summary</h4> 
+The information you provide in these four textboxes is embedded in the PDF:
+<UL>
+	<LI> Title
+	<LI> Subject
+	<LI> Author
+	<LI> Keywords
+</UL>
+These are displayed along with other <I>Document Properties</I> by the Adobe PDF Reader. 
+
+<h4>Default button</h4> 
+It populates the various options with illustrative defaults.
+
+<h4>Show ... options</h4> 
+These options only apply to how <I>this</I> solution generates a PDF Table.
+<UL>
+	<LI> <B>Title</B> if checked, displays the Title (from the PDF Document Summary above) in the top margin of every PDF page 
+	<LI> <B>Page Number</B> if checked, displays the page number in the bottom margin of every PDF page
+	<LI> <B>Watermark</B> if checked, will display a watermark in the middle of every page
+		<UL>
+			<LI> <B>Text</B> will display any word or phrase (such as "CONFIDENTIAL") at a 45 degrees angle
+			<LI> <B>File</B> will display the image file you've specified
+		</UL>
+	<LI> <B>Landscape</B> if checked, will display all pages in landscape orientation
+	<LI> <I>Paper Size</I> determines the size of each page. 
+	     Only three are supported in this solution, namely, <B>Letter</B> and <B>Legal</B> paper sizes used mostly in the US 
+			 and the ISO <B>A4</B> size, widely used in much of the rest of the world
+	<LI> <B>Scale Factor: Column Widths</B> (default = "1.0") is a multiplier that simply scales the column <code>width</code>s.
+	     By default, all the columns span the width of the page (leaving room for the margins). 
+			 The table is always horizontally centered on each page. So, if you set the scale factor to "0.8", 
+			 the resulting table will be 20% narrower as the column <code>width</code> of each column is reduced proportionately.
+			 Setting the scale factor to, say, "1.05", will widen the table and each column by 5%. 
+			 (NOTE: If the XML file does not contain column <code>width</code> values, each column defaults to the same width.)
+</UL>
+
+<h4>Font options</h4> 
+These options only apply to how <I>this</I> solution generates a PDF Table.
+They determine the fonts used for the data fields in the <B>Body</B> and each column <B>Header</B> of the table.
+<UL>
+	<LI> <B>Type Face</B> determines the names of the fonts used
+	<LI> <B>Type Size</B> determines the size (in Points) of the fonts
+	<LI> <B>Type Style</B> determines if the fonts are plain, <B>bold</B>, <I>italicized</I>, or <I><B>both</B></I>.
+</UL>
+
+<h4>View ... options</h4> 
+These options only apply to how <I>this</I> solution generates a PDF Table.
+They specify your "viewing preferences", namely, how you want Adobe Reader to display the PDF when the file is first opened.
+<UL>
+	<LI> <B>2-Page Layout</B> if checked, uses the <code>PdfWriter.PageLayoutTwoColumnLeft</code> 
+	        otherwise uses the default value <code>PdfWriter.PageLayoutSinglePage </code> (See iTextSharp for details)
+	<LI> <B>Tool bar</B> determines if Adobe Reader displays its tool bar
+	<LI> <B>Menu bar</B> determines if Adobe Reader displays its menu bar
+	<LI> <B>Window UI</B> determines if Adobe Reader displays things like scroll bars, navigation controls, etc.
+	<LI> <B>Resize to Fit Window</B> determines if Adobe Reader should display the initial page "to fit" in its window
+	<LI> <B>Center on Screen</B> does just that, but only if the Adobe Reader is in a standalone browser; 
+	        does not have any effect in this solution
+	<LI> <B>Encrypt</B> See the next section
+</UL>
+
+<h4>Encrypt ... options</h4> 
+These options only apply to how <I>this</I> solution generates a PDF Table.
+They determine if the PDF file generated needs to be encrypted and/or 
+contain embedded restrictions on the things a reader can do with your PDF when viewing it in an Adobe PDF Reader
+
+<UL>
+	<LI> <B>Owner</B> password, if provided, will encrypt the file 
+	<LI> <B>User</B> password, if provided, will require the user to enter the password to open view the contents of the PDF 
+	<LI> <B>Print</B> if unchecked, will prevent the user from printing the contents
+	<LI> <B>Print Degraded</B> if unchecked, will prevent the user from printing a degraded version of the PDF 
+														(see Adobe's documentation for details)
+	<LI> <B>Modify Contents</B> if unchecked, will prevent the user modifying the contents of the PDF 
+														(see Adobe's documentation for details)
+	<LI> <B>Copy</B> if unchecked, will prevent the user from copying the PDF 
+														(see Adobe's documentation for details)
+	<LI> <B>Modify Annotations</B> see Adobe's and/or iTextSharp's documentation for details
+	<LI> <B>Fill In</B> see Adobe's and/or iTextSharp's documentation for details
+	<LI> <B>Screen Read</B> see Adobe's and/or iTextSharp's documentation for details
+	<LI> <B>Assemble</B> see Adobe's and/or iTextSharp's documentation for details
+	<LI> <B>Strong Encryption</B> if unchecked, uses 40-bit encryption, if checked, uses 128-bit encryption.
+	        Both use the above passwords
+</UL>
+BE SURE to see Adobe's and iTextSharp's documentation for details BEFORE you create a real encrypted PDF.
+
+<h3>Help Menu</h3>
+The Help menu contains links to two important sources of information:
+	<LI>iTextSharp Tutorial Home
+	<LI>Adobe PDF Specifications (various versions)
+<br/><br/>
+Try them. You will see why they are very important, especially if you are determined to create your own PDFs.
+
+<h2>Using the code</h2>
+
+Be sure to read the DISCLAIMER above before you do anything.
+
+<h3>Prerequisite</h3>
+<p>This solution was created using Visual Studio 2005 and before building the solution you need to 
+use the VS2005 <B>Project &gt; Add Reference </B> menu command to provide a <code>Reference</code> to <B>iTextSharp.DLL</B> version 4.x. 
+If you don't have this, you can download just the DLL or the source [and build it yourself] using one of these links to SourceForge.net:
+<ul>
+<li><a href="http://downloads.sourceforge.net/itextsharp/itextsharp-4.0.2-dll.zip?modtime=1173357588&big_mirror=0">
+		Download iTextSharp DLL</a> (~1 MB)
+<li><a href="http://sourceforge.net/project/showfiles.php?group_id=72954">
+		Download iTextSharp Source</a> (~3 MB)
+</ul>
+</p>
+
+<h3>Building the solution</h3>
+<p>If you have Visual Studio 2005 then you should be able to use the project source code "out of the box" 
+-- simply build and run. 
+The code itself is not rocket science. 
+It is reasonably documented. 
+More important, you have access to a wealth of information on what the code does via valuable links in the <B>Help</B> menu.
+If you don't have Visual Studio 2005, you will have to ask a more experienced friend. 
+(Don't ask me, as I am a newbie! I am also clueless about VB.NET!!)
+
+<h3>Code modules</h3>
+Side benefits of the code for newbies (like myself): The project includes modules with reasonably documented and self-explantory code. 
+With luck, they may help you learn how to use a few features of the sub-systems employed. 
+(Many of them are described elsewhere in the articles listed at the end.) 
+Here the focus is only those related to creating PDFs using C#.
+
+<h4>VVX_PDF.cs</h4>
+<p><code>VVX.PDF</code> is a wrapper class used to translate the UI options described above and invoke the appropriate iTextSharp
+capabilities. It contains the following (each grouped in <code>#region</code> ... <code>#endregion</code> tags),
+<UL>
+	<LI> <I>Enums</I>
+	<LI> <I>Member Variables</I>
+	<LI> <I>Properties</I> to set/get values of the member variables
+	<LI> private <I>Helper Methods</I>
+	<LI> <I>XmlStore methods</I> contains the three important methods that represent the "guts" of this solution
+	<br/>
+	<br/>
+		<UL>
+			<LI> <p><code>DoCreateFromXmlStore(...)</code> This relatively tiny method simply follows the iTextSharp steps 1 through 5.
+			     For step 4, however, it turns to the DoLoadDocument(...) method to extract the data from the XML file.</p>
+			<LI> <p><code>DoLoadDocument(...)</code> This is an enhanced and customized version of the LoadDocument method found in Chap0518 and Chap 1202
+			     of the iTextSharp tutorial. Although the code is reasonably documented, it may help you to visit the iTextShart Tutorial
+					 web site (perhaps via the Help menu of this solution) and read more about the code.</p>
+			<LI> <p><code>DoConfigPageEventHandler(...)</code> This is a helper method that initializes the custom "new page" Event Handler 
+					 you must write to implement the <B>Show ... options</B>, namely, Title, Page Numbers, and Watermarks, 
+					 as well as painting the "gray" background for the column headers.</p>
+		</UL>
+</UL>
+
+<h4>VVX_PDF_TableEvents.cs</h4>
+<p><code>VVX.PDF_TableEvents</code> contains essentially a single class that contain the required [by iTextSharp] event
+handler. It is called after iTextSharp finishes composing <I>each page</I> of a PDF Table.
+In this class, <I>you</I> 
+<UL>
+	<LI> keep track of page numbers
+	<LI> draw the title in the top margin
+	<LI> draw the page number in the bottom margin
+	<LI> ... or "decorate" your page and/or table in any way you wish 
+</UL>
+
+
+<h2>iText</h2>
+<p>If you want to learn more about iText, on which iTextSharp is based, click <A HREF="http://itext.ugent.be/itext-in-action/">here</A>.
+</p>
+
+<h2>There are alternatives</h2>
+<p>
+If iTextSharp is too difficult you might consider using one of several commercial PDF solutions, some of them are quite inexpensive.
+However, I haven't had much success with them. (The only place I have found creating PDFs is a breeze is on my iMac; 
+creating PDFs on it from <i>any</i> application is a no-brainer! And you get beautiful PDFs, too.)
+</p>
+
+<h2>Finally, a word of thanks to you</h2>
+<p>I have learned a lot from people like you who have anonymously and freely shared your experiences with the world. 
+Perhaps, you gave a little, but I learned a lot. If this utility helps even one person, you've made my day
+and given me a chance to give back to the community. So, thank you!
+</p>
+
+<h4>Other recent contributions</h4>
+<li><A HREF="http://www.codeproject.com/cs/library/iTextSharpTutorial.asp">"Tutorials on creating PDF files using C# (.NET 2.0) and iTextSharp"</A>. March 16, 2007 
+</li>
+<li><a href="http://www.codeproject.com/useritems/XmlStore.asp">"A utility to read, edit, encrypt, decrypt, write XmlStore files"</a>. March 12, 2007
+</li>
+<li><A HREF="http://www.codeproject.com/useritems/XmlStore2.asp">"XmlStore Part 2: Printing DataGridView Contents"</A>. March 18, 2007
+</li>
+<li>
+<a href="http://www.codeproject.com/useritems/ImageFileReflector.asp">"A simple utility to quickly create reflected versions of an image file (*.GIF, *.PNG, etc.)"</a>. March 6, 2007
+</li>
+<li>
+<a href="http://www.codeproject.com/useritems/ImageFileBuilder.asp">"A simple utility to quickly create opaque or transparent image files (*.GIF, *.PNG, etc.)"</a>. March 5, 2007
+</li>
+
+<h4>If any of these have helped you ...</h4>
+<p>
+Please consider sending in a donation to one of my favorite causes: <a href="http://www.yearup.org"><b>Year Up</b></a> 
+or to any similar NGO (non-governmental organization) in the world that is selflessly doing good work and helping people in need.
+<I>Give a little, get a lot!</I>
+</p>
+
+<!-------------------------------    That's it!   --------------------------->
+</body>
+</html>

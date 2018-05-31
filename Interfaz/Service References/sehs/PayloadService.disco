@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<discovery xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.xmlsoap.org/disco/">
+  <contractRef ref="https://sad-us-fm-1.aasi.live.apps.sdasystems.org/UPS/SEHS/Services/Aasi.Net/Integration/PayloadService.svc?wsdl" docRef="https://sad-us-fm-1.aasi.live.apps.sdasystems.org/UPS/SEHS/Services/Aasi.Net/Integration/PayloadService.svc" xmlns="http://schemas.xmlsoap.org/disco/scl/" />
+</discovery>

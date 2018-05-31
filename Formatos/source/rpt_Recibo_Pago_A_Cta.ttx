@@ -1,0 +1,14 @@
+codigo	Long		
+documento	String	150	
+numero	String	50
+campania	String	50	
+codigo_asis	Long		
+asistente	String	250	
+codigo_colp	Long		
+colportor	String	250	
+fecha	Date		
+monto	Number		
+estado	Boolean		
+usuario	String	50	
+caja	String	150	
+observacion	String	250	

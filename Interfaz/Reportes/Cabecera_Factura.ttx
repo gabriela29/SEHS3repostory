@@ -1,0 +1,27 @@
+codigo	Long		
+numero	String	15	
+cliente	String	150	
+fecha	Date		
+nombre_cli	String	50	
+direccion	String	100	
+documento_identidad	String	15	
+condicion	String	10	
+subtotal	Currency		
+igv	Currency		
+total	Currency		
+cambio	Currency		
+usuario	String	20	
+caja	String	20	
+observacion	String	50	
+guia_referencia	String	50	
+moneda	String		5
+simbolo_moneda	String		10
+descrip_moneda	String		50
+importe_letras	String	500	
+estado	Boolean		Boolean
+nombre_local	String		250
+direccion_local	String		250
+telefono_local	String		250
+empresa	String		250
+ruc	String		250
+serietk	String		250

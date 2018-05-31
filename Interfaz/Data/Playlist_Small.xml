@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xmlStore version="1.0">
+  <schema datanodename="song">
+    <field name="ReleaseDate" title="Release Date"  width="15"/>
+    <field name="Track"       title="Track"         width="10"/>
+    <field name="Title"       title="Title"         width="40"/>
+    <field name="Artist"      title="Artist"        width="15"/>
+    <field name="Album"       title="Album"         width="25"/>
+  </schema>
+  <song ReleaseDate="11/22/1968" Track="29.68" Title="Revolution 9" Artist="Beatles" Album="The Beatles [White Album]" />
+  <song ReleaseDate="1960" Track="6.80" Title="Fools Rush In" Artist="Frank Sinatra" Album="Nice 'N' Easy" />
+  <song ReleaseDate="11/11/1971" Track="1" Title="One of These Days" Artist="Pink Floyd" Album="Meddle" />
+  <song ReleaseDate="1988" Track="7" Title="Where Is My Mind?" Artist="Pixies" Album="Surfer Rosa" />
+  <song ReleaseDate="5/1981" Track="9" Title="Can't Find My Mind" Artist="Cramps" Album="Psychedelic Jungle" />
+  <song ReleaseDate="6/10/2003" Track="13" Title="Scatterbrain. (As Dead As Leaves.)" Artist="Radiohead" Album="Hail to the Thief" />
+  <song ReleaseDate="6/30/1992" Track="3" Title="Dress" Artist="P J Harvey" Album="Dry" />
+</xmlStore>

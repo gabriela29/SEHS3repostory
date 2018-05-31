@@ -1,0 +1,17 @@
+codigo	Long
+numero	String	15	
+cliente	String	150	
+empresa_transporte	String	150	
+chofer	String	150	
+licencia	String	150	
+constancia	String	150	
+marca_placa	String	150	
+fecha_emision	String	15	
+fecha_traslado	String	15	
+hora_traslado	String	15	
+desde	String	150	
+hasta	String	150	
+documento_identidad	String	15	
+usuario	String	20	
+caja	String	20	
+referencia	String	25	

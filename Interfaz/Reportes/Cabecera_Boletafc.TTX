@@ -1,0 +1,11 @@
+codigo	Long
+numero	String	15	
+fecha	Date		
+codigo_alu	Long
+alumno	String	150	
+usuario	String	20	
+caja	String	20	
+total	Currency		
+lugar_pago	String	10
+info_adicional	String	500	
+importe_letras	String	500	

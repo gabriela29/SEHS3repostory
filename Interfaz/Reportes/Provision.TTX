@@ -1,0 +1,9 @@
+codigo_alu	Long		
+fecha	String	15	
+serie	Short		
+numero	Long		
+alumno	String	150	
+concepto	String	100	
+importe	Currency		
+info_adicional	String	200	
+importe_letras	String	500	

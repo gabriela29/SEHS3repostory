@@ -1,0 +1,209 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="12.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{B8860A4B-A1C7-4817-8D31-78F4FDA9B0B9}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>CapaLogicaNegocio</RootNamespace>
+    <AssemblyName>CapaLogicaNegocio</AssemblyName>
+    <MyType>Windows</MyType>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>CapaLogicaNegocio.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>CapaLogicaNegocio.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CapaDatos, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\CapaDatos\bin\Debug\CapaDatos.dll</HintPath>
+    </Reference>
+    <Reference Include="Mono.Security, Version=2.0.0.0, Culture=neutral, PublicKeyToken=0738eb9f132ed756, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Npgsql2.0.2-bin-ms.net\bin\Mono.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="Npgsql, Version=2.0.2.0, Culture=neutral, PublicKeyToken=5d8b90d52f46fda7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Npgsql2.0.2-bin-ms.net\bin\Npgsql.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Diagnostics" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="basic\gestion_accesoManager.vb" />
+    <Compile Include="basic\monedaManager.vb" />
+    <Compile Include="basic\registrarvManager.vb" />
+    <Compile Include="basic\unidad_negocioManager.vb" />
+    <Compile Include="basic\personaManager.vb" />
+    <Compile Include="basic\rolManager.vb" />
+    <Compile Include="caja\arqueo_fondo_fManager.vb" />
+    <Compile Include="caja\arqueo_ingresosManager.vb" />
+    <Compile Include="catalogo\categoriaManager.vb" />
+    <Compile Include="catalogo\unidad_medidaManager.vb" />
+    <Compile Include="catalogo\grupoManager.vb" />
+    <Compile Include="catalogo\marcaManager.vb" />
+    <Compile Include="catalogo\subcategoriaManager.vb" />
+    <Compile Include="categoria_personaManager.vb" />
+    <Compile Include="comision_spManager.vb" />
+    <Compile Include="configuracion\det_mov_mercaderiaManager.vb" />
+    <Compile Include="configuracion\tipo_mov_mercaderiaManager.vb" />
+    <Compile Include="configuracion\modulo_sistemaManager.vb" />
+    <Compile Include="consignacion\bonificacion\bonificacionManager.vb" />
+    <Compile Include="consignacion\bonificacion\bonificacion_tipoManager.vb" />
+    <Compile Include="consignacion\bonificacion\destino_bonificacionManager.vb" />
+    <Compile Include="consignacion\campaniaManager.vb" />
+    <Compile Include="consignacion\consignacionManager.vb" />
+    <Compile Include="consignacion\Control_AsistenteManager.vb" />
+    <Compile Include="consignacion\pedidoweb\depositocolpwebManager.vb" />
+    <Compile Include="consignacion\pedidoweb\devolucionasiswebManager.vb" />
+    <Compile Include="consignacion\pedidoweb\pedidocolpwebManager.vb" />
+    <Compile Include="consignacion\productos_campaniaManager.vb" />
+    <Compile Include="consignacion\tipopersonacampaniaManager.vb" />
+    <Compile Include="contable\loteManager.vb" />
+    <Compile Include="contable\tipo_loteManager.vb" />
+    <Compile Include="control_mesManager.vb" />
+    <Compile Include="contable\centro_costoManager.vb" />
+    <Compile Include="ClaveManager.vb" />
+    <Compile Include="AlmacenManager.vb" />
+    <Compile Include="concepto_gastoManager.vb" />
+    <Compile Include="finanzas\lista_negraManager.vb" />
+    <Compile Include="finanzas\persona_limite_creditoManager.vb" />
+    <Compile Include="finanzas\porcobrar_gestionManager.vb" />
+    <Compile Include="finanzas\por_pagarManager.vb" />
+    <Compile Include="Inventarios\Importacion\importacionManager.vb" />
+    <Compile Include="Lote_Gasto\detalle_lote_gastoManager.vb" />
+    <Compile Include="Lote_Gasto\lote_gastoManager.vb" />
+    <Compile Include="lote_ingreso\lote_ingresoManager.vb" />
+    <Compile Include="finanzas\registro_mbManager.vb" />
+    <Compile Include="reportes\reportes_colportajewebManager.vb" />
+    <Compile Include="reportes\reportes_gerencialesManager.vb" />
+    <Compile Include="reportes\reportes_pedidosManager.vb" />
+    <Compile Include="reportes\reportes_suscripcionManager.vb" />
+    <Compile Include="reportes\Reportes_VariosManager.vb" />
+    <Compile Include="suscripcion\depositoManager.vb" />
+    <Compile Include="suscripcion\distrito_misioneroManager.vb" />
+    <Compile Include="suscripcion\materialManager.vb" />
+    <Compile Include="suscripcion\iglesiaManager.vb" />
+    <Compile Include="suscripcion\material_grupoManager.vb" />
+    <Compile Include="suscripcion\material_subgrupoManager.vb" />
+    <Compile Include="suscripcion\misionManager.vb" />
+    <Compile Include="Inventarios\inventariosManager.vb" />
+    <Compile Include="Inventarios\Ventas\venta_guiaManager.vb" />
+    <Compile Include="productotempManager.vb" />
+    <Compile Include="reportes\reportes_consignacionManager.vb" />
+    <Compile Include="reportes\reportes_salidasManager.vb" />
+    <Compile Include="Inventarios\Salidas\salida_mercaderiaManager.vb" />
+    <Compile Include="datos_guiaManager.vb" />
+    <Compile Include="cursoresManager.vb" />
+    <Compile Include="distritoManager.vb" />
+    <Compile Include="empresaManager.vb" />
+    <Compile Include="Inventarios\Ingresos\ingreso_mercaderiaManager.vb" />
+    <Compile Include="finanzas\movimiento_bancario_Manager.vb" />
+    <Compile Include="utilidades\migracionManager.vb" />
+    <Compile Include="utilidades\permisos_impresionManager.vb" />
+    <Compile Include="permisos_moduloManager.vb" />
+    <Compile Include="contable\plan_cuentasManager.vb" />
+    <Compile Include="finanzas\por_cobrarManager.vb" />
+    <Compile Include="catalogo\productoManager.vb" />
+    <Compile Include="ReportesManager.vb" />
+    <Compile Include="detalle_lote_gastosManager.vb" />
+    <Compile Include="documentoManager.vb" />
+    <Compile Include="lote_gastosManager.vb" />
+    <Compile Include="reportes\reportes_comprasManager.vb" />
+    <Compile Include="reportes\reportes_ventasManager.vb" />
+    <Compile Include="serieManager.vb" />
+    <Compile Include="suscripcion\pedidoManager.vb" />
+    <Compile Include="suscripcion\periodoManager.vb" />
+    <Compile Include="suscripcion\suscripcionManager.vb" />
+    <Compile Include="tabla_virtualManager.vb" />
+    <Compile Include="DataTableDesvinculado.vb" />
+    <Compile Include="GestionSeguridadManager.vb" />
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="OpcionesBusquedaManager.vb" />
+    <Compile Include="Inventarios\Ventas\ventaManager.vb" />
+    <Compile Include="utilidades\transferis_stockManager.vb" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CapaObjetos\CapaObjetosNegocio.vbproj">
+      <Project>{4CD8BDF4-7EF1-4958-9150-245D208A072C}</Project>
+      <Name>CapaObjetosNegocio</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

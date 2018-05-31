@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="11d489bf-f18c-459b-9cf0-9413372ccab1" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="https://sad-us-fm-1.aasi.live.apps.sdasystems.org/UPS/SEHS/Services/Aasi.Net/Integration/PayloadService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="PayloadService.xsd" MetadataType="Schema" ID="478cf142-a5a6-4885-ac8f-3753871bd026" SourceId="1" SourceUrl="https://sad-us-fm-1.aasi.live.apps.sdasystems.org/UPS/SEHS/Services/Aasi.Net/Integration/PayloadService.svc?xsd=xsd1" />
+    <MetadataFile FileName="PayloadService1.xsd" MetadataType="Schema" ID="457d483e-47e1-4764-82b8-c57639cf8880" SourceId="1" SourceUrl="https://sad-us-fm-1.aasi.live.apps.sdasystems.org/UPS/SEHS/Services/Aasi.Net/Integration/PayloadService.svc?xsd=xsd0" />
+    <MetadataFile FileName="PayloadService.disco" MetadataType="Disco" ID="33b4cc04-b69e-4f60-9407-479581abc866" SourceId="1" SourceUrl="https://sad-us-fm-1.aasi.live.apps.sdasystems.org/UPS/SEHS/Services/Aasi.Net/Integration/PayloadService.svc?disco" />
+    <MetadataFile FileName="PayloadBusiness.wsdl" MetadataType="Wsdl" ID="3110f522-b172-48ed-b2a1-b1f0868ee758" SourceId="1" SourceUrl="https://sad-us-fm-1.aasi.live.apps.sdasystems.org/UPS/SEHS/Services/Aasi.Net/Integration/PayloadService.svc?wsdl" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>
