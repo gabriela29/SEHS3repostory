@@ -315,7 +315,7 @@ Public Class FrmPersonaEdit
 
             txtDNI.Text = dtRow("dni")
             txtRUC_PN.Text = dtRow("ruc")
-            txtRuc_PJ.Text = dtRow("rucj")
+            txtRuc_PJ.Text = dtRow("rucj") '
             txtTitulo.Text = dtRow("titulo")
             txtApe_Pat.Text = dtRow("paterno")
             txtApe_Mat.Text = dtRow("materno")
