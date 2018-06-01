@@ -53,11 +53,11 @@ Public Class FrmPlan_Ctacte
 
     End Sub
 
-    Private Sub BtnRegistroPDireccion_Click(sender As Object, e As EventArgs) Handles BtnRegistroPDireccion.Click
-        Dim frm As FrmPersona_Direccion = New FrmPersona_Direccion
-        frm.swNuevo = True
-        frm.ShowDialog()
-    End Sub
+    'Private Sub BtnRegistroPDireccion_Click(sender As Object, e As EventArgs)
+    '    Dim frm As FrmPersona_Direccion = New FrmPersona_Direccion
+    '    frm.swNuevo = True
+    '    frm.ShowDialog()
+    'End Sub
 
     Private Sub btnRegistroV_Click(sender As Object, e As EventArgs) Handles btnRegistroV.Click
         Dim frm As FrmRegistrar_VentaLis = New FrmRegistrar_VentaLis

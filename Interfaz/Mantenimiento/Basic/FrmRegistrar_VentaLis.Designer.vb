@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class FrmRegistrar_VentaLis
     Inherits System.Windows.Forms.Form
 
     'Form reemplaza a Dispose para limpiar la lista de componentes.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,7 +20,7 @@ Partial Class FrmRegistrar_VentaLis
     'NOTA: el Diseñador de Windows Forms necesita el siguiente procedimiento
     'Se puede modificar usando el Diseñador de Windows Forms.  
     'No lo modifique con el editor de código.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Dim Appearance1 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
         Dim Appearance2 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
@@ -50,20 +50,20 @@ Partial Class FrmRegistrar_VentaLis
         Me.UltraGroupBox1 = New Infragistics.Win.Misc.UltraGroupBox()
         Me.UltraPictureBox1 = New Infragistics.Win.UltraWinEditors.UltraPictureBox()
         Me.btnBuscar = New Infragistics.Win.Misc.UltraButton()
-        Me.txtalmacen = New Infragistics.Win.UltraWinEditors.UltraTextEditor()
         Me.lblBuscar = New Infragistics.Win.Misc.UltraLabel()
         Me.UltraLabel1 = New Infragistics.Win.Misc.UltraLabel()
         Me.txtmes = New Infragistics.Win.UltraWinEditors.UltraTextEditor()
         Me.txtanio = New Infragistics.Win.UltraWinEditors.UltraTextEditor()
         Me.txtLimite = New Infragistics.Win.UltraWinEditors.UltraTextEditor()
+        Me.txtalmacen = New Infragistics.Win.UltraWinEditors.UltraTextEditor()
         Me.TpCliente.SuspendLayout()
         CType(Me.dgvListadoregis, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.UltraGroupBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.UltraGroupBox1.SuspendLayout()
-        CType(Me.txtalmacen, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.txtmes, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.txtanio, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.txtLimite, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.txtalmacen, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'lbl
@@ -204,29 +204,13 @@ Partial Class FrmRegistrar_VentaLis
         Me.btnBuscar.Text = "&Buscar"
         Me.btnBuscar.UseOsThemes = Infragistics.Win.DefaultableBoolean.[False]
         '
-        'txtalmacen
-        '
-        Appearance6.ForeColor = System.Drawing.Color.Navy
-        Me.txtalmacen.Appearance = Appearance6
-        Me.txtalmacen.DisplayStyle = Infragistics.Win.EmbeddableElementDisplayStyle.Office2007
-        Me.txtalmacen.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtalmacen.Location = New System.Drawing.Point(139, 46)
-        Me.txtalmacen.MaxLength = 50
-        Me.txtalmacen.Name = "txtalmacen"
-        Me.txtalmacen.NullText = "Almacen"
-        Appearance7.ForeColor = System.Drawing.Color.DarkGray
-        Me.txtalmacen.NullTextAppearance = Appearance7
-        Me.txtalmacen.ReadOnly = True
-        Me.txtalmacen.Size = New System.Drawing.Size(116, 22)
-        Me.txtalmacen.TabIndex = 80
-        '
         'lblBuscar
         '
-        Appearance8.BackColorAlpha = Infragistics.Win.Alpha.Transparent
-        Appearance8.ForeColor = System.Drawing.Color.SteelBlue
-        Appearance8.TextHAlignAsString = "Right"
-        Appearance8.TextVAlignAsString = "Top"
-        Me.lblBuscar.Appearance = Appearance8
+        Appearance6.BackColorAlpha = Infragistics.Win.Alpha.Transparent
+        Appearance6.ForeColor = System.Drawing.Color.SteelBlue
+        Appearance6.TextHAlignAsString = "Right"
+        Appearance6.TextVAlignAsString = "Top"
+        Me.lblBuscar.Appearance = Appearance6
         Me.lblBuscar.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblBuscar.Location = New System.Drawing.Point(63, 49)
         Me.lblBuscar.Name = "lblBuscar"
@@ -238,12 +222,12 @@ Partial Class FrmRegistrar_VentaLis
         '
         Me.UltraLabel1.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Appearance9.BackColor = System.Drawing.Color.LightBlue
-        Appearance9.BackColor2 = System.Drawing.Color.White
-        Appearance9.BackGradientStyle = Infragistics.Win.GradientStyle.Vertical
-        Appearance9.ForeColor = System.Drawing.Color.SteelBlue
-        Appearance9.TextVAlignAsString = "Top"
-        Me.UltraLabel1.Appearance = Appearance9
+        Appearance7.BackColor = System.Drawing.Color.LightBlue
+        Appearance7.BackColor2 = System.Drawing.Color.White
+        Appearance7.BackGradientStyle = Infragistics.Win.GradientStyle.Vertical
+        Appearance7.ForeColor = System.Drawing.Color.SteelBlue
+        Appearance7.TextVAlignAsString = "Top"
+        Me.UltraLabel1.Appearance = Appearance7
         Me.UltraLabel1.Font = New System.Drawing.Font("Verdana", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.UltraLabel1.Location = New System.Drawing.Point(63, -2)
         Me.UltraLabel1.Name = "UltraLabel1"
@@ -253,41 +237,39 @@ Partial Class FrmRegistrar_VentaLis
         '
         'txtmes
         '
-        Appearance10.ForeColor = System.Drawing.Color.Navy
-        Me.txtmes.Appearance = Appearance10
+        Appearance8.ForeColor = System.Drawing.Color.Navy
+        Me.txtmes.Appearance = Appearance8
         Me.txtmes.DisplayStyle = Infragistics.Win.EmbeddableElementDisplayStyle.Office2007
         Me.txtmes.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtmes.Location = New System.Drawing.Point(261, 45)
         Me.txtmes.MaxLength = 50
         Me.txtmes.Name = "txtmes"
         Me.txtmes.NullText = "Mes"
-        Appearance11.ForeColor = System.Drawing.Color.DarkGray
-        Me.txtmes.NullTextAppearance = Appearance11
-        Me.txtmes.ReadOnly = True
-        Me.txtmes.Size = New System.Drawing.Size(116, 22)
+        Appearance9.ForeColor = System.Drawing.Color.DarkGray
+        Me.txtmes.NullTextAppearance = Appearance9
+        Me.txtmes.Size = New System.Drawing.Size(118, 22)
         Me.txtmes.TabIndex = 85
         '
         'txtanio
         '
-        Appearance12.ForeColor = System.Drawing.Color.Navy
-        Me.txtanio.Appearance = Appearance12
+        Appearance10.ForeColor = System.Drawing.Color.Navy
+        Me.txtanio.Appearance = Appearance10
         Me.txtanio.DisplayStyle = Infragistics.Win.EmbeddableElementDisplayStyle.Office2007
         Me.txtanio.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtanio.Location = New System.Drawing.Point(383, 44)
         Me.txtanio.MaxLength = 50
         Me.txtanio.Name = "txtanio"
         Me.txtanio.NullText = "Año"
-        Appearance13.ForeColor = System.Drawing.Color.DarkGray
-        Me.txtanio.NullTextAppearance = Appearance13
-        Me.txtanio.ReadOnly = True
-        Me.txtanio.Size = New System.Drawing.Size(116, 22)
+        Appearance11.ForeColor = System.Drawing.Color.DarkGray
+        Me.txtanio.NullTextAppearance = Appearance11
+        Me.txtanio.Size = New System.Drawing.Size(118, 22)
         Me.txtanio.TabIndex = 86
         '
         'txtLimite
         '
-        Appearance14.ForeColor = System.Drawing.Color.Navy
-        Appearance14.TextHAlignAsString = "Right"
-        Me.txtLimite.Appearance = Appearance14
+        Appearance12.ForeColor = System.Drawing.Color.Navy
+        Appearance12.TextHAlignAsString = "Right"
+        Me.txtLimite.Appearance = Appearance12
         Me.txtLimite.DisplayStyle = Infragistics.Win.EmbeddableElementDisplayStyle.Office2007
         Me.txtLimite.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtLimite.Location = New System.Drawing.Point(623, 44)
@@ -296,6 +278,21 @@ Partial Class FrmRegistrar_VentaLis
         Me.txtLimite.Size = New System.Drawing.Size(63, 22)
         Me.txtLimite.TabIndex = 87
         Me.txtLimite.Text = "50"
+        '
+        'txtalmacen
+        '
+        Appearance13.ForeColor = System.Drawing.Color.Navy
+        Me.txtalmacen.Appearance = Appearance13
+        Me.txtalmacen.DisplayStyle = Infragistics.Win.EmbeddableElementDisplayStyle.Office2007
+        Me.txtalmacen.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtalmacen.Location = New System.Drawing.Point(139, 46)
+        Me.txtalmacen.MaxLength = 50
+        Me.txtalmacen.Name = "txtalmacen"
+        Me.txtalmacen.NullText = "Almacen"
+        Appearance14.ForeColor = System.Drawing.Color.DarkGray
+        Me.txtalmacen.NullTextAppearance = Appearance14
+        Me.txtalmacen.Size = New System.Drawing.Size(118, 22)
+        Me.txtalmacen.TabIndex = 80
         '
         'FrmRegistrar_VentaLis
         '
@@ -321,10 +318,10 @@ Partial Class FrmRegistrar_VentaLis
         CType(Me.UltraGroupBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.UltraGroupBox1.ResumeLayout(False)
         Me.UltraGroupBox1.PerformLayout()
-        CType(Me.txtalmacen, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.txtmes, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.txtanio, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.txtLimite, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.txtalmacen, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -342,10 +339,10 @@ Partial Class FrmRegistrar_VentaLis
     Friend WithEvents UltraGroupBox1 As Infragistics.Win.Misc.UltraGroupBox
     Friend WithEvents UltraPictureBox1 As Infragistics.Win.UltraWinEditors.UltraPictureBox
     Friend WithEvents btnBuscar As Infragistics.Win.Misc.UltraButton
-    Friend WithEvents txtalmacen As Infragistics.Win.UltraWinEditors.UltraTextEditor
     Friend WithEvents lblBuscar As Infragistics.Win.Misc.UltraLabel
     Friend WithEvents UltraLabel1 As Infragistics.Win.Misc.UltraLabel
     Friend WithEvents txtmes As Infragistics.Win.UltraWinEditors.UltraTextEditor
     Friend WithEvents txtanio As Infragistics.Win.UltraWinEditors.UltraTextEditor
     Friend WithEvents txtLimite As Infragistics.Win.UltraWinEditors.UltraTextEditor
+    Friend WithEvents txtalmacen As Infragistics.Win.UltraWinEditors.UltraTextEditor
 End Class

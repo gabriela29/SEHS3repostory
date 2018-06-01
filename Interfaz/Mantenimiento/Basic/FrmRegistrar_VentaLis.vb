@@ -170,20 +170,19 @@ Public Class FrmRegistrar_VentaLis
         End Try
     End Sub
 
-
-
     Private Sub tsReporte_Click(sender As Object, e As EventArgs) Handles tsReporte.Click
 
     End Sub
-
-
-
 
     Private Sub FrmRegistrar_VentaLis_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         ' Call llenar_combos()
         Call LibreriasFormularios.formatear_grid(dgvListadoregis)
     End Sub
 
+    Private Sub btnBuscar_Click(sender As Object, e As EventArgs) Handles btnBuscar.Click
+        Call ListarCondiciones()
+
+    End Sub
 
     Private Sub TpModificar_Click(sender As Object, e As EventArgs) Handles TpModificar.Click
         If dgvListadoregis.Rows.Count > 0 Then

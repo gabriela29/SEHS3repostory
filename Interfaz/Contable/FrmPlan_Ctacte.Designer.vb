@@ -1,27 +1,27 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class FrmPlan_Ctacte
-  Inherits System.Windows.Forms.Form
+    Inherits System.Windows.Forms.Form
 
-  'Form overrides dispose to clean up the component list.
-  <System.Diagnostics.DebuggerNonUserCode()> _
-  Protected Overrides Sub Dispose(ByVal disposing As Boolean)
-    Try
-      If disposing AndAlso components IsNot Nothing Then
-        components.Dispose()
-      End If
-    Finally
-      MyBase.Dispose(disposing)
-    End Try
-  End Sub
+    'Form overrides dispose to clean up the component list.
+    <System.Diagnostics.DebuggerNonUserCode()>
+    Protected Overrides Sub Dispose(ByVal disposing As Boolean)
+        Try
+            If disposing AndAlso components IsNot Nothing Then
+                components.Dispose()
+            End If
+        Finally
+            MyBase.Dispose(disposing)
+        End Try
+    End Sub
 
-  'Required by the Windows Form Designer
-  Private components As System.ComponentModel.IContainer
+    'Required by the Windows Form Designer
+    Private components As System.ComponentModel.IContainer
 
-  'NOTE: The following procedure is required by the Windows Form Designer
-  'It can be modified using the Windows Form Designer.  
-  'Do not modify it using the code editor.
-  <System.Diagnostics.DebuggerStepThrough()> _
-  Private Sub InitializeComponent()
+    'NOTE: The following procedure is required by the Windows Form Designer
+    'It can be modified using the Windows Form Designer.  
+    'Do not modify it using the code editor.
+    <System.Diagnostics.DebuggerStepThrough()>
+    Private Sub InitializeComponent()
         Dim Appearance1 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
         Dim Appearance2 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
         Dim Appearance3 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
@@ -39,7 +39,6 @@ Partial Class FrmPlan_Ctacte
         Dim Appearance14 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
         Dim Appearance15 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
         Me.gpConsulta = New Infragistics.Win.Misc.UltraGroupBox()
-        Me.BtnRegistroPDireccion = New System.Windows.Forms.Button()
         Me.btnRegistroV = New System.Windows.Forms.Button()
         Me.txtNombre = New Infragistics.Win.UltraWinEditors.UltraTextEditor()
         Me.cboEntidad = New System.Windows.Forms.ComboBox()
@@ -78,7 +77,6 @@ Partial Class FrmPlan_Ctacte
         Appearance1.BackColor = System.Drawing.Color.White
         Appearance1.BackColor2 = System.Drawing.Color.White
         Me.gpConsulta.ContentAreaAppearance = Appearance1
-        Me.gpConsulta.Controls.Add(Me.BtnRegistroPDireccion)
         Me.gpConsulta.Controls.Add(Me.btnRegistroV)
         Me.gpConsulta.Controls.Add(Me.txtNombre)
         Me.gpConsulta.Controls.Add(Me.cboEntidad)
@@ -91,20 +89,6 @@ Partial Class FrmPlan_Ctacte
         Me.gpConsulta.Size = New System.Drawing.Size(664, 87)
         Me.gpConsulta.TabIndex = 3
         Me.gpConsulta.Text = "         Entidad                     Tipo"
-        '
-        'BtnRegistroPDireccion
-        '
-        Me.BtnRegistroPDireccion.AccessibleRole = System.Windows.Forms.AccessibleRole.None
-        Me.BtnRegistroPDireccion.BackColor = System.Drawing.Color.MistyRose
-        Me.BtnRegistroPDireccion.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
-        Me.BtnRegistroPDireccion.FlatAppearance.BorderColor = System.Drawing.Color.Maroon
-        Me.BtnRegistroPDireccion.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.BtnRegistroPDireccion.Location = New System.Drawing.Point(501, 21)
-        Me.BtnRegistroPDireccion.Name = "BtnRegistroPDireccion"
-        Me.BtnRegistroPDireccion.Size = New System.Drawing.Size(121, 55)
-        Me.BtnRegistroPDireccion.TabIndex = 98
-        Me.BtnRegistroPDireccion.Text = "Registro Direccion Persona"
-        Me.BtnRegistroPDireccion.UseVisualStyleBackColor = False
         '
         'btnRegistroV
         '
@@ -396,25 +380,24 @@ Partial Class FrmPlan_Ctacte
     End Sub
 
     Friend WithEvents gpConsulta As Infragistics.Win.Misc.UltraGroupBox
-  Friend WithEvents cboTipo As Infragistics.Win.UltraWinGrid.UltraCombo
-  Friend WithEvents BtnMostrar As Button
-  Friend WithEvents UltraLabel2 As Infragistics.Win.Misc.UltraLabel
-  Friend WithEvents GroupBox As Infragistics.Win.Misc.UltraGroupBox
-  Private WithEvents picAjaxBig As PictureBox
-  Friend WithEvents ToolStrip1 As ToolStrip
-  Friend WithEvents tsActualizar As ToolStripButton
-  Friend WithEvents ToolStripSeparator10 As ToolStripSeparator
-  Friend WithEvents tsNuevo As ToolStripButton
-  Friend WithEvents ToolStripSeparator2 As ToolStripSeparator
-  Friend WithEvents tsDigitación As ToolStripButton
-  Friend WithEvents ToolStripSeparator1 As ToolStripSeparator
-  Friend WithEvents tsCerrarD As ToolStripButton
-  Friend WithEvents dgvListado As Infragistics.Win.UltraWinGrid.UltraGrid
-  Friend WithEvents btnLocation As Infragistics.Win.Misc.UltraButton
-  Friend WithEvents lblPendientes As Infragistics.Win.Misc.UltraLabel
-  Friend WithEvents cboEntidad As ComboBox
-  Friend WithEvents txtNombre As Infragistics.Win.UltraWinEditors.UltraTextEditor
-  Friend WithEvents bwLlenar_Grid As System.ComponentModel.BackgroundWorker
+    Friend WithEvents cboTipo As Infragistics.Win.UltraWinGrid.UltraCombo
+    Friend WithEvents BtnMostrar As Button
+    Friend WithEvents UltraLabel2 As Infragistics.Win.Misc.UltraLabel
+    Friend WithEvents GroupBox As Infragistics.Win.Misc.UltraGroupBox
+    Private WithEvents picAjaxBig As PictureBox
+    Friend WithEvents ToolStrip1 As ToolStrip
+    Friend WithEvents tsActualizar As ToolStripButton
+    Friend WithEvents ToolStripSeparator10 As ToolStripSeparator
+    Friend WithEvents tsNuevo As ToolStripButton
+    Friend WithEvents ToolStripSeparator2 As ToolStripSeparator
+    Friend WithEvents tsDigitación As ToolStripButton
+    Friend WithEvents ToolStripSeparator1 As ToolStripSeparator
+    Friend WithEvents tsCerrarD As ToolStripButton
+    Friend WithEvents dgvListado As Infragistics.Win.UltraWinGrid.UltraGrid
+    Friend WithEvents btnLocation As Infragistics.Win.Misc.UltraButton
+    Friend WithEvents lblPendientes As Infragistics.Win.Misc.UltraLabel
+    Friend WithEvents cboEntidad As ComboBox
+    Friend WithEvents txtNombre As Infragistics.Win.UltraWinEditors.UltraTextEditor
+    Friend WithEvents bwLlenar_Grid As System.ComponentModel.BackgroundWorker
     Friend WithEvents btnRegistroV As Button
-    Friend WithEvents BtnRegistroPDireccion As Button
 End Class

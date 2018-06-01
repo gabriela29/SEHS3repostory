@@ -12,7 +12,7 @@ Namespace Dal
         Public Shared Function GetItem(ByVal vRegistrarv As Long) As registrarv
             Dim objregistrarv As registrarv = Nothing
             Dim TempList As New DataTable
-            Dim oSP As New clsStored_Procedure("contable.paregistrar_getrow")
+            Dim oSP As New clsStored_Procedure("contable.paregistro_venta_getrow")
             Dim oConexion As New clsConexion
             Dim objReader As DataRow = Nothing
             Try
@@ -54,6 +54,7 @@ Namespace Dal
                 vConsulta = vConsulta & " '" & vidalmacen & "',"
                 vConsulta = vConsulta & " '" & vmes & "',"
                 vConsulta = vConsulta & " '" & vanio & "',"
+                vConsulta = vConsulta & " '" & vproceso & "',"
                 vConsulta = vConsulta & " " & IIf(varrrol.Trim = "", "null", varrrol) & ","
                 vConsulta = vConsulta & " " & vfilas & ","
                 vConsulta = vConsulta & " '" & vcodigo_per & ");"
@@ -135,7 +136,7 @@ Namespace Dal
                 vCadena = vCadena & " '" & Trim(objR.idtabla) & "',"
                 vCadena = vCadena & " '" & Trim(objR.cod_ass) & "',"
                 vCadena = vCadena & " '" & Trim(objR.mes) & "',"
-                vCadena = vCadena & " '" & Trim(objR.anio) & "',"
+                vCadena = vCadena & " '" & Trim(objR.anio) & ")"
 
 
                 Dim oConexion As New clsConexion

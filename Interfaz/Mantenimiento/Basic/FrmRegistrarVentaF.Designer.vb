@@ -776,6 +776,7 @@ Partial Class FrmRegistrarVentaF
         Me.Controls.Add(Me.btnCerrar1)
         Me.Controls.Add(Me.BtnGuardar)
         Me.Controls.Add(Me.UgvDatos)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "FrmRegistrarVentaF"
         Me.Text = "FrmRegistrarVentaF"
         CType(Me.UgvDatos, System.ComponentModel.ISupportInitialize).EndInit()

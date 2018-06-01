@@ -8,18 +8,14 @@ Imports Infragistics.Win.UltraWinGrid
 Public Class FrmRegistrarVentaF
     Public pregistrarvId As Long, swNuevo As Boolean
     Public xcodigoId As Long, xnombre_c As String, xcodigo_sunat As String, xnumero As String, xtipo_documento_per As String, xnumero_doc_per As String, xpersona As String
-
-
     Public xafecto As Long, xnoafecto As Long
-
-
 
     Public dtDatos As DataTable
 
 
 
 
-    Private Sub Mostrar_Registro() 'AQUI SE REGISTRARA LOS DATOS DEL FORMULARIO
+    Private Sub Mostrar_Registro()
         Dim dtRow As DataRow
 
         For Each dtRow In dtDatos.Rows
@@ -281,19 +277,20 @@ Public Class FrmRegistrarVentaF
         Return valido
     End Function
 
-    Private Function GrabarRegistroDoc() As Boolean
+    Private Function GrabarRegistroDoc() As Boolean 'AQUI SE REGISTRARA LOS DATOS DEL FORMULARIO
 
 
-        Dim ObjP As New registrarv
+        Dim objR As New registrarv
         Dim dgvRw As UltraGridRow
         Dim fechae As String = "", ok As Long
         Dim fechao As String = "", si As Long
+        Dim vacodigo_per As String = "null"
 
         Try
             fechae = LibreriasFormularios.Formato_Fecha(datefechae.Value)
             fechao = LibreriasFormularios.Formato_Fecha(datefechao.Value)
 
-            With ObjP
+            With objR
                 If xcodigoId > 0 Then
                     .codigo_per = xcodigoId
 
@@ -316,24 +313,29 @@ Public Class FrmRegistrarVentaF
                 .fecha_doc_ori = fechao
                 .codigo_doc_ori = txtcodigoo.Text.Trim & ""
                 .serie_doc_ori = txtserieo.Text.Trim & ""
-
-
+                .numero_doc_ori = txtnumeror.Text.Trim & ""
+                .signo = txtsigno.Text.Trim & ""
+                .serie = txtserieint.Text.Trim & ""
+                .numero_int = txtnumeroint.Text.Trim & ""
+                .codigo_doc = txtcodigodoc.Text.Trim & ""
+                .tabla = labeltabla.Text.Trim & ""
+                .idtabla = labeltablaid.Text.Trim & ""
+                .mes = labelmes.Text.Trim & ""
+                .anio = labelaño.Text.Trim & ""
 
             End With
+            ok = registrarvManager.Actualizar(objR, vacodigo_per)
 
-
-
-
+            If ok > 0 Then
+                GrabarRegistroDoc = True
+            End If
+            objR = Nothing
         Catch ex As Exception
-
+            GrabarRegistroDoc = False
+            MsgBox(ex.Message)
         End Try
 
     End Function
-
-
-
-
-
 
     Private Sub Btnguardar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BtnGuardar.Click
         If ValidarDatos() Then
@@ -345,7 +347,33 @@ Public Class FrmRegistrarVentaF
         End If
     End Sub
 
-    Public Sub Buscar_Registro()
+    Public Sub Buscar_Registrarv(ByVal vTipo As String, ByVal vNumero As String)
+        Dim objRe As New registrarv
+
+        If Not objRe Is Nothing Then
+
+
+            If objRe.codigo_per > 0 Then
+                MessageBox.Show("Documento ya existe en la base datos", "AVISO", MessageBoxButtons.OK)
+
+                labelmes.Text = objRe.mes
+                labelaño.Text = objRe.anio
+
+
+
+
+
+            End If
+
+        End If
+
+
+
+
+
+
+
+
 
     End Sub
 

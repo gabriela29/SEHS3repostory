@@ -695,21 +695,19 @@ Public Class FrmPersonaEdit
         .tipo = pTipoPer
         .nacimiento = fNac
         If chkPN.Checked Then
-          .tipo = "N"
-
+                    .tipo = "N"
                     .titulo = txtTitulo.Text.Trim & ""
                     .ape_pat = txtApe_Pat.Text.Trim & ""
                     .ape_mat = txtApe_Mat.Text.Trim & ""
-          .nombre = TxtNombre.Text.Trim
-          .dni = txtDNI.Text.Trim & ""
-          .pernat_ruc = txtRUC_PN.Text & ""
-          .sexo = cboSexo.Value
-          .est_civil = cboEstadoCivil.Value
-
-          .direccion = txtDireccion.Text
-          .nombre_comercial = txtNombre_Com.Text
-          .distritoid = cboDistrito.Value
-        Else
+                    .nombre = TxtNombre.Text.Trim
+                    .dni = txtDNI.Text.Trim & ""
+                    .pernat_ruc = txtRUC_PN.Text & ""
+                    .sexo = cboSexo.Value
+                    .est_civil = cboEstadoCivil.Value
+                    .direccion = txtDireccion.Text
+                    .nombre_comercial = txtNombre_Com.Text
+                    .distritoid = cboDistrito.Value
+                Else
           .tipo = "J"
           .ruc = txtRuc_PJ.Text
           .raz_soc = txtRazon_Social.Text
@@ -1166,8 +1164,6 @@ Public Class FrmPersonaEdit
             End If
         End If
     End Sub
-
-
 
     Public Function Agregar_Telefono() As Boolean
         Try
