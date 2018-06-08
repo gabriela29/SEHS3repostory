@@ -50,10 +50,10 @@ Namespace Dal
 
 
             Try
-                vConsulta = "select * from contable.paregistrar_consulta ( "
-                vConsulta = vConsulta & " '" & vidalmacen & "',"
-                vConsulta = vConsulta & " '" & vmes & "',"
-                vConsulta = vConsulta & " '" & vanio & "',"
+                vConsulta = "select * from contable.paregistro_venta_consulta ( "
+                vConsulta = vConsulta & " " & vidalmacen & ","
+                vConsulta = vConsulta & " " & vmes & ","
+                vConsulta = vConsulta & " " & vanio & ","
                 vConsulta = vConsulta & " '" & vproceso & "',"
                 vConsulta = vConsulta & " " & IIf(varrrol.Trim = "", "null", varrrol) & ","
                 vConsulta = vConsulta & " " & vfilas & ","
@@ -88,10 +88,11 @@ Namespace Dal
             objeto.cambio = objData.Item("cambio")
             objeto.estado = objData.Item("estado")
             objeto.fecha_doc_ori = objData.Item("fecha_doc_ori")
+            objeto.fecha_doc_ori = objData.Item("cod_doc_ori")
             objeto.serie_doc_ori = objData.Item("serie_doc_ori")
             objeto.numero_doc_ori = objData.Item("numero_doc_ori")
             objeto.signo = objData.Item("signo")
-            objeto.serie = objData.Item("serie_int")
+            objeto.serie_int = objData.Item("serie_int")
             objeto.numero_int = objData.Item("numero_int")
             objeto.codigo_doc = objData.Item("codigo_doc")
             objeto.almacenaid = objData.Item("almacenid")
@@ -110,7 +111,7 @@ Namespace Dal
             Dim vCadena As String = ""
 
             Try
-                vCadena = "select * from contable.paregistrar_actualizar( "
+                vCadena = "select * from contable.paregistro_venta_actualizar1 ( "
                 vCadena = vCadena & " " & IIf(objR.codigo_per > 0, "false", "true") & ", "
                 vCadena = vCadena & " " & Trim(Str(objR.codigo_per)) & ", "
                 vCadena = vCadena & " '" & Trim(objR.emision) & "',"
@@ -120,23 +121,28 @@ Namespace Dal
                 vCadena = vCadena & " '" & Trim(objR.tipo_doc_per) & "',"
                 vCadena = vCadena & " '" & Trim(objR.numero_doc_per) & "',"
                 vCadena = vCadena & " '" & Trim(objR.persona) & "',"
-                vCadena = vCadena & " '" & Trim(objR.afecto) & "',"
-                vCadena = vCadena & " '" & Trim(objR.noafecto) & "',"
-                vCadena = vCadena & " '" & Trim(objR.igv) & "',"
-                vCadena = vCadena & " '" & Trim(objR.descuento) & "',"
-                vCadena = vCadena & " '" & Trim(objR.total) & "',"
-                vCadena = vCadena & " '" & Trim(objR.cambio) & "',"
-                vCadena = vCadena & " '" & Trim(objR.estado) & "',"
+                vCadena = vCadena & " " & Trim(objR.afecto) & ","
+                vCadena = vCadena & " " & Trim(objR.noafecto) & ","
+                vCadena = vCadena & " " & Trim(objR.igv) & ","
+                vCadena = vCadena & " " & Trim(objR.descuento) & ","
+                vCadena = vCadena & " " & Trim(objR.total) & " ,"
+                vCadena = vCadena & " " & Trim(objR.cambio) & " ,"
+                vCadena = vCadena & " " & Trim(objR.estado) & "," 'boolean
                 vCadena = vCadena & " '" & Trim(objR.fecha_doc_ori) & "',"
+                vCadena = vCadena & " '" & Trim(objR.cod_doc_ori) & "',"
                 vCadena = vCadena & " '" & Trim(objR.serie_doc_ori) & "',"
+                vCadena = vCadena & " '" & Trim(objR.numero_doc_ori) & "',"
+                vCadena = vCadena & " '" & Trim(objR.signo) & "',"
+                vCadena = vCadena & " '" & Trim(objR.serie_int) & "',"
                 vCadena = vCadena & " '" & Trim(objR.numero_int) & "',"
-                vCadena = vCadena & " '" & Trim(objR.codigo_doc) & "',"
-                vCadena = vCadena & " '" & Trim(objR.almacenaid) & "',"
+                vCadena = vCadena & " " & Trim(objR.codigo_doc) & ","
+                vCadena = vCadena & " " & Trim(objR.almacenaid) & ","
                 vCadena = vCadena & " '" & Trim(objR.tabla) & "',"
-                vCadena = vCadena & " '" & Trim(objR.idtabla) & "',"
-                vCadena = vCadena & " '" & Trim(objR.cod_ass) & "',"
-                vCadena = vCadena & " '" & Trim(objR.mes) & "',"
-                vCadena = vCadena & " '" & Trim(objR.anio) & ")"
+                vCadena = vCadena & " " & Trim(objR.idtabla) & ","
+                vCadena = vCadena & " " & Trim(objR.cod_ass) & ","
+                vCadena = vCadena & " " & Trim(objR.mes) & ", "
+                vCadena = vCadena & " " & Trim(objR.anio) & " "
+                vCadena = vCadena & " )"
 
 
                 Dim oConexion As New clsConexion
@@ -154,7 +160,7 @@ Namespace Dal
             Dim vCadena As String = ""
 
             Try
-                vCadena = "select * from contable.paregistrar_eliminar( "
+                vCadena = "select * from contable.paregistro_venta_eliminar( "
                 vCadena = vCadena & " " & Trim(Str(vcodigo_per)) & ", "
                 vCadena = vCadena & " " & Trim(vUsuario) & ", "
                 vCadena = vCadena & " '" & Trim(vIp) & "');"

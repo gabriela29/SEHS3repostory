@@ -14,24 +14,24 @@ Namespace BO
         Private mcodigo_per As Long = -1
         Private memision As Date
         Private mnombre_corto As String
-        Private mcodigo_sunat As Integer
-        Private mnumero As Integer
+        Private mcodigo_sunat As String
+        Private mnumero As String
         Private mtipo_doc_per As String
-        Private mnumero_doc_per As Integer
+        Private mnumero_doc_per As String
         Private mpersona As String
-        Private mafecto As Integer
-        Private mnoafecto As Integer
-        Private migv As Integer
-        Private mdescuento As Integer
-        Private mtotal As Integer
-        Private mcambio As Integer
-        Private mestado As Integer
+        Private mafecto As Double
+        Private mnoafecto As Double
+        Private migv As Double
+        Private mdescuento As Double
+        Private mtotal As Double
+        Private mcambio As Double
+        Private mestado As Boolean
         Private mfecha_doc_ori As Date
+        Private mcod_doc_ori As String
         Private mserie_doc_ori As String
-        Private mcodigo_doc_ori As String
-        Private mnumero_doc_ori As Integer
+        Private mnumero_doc_ori As String
         Private msigno As String
-        Private mserie As String
+        Private mserie_int As String
         Private mnumero_int As String
         Private mcodigo_doc As Integer
         Private malmacenaid As Integer
@@ -70,20 +70,20 @@ Namespace BO
             End Set
         End Property
 
-        Public Property codigo_sunat() As Integer
+        Public Property codigo_sunat() As String
             Get
                 Return mcodigo_sunat
             End Get
-            Set(ByVal value As Integer)
+            Set(ByVal value As String)
                 mcodigo_sunat = value
             End Set
         End Property
 
-        Public Property numero() As Integer
+        Public Property numero() As String
             Get
                 Return mnumero
             End Get
-            Set(ByVal value As Integer)
+            Set(ByVal value As String)
                 mnumero = value
             End Set
         End Property
@@ -97,11 +97,11 @@ Namespace BO
             End Set
         End Property
 
-        Public Property numero_doc_per() As Integer
+        Public Property numero_doc_per() As String
             Get
                 Return mnumero_doc_per
             End Get
-            Set(ByVal value As Integer)
+            Set(ByVal value As String)
                 mnumero_doc_per = value
             End Set
         End Property
@@ -115,65 +115,65 @@ Namespace BO
             End Set
         End Property
 
-        Public Property afecto() As Integer
+        Public Property afecto() As Double
             Get
                 Return mafecto
             End Get
-            Set(ByVal value As Integer)
+            Set(ByVal value As Double)
                 mafecto = value
             End Set
         End Property
 
-        Public Property noafecto() As Integer
+        Public Property noafecto() As Double
             Get
                 Return mnoafecto
             End Get
-            Set(ByVal value As Integer)
+            Set(ByVal value As Double)
                 mnoafecto = value
             End Set
         End Property
 
-        Public Property igv() As Integer
+        Public Property igv() As Double
             Get
                 Return migv
             End Get
-            Set(ByVal value As Integer)
+            Set(ByVal value As Double)
                 migv = value
             End Set
         End Property
 
-        Public Property descuento() As Integer
+        Public Property descuento() As Double
             Get
                 Return mdescuento
             End Get
-            Set(ByVal value As Integer)
+            Set(ByVal value As Double)
                 mdescuento = value
             End Set
         End Property
 
-        Public Property total() As Integer
+        Public Property total() As Double
             Get
                 Return mtotal
             End Get
-            Set(ByVal value As Integer)
+            Set(ByVal value As Double)
                 mtotal = value
             End Set
         End Property
 
-        Public Property cambio() As Integer
+        Public Property cambio() As Double
             Get
                 Return mcambio
             End Get
-            Set(ByVal value As Integer)
+            Set(ByVal value As Double)
                 mcambio = value
             End Set
         End Property
 
-        Public Property estado() As Integer
+        Public Property estado() As Boolean
             Get
                 Return mestado
             End Get
-            Set(ByVal value As Integer)
+            Set(ByVal value As Boolean)
                 mestado = value
             End Set
         End Property
@@ -187,12 +187,12 @@ Namespace BO
             End Set
         End Property
 
-        Public Property codigo_doc_ori() As String
+        Public Property cod_doc_ori() As String
             Get
-                Return mcodigo_doc_ori
+                Return mcod_doc_ori
             End Get
             Set(ByVal value As String)
-                mcodigo_doc_ori = value
+                mcod_doc_ori = value
             End Set
         End Property
 
@@ -207,11 +207,11 @@ Namespace BO
             End Set
         End Property
 
-        Public Property numero_doc_ori() As Integer
+        Public Property numero_doc_ori() As String
             Get
                 Return mnumero_doc_ori
             End Get
-            Set(ByVal value As Integer)
+            Set(ByVal value As String)
                 mnumero_doc_ori = value
             End Set
         End Property
@@ -225,12 +225,12 @@ Namespace BO
             End Set
         End Property
 
-        Public Property serie() As String
+        Public Property serie_int() As String
             Get
-                Return mserie
+                Return mserie_int
             End Get
             Set(ByVal value As String)
-                mserie = value
+                mserie_int = value
             End Set
         End Property
 
