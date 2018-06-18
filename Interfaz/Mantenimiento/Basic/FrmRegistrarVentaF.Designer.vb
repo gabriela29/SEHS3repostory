@@ -53,18 +53,24 @@ Partial Class FrmRegistrarVentaF
         Dim Appearance28 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
         Dim Appearance29 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
         Dim Appearance30 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmRegistrarVentaF))
         Dim Appearance31 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
         Dim Appearance32 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
         Dim Appearance33 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmRegistrarVentaF))
+        Dim Appearance34 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
+        Dim Appearance35 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
+        Dim Appearance36 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
         Me.bwdatos = New System.ComponentModel.BackgroundWorker()
         Me.UgvDatos = New Infragistics.Win.Misc.UltraGroupBox()
+        Me.txtcodigo_doc = New Infragistics.Win.Misc.UltraLabel()
+        Me.txtAlmacenId = New Infragistics.Win.Misc.UltraLabel()
+        Me.label = New Infragistics.Win.Misc.UltraLabel()
+        Me.almacen_id = New Infragistics.Win.Misc.UltraLabel()
         Me.labelaño = New Infragistics.Win.Misc.UltraLabel()
         Me.labeltablaid = New Infragistics.Win.Misc.UltraLabel()
         Me.labelmes = New Infragistics.Win.Misc.UltraLabel()
         Me.labeltabla = New Infragistics.Win.Misc.UltraLabel()
         Me.datefechao = New Infragistics.Win.UltraWinEditors.UltraDateTimeEditor()
-        Me.txtcodigodoc = New Infragistics.Win.UltraWinEditors.UltraTextEditor()
         Me.txtnumeroint = New Infragistics.Win.UltraWinEditors.UltraTextEditor()
         Me.txtserieint = New Infragistics.Win.UltraWinEditors.UltraTextEditor()
         Me.txtsigno = New Infragistics.Win.UltraWinEditors.UltraTextEditor()
@@ -87,7 +93,6 @@ Partial Class FrmRegistrarVentaF
         Me.UltraLabel23 = New Infragistics.Win.Misc.UltraLabel()
         Me.UltraLabel22 = New Infragistics.Win.Misc.UltraLabel()
         Me.UltraLabel21 = New Infragistics.Win.Misc.UltraLabel()
-        Me.UltraLabel20 = New Infragistics.Win.Misc.UltraLabel()
         Me.UltraLabel19 = New Infragistics.Win.Misc.UltraLabel()
         Me.UltraLabel18 = New Infragistics.Win.Misc.UltraLabel()
         Me.UltraLabel17 = New Infragistics.Win.Misc.UltraLabel()
@@ -116,7 +121,6 @@ Partial Class FrmRegistrarVentaF
         CType(Me.UgvDatos, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.UgvDatos.SuspendLayout()
         CType(Me.datefechao, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.txtcodigodoc, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.txtnumeroint, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.txtserieint, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.txtsigno, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -142,12 +146,15 @@ Partial Class FrmRegistrarVentaF
         '
         Appearance1.BackColor = System.Drawing.Color.WhiteSmoke
         Me.UgvDatos.Appearance = Appearance1
+        Me.UgvDatos.Controls.Add(Me.txtcodigo_doc)
+        Me.UgvDatos.Controls.Add(Me.txtAlmacenId)
+        Me.UgvDatos.Controls.Add(Me.label)
+        Me.UgvDatos.Controls.Add(Me.almacen_id)
         Me.UgvDatos.Controls.Add(Me.labelaño)
         Me.UgvDatos.Controls.Add(Me.labeltablaid)
         Me.UgvDatos.Controls.Add(Me.labelmes)
         Me.UgvDatos.Controls.Add(Me.labeltabla)
         Me.UgvDatos.Controls.Add(Me.datefechao)
-        Me.UgvDatos.Controls.Add(Me.txtcodigodoc)
         Me.UgvDatos.Controls.Add(Me.txtnumeroint)
         Me.UgvDatos.Controls.Add(Me.txtserieint)
         Me.UgvDatos.Controls.Add(Me.txtsigno)
@@ -170,7 +177,6 @@ Partial Class FrmRegistrarVentaF
         Me.UgvDatos.Controls.Add(Me.UltraLabel23)
         Me.UgvDatos.Controls.Add(Me.UltraLabel22)
         Me.UgvDatos.Controls.Add(Me.UltraLabel21)
-        Me.UgvDatos.Controls.Add(Me.UltraLabel20)
         Me.UgvDatos.Controls.Add(Me.UltraLabel19)
         Me.UgvDatos.Controls.Add(Me.UltraLabel18)
         Me.UgvDatos.Controls.Add(Me.UltraLabel17)
@@ -196,11 +202,59 @@ Partial Class FrmRegistrarVentaF
         Me.UgvDatos.Size = New System.Drawing.Size(816, 467)
         Me.UgvDatos.TabIndex = 0
         '
-        'labelaño
+        'txtcodigo_doc
         '
         Appearance2.BackColorAlpha = Infragistics.Win.Alpha.Transparent
         Appearance2.ForeColor = System.Drawing.Color.DodgerBlue
-        Me.labelaño.Appearance = Appearance2
+        Me.txtcodigo_doc.Appearance = Appearance2
+        Me.txtcodigo_doc.Font = New System.Drawing.Font("Arial", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtcodigo_doc.Location = New System.Drawing.Point(588, 338)
+        Me.txtcodigo_doc.Name = "txtcodigo_doc"
+        Me.txtcodigo_doc.Size = New System.Drawing.Size(32, 25)
+        Me.txtcodigo_doc.TabIndex = 104
+        Me.txtcodigo_doc.Text = "8"
+        '
+        'txtAlmacenId
+        '
+        Appearance3.BackColorAlpha = Infragistics.Win.Alpha.Transparent
+        Appearance3.ForeColor = System.Drawing.Color.DodgerBlue
+        Me.txtAlmacenId.Appearance = Appearance3
+        Me.txtAlmacenId.Font = New System.Drawing.Font("Arial", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtAlmacenId.Location = New System.Drawing.Point(737, 335)
+        Me.txtAlmacenId.Name = "txtAlmacenId"
+        Me.txtAlmacenId.Size = New System.Drawing.Size(30, 25)
+        Me.txtAlmacenId.TabIndex = 103
+        Me.txtAlmacenId.Text = "1"
+        '
+        'label
+        '
+        Appearance4.BackColorAlpha = Infragistics.Win.Alpha.Transparent
+        Appearance4.ForeColor = System.Drawing.Color.Navy
+        Me.label.Appearance = Appearance4
+        Me.label.Font = New System.Drawing.Font("Arial", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.label.Location = New System.Drawing.Point(503, 338)
+        Me.label.Name = "label"
+        Me.label.Size = New System.Drawing.Size(89, 45)
+        Me.label.TabIndex = 102
+        Me.label.Text = "Codigo de Documento:"
+        '
+        'almacen_id
+        '
+        Appearance5.BackColorAlpha = Infragistics.Win.Alpha.Transparent
+        Appearance5.ForeColor = System.Drawing.Color.Navy
+        Me.almacen_id.Appearance = Appearance5
+        Me.almacen_id.Font = New System.Drawing.Font("Arial", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.almacen_id.Location = New System.Drawing.Point(652, 335)
+        Me.almacen_id.Name = "almacen_id"
+        Me.almacen_id.Size = New System.Drawing.Size(75, 39)
+        Me.almacen_id.TabIndex = 101
+        Me.almacen_id.Text = "Almacen Id:"
+        '
+        'labelaño
+        '
+        Appearance6.BackColorAlpha = Infragistics.Win.Alpha.Transparent
+        Appearance6.ForeColor = System.Drawing.Color.DodgerBlue
+        Me.labelaño.Appearance = Appearance6
         Me.labelaño.Font = New System.Drawing.Font("Arial", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.labelaño.Location = New System.Drawing.Point(728, 434)
         Me.labelaño.Name = "labelaño"
@@ -210,9 +264,9 @@ Partial Class FrmRegistrarVentaF
         '
         'labeltablaid
         '
-        Appearance3.BackColorAlpha = Infragistics.Win.Alpha.Transparent
-        Appearance3.ForeColor = System.Drawing.Color.DodgerBlue
-        Me.labeltablaid.Appearance = Appearance3
+        Appearance7.BackColorAlpha = Infragistics.Win.Alpha.Transparent
+        Appearance7.ForeColor = System.Drawing.Color.DodgerBlue
+        Me.labeltablaid.Appearance = Appearance7
         Me.labeltablaid.Font = New System.Drawing.Font("Arial", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.labeltablaid.Location = New System.Drawing.Point(728, 386)
         Me.labeltablaid.Name = "labeltablaid"
@@ -222,9 +276,9 @@ Partial Class FrmRegistrarVentaF
         '
         'labelmes
         '
-        Appearance4.BackColorAlpha = Infragistics.Win.Alpha.Transparent
-        Appearance4.ForeColor = System.Drawing.Color.DodgerBlue
-        Me.labelmes.Appearance = Appearance4
+        Appearance8.BackColorAlpha = Infragistics.Win.Alpha.Transparent
+        Appearance8.ForeColor = System.Drawing.Color.DodgerBlue
+        Me.labelmes.Appearance = Appearance8
         Me.labelmes.Font = New System.Drawing.Font("Arial", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.labelmes.Location = New System.Drawing.Point(588, 434)
         Me.labelmes.Name = "labelmes"
@@ -234,9 +288,9 @@ Partial Class FrmRegistrarVentaF
         '
         'labeltabla
         '
-        Appearance5.BackColorAlpha = Infragistics.Win.Alpha.Transparent
-        Appearance5.ForeColor = System.Drawing.Color.DodgerBlue
-        Me.labeltabla.Appearance = Appearance5
+        Appearance9.BackColorAlpha = Infragistics.Win.Alpha.Transparent
+        Appearance9.ForeColor = System.Drawing.Color.DodgerBlue
+        Me.labeltabla.Appearance = Appearance9
         Me.labeltabla.Font = New System.Drawing.Font("Arial", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.labeltabla.Location = New System.Drawing.Point(588, 386)
         Me.labeltabla.Name = "labeltabla"
@@ -251,14 +305,6 @@ Partial Class FrmRegistrarVentaF
         Me.datefechao.Name = "datefechao"
         Me.datefechao.Size = New System.Drawing.Size(144, 21)
         Me.datefechao.TabIndex = 96
-        '
-        'txtcodigodoc
-        '
-        Me.txtcodigodoc.DisplayStyle = Infragistics.Win.EmbeddableElementDisplayStyle.Office2007
-        Me.txtcodigodoc.Location = New System.Drawing.Point(574, 342)
-        Me.txtcodigodoc.Name = "txtcodigodoc"
-        Me.txtcodigodoc.Size = New System.Drawing.Size(189, 21)
-        Me.txtcodigodoc.TabIndex = 95
         '
         'txtnumeroint
         '
@@ -406,9 +452,9 @@ Partial Class FrmRegistrarVentaF
         '
         'UltraLabel24
         '
-        Appearance6.BackColorAlpha = Infragistics.Win.Alpha.Transparent
-        Appearance6.ForeColor = System.Drawing.Color.Navy
-        Me.UltraLabel24.Appearance = Appearance6
+        Appearance10.BackColorAlpha = Infragistics.Win.Alpha.Transparent
+        Appearance10.ForeColor = System.Drawing.Color.Navy
+        Me.UltraLabel24.Appearance = Appearance10
         Me.UltraLabel24.Font = New System.Drawing.Font("Arial", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.UltraLabel24.Location = New System.Drawing.Point(689, 435)
         Me.UltraLabel24.Name = "UltraLabel24"
@@ -418,9 +464,9 @@ Partial Class FrmRegistrarVentaF
         '
         'UltraLabel23
         '
-        Appearance7.BackColorAlpha = Infragistics.Win.Alpha.Transparent
-        Appearance7.ForeColor = System.Drawing.Color.Navy
-        Me.UltraLabel23.Appearance = Appearance7
+        Appearance11.BackColorAlpha = Infragistics.Win.Alpha.Transparent
+        Appearance11.ForeColor = System.Drawing.Color.Navy
+        Me.UltraLabel23.Appearance = Appearance11
         Me.UltraLabel23.Font = New System.Drawing.Font("Arial", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.UltraLabel23.Location = New System.Drawing.Point(544, 434)
         Me.UltraLabel23.Name = "UltraLabel23"
@@ -430,9 +476,9 @@ Partial Class FrmRegistrarVentaF
         '
         'UltraLabel22
         '
-        Appearance8.BackColorAlpha = Infragistics.Win.Alpha.Transparent
-        Appearance8.ForeColor = System.Drawing.Color.Navy
-        Me.UltraLabel22.Appearance = Appearance8
+        Appearance12.BackColorAlpha = Infragistics.Win.Alpha.Transparent
+        Appearance12.ForeColor = System.Drawing.Color.Navy
+        Me.UltraLabel22.Appearance = Appearance12
         Me.UltraLabel22.Font = New System.Drawing.Font("Arial", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.UltraLabel22.Location = New System.Drawing.Point(668, 386)
         Me.UltraLabel22.Name = "UltraLabel22"
@@ -442,9 +488,9 @@ Partial Class FrmRegistrarVentaF
         '
         'UltraLabel21
         '
-        Appearance9.BackColorAlpha = Infragistics.Win.Alpha.Transparent
-        Appearance9.ForeColor = System.Drawing.Color.Navy
-        Me.UltraLabel21.Appearance = Appearance9
+        Appearance13.BackColorAlpha = Infragistics.Win.Alpha.Transparent
+        Appearance13.ForeColor = System.Drawing.Color.Navy
+        Me.UltraLabel21.Appearance = Appearance13
         Me.UltraLabel21.Font = New System.Drawing.Font("Arial", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.UltraLabel21.Location = New System.Drawing.Point(537, 386)
         Me.UltraLabel21.Name = "UltraLabel21"
@@ -452,23 +498,11 @@ Partial Class FrmRegistrarVentaF
         Me.UltraLabel21.TabIndex = 74
         Me.UltraLabel21.Text = "Tabla:"
         '
-        'UltraLabel20
-        '
-        Appearance10.BackColorAlpha = Infragistics.Win.Alpha.Transparent
-        Appearance10.ForeColor = System.Drawing.Color.Navy
-        Me.UltraLabel20.Appearance = Appearance10
-        Me.UltraLabel20.Font = New System.Drawing.Font("Arial", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.UltraLabel20.Location = New System.Drawing.Point(500, 338)
-        Me.UltraLabel20.Name = "UltraLabel20"
-        Me.UltraLabel20.Size = New System.Drawing.Size(78, 39)
-        Me.UltraLabel20.TabIndex = 73
-        Me.UltraLabel20.Text = "Código del Documento:"
-        '
         'UltraLabel19
         '
-        Appearance11.BackColorAlpha = Infragistics.Win.Alpha.Transparent
-        Appearance11.ForeColor = System.Drawing.Color.Navy
-        Me.UltraLabel19.Appearance = Appearance11
+        Appearance14.BackColorAlpha = Infragistics.Win.Alpha.Transparent
+        Appearance14.ForeColor = System.Drawing.Color.Navy
+        Me.UltraLabel19.Appearance = Appearance14
         Me.UltraLabel19.Font = New System.Drawing.Font("Arial", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.UltraLabel19.Location = New System.Drawing.Point(503, 297)
         Me.UltraLabel19.Name = "UltraLabel19"
@@ -478,9 +512,9 @@ Partial Class FrmRegistrarVentaF
         '
         'UltraLabel18
         '
-        Appearance12.BackColorAlpha = Infragistics.Win.Alpha.Transparent
-        Appearance12.ForeColor = System.Drawing.Color.Navy
-        Me.UltraLabel18.Appearance = Appearance12
+        Appearance15.BackColorAlpha = Infragistics.Win.Alpha.Transparent
+        Appearance15.ForeColor = System.Drawing.Color.Navy
+        Me.UltraLabel18.Appearance = Appearance15
         Me.UltraLabel18.Font = New System.Drawing.Font("Arial", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.UltraLabel18.Location = New System.Drawing.Point(519, 250)
         Me.UltraLabel18.Name = "UltraLabel18"
@@ -490,9 +524,9 @@ Partial Class FrmRegistrarVentaF
         '
         'UltraLabel17
         '
-        Appearance13.BackColorAlpha = Infragistics.Win.Alpha.Transparent
-        Appearance13.ForeColor = System.Drawing.Color.Navy
-        Me.UltraLabel17.Appearance = Appearance13
+        Appearance16.BackColorAlpha = Infragistics.Win.Alpha.Transparent
+        Appearance16.ForeColor = System.Drawing.Color.Navy
+        Me.UltraLabel17.Appearance = Appearance16
         Me.UltraLabel17.Font = New System.Drawing.Font("Arial", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.UltraLabel17.Location = New System.Drawing.Point(533, 206)
         Me.UltraLabel17.Name = "UltraLabel17"
@@ -502,9 +536,9 @@ Partial Class FrmRegistrarVentaF
         '
         'UltraLabel16
         '
-        Appearance14.BackColorAlpha = Infragistics.Win.Alpha.Transparent
-        Appearance14.ForeColor = System.Drawing.Color.Navy
-        Me.UltraLabel16.Appearance = Appearance14
+        Appearance17.BackColorAlpha = Infragistics.Win.Alpha.Transparent
+        Appearance17.ForeColor = System.Drawing.Color.Navy
+        Me.UltraLabel16.Appearance = Appearance17
         Me.UltraLabel16.Font = New System.Drawing.Font("Arial", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.UltraLabel16.Location = New System.Drawing.Point(463, 158)
         Me.UltraLabel16.Name = "UltraLabel16"
@@ -514,9 +548,9 @@ Partial Class FrmRegistrarVentaF
         '
         'UltraLabel15
         '
-        Appearance15.BackColorAlpha = Infragistics.Win.Alpha.Transparent
-        Appearance15.ForeColor = System.Drawing.Color.Navy
-        Me.UltraLabel15.Appearance = Appearance15
+        Appearance18.BackColorAlpha = Infragistics.Win.Alpha.Transparent
+        Appearance18.ForeColor = System.Drawing.Color.Navy
+        Me.UltraLabel15.Appearance = Appearance18
         Me.UltraLabel15.Font = New System.Drawing.Font("Arial", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.UltraLabel15.Location = New System.Drawing.Point(478, 121)
         Me.UltraLabel15.Name = "UltraLabel15"
@@ -526,9 +560,9 @@ Partial Class FrmRegistrarVentaF
         '
         'UltraLabel14
         '
-        Appearance16.BackColorAlpha = Infragistics.Win.Alpha.Transparent
-        Appearance16.ForeColor = System.Drawing.Color.Navy
-        Me.UltraLabel14.Appearance = Appearance16
+        Appearance19.BackColorAlpha = Infragistics.Win.Alpha.Transparent
+        Appearance19.ForeColor = System.Drawing.Color.Navy
+        Me.UltraLabel14.Appearance = Appearance19
         Me.UltraLabel14.Font = New System.Drawing.Font("Arial", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.UltraLabel14.Location = New System.Drawing.Point(467, 78)
         Me.UltraLabel14.Name = "UltraLabel14"
@@ -538,9 +572,9 @@ Partial Class FrmRegistrarVentaF
         '
         'UltraLabel13
         '
-        Appearance17.BackColorAlpha = Infragistics.Win.Alpha.Transparent
-        Appearance17.ForeColor = System.Drawing.Color.Navy
-        Me.UltraLabel13.Appearance = Appearance17
+        Appearance20.BackColorAlpha = Infragistics.Win.Alpha.Transparent
+        Appearance20.ForeColor = System.Drawing.Color.Navy
+        Me.UltraLabel13.Appearance = Appearance20
         Me.UltraLabel13.Font = New System.Drawing.Font("Arial", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.UltraLabel13.Location = New System.Drawing.Point(471, 45)
         Me.UltraLabel13.Name = "UltraLabel13"
@@ -550,9 +584,9 @@ Partial Class FrmRegistrarVentaF
         '
         'UltraLabel12
         '
-        Appearance18.BackColorAlpha = Infragistics.Win.Alpha.Transparent
-        Appearance18.ForeColor = System.Drawing.Color.Navy
-        Me.UltraLabel12.Appearance = Appearance18
+        Appearance21.BackColorAlpha = Infragistics.Win.Alpha.Transparent
+        Appearance21.ForeColor = System.Drawing.Color.Navy
+        Me.UltraLabel12.Appearance = Appearance21
         Me.UltraLabel12.Font = New System.Drawing.Font("Arial", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.UltraLabel12.Location = New System.Drawing.Point(131, 438)
         Me.UltraLabel12.Name = "UltraLabel12"
@@ -562,9 +596,9 @@ Partial Class FrmRegistrarVentaF
         '
         'UltraLabel11
         '
-        Appearance19.BackColorAlpha = Infragistics.Win.Alpha.Transparent
-        Appearance19.ForeColor = System.Drawing.Color.Navy
-        Me.UltraLabel11.Appearance = Appearance19
+        Appearance22.BackColorAlpha = Infragistics.Win.Alpha.Transparent
+        Appearance22.ForeColor = System.Drawing.Color.Navy
+        Me.UltraLabel11.Appearance = Appearance22
         Me.UltraLabel11.Font = New System.Drawing.Font("Arial", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.UltraLabel11.Location = New System.Drawing.Point(199, 389)
         Me.UltraLabel11.Name = "UltraLabel11"
@@ -574,9 +608,9 @@ Partial Class FrmRegistrarVentaF
         '
         'UltraLabel10
         '
-        Appearance20.BackColorAlpha = Infragistics.Win.Alpha.Transparent
-        Appearance20.ForeColor = System.Drawing.Color.Navy
-        Me.UltraLabel10.Appearance = Appearance20
+        Appearance23.BackColorAlpha = Infragistics.Win.Alpha.Transparent
+        Appearance23.ForeColor = System.Drawing.Color.Navy
+        Me.UltraLabel10.Appearance = Appearance23
         Me.UltraLabel10.Font = New System.Drawing.Font("Arial", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.UltraLabel10.Location = New System.Drawing.Point(53, 389)
         Me.UltraLabel10.Name = "UltraLabel10"
@@ -586,9 +620,9 @@ Partial Class FrmRegistrarVentaF
         '
         'UltraLabel9
         '
-        Appearance21.BackColorAlpha = Infragistics.Win.Alpha.Transparent
-        Appearance21.ForeColor = System.Drawing.Color.Navy
-        Me.UltraLabel9.Appearance = Appearance21
+        Appearance24.BackColorAlpha = Infragistics.Win.Alpha.Transparent
+        Appearance24.ForeColor = System.Drawing.Color.Navy
+        Me.UltraLabel9.Appearance = Appearance24
         Me.UltraLabel9.Font = New System.Drawing.Font("Arial", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.UltraLabel9.Location = New System.Drawing.Point(206, 338)
         Me.UltraLabel9.Name = "UltraLabel9"
@@ -598,9 +632,9 @@ Partial Class FrmRegistrarVentaF
         '
         'UltraLabel8
         '
-        Appearance22.BackColorAlpha = Infragistics.Win.Alpha.Transparent
-        Appearance22.ForeColor = System.Drawing.Color.Navy
-        Me.UltraLabel8.Appearance = Appearance22
+        Appearance25.BackColorAlpha = Infragistics.Win.Alpha.Transparent
+        Appearance25.ForeColor = System.Drawing.Color.Navy
+        Me.UltraLabel8.Appearance = Appearance25
         Me.UltraLabel8.Font = New System.Drawing.Font("Arial", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.UltraLabel8.Location = New System.Drawing.Point(33, 338)
         Me.UltraLabel8.Name = "UltraLabel8"
@@ -610,9 +644,9 @@ Partial Class FrmRegistrarVentaF
         '
         'UltraLabel7
         '
-        Appearance23.BackColorAlpha = Infragistics.Win.Alpha.Transparent
-        Appearance23.ForeColor = System.Drawing.Color.Navy
-        Me.UltraLabel7.Appearance = Appearance23
+        Appearance26.BackColorAlpha = Infragistics.Win.Alpha.Transparent
+        Appearance26.ForeColor = System.Drawing.Color.Navy
+        Me.UltraLabel7.Appearance = Appearance26
         Me.UltraLabel7.Font = New System.Drawing.Font("Arial", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.UltraLabel7.Location = New System.Drawing.Point(110, 290)
         Me.UltraLabel7.Name = "UltraLabel7"
@@ -622,9 +656,9 @@ Partial Class FrmRegistrarVentaF
         '
         'UltraLabel6
         '
-        Appearance24.BackColorAlpha = Infragistics.Win.Alpha.Transparent
-        Appearance24.ForeColor = System.Drawing.Color.Navy
-        Me.UltraLabel6.Appearance = Appearance24
+        Appearance27.BackColorAlpha = Infragistics.Win.Alpha.Transparent
+        Appearance27.ForeColor = System.Drawing.Color.Navy
+        Me.UltraLabel6.Appearance = Appearance27
         Me.UltraLabel6.Font = New System.Drawing.Font("Arial", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.UltraLabel6.Location = New System.Drawing.Point(26, 250)
         Me.UltraLabel6.Name = "UltraLabel6"
@@ -634,9 +668,9 @@ Partial Class FrmRegistrarVentaF
         '
         'UltraLabel5
         '
-        Appearance25.BackColorAlpha = Infragistics.Win.Alpha.Transparent
-        Appearance25.ForeColor = System.Drawing.Color.Navy
-        Me.UltraLabel5.Appearance = Appearance25
+        Appearance28.BackColorAlpha = Infragistics.Win.Alpha.Transparent
+        Appearance28.ForeColor = System.Drawing.Color.Navy
+        Me.UltraLabel5.Appearance = Appearance28
         Me.UltraLabel5.Font = New System.Drawing.Font("Arial", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.UltraLabel5.Location = New System.Drawing.Point(47, 206)
         Me.UltraLabel5.Name = "UltraLabel5"
@@ -646,9 +680,9 @@ Partial Class FrmRegistrarVentaF
         '
         'UltraLabel4
         '
-        Appearance26.BackColorAlpha = Infragistics.Win.Alpha.Transparent
-        Appearance26.ForeColor = System.Drawing.Color.Navy
-        Me.UltraLabel4.Appearance = Appearance26
+        Appearance29.BackColorAlpha = Infragistics.Win.Alpha.Transparent
+        Appearance29.ForeColor = System.Drawing.Color.Navy
+        Me.UltraLabel4.Appearance = Appearance29
         Me.UltraLabel4.Font = New System.Drawing.Font("Arial", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.UltraLabel4.Location = New System.Drawing.Point(58, 161)
         Me.UltraLabel4.Name = "UltraLabel4"
@@ -658,9 +692,9 @@ Partial Class FrmRegistrarVentaF
         '
         'UltraLabel3
         '
-        Appearance27.BackColorAlpha = Infragistics.Win.Alpha.Transparent
-        Appearance27.ForeColor = System.Drawing.Color.Navy
-        Me.UltraLabel3.Appearance = Appearance27
+        Appearance30.BackColorAlpha = Infragistics.Win.Alpha.Transparent
+        Appearance30.ForeColor = System.Drawing.Color.Navy
+        Me.UltraLabel3.Appearance = Appearance30
         Me.UltraLabel3.Font = New System.Drawing.Font("Arial", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.UltraLabel3.Location = New System.Drawing.Point(80, 121)
         Me.UltraLabel3.Name = "UltraLabel3"
@@ -670,9 +704,9 @@ Partial Class FrmRegistrarVentaF
         '
         'UltraLabel1
         '
-        Appearance28.BackColorAlpha = Infragistics.Win.Alpha.Transparent
-        Appearance28.ForeColor = System.Drawing.Color.Navy
-        Me.UltraLabel1.Appearance = Appearance28
+        Appearance31.BackColorAlpha = Infragistics.Win.Alpha.Transparent
+        Appearance31.ForeColor = System.Drawing.Color.Navy
+        Me.UltraLabel1.Appearance = Appearance31
         Me.UltraLabel1.Font = New System.Drawing.Font("Arial", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.UltraLabel1.Location = New System.Drawing.Point(73, 75)
         Me.UltraLabel1.Name = "UltraLabel1"
@@ -682,9 +716,9 @@ Partial Class FrmRegistrarVentaF
         '
         'UltraLabel2
         '
-        Appearance29.BackColorAlpha = Infragistics.Win.Alpha.Transparent
-        Appearance29.ForeColor = System.Drawing.Color.Navy
-        Me.UltraLabel2.Appearance = Appearance29
+        Appearance32.BackColorAlpha = Infragistics.Win.Alpha.Transparent
+        Appearance32.ForeColor = System.Drawing.Color.Navy
+        Me.UltraLabel2.Appearance = Appearance32
         Me.UltraLabel2.Font = New System.Drawing.Font("Arial", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.UltraLabel2.Location = New System.Drawing.Point(53, 45)
         Me.UltraLabel2.Name = "UltraLabel2"
@@ -694,11 +728,11 @@ Partial Class FrmRegistrarVentaF
         '
         'btnCerrar1
         '
-        Appearance30.BackColor = System.Drawing.Color.White
-        Appearance30.BackColor2 = System.Drawing.SystemColors.GradientInactiveCaption
-        Appearance30.BackGradientStyle = Infragistics.Win.GradientStyle.Vertical
-        Appearance30.Image = CType(resources.GetObject("Appearance30.Image"), Object)
-        Me.btnCerrar1.Appearance = Appearance30
+        Appearance33.BackColor = System.Drawing.Color.White
+        Appearance33.BackColor2 = System.Drawing.SystemColors.GradientInactiveCaption
+        Appearance33.BackGradientStyle = Infragistics.Win.GradientStyle.Vertical
+        Appearance33.Image = CType(resources.GetObject("Appearance33.Image"), Object)
+        Me.btnCerrar1.Appearance = Appearance33
         Me.btnCerrar1.ButtonStyle = Infragistics.Win.UIElementButtonStyle.Office2007RibbonButton
         Me.btnCerrar1.DialogResult = System.Windows.Forms.DialogResult.Cancel
         Me.btnCerrar1.Location = New System.Drawing.Point(305, 520)
@@ -710,11 +744,11 @@ Partial Class FrmRegistrarVentaF
         '
         'labelTitulo
         '
-        Appearance31.BackColorAlpha = Infragistics.Win.Alpha.Transparent
-        Appearance31.ForeColor = System.Drawing.Color.Azure
-        Appearance31.TextHAlignAsString = "Center"
-        Appearance31.TextVAlignAsString = "Middle"
-        Me.labelTitulo.Appearance = Appearance31
+        Appearance34.BackColorAlpha = Infragistics.Win.Alpha.Transparent
+        Appearance34.ForeColor = System.Drawing.Color.Azure
+        Appearance34.TextHAlignAsString = "Center"
+        Appearance34.TextVAlignAsString = "Middle"
+        Me.labelTitulo.Appearance = Appearance34
         Me.labelTitulo.Font = New System.Drawing.Font("Perpetua Titling MT", 12.0!, System.Drawing.FontStyle.Bold)
         Me.labelTitulo.Location = New System.Drawing.Point(344, 4)
         Me.labelTitulo.Name = "labelTitulo"
@@ -739,10 +773,10 @@ Partial Class FrmRegistrarVentaF
         '
         'lblErrorR
         '
-        Appearance32.BackColorAlpha = Infragistics.Win.Alpha.Transparent
-        Appearance32.ForeColor = System.Drawing.Color.Navy
-        Appearance32.TextVAlignAsString = "Middle"
-        Me.lblErrorR.Appearance = Appearance32
+        Appearance35.BackColorAlpha = Infragistics.Win.Alpha.Transparent
+        Appearance35.ForeColor = System.Drawing.Color.Navy
+        Appearance35.TextVAlignAsString = "Middle"
+        Me.lblErrorR.Appearance = Appearance35
         Me.lblErrorR.Font = New System.Drawing.Font("Arial", 8.25!)
         Me.lblErrorR.Location = New System.Drawing.Point(34, 520)
         Me.lblErrorR.Name = "lblErrorR"
@@ -751,11 +785,11 @@ Partial Class FrmRegistrarVentaF
         '
         'BtnGuardar
         '
-        Appearance33.BackColor = System.Drawing.Color.White
-        Appearance33.BackColor2 = System.Drawing.SystemColors.GradientInactiveCaption
-        Appearance33.BackGradientStyle = Infragistics.Win.GradientStyle.Vertical
-        Appearance33.Image = CType(resources.GetObject("Appearance33.Image"), Object)
-        Me.BtnGuardar.Appearance = Appearance33
+        Appearance36.BackColor = System.Drawing.Color.White
+        Appearance36.BackColor2 = System.Drawing.SystemColors.GradientInactiveCaption
+        Appearance36.BackGradientStyle = Infragistics.Win.GradientStyle.Vertical
+        Appearance36.Image = CType(resources.GetObject("Appearance36.Image"), Object)
+        Me.BtnGuardar.Appearance = Appearance36
         Me.BtnGuardar.ButtonStyle = Infragistics.Win.UIElementButtonStyle.Office2007RibbonButton
         Me.BtnGuardar.Location = New System.Drawing.Point(426, 520)
         Me.BtnGuardar.Name = "BtnGuardar"
@@ -783,7 +817,6 @@ Partial Class FrmRegistrarVentaF
         Me.UgvDatos.ResumeLayout(False)
         Me.UgvDatos.PerformLayout()
         CType(Me.datefechao, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.txtcodigodoc, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.txtnumeroint, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.txtserieint, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.txtsigno, System.ComponentModel.ISupportInitialize).EndInit()
@@ -828,13 +861,11 @@ Partial Class FrmRegistrarVentaF
     Friend WithEvents UltraLabel16 As Infragistics.Win.Misc.UltraLabel
     Friend WithEvents UltraLabel15 As Infragistics.Win.Misc.UltraLabel
     Friend WithEvents UltraLabel14 As Infragistics.Win.Misc.UltraLabel
-    Friend WithEvents UltraLabel20 As Infragistics.Win.Misc.UltraLabel
     Friend WithEvents UltraLabel19 As Infragistics.Win.Misc.UltraLabel
     Friend WithEvents UltraLabel24 As Infragistics.Win.Misc.UltraLabel
     Friend WithEvents UltraLabel23 As Infragistics.Win.Misc.UltraLabel
     Friend WithEvents UltraLabel22 As Infragistics.Win.Misc.UltraLabel
     Friend WithEvents UltraLabel21 As Infragistics.Win.Misc.UltraLabel
-    Friend WithEvents txtcodigodoc As Infragistics.Win.UltraWinEditors.UltraTextEditor
     Friend WithEvents txtnumeroint As Infragistics.Win.UltraWinEditors.UltraTextEditor
     Friend WithEvents txtserieint As Infragistics.Win.UltraWinEditors.UltraTextEditor
     Friend WithEvents txtsigno As Infragistics.Win.UltraWinEditors.UltraTextEditor
@@ -863,4 +894,8 @@ Partial Class FrmRegistrarVentaF
     Friend WithEvents ErrorProvider1 As ErrorProvider
     Friend WithEvents lblErrorR As Infragistics.Win.Misc.UltraLabel
     Friend WithEvents BtnGuardar As Infragistics.Win.Misc.UltraButton
+    Friend WithEvents txtcodigo_doc As Infragistics.Win.Misc.UltraLabel
+    Friend WithEvents txtAlmacenId As Infragistics.Win.Misc.UltraLabel
+    Friend WithEvents label As Infragistics.Win.Misc.UltraLabel
+    Friend WithEvents almacen_id As Infragistics.Win.Misc.UltraLabel
 End Class

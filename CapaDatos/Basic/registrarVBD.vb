@@ -106,12 +106,11 @@ Namespace Dal
 
 
 
-        Public Shared Function Actualizar(ByVal objR As registrarv, ByVal varralmacenid As String)
-
+        Public Shared Function Actualizar(ByVal objR As registrarv, ByVal varralmacenid As String) As DataTable
             Dim vCadena As String = ""
 
             Try
-                vCadena = "select * from contable.paregistro_venta_actualizar1 ( "
+                vCadena = "select * from contable.spi_registro_ventas ( "
                 vCadena = vCadena & " " & IIf(objR.codigo_per > 0, "false", "true") & ", "
                 vCadena = vCadena & " " & Trim(Str(objR.codigo_per)) & ", "
                 vCadena = vCadena & " '" & Trim(objR.emision) & "',"
@@ -161,9 +160,8 @@ Namespace Dal
 
             Try
                 vCadena = "select * from contable.paregistro_venta_eliminar( "
-                vCadena = vCadena & " " & Trim(Str(vcodigo_per)) & ", "
-                vCadena = vCadena & " " & Trim(vUsuario) & ", "
-                vCadena = vCadena & " '" & Trim(vIp) & "');"
+                vCadena = vCadena & " " & Trim(Str(vcodigo_per)) & " ');"
+
 
 
                 Dim oConexion As New clsConexion

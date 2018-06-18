@@ -37,7 +37,6 @@ Public Class FrmRegistrarVentaF
             txtsigno.Text = dtRow("signo")
             txtserieint.Text = dtRow("serie_int")
             txtnumeroint.Text = dtRow("numero_int")
-            txtcodigodoc.Text = dtRow("codigo_doc")
             labeltabla.Text = dtRow("tabla")
             labeltablaid.Text = dtRow("tablaid")
             labelmes.Text = dtRow("mes")
@@ -233,12 +232,21 @@ Public Class FrmRegistrarVentaF
 
         End If
 
-        If Trim(txtcodigodoc.Text) = "" Then
+        If Trim(txtcodigo_doc.Text) = "" Then
             valido = False
-            ErrorProvider1.SetError(txtcodigodoc, "Debe ingresar el código")
-            CamposConError.Add("CODIGO-INT")
+            ErrorProvider1.SetError(txtcodigo_doc, "Debe ingresar el codigo_doc")
+            CamposConError.Add("CODIGO-DOC")
         Else
-            ErrorProvider1.SetError(txtcodigodoc, Nothing)
+            ErrorProvider1.SetError(txtcodigo_doc, Nothing)
+
+        End If
+
+        If Trim(txtAlmacenId.Text) = "" Then
+            valido = False
+            ErrorProvider1.SetError(txtAlmacenId, "Debe ingresar el almacenid")
+            CamposConError.Add("ALMACEN-INT")
+        Else
+            ErrorProvider1.SetError(txtAlmacenId, Nothing)
 
         End If
 
@@ -317,7 +325,8 @@ Public Class FrmRegistrarVentaF
                 .signo = txtsigno.Text.Trim & ""
                 .serie_int = txtserieint.Text.Trim & ""
                 .numero_int = txtnumeroint.Text.Trim & ""
-                .codigo_doc = txtcodigodoc.Text.Trim & ""
+                .codigo_doc = txtcodigo_doc.Text.Trim & ""
+                .almacenaid = txtAlmacenId.Text.Trim & ""
                 .tabla = labeltabla.Text.Trim & ""
                 .idtabla = labeltablaid.Text.Trim & ""
                 .mes = labelmes.Text.Trim & ""
@@ -358,9 +367,6 @@ Public Class FrmRegistrarVentaF
 
                 labelmes.Text = objRe.mes
                 labelaño.Text = objRe.anio
-
-
-
 
 
             End If

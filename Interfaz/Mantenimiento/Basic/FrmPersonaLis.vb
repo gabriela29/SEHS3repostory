@@ -64,7 +64,7 @@ Public Class FrmPersonaLis
     End Sub
 
     Public Function Eliminar(ByVal _id As Integer) As Boolean
-        'Eliminar = personaManager.Eliminar(_id, GestionSeguridadManager.idUsuario, GestionSeguridadManager.miIP)
+        Eliminar = personaManager.Eliminar(_id, GestionSeguridadManager.idUsuario, GestionSeguridadManager.miIP)
     End Function
 
     Private Sub dgvListado_BeforeSelectChange(ByVal sender As Object, ByVal e As Infragistics.Win.UltraWinGrid.BeforeSelectChangeEventArgs) Handles dgvListado.BeforeSelectChange

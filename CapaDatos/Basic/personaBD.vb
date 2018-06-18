@@ -187,6 +187,7 @@ Namespace Dal
 
         End Function
 
+
         Public Shared Function Actualizar(ByVal objP As persona, ByVal varrphone As String, ByVal varremail As String,
                                           ByVal varrsocialmedia As String, ByVal varrrol As String, ByVal varrdireccion As String) As DataTable
             Dim vCadena As String = ""
