@@ -42,6 +42,7 @@ Public Class FrmRegistrar_VentaLis
 
         Catch ex As Exception
             MsgBox(ex.Message)
+
         End Try
     End Function
 
