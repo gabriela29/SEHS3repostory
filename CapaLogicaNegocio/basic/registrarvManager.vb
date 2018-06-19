@@ -16,9 +16,8 @@ Namespace BLL
             Return registrarVBD.GetItem(codigo_registrarv)
         End Function
 
-        Public Shared Function GetList(ByVal vcodigo_per As Integer, ByVal vidalmacen As Integer,
-                                       ByVal vmes As Integer, ByVal vanio As Integer, ByVal vproceso As String,
-                                       ByVal varrrol As String, vfilas As Long) As DataTable
+        Public Shared Function GetList(ByVal vidalmacen As Integer, ByVal vmes As Integer, ByVal vanio As Integer, ByVal vproceso As String,
+                                       ByVal varrrol As String, ByVal vfilas As Long, ByVal vcodigo_per As Integer) As DataTable
             Return registrarVBD.GetList(vcodigo_per, vidalmacen, vmes, vanio, vproceso, varrrol, vfilas)
         End Function
 
@@ -62,15 +61,6 @@ Namespace BLL
             End Try
             Return Eliminar_Registrar
         End Function
-
-
-
-
-
-
-
-
-
 
 
     End Class

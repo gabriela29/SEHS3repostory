@@ -43,7 +43,7 @@ Namespace Dal
 
         Public Shared Function GetList(ByVal vcodigo_per As Integer, ByVal vidalmacen As Integer,
                                        ByVal vmes As Integer, ByVal vanio As Integer, ByVal vproceso As String,
-                                       ByVal varrrol As String, vfilas As Long) As DataTable
+                                       ByVal varrrol As String, ByVal vfilas As Long) As DataTable
             Dim TempList As New DataTable
             Dim vConsulta As String
             Dim oConexion As New clsConexion
