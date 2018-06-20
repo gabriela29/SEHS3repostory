@@ -2710,9 +2710,6 @@ Partial Class FrmPersonaEdit
         '
         Me.ErrorProvider1.ContainerControl = Me
         '
-        'ToolTip1
-        '
-        '
         'FrmPersonaEdit
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)

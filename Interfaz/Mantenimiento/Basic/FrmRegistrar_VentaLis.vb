@@ -33,7 +33,7 @@ Public Class FrmRegistrar_VentaLis
 
 
         Try
-            '  ListadoRegistros = registrarvManager.GetList(Integer.Parse(txtalmacen.Text), Integer.Parse(txtmes.Text), Integer.Parse(txtanio.Text), "", 0)
+            ListadoRegistros = registrarvManager.GetList(txtalmacen.Text, txtmes.Text, txtanio.Text, "", vArray, xLimit, 0)
             dgvListadoregis.DataSource = ListadoRegistros
             'dgvListado.DataBind()
             If dgvListadoregis.Rows.Count() > 0 Then
