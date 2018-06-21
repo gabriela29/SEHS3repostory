@@ -41,12 +41,13 @@ Namespace Dal
 
 
 
-        Public Shared Function GetList(ByVal vcodigo_per As Integer, ByVal vidalmacen As Integer,
+        Public Shared Function GetList(ByVal vidalmacen As Integer,
                                        ByVal vmes As Integer, ByVal vanio As Integer, ByVal vproceso As String,
-                                       ByVal varrrol As String, ByVal vfilas As Long) As DataTable
+                                       ByVal varrrol As String, ByVal vfilas As Integer, ByVal vcodigo_per As Integer) As DataTable
             Dim TempList As New DataTable
             Dim vConsulta As String
             Dim oConexion As New clsConexion
+
 
 
             Try
@@ -57,7 +58,7 @@ Namespace Dal
                 vConsulta = vConsulta & " '" & vproceso & "',"
                 vConsulta = vConsulta & " " & IIf(varrrol.Trim = "", "null", varrrol) & ","
                 vConsulta = vConsulta & " " & vfilas & ","
-                vConsulta = vConsulta & " '" & vcodigo_per & ");"
+                vConsulta = vConsulta & " " & vcodigo_per & ");"
 
                 TempList = oConexion.Ejecutar_Consulta(vConsulta)
                 oConexion.Cerrar_Conexion()

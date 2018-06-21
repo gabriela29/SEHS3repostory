@@ -22,7 +22,9 @@ Public Class FrmRegistrar_VentaLis
         Dim vArray As String = "", vTiene As Boolean = False
         Dim dgvRw As UltraGridRow
         xLimit = Integer.Parse(txtLimite.Text)
-
+        Dim mesentero As Integer
+        Dim anioentero As Integer
+        Dim almacenentero As Integer
 
         If vTiene Then
             vArray = Mid(vArray, 1, Len(vArray) - 1)
@@ -31,9 +33,31 @@ Public Class FrmRegistrar_VentaLis
             vArray = "null"
         End If
 
+        If txtalmacen.Text = "" Then
+            ' txtmes.Text = 0
+            almacenentero = 0
+        Else
+            almacenentero = Integer.Parse(txtalmacen.Text)
+        End If
+
+        If txtmes.Text = "" Then
+            ' txtmes.Text = 0
+            mesentero = 0
+        Else
+            mesentero = Integer.Parse(txtmes.Text)
+        End If
+
+        If txtanio.Text = "" Then
+            'txtanio.Text = 0
+            anioentero = 0
+
+        Else
+            anioentero = Integer.Parse(txtanio.Text)
+        End If
 
         Try
-            ListadoRegistros = registrarvManager.GetList(txtalmacen.Text, txtmes.Text, txtanio.Text, "", vArray, xLimit, 0)
+
+            ListadoRegistros = registrarvManager.GetList(almacenentero, mesentero, anioentero, "", vArray, xLimit, 0)
             dgvListadoregis.DataSource = ListadoRegistros
             'dgvListado.DataBind()
             If dgvListadoregis.Rows.Count() > 0 Then
