@@ -56,7 +56,7 @@ Namespace Dal
                 vConsulta = vConsulta & " " & vmes & ","
                 vConsulta = vConsulta & " " & vanio & ","
                 vConsulta = vConsulta & " '" & vproceso & "',"
-                vConsulta = vConsulta & " " & IIf(varrrol.Trim = "", "null", varrrol) & ","
+                vConsulta = vConsulta & " '" & IIf(varrrol.Trim = "", "null", varrrol) & "',"
                 vConsulta = vConsulta & " " & vfilas & ","
                 vConsulta = vConsulta & " " & vcodigo_per & ");"
 
