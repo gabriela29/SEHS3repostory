@@ -111,7 +111,7 @@ Namespace Dal
             Dim vCadena As String = ""
 
             Try
-                vCadena = "select * from contable.spi_registro_ventas ( "
+                vCadena = "select * from contable.paregistro_venta ( "
                 vCadena = vCadena & " " & IIf(objR.codigo_per > 0, "false", "true") & ", "
                 vCadena = vCadena & " " & Trim(Str(objR.codigo_per)) & ", "
                 vCadena = vCadena & " '" & Trim(objR.emision) & "',"
