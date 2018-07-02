@@ -7,13 +7,18 @@ Imports Infragistics.Win.UltraWinGrid
 
 Public Class FrmRegistrarVentaF
     Public pregistrarvId As Long, swNuevo As Boolean
-    Public xcodigoId As Long, xnombre_c As String, xcodigo_sunat As String, xnumero As String, xtipo_documento_per As String, xnumero_doc_per As String, xpersona As String
+    Public xalmacenaid As Long, xnombre_c As String, xcodigo_sunat As String, xnumero As String, xtipo_documento_per As String, xnumero_doc_per As String, xpersona As String
     Public xafecto As Long, xnoafecto As Long
 
     Public dtDatos As DataTable
 
+    Private Sub txtnombrec_ValueChanged(sender As Object, e As EventArgs) Handles txtnombrec.ValueChanged
 
+    End Sub
 
+    Private Sub UgvDatos_Click(sender As Object, e As EventArgs) Handles UgvDatos.Click
+
+    End Sub
 
     Private Sub Mostrar_Registro()
         Dim dtRow As DataRow
@@ -41,6 +46,7 @@ Public Class FrmRegistrarVentaF
             labeltablaid.Text = dtRow("tablaid")
             labelmes.Text = dtRow("mes")
             labelaño.Text = dtRow("anio")
+
 
         Next
 
@@ -70,6 +76,7 @@ Public Class FrmRegistrarVentaF
         Dim valido As Boolean = True
         Dim CamposConError As New Specialized.StringCollection
         Dim campo As String
+
 
         If Not IsDate(datefechae.Value) Then
 
@@ -232,23 +239,7 @@ Public Class FrmRegistrarVentaF
 
         End If
 
-        If Trim(txtcodigo_doc.Text) = "" Then
-            valido = False
-            ErrorProvider1.SetError(txtcodigo_doc, "Debe ingresar el codigo_doc")
-            CamposConError.Add("CODIGO-DOC")
-        Else
-            ErrorProvider1.SetError(txtcodigo_doc, Nothing)
 
-        End If
-
-        If Trim(txtAlmacenId.Text) = "" Then
-            valido = False
-            ErrorProvider1.SetError(txtAlmacenId, "Debe ingresar el almacenid")
-            CamposConError.Add("ALMACEN-INT")
-        Else
-            ErrorProvider1.SetError(txtAlmacenId, Nothing)
-
-        End If
 
         If labeltabla.Text = "" Then
             valido = False
@@ -299,13 +290,13 @@ Public Class FrmRegistrarVentaF
             fechao = LibreriasFormularios.Formato_Fecha(datefechao.Value)
 
             With objR
-                If xcodigoId > 0 Then
-                    .codigo_per = xcodigoId
+                If xalmacenaid > 0 Then
+                    .almacenaid = xalmacenaid
 
                 Else
-                    .codigo_per = 0
+                    .almacenaid = 0
                 End If
-
+                .codigo_per = Textcodigo_doc.Text.Trim & ""
                 .emision = fechae
                 .nombre_corto = txtnombrec.Text.Trim & ""
                 .codigo_sunat = txtcodigosu.Text.Trim & ""
@@ -318,6 +309,7 @@ Public Class FrmRegistrarVentaF
                 .igv = txtigv.Text.Trim & ""
                 .descuento = txtdescuento.Text.Trim & ""
                 .total = txtcantidadtotal.Text.Trim & ""
+                .codigo_doc = Textcodigo_doc.Text.Trim & ""
                 .fecha_doc_ori = fechao
                 .cod_doc_ori = txtcodigoo.Text.Trim & ""
                 .serie_doc_ori = txtserieo.Text.Trim & ""
@@ -325,8 +317,6 @@ Public Class FrmRegistrarVentaF
                 .signo = txtsigno.Text.Trim & ""
                 .serie_int = txtserieint.Text.Trim & ""
                 .numero_int = txtnumeroint.Text.Trim & ""
-                .codigo_doc = txtcodigo_doc.Text.Trim & ""
-                .almacenaid = txtAlmacenId.Text.Trim & ""
                 .tabla = labeltabla.Text.Trim & ""
                 .idtabla = labeltablaid.Text.Trim & ""
                 .mes = labelmes.Text.Trim & ""
