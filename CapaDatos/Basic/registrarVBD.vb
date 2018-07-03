@@ -112,10 +112,10 @@ Namespace Dal
 
             Try
                 vCadena = "select * from contable.paregistro_venta_actualizar1( "
-                vCadena = vCadena & " " & IIf(objR.almacenaid > 0, "false", "true") & ", "
+                vCadena = vCadena & " " & IIf(objR.almacenaid > 0, "false", "true") & ", '"
                 vCadena = vCadena & " " & Trim(objR.codigo_doc) & ","
                 vCadena = vCadena & " " & Trim(Str(objR.codigo_per)) & ", "
-                vCadena = vCadena & " " & Trim(objR.emision) & "',"
+                vCadena = vCadena & " '" & Trim(objR.emision) & "',"
                 vCadena = vCadena & " '" & Trim(objR.nombre_corto) & "',"
                 vCadena = vCadena & " '" & Trim(objR.codigo_sunat) & "',"
                 vCadena = vCadena & " '" & Trim(objR.numero) & "',"
