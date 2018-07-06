@@ -6,8 +6,9 @@ Imports CapaLogicaNegocio.Bll
 
 
 Public Class FrmCatalogo
-  Public _codigo As Long, pCod_Cat As Integer
-  Public ListadoRegistros As DataTable
+    Public _codigo As Long, pCod_Cat As Integer
+    Public swNuevo As Boolean
+    Public ListadoRegistros As DataTable
 
   Private Sub FrmCatalogo_KeyDown(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyEventArgs) Handles Me.KeyDown
     If e.KeyCode = Keys.F12 Then
@@ -142,9 +143,9 @@ Public Class FrmCatalogo
   Private Sub Nuevo()
     'Call FrmProductoNM.LimpiarControles()
     Dim vTienePermiso As Boolean = False
-    Call LibreriasFormularios.TienePermiso(GestionSeguridadManager.idUsuario, "producto-add", vTienePermiso)
+        Call LibreriasFormularios.TienePermiso(GestionSeguridadManager.idUsuario, "producto-add", vTienePermiso)
 
-    If GestionSeguridadManager.sUsuario = "admin" Or vTienePermiso Then
+        If GestionSeguridadManager.sUsuario = "admin" Or vTienePermiso Then
       Dim frmCP As New FrmProductoNM
       With frmCP
         .xNew = False
@@ -347,7 +348,13 @@ Public Class FrmCatalogo
     Call LibreriasFormularios.Ver_Form(frm, "Catalo Alm.")
   End Sub
 
-  Private Sub tsReporte_Click(sender As Object, e As EventArgs) Handles tsReporte.Click
-    Call LibreriasFormularios.Exportar_UltraGrid_Excel(dgvListado, utExcel, "Asistente.xls")
-  End Sub
+    Private Sub btncategoria_Click(sender As Object, e As EventArgs) Handles btncategoria.Click
+        Dim frm As FrmCategorias_Sub = New FrmCategorias_Sub
+        frm.swNuevo = True
+        frm.ShowDialog()
+    End Sub
+
+    Private Sub tsReporte_Click(sender As Object, e As EventArgs) Handles tsReporte.Click
+        Call LibreriasFormularios.Exportar_UltraGrid_Excel(dgvListado, utExcel, "Asistente.xls")
+    End Sub
 End Class

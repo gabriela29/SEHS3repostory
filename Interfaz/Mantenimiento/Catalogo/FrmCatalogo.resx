@@ -112,12 +112,12 @@
     <value>2.0</value>
   </resheader>
   <resheader name="reader">
-    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <resheader name="writer">
-    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="Appearance2.ImageBackground" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACIAAAAVCAYAAAAjODzXAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6
@@ -285,6 +285,9 @@
         G65IB9vyVDYmAAAAAElFTkSuQmCC
 </value>
   </data>
+  <metadata name="TpCliente.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>26, 5</value>
+  </metadata>
   <data name="picAjaxBig.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         R0lGODlhMgAyAPIAAP///wCA/zaa/gCA/5zN/uLw/sLg/nC3/iH/C05FVFNDQVBFMi4wAwEAAAAh/hpD
@@ -398,9 +401,6 @@
         AloCADsAAAAAAAAAAAA=
 </value>
   </data>
-  <metadata name="TpCliente.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>26, 5</value>
-  </metadata>
   <data name="TpNuevo.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
@@ -421,17 +421,17 @@
   <data name="TpModificar.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         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
-        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
+        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
 </value>
   </data>
   <data name="TpEliminar.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
@@ -459,7 +459,7 @@
         VwrA/Rtn/QiKfADckGXYsnwKqAAAAABJRU5ErkJggg==
 </value>
   </data>
-  <metadata name="bwLlenar_Grid.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+  <metadata name="bwLlenar_Grid.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>166, 5</value>
   </metadata>
   <data name="UltraPictureBox1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
@@ -635,10 +635,10 @@
         2vq7EGa6Bd6/HSEQ8Pk3QQb9L5z75Cu723JIAAAAAElFTkSuQmCC
 </value>
   </data>
-  <metadata name="utExcel.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+  <metadata name="utExcel.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>348, 6</value>
   </metadata>
-  <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>38</value>
   </metadata>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">

@@ -83,7 +83,30 @@ Namespace Dal
             Finally
                 oSP = Nothing
             End Try
+            'Dim vCadena As String = ""
+            'Try
+
+            '    vCadena = "select * from catalogo.pacategoria_actualizar2( "
+            '    vCadena = vCadena & " " & IIf(objc.categoriaid > 0, "false", "true") & ", "
+            '    vCadena = vCadena & " " & Trim(Str(objc.categoriaid)) & ","
+            '    vCadena = vCadena & " '" & Trim(objc.nombre) & "', "
+            '    vCadena = vCadena & " '" & Trim(objc.abrev) & "' "
+
+
+
+
+            '    vCadena = vCadena & ")"
+
+            '    Dim oConexion As New clsConexion
+            '    Grabar = oConexion.Ejecutar_Consulta(vCadena)
+            '    oConexion.Cerrar_Conexion()
+            '    oConexion = Nothing
+            'Finally
+            '    vCadena = ""
+            'End Try
         End Function
+
+
 
         Public Shared Function Eliminar(ByVal vCategoriaId As Integer) As DataTable
             Dim oSP As New clsStored_Procedure("catalogo.pacategoria_eliminar")

@@ -47,7 +47,6 @@ Public Class FrmRegistrarVentaF
             labelmes.Text = dtRow("mes")
             labelaño.Text = dtRow("anio")
 
-
         Next
 
     End Sub

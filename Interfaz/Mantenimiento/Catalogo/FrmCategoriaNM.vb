@@ -7,7 +7,8 @@ Imports Infragistics.Win.UltraWinGrid
 
 Public Class FrmCategoriaNM
     Public pCodigo As Integer
-    Public ModoVentanaFlotante As Boolean
+    Public ModoVentanaFlotante As Boolean, swNuevo As Boolean
+
 
     Private Sub Mostrar_Datos()
         Dim Objc As categoria

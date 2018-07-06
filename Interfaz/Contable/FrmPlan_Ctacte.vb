@@ -78,6 +78,7 @@ Public Class FrmPlan_Ctacte
         If Not bwLlenar_Grid.IsBusy Then
             bwLlenar_Grid.RunWorkerAsync()
         End If
+
     End Function
 
 

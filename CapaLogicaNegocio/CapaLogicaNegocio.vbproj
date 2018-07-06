@@ -65,6 +65,7 @@
     <Import Include="System.Diagnostics" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="basic\bancoManager.vb" />
     <Compile Include="basic\gestion_accesoManager.vb" />
     <Compile Include="basic\monedaManager.vb" />
     <Compile Include="basic\registrarvManager.vb" />

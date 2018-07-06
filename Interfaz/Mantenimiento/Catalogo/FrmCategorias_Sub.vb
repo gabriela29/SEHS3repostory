@@ -10,6 +10,7 @@ Public Class FrmCategorias_Sub
     Public dtCategoria As DataTable
     Public dtSubCat As DataTable
     Public IdUsuario As Long
+    Public swNuevo As Boolean
 
     Private WithEvents popupHelperD As ControlesPersonalizados.Components.Controls.GestorVentanaPopup = Nothing
     Private WithEvents popupHelper As ControlesPersonalizados.Components.Controls.GestorVentanaPopup = Nothing
