@@ -1,4 +1,4 @@
-﻿Public Class FormEmpresaLis
+﻿Public Class FrmEmpresaLis
     Public _codigo As Integer
     Public ListadoRegistros As DataTableClearEventArgs
 

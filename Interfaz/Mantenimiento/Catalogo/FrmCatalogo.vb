@@ -354,6 +354,18 @@ Public Class FrmCatalogo
         frm.ShowDialog()
     End Sub
 
+    Private Sub btn_Banco_Click(sender As Object, e As EventArgs) Handles btn_Banco.Click
+        Dim frm As FrmBancoLis = New FrmBancoLis
+        frm.swNuevoBanco = True
+        frm.ShowDialog()
+    End Sub
+
+    Private Sub btn_CuentaCo_Click(sender As Object, e As EventArgs) Handles btn_CuentaCo.Click
+        Dim frm As FrmCategorias_Sub = New FrmCategorias_Sub
+        frm.swNuevo = True
+        frm.ShowDialog()
+    End Sub
+
     Private Sub tsReporte_Click(sender As Object, e As EventArgs) Handles tsReporte.Click
         Call LibreriasFormularios.Exportar_UltraGrid_Excel(dgvListado, utExcel, "Asistente.xls")
     End Sub

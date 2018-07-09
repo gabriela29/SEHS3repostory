@@ -15,7 +15,7 @@ Namespace Dal
             Dim objReader As DataRow
             Try
 
-                oSP = "select * from categoria where categoriaid=" & codigo
+                oSP = "select * from catalogo.categoria where categoriaid=" & codigo
                 TempList = oConexion.Ejecutar_Consulta(oSP)
                 objReader = Nothing
                 If TempList.Rows.Count > 0 Then
@@ -63,47 +63,47 @@ Namespace Dal
         End Function
 
         Public Shared Function Grabar(ByRef objc As categoria) As DataTable
-            Dim oSP As New clsStored_Procedure("pacategoria_actualizar")
-            Try
-                If objc.categoriaid = -1 Then
-                    oSP.addParameter("innew", True, NpgsqlTypes.NpgsqlDbType.Boolean, 0, ParameterDirection.Input)
-                Else
-                    oSP.addParameter("innew", False, NpgsqlTypes.NpgsqlDbType.Boolean, 0, ParameterDirection.Input)
-                End If
-                oSP.addParameter("incategoriaid", objc.categoriaid, NpgsqlTypes.NpgsqlDbType.Integer, 2, ParameterDirection.Input)
-
-                oSP.addParameter("innombre", objc.nombre, NpgsqlTypes.NpgsqlDbType.Varchar, 50, ParameterDirection.Input)
-
-                oSP.addParameter("inabrev", objc.abrev, NpgsqlTypes.NpgsqlDbType.Varchar, 50, ParameterDirection.Input)
-
-                Dim oConexion As New clsConexion
-                Grabar = oConexion.Ejecutar_Consulta(oSP)
-                oConexion.Cerrar_Conexion()
-                oConexion = Nothing
-            Finally
-                oSP = Nothing
-            End Try
-            'Dim vCadena As String = ""
+            Dim oSP As New clsStored_Procedure("catalogo.pacategoria_actualizar2")
             'Try
+            '    If objc.categoriaid = -1 Then
+            '        oSP.addParameter("innew", True, NpgsqlTypes.NpgsqlDbType.Boolean, 0, ParameterDirection.Input)
+            '    Else
+            '        oSP.addParameter("innew", False, NpgsqlTypes.NpgsqlDbType.Boolean, 0, ParameterDirection.Input)
+            '    End If
+            '    oSP.addParameter("incategoriaid", objc.categoriaid, NpgsqlTypes.NpgsqlDbType.Integer, 2, ParameterDirection.Input)
 
-            '    vCadena = "select * from catalogo.pacategoria_actualizar2( "
-            '    vCadena = vCadena & " " & IIf(objc.categoriaid > 0, "false", "true") & ", "
-            '    vCadena = vCadena & " " & Trim(Str(objc.categoriaid)) & ","
-            '    vCadena = vCadena & " '" & Trim(objc.nombre) & "', "
-            '    vCadena = vCadena & " '" & Trim(objc.abrev) & "' "
+            '    oSP.addParameter("innombre", objc.nombre, NpgsqlTypes.NpgsqlDbType.Varchar, 50, ParameterDirection.Input)
 
-
-
-
-            '    vCadena = vCadena & ")"
+            '    oSP.addParameter("inabrev", objc.abrev, NpgsqlTypes.NpgsqlDbType.Varchar, 50, ParameterDirection.Input)
 
             '    Dim oConexion As New clsConexion
-            '    Grabar = oConexion.Ejecutar_Consulta(vCadena)
+            '    Grabar = oConexion.Ejecutar_Consulta(oSP)
             '    oConexion.Cerrar_Conexion()
             '    oConexion = Nothing
             'Finally
-            '    vCadena = ""
+            '    oSP = Nothing
             'End Try
+            Dim vCadena As String = ""
+            Try
+
+                vCadena = "select * from catalogo.pacategoria_actualizar2( "
+                vCadena = vCadena & " " & IIf(objc.categoriaid > 0, "false", "true") & ", "
+                vCadena = vCadena & " " & Trim(Str(objc.categoriaid)) & ","
+                vCadena = vCadena & " '" & Trim(objc.nombre) & "', "
+                vCadena = vCadena & " '" & Trim(objc.abrev) & "' "
+
+
+
+
+                vCadena = vCadena & ")"
+
+                Dim oConexion As New clsConexion
+                Grabar = oConexion.Ejecutar_Consulta(vCadena)
+                oConexion.Cerrar_Conexion()
+                oConexion = Nothing
+            Finally
+                vCadena = ""
+            End Try
         End Function
 
 

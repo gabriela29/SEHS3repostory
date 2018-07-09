@@ -90,6 +90,8 @@ Partial Class FrmCatalogo
         Me.txtFilas = New Infragistics.Win.UltraWinEditors.UltraTextEditor()
         Me.BtnCatalogoAlm = New System.Windows.Forms.Button()
         Me.btncategoria = New System.Windows.Forms.Button()
+        Me.btn_Banco = New System.Windows.Forms.Button()
+        Me.btn_CuentaCo = New System.Windows.Forms.Button()
         Me.UltraTabPageControl1.SuspendLayout()
         CType(Me.dgvCondicion, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.UltraGroupBox4, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -482,7 +484,7 @@ Partial Class FrmCatalogo
         Me.UltraLabel1.Name = "UltraLabel1"
         Me.UltraLabel1.Size = New System.Drawing.Size(753, 35)
         Me.UltraLabel1.TabIndex = 67
-        Me.UltraLabel1.Text = "CATALOTOGO DE PRODUCTOS"
+        Me.UltraLabel1.Text = "CATALOGO DE PRODUCTOS"
         '
         'UltraPictureBox1
         '
@@ -501,7 +503,7 @@ Partial Class FrmCatalogo
         Me.txtFilas.Appearance = Appearance32
         Me.txtFilas.DisplayStyle = Infragistics.Win.EmbeddableElementDisplayStyle.Office2007
         Me.txtFilas.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtFilas.Location = New System.Drawing.Point(515, 40)
+        Me.txtFilas.Location = New System.Drawing.Point(450, 39)
         Me.txtFilas.MaxLength = 50
         Me.txtFilas.Name = "txtFilas"
         Me.txtFilas.Size = New System.Drawing.Size(80, 22)
@@ -526,12 +528,34 @@ Partial Class FrmCatalogo
         '
         Me.btncategoria.BackColor = System.Drawing.Color.Maroon
         Me.btncategoria.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.btncategoria.Location = New System.Drawing.Point(728, 25)
+        Me.btncategoria.Location = New System.Drawing.Point(509, 1)
         Me.btncategoria.Name = "btncategoria"
-        Me.btncategoria.Size = New System.Drawing.Size(84, 34)
+        Me.btncategoria.Size = New System.Drawing.Size(84, 32)
         Me.btncategoria.TabIndex = 91
         Me.btncategoria.Text = "CATEGORIA"
         Me.btncategoria.UseVisualStyleBackColor = False
+        '
+        'btn_Banco
+        '
+        Me.btn_Banco.BackColor = System.Drawing.Color.Maroon
+        Me.btn_Banco.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.btn_Banco.Location = New System.Drawing.Point(599, 2)
+        Me.btn_Banco.Name = "btn_Banco"
+        Me.btn_Banco.Size = New System.Drawing.Size(84, 32)
+        Me.btn_Banco.TabIndex = 92
+        Me.btn_Banco.Text = "BANCO"
+        Me.btn_Banco.UseVisualStyleBackColor = False
+        '
+        'btn_CuentaCo
+        '
+        Me.btn_CuentaCo.BackColor = System.Drawing.Color.Maroon
+        Me.btn_CuentaCo.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.btn_CuentaCo.Location = New System.Drawing.Point(689, 4)
+        Me.btn_CuentaCo.Name = "btn_CuentaCo"
+        Me.btn_CuentaCo.Size = New System.Drawing.Size(128, 32)
+        Me.btn_CuentaCo.TabIndex = 93
+        Me.btn_CuentaCo.Text = "CUENTA CORRIENTE"
+        Me.btn_CuentaCo.UseVisualStyleBackColor = False
         '
         'FrmCatalogo
         '
@@ -539,6 +563,8 @@ Partial Class FrmCatalogo
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(839, 464)
+        Me.Controls.Add(Me.btn_CuentaCo)
+        Me.Controls.Add(Me.btn_Banco)
         Me.Controls.Add(Me.btncategoria)
         Me.Controls.Add(Me.BtnCatalogoAlm)
         Me.Controls.Add(Me.txtFilas)
@@ -604,4 +630,6 @@ Partial Class FrmCatalogo
     Friend WithEvents txtFilas As Infragistics.Win.UltraWinEditors.UltraTextEditor
   Friend WithEvents BtnCatalogoAlm As Button
     Friend WithEvents btncategoria As Button
+    Friend WithEvents btn_Banco As Button
+    Friend WithEvents btn_CuentaCo As Button
 End Class

@@ -259,11 +259,15 @@ Public Class FrmCategorias_Sub
     Private Sub tsDEditar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles tsDEditar.Click
 
         If Not dgvListado.Rows.Count > 0 Then
-            MsgBox("No hay Documentos Seleccioandos que modificar", MsgBoxStyle.Information, "INFORMACIÓN")
+            MsgBox("No hay Documentos Seleccionados que modificar", MsgBoxStyle.Information, "INFORMACIÓN")
             Exit Sub
         End If
 
-        If Not _codigo = 0 And dgvListado.Selected.Rows.Count > 0 Then
+        'If Not _codigo = 0 And dgvListado.Selected.Rows.Count > 0 Then
+        '    popupHelperD = New ControlesPersonalizados.Components.Controls.GestorVentanaPopup()
+        '    Dim frm As FrmCategoriaNM = New FrmCategoriaNM()
+
+        If dgvListado.Selected.Rows.Count > 0 Then
             popupHelperD = New ControlesPersonalizados.Components.Controls.GestorVentanaPopup()
             Dim frm As FrmCategoriaNM = New FrmCategoriaNM()
 
@@ -278,7 +282,7 @@ Public Class FrmCategorias_Sub
                 .ModoVentanaFlotante = True
 
                 .pCodigo = CInt(dgvListado.DisplayLayout.ActiveRow.Cells(0).Value)
-
+                '.pCodigo = dgvListado.DisplayLayout.ActiveRow.Cells(0).Value
 
             End With
             Dim locationD As Point = Me.PointToScreen(New Point(Me.txtLocaltionDoc.Left, txtLocaltionDoc.Bottom))
@@ -286,7 +290,7 @@ Public Class FrmCategorias_Sub
             popupHelperD.ShowPopup(Me, frm, locationD)
 
         Else
-            MsgBox("  Debe Seleccionar un Registro Primero ", MsgBoxStyle.Exclamation, "DSIAM")
+            MsgBox("  Editar form Debe Seleccionar un Registro Primero ", MsgBoxStyle.Exclamation, "DSIAM")
         End If
     End Sub
 

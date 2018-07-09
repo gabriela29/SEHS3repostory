@@ -16,6 +16,7 @@ Public Class frmBanco
     Public pcodigo As Integer
     Public ModoVentanaFlotante As Boolean, swNuevo As Boolean
 
+
     Private Sub Mostrar_Datos()
         Dim Objc As banco
 

@@ -421,17 +421,17 @@
   <data name="TpModificar.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         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
-        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
+        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
 </value>
   </data>
   <data name="TpEliminar.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
