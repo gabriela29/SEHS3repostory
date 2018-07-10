@@ -53,6 +53,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="basic\banco.vb" />
+    <Compile Include="basic\cuentaCorriente.vb" />
     <Compile Include="registrarv.vb" />
     <Compile Include="basic\rol.vb" />
     <Compile Include="bonificacion\destino_bonificacion.vb" />

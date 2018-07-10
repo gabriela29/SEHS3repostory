@@ -62,6 +62,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Basic\BancoBD.vb" />
+    <Compile Include="Basic\CuentaCoBD.vb" />
     <Compile Include="Basic\gestion_accesoBD.vb" />
     <Compile Include="Basic\registrarVBD.vb" />
     <Compile Include="Basic\unidad_negocioBD.vb" />

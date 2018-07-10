@@ -360,7 +360,7 @@ Public Class FrmCatalogo
         frm.ShowDialog()
     End Sub
 
-    Private Sub btn_CuentaCo_Click(sender As Object, e As EventArgs) Handles btn_CuentaCo.Click
+    Private Sub btn_CuentaCo_Click(sender As Object, e As EventArgs) 
         Dim frm As FrmCategorias_Sub = New FrmCategorias_Sub
         frm.swNuevo = True
         frm.ShowDialog()

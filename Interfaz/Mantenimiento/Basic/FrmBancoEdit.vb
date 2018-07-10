@@ -7,10 +7,6 @@ Imports CapaObjetosNegocio.BO
 Imports Infragistics.Win
 Imports Infragistics.Win.UltraWinGrid
 
-
-
-
-
 Public Class frmBanco
     Public vBancoid
     Public pcodigo As Integer
@@ -32,30 +28,6 @@ Public Class frmBanco
 
     End Sub
 
-    Private Sub BtnAceptar_Click(sender As Object, e As EventArgs) Handles BtnAceptar.Click
-        If MessageBox.Show("¿Desea grabar los datos?", "Confirmar", MessageBoxButtons.YesNo) = Windows.Forms.DialogResult.Yes Then
-            Try
-                If Not TxtNom_banco.Text.Trim = "" Then
-                    If Actualizar() Then
-                        Me.Close()
-                    End If
-                Else
-                    MessageBox.Show("Debe ingresar un nombre", "AVISO", MessageBoxButtons.OK)
-                End If
-
-                Me.Close()
-            Catch ex As Exception
-                MsgBox(ex.Message)
-            End Try
-        End If
-    End Sub
-
-    Private Sub btnCerrar_Click(sender As Object, e As EventArgs) Handles btnCerrar.Click
-        Me.Close()
-    End Sub
-
-
-
     Public Function Actualizar() As Boolean
         Dim Objeto As New banco
         Try
@@ -76,6 +48,36 @@ Public Class frmBanco
             MsgBox(ex.Message)
         End Try
     End Function
+
+    Private Sub btnCerrar_Click(sender As Object, e As EventArgs) Handles btnCerrar.Click
+        Me.Close()
+    End Sub
+
+    Private Sub BtnAceptar_Click(sender As Object, e As EventArgs) Handles BtnAceptar.Click
+        If MessageBox.Show("¿Desea grabar los datos?", "Confirmar", MessageBoxButtons.YesNo) = Windows.Forms.DialogResult.Yes Then
+            Try
+                If Not TxtNom_banco.Text.Trim = "" Then
+                    If Actualizar() Then
+                        Me.Close()
+                    End If
+                Else
+                    MessageBox.Show("Debe ingresar un nombre", "AVISO", MessageBoxButtons.OK)
+                End If
+
+                Me.Close()
+            Catch ex As Exception
+                MsgBox(ex.Message)
+            End Try
+        End If
+    End Sub
+
+    Private Sub FrmBancoEdiNM_KeyPress(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles Me.KeyPress
+        If e.KeyChar = Chr(Keys.Enter) Then
+            SendKeys.Send("{tab}")
+        End If
+    End Sub
+
+
 
 
 
