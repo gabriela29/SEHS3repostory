@@ -23,6 +23,7 @@ Partial Class FrmBancoLis
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Dim Appearance1 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmBancoLis))
         Dim Appearance2 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
         Dim Appearance3 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
         Dim Appearance4 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
@@ -49,27 +50,26 @@ Partial Class FrmBancoLis
         Dim Appearance23 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
         Dim Appearance24 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
         Dim Appearance25 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmBancoLis))
         Me.UltraGroupBox4 = New Infragistics.Win.Misc.UltraGroupBox()
+        Me.UltraPictureBox1 = New Infragistics.Win.UltraWinEditors.UltraPictureBox()
         Me.ContBancoLis = New Infragistics.Win.Misc.UltraGroupBox()
         Me.dgvListadobanco = New Infragistics.Win.UltraWinGrid.UltraGrid()
         Me.ToolStrip1 = New System.Windows.Forms.ToolStrip()
-        Me.ContCuentaCo = New Infragistics.Win.Misc.UltraGroupBox()
-        Me.dgvCuentaCo = New Infragistics.Win.UltraWinGrid.UltraGrid()
-        Me.TpCliente = New System.Windows.Forms.ToolStrip()
-        Me.ToolStripSeparator5 = New System.Windows.Forms.ToolStripSeparator()
-        Me.ToolStripSeparator2 = New System.Windows.Forms.ToolStripSeparator()
-        Me.ToolStripSeparator4 = New System.Windows.Forms.ToolStripSeparator()
-        Me.ToolStripSeparator1 = New System.Windows.Forms.ToolStripSeparator()
-        Me.ToolStripSeparator3 = New System.Windows.Forms.ToolStripSeparator()
         Me.tsDNuevo = New System.Windows.Forms.ToolStripButton()
         Me.tsDEditar = New System.Windows.Forms.ToolStripButton()
         Me.tsDDelete = New System.Windows.Forms.ToolStripButton()
         Me.tsCerrar = New System.Windows.Forms.ToolStripButton()
-        Me.UltraPictureBox1 = New Infragistics.Win.UltraWinEditors.UltraPictureBox()
-        Me.TpEliminar = New System.Windows.Forms.ToolStripButton()
-        Me.TpModificar = New System.Windows.Forms.ToolStripButton()
-        Me.TpNuevo = New System.Windows.Forms.ToolStripButton()
+        Me.ContCuentaCo = New Infragistics.Win.Misc.UltraGroupBox()
+        Me.dgvCuentaCo = New Infragistics.Win.UltraWinGrid.UltraGrid()
+        Me.TpCliente = New System.Windows.Forms.ToolStrip()
+        Me.ToolStripSeparator5 = New System.Windows.Forms.ToolStripSeparator()
+        Me.TpEliminarCC = New System.Windows.Forms.ToolStripButton()
+        Me.ToolStripSeparator2 = New System.Windows.Forms.ToolStripSeparator()
+        Me.ToolStripSeparator4 = New System.Windows.Forms.ToolStripSeparator()
+        Me.TpModificarCC = New System.Windows.Forms.ToolStripButton()
+        Me.ToolStripSeparator1 = New System.Windows.Forms.ToolStripSeparator()
+        Me.ToolStripSeparator3 = New System.Windows.Forms.ToolStripSeparator()
+        Me.TpNuevoCC = New System.Windows.Forms.ToolStripButton()
         CType(Me.UltraGroupBox4, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.UltraGroupBox4.SuspendLayout()
         CType(Me.ContBancoLis, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -96,6 +96,17 @@ Partial Class FrmBancoLis
         Me.UltraGroupBox4.TabIndex = 65
         Me.UltraGroupBox4.ViewStyle = Infragistics.Win.Misc.GroupBoxViewStyle.Office2007
         '
+        'UltraPictureBox1
+        '
+        Me.UltraPictureBox1.AutoSize = True
+        Me.UltraPictureBox1.BorderShadowColor = System.Drawing.Color.Empty
+        Me.UltraPictureBox1.Image = CType(resources.GetObject("UltraPictureBox1.Image"), Object)
+        Me.UltraPictureBox1.ImageTransparentColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.UltraPictureBox1.Location = New System.Drawing.Point(6, 3)
+        Me.UltraPictureBox1.Name = "UltraPictureBox1"
+        Me.UltraPictureBox1.Size = New System.Drawing.Size(48, 48)
+        Me.UltraPictureBox1.TabIndex = 6
+        '
         'ContBancoLis
         '
         Me.ContBancoLis.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
@@ -120,9 +131,9 @@ Partial Class FrmBancoLis
         '
         Me.dgvListadobanco.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.dgvListadobanco.Location = New System.Drawing.Point(6, 31)
+        Me.dgvListadobanco.Location = New System.Drawing.Point(0, 31)
         Me.dgvListadobanco.Name = "dgvListadobanco"
-        Me.dgvListadobanco.Size = New System.Drawing.Size(320, 315)
+        Me.dgvListadobanco.Size = New System.Drawing.Size(324, 315)
         Me.dgvListadobanco.TabIndex = 22
         '
         'ToolStrip1
@@ -135,6 +146,40 @@ Partial Class FrmBancoLis
         Me.ToolStrip1.Size = New System.Drawing.Size(321, 25)
         Me.ToolStrip1.TabIndex = 21
         Me.ToolStrip1.Text = "ToolStrip2"
+        '
+        'tsDNuevo
+        '
+        Me.tsDNuevo.Image = CType(resources.GetObject("tsDNuevo.Image"), System.Drawing.Image)
+        Me.tsDNuevo.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.tsDNuevo.Name = "tsDNuevo"
+        Me.tsDNuevo.Size = New System.Drawing.Size(62, 22)
+        Me.tsDNuevo.Text = "&Nuevo"
+        Me.tsDNuevo.ToolTipText = "Nuevo"
+        '
+        'tsDEditar
+        '
+        Me.tsDEditar.Image = CType(resources.GetObject("tsDEditar.Image"), System.Drawing.Image)
+        Me.tsDEditar.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.tsDEditar.Name = "tsDEditar"
+        Me.tsDEditar.Size = New System.Drawing.Size(78, 22)
+        Me.tsDEditar.Text = "&Modificar"
+        Me.tsDEditar.ToolTipText = "Modificar"
+        '
+        'tsDDelete
+        '
+        Me.tsDDelete.Image = CType(resources.GetObject("tsDDelete.Image"), System.Drawing.Image)
+        Me.tsDDelete.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.tsDDelete.Name = "tsDDelete"
+        Me.tsDDelete.Size = New System.Drawing.Size(70, 22)
+        Me.tsDDelete.Text = "&Eliminar"
+        '
+        'tsCerrar
+        '
+        Me.tsCerrar.Image = CType(resources.GetObject("tsCerrar.Image"), System.Drawing.Image)
+        Me.tsCerrar.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.tsCerrar.Name = "tsCerrar"
+        Me.tsCerrar.Size = New System.Drawing.Size(59, 22)
+        Me.tsCerrar.Text = "Cerrar"
         '
         'ContCuentaCo
         '
@@ -185,10 +230,10 @@ Partial Class FrmBancoLis
         Appearance8.TextHAlignAsString = "Right"
         Me.dgvCuentaCo.DisplayLayout.CaptionAppearance = Appearance8
         Me.dgvCuentaCo.DisplayLayout.CaptionVisible = Infragistics.Win.DefaultableBoolean.[False]
-        Me.dgvCuentaCo.DisplayLayout.FixedHeaderOffImage = CType(resources.GetObject("dgvSubCat.DisplayLayout.FixedHeaderOffImage"), System.Drawing.Image)
-        Me.dgvCuentaCo.DisplayLayout.FixedHeaderOnImage = CType(resources.GetObject("dgvSubCat.DisplayLayout.FixedHeaderOnImage"), System.Drawing.Image)
-        Me.dgvCuentaCo.DisplayLayout.FixedRowOffImage = CType(resources.GetObject("dgvSubCat.DisplayLayout.FixedRowOffImage"), System.Drawing.Image)
-        Me.dgvCuentaCo.DisplayLayout.FixedRowOnImage = CType(resources.GetObject("dgvSubCat.DisplayLayout.FixedRowOnImage"), System.Drawing.Image)
+        Me.dgvCuentaCo.DisplayLayout.FixedHeaderOffImage = CType(resources.GetObject("dgvCuentaCo.DisplayLayout.FixedHeaderOffImage"), System.Drawing.Image)
+        Me.dgvCuentaCo.DisplayLayout.FixedHeaderOnImage = CType(resources.GetObject("dgvCuentaCo.DisplayLayout.FixedHeaderOnImage"), System.Drawing.Image)
+        Me.dgvCuentaCo.DisplayLayout.FixedRowOffImage = CType(resources.GetObject("dgvCuentaCo.DisplayLayout.FixedRowOffImage"), System.Drawing.Image)
+        Me.dgvCuentaCo.DisplayLayout.FixedRowOnImage = CType(resources.GetObject("dgvCuentaCo.DisplayLayout.FixedRowOnImage"), System.Drawing.Image)
         Appearance9.FontData.BoldAsString = "True"
         Appearance9.FontData.Name = "Trebuchet MS"
         Appearance9.FontData.SizeInPoints = 10.0!
@@ -265,9 +310,9 @@ Partial Class FrmBancoLis
         ScrollBarLook1.TrackAppearanceVertical = Appearance25
         Me.dgvCuentaCo.DisplayLayout.ScrollBarLook = ScrollBarLook1
         Me.dgvCuentaCo.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
-        Me.dgvCuentaCo.Location = New System.Drawing.Point(3, 32)
+        Me.dgvCuentaCo.Location = New System.Drawing.Point(3, 31)
         Me.dgvCuentaCo.Name = "dgvCuentaCo"
-        Me.dgvCuentaCo.Size = New System.Drawing.Size(374, 311)
+        Me.dgvCuentaCo.Size = New System.Drawing.Size(374, 312)
         Me.dgvCuentaCo.TabIndex = 22
         Me.dgvCuentaCo.Text = "Series Docuementos por Sucursal"
         Me.dgvCuentaCo.UseOsThemes = Infragistics.Win.DefaultableBoolean.[False]
@@ -277,7 +322,7 @@ Partial Class FrmBancoLis
         Me.TpCliente.AutoSize = False
         Me.TpCliente.BackColor = System.Drawing.Color.White
         Me.TpCliente.Dock = System.Windows.Forms.DockStyle.None
-        Me.TpCliente.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripSeparator5, Me.TpEliminar, Me.ToolStripSeparator2, Me.ToolStripSeparator4, Me.TpModificar, Me.ToolStripSeparator1, Me.ToolStripSeparator3, Me.TpNuevo})
+        Me.TpCliente.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripSeparator5, Me.TpEliminarCC, Me.ToolStripSeparator2, Me.ToolStripSeparator4, Me.TpModificarCC, Me.ToolStripSeparator1, Me.ToolStripSeparator3, Me.TpNuevoCC})
         Me.TpCliente.Location = New System.Drawing.Point(3, 3)
         Me.TpCliente.Name = "TpCliente"
         Me.TpCliente.RenderMode = System.Windows.Forms.ToolStripRenderMode.System
@@ -291,6 +336,15 @@ Partial Class FrmBancoLis
         Me.ToolStripSeparator5.Name = "ToolStripSeparator5"
         Me.ToolStripSeparator5.Size = New System.Drawing.Size(6, 25)
         '
+        'TpEliminarCC
+        '
+        Me.TpEliminarCC.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.TpEliminarCC.Image = CType(resources.GetObject("TpEliminarCC.Image"), System.Drawing.Image)
+        Me.TpEliminarCC.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.TpEliminarCC.Name = "TpEliminarCC"
+        Me.TpEliminarCC.Size = New System.Drawing.Size(23, 22)
+        Me.TpEliminarCC.Text = "&Eliminar"
+        '
         'ToolStripSeparator2
         '
         Me.ToolStripSeparator2.Name = "ToolStripSeparator2"
@@ -300,6 +354,16 @@ Partial Class FrmBancoLis
         '
         Me.ToolStripSeparator4.Name = "ToolStripSeparator4"
         Me.ToolStripSeparator4.Size = New System.Drawing.Size(6, 25)
+        '
+        'TpModificarCC
+        '
+        Me.TpModificarCC.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.TpModificarCC.Image = CType(resources.GetObject("TpModificarCC.Image"), System.Drawing.Image)
+        Me.TpModificarCC.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.TpModificarCC.Name = "TpModificarCC"
+        Me.TpModificarCC.Size = New System.Drawing.Size(23, 22)
+        Me.TpModificarCC.Text = "&Modificar"
+        Me.TpModificarCC.ToolTipText = "Modificar"
         '
         'ToolStripSeparator1
         '
@@ -311,79 +375,15 @@ Partial Class FrmBancoLis
         Me.ToolStripSeparator3.Name = "ToolStripSeparator3"
         Me.ToolStripSeparator3.Size = New System.Drawing.Size(6, 25)
         '
-        'tsDNuevo
+        'TpNuevoCC
         '
-        Me.tsDNuevo.Image = CType(resources.GetObject("tsDNuevo.Image"), System.Drawing.Image)
-        Me.tsDNuevo.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.tsDNuevo.Name = "tsDNuevo"
-        Me.tsDNuevo.Size = New System.Drawing.Size(62, 22)
-        Me.tsDNuevo.Text = "&Nuevo"
-        Me.tsDNuevo.ToolTipText = "Nuevo"
-        '
-        'tsDEditar
-        '
-        Me.tsDEditar.Image = CType(resources.GetObject("tsDEditar.Image"), System.Drawing.Image)
-        Me.tsDEditar.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.tsDEditar.Name = "tsDEditar"
-        Me.tsDEditar.Size = New System.Drawing.Size(78, 22)
-        Me.tsDEditar.Text = "&Modificar"
-        Me.tsDEditar.ToolTipText = "Modificar"
-        '
-        'tsDDelete
-        '
-        Me.tsDDelete.Image = CType(resources.GetObject("tsDDelete.Image"), System.Drawing.Image)
-        Me.tsDDelete.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.tsDDelete.Name = "tsDDelete"
-        Me.tsDDelete.Size = New System.Drawing.Size(70, 22)
-        Me.tsDDelete.Text = "&Eliminar"
-        '
-        'tsCerrar
-        '
-        Me.tsCerrar.Image = CType(resources.GetObject("tsCerrar.Image"), System.Drawing.Image)
-        Me.tsCerrar.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.tsCerrar.Name = "tsCerrar"
-        Me.tsCerrar.Size = New System.Drawing.Size(59, 22)
-        Me.tsCerrar.Text = "Cerrar"
-        '
-        'UltraPictureBox1
-        '
-        Me.UltraPictureBox1.AutoSize = True
-        Me.UltraPictureBox1.BorderShadowColor = System.Drawing.Color.Empty
-        Me.UltraPictureBox1.Image = CType(resources.GetObject("UltraPictureBox1.Image"), Object)
-        Me.UltraPictureBox1.ImageTransparentColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.UltraPictureBox1.Location = New System.Drawing.Point(6, 3)
-        Me.UltraPictureBox1.Name = "UltraPictureBox1"
-        Me.UltraPictureBox1.Size = New System.Drawing.Size(48, 48)
-        Me.UltraPictureBox1.TabIndex = 6
-        '
-        'TpEliminar
-        '
-        Me.TpEliminar.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.TpEliminar.Image = CType(resources.GetObject("TpEliminar.Image"), System.Drawing.Image)
-        Me.TpEliminar.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.TpEliminar.Name = "TpEliminar"
-        Me.TpEliminar.Size = New System.Drawing.Size(23, 22)
-        Me.TpEliminar.Text = "&Eliminar"
-        '
-        'TpModificar
-        '
-        Me.TpModificar.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.TpModificar.Image = CType(resources.GetObject("TpModificar.Image"), System.Drawing.Image)
-        Me.TpModificar.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.TpModificar.Name = "TpModificar"
-        Me.TpModificar.Size = New System.Drawing.Size(23, 22)
-        Me.TpModificar.Text = "&Modificar"
-        Me.TpModificar.ToolTipText = "Modificar"
-        '
-        'TpNuevo
-        '
-        Me.TpNuevo.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.TpNuevo.Image = CType(resources.GetObject("TpNuevo.Image"), System.Drawing.Image)
-        Me.TpNuevo.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.TpNuevo.Name = "TpNuevo"
-        Me.TpNuevo.Size = New System.Drawing.Size(23, 22)
-        Me.TpNuevo.Text = "&Nuevo"
-        Me.TpNuevo.ToolTipText = "Nuevo"
+        Me.TpNuevoCC.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.TpNuevoCC.Image = CType(resources.GetObject("TpNuevoCC.Image"), System.Drawing.Image)
+        Me.TpNuevoCC.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.TpNuevoCC.Name = "TpNuevoCC"
+        Me.TpNuevoCC.Size = New System.Drawing.Size(23, 22)
+        Me.TpNuevoCC.Text = "&Nuevo"
+        Me.TpNuevoCC.ToolTipText = "Nuevo"
         '
         'FrmBancoLis
         '
@@ -395,6 +395,7 @@ Partial Class FrmBancoLis
         Me.Controls.Add(Me.ContCuentaCo)
         Me.Name = "FrmBancoLis"
         Me.Text = "FrmBancoLis"
+        Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         CType(Me.UltraGroupBox4, System.ComponentModel.ISupportInitialize).EndInit()
         Me.UltraGroupBox4.ResumeLayout(False)
         Me.UltraGroupBox4.PerformLayout()
@@ -426,11 +427,11 @@ Partial Class FrmBancoLis
     Friend WithEvents dgvCuentaCo As Infragistics.Win.UltraWinGrid.UltraGrid
     Friend WithEvents TpCliente As ToolStrip
     Friend WithEvents ToolStripSeparator5 As ToolStripSeparator
-    Friend WithEvents TpEliminar As ToolStripButton
+    Friend WithEvents TpEliminarCC As ToolStripButton
     Friend WithEvents ToolStripSeparator2 As ToolStripSeparator
     Friend WithEvents ToolStripSeparator4 As ToolStripSeparator
-    Friend WithEvents TpModificar As ToolStripButton
+    Friend WithEvents TpModificarCC As ToolStripButton
     Friend WithEvents ToolStripSeparator1 As ToolStripSeparator
     Friend WithEvents ToolStripSeparator3 As ToolStripSeparator
-    Friend WithEvents TpNuevo As ToolStripButton
+    Friend WithEvents TpNuevoCC As ToolStripButton
 End Class

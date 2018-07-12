@@ -154,9 +154,10 @@ Partial Class FrmCategorias_Sub
         '
         Me.dgvListado.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.dgvListado.Location = New System.Drawing.Point(9, 32)
+        Me.dgvListado.Location = New System.Drawing.Point(-1, 29)
         Me.dgvListado.Name = "dgvListado"
-        Me.dgvListado.Size = New System.Drawing.Size(357, 276)
+        Me.dgvListado.RightToLeft = System.Windows.Forms.RightToLeft.No
+        Me.dgvListado.Size = New System.Drawing.Size(367, 279)
         Me.dgvListado.TabIndex = 22
         '
         'ToolStrip1

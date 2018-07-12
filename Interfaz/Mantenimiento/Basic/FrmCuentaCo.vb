@@ -5,18 +5,38 @@ Imports CapaObjetosNegocio.BO
 
 
 Public Class FrmCuentaCo
-    Public pCodigo As Integer, pCodigo_Cat As Integer
+    Public VCodigo As Integer, pCodigo_banco As Integer
     Public rCodigo As Integer
     Public ModoVentanaFlotante As Boolean
+
+    Private Sub llenar_Combos()
+
+        Try
+            Me.cbobanco.DataSource = bancoManager.GetList("")
+            Me.cbobanco.DataBind()
+            Me.cbobanco.ValueMember = "bancoid"
+            Me.cbobanco.MinDropDownItems = 2
+            Me.cbobanco.MaxDropDownItems = 4
+            If VCodigo = 0 Then
+                cbobanco.Value = pCodigo_banco
+            End If
+
+        Catch ex As Exception
+            MsgBox(ex.Message)
+        End Try
+
+
+    End Sub
+
 
     Private Sub Mostrar_Datos()
         Dim Objc As cuentaCorriente
 
-        Objc = CuentaCoManager.GetItem(pCodigo)
+        Objc = CuentaCoManager.GetItem(VCodigo)
 
         If Not Objc Is Nothing Then
-            'cboCategoria.Value = Objc.categoriaid
-            textbancoid.Text = Objc.bancoid
+            cbobanco.Value = Objc.bancoid
+            ' textbancoid.Text = Objc.bancoid
             txtnumero.Text = Objc.numero
             txtempresaid.Text = Objc.numero
             txtAbreviatura.Text = Objc.abreviatura
@@ -36,8 +56,13 @@ Public Class FrmCuentaCo
 
     Private Sub BtnGrabar_Click(sender As Object, e As EventArgs) Handles BtnGrabar.Click
         If MessageBox.Show("¿Desea grabar los datos?", "CONFIRMAR", MessageBoxButtons.YesNo) = Windows.Forms.DialogResult.Yes Then
-
-            Call Actualizar()
+            Try
+                If Not (cbobanco.Text.Trim = "" Or txtnumero.Text.Trim = "") Then
+                    Call Actualizar()
+                End If
+            Catch ex As Exception
+                MsgBox(ex.Message)
+            End Try
         End If
     End Sub
 
@@ -45,13 +70,14 @@ Public Class FrmCuentaCo
         Dim Objeto As New cuentaCorriente
         Try
             With Objeto
-                If pCodigo > 0 Then
-                    .ctacteid = pCodigo
+                If VCodigo > 0 Then
+                    .ctacteid = VCodigo
                 Else
                     .ctacteid = -1
 
                 End If
-                .bancoid = textbancoid.Text.Trim
+                '  .bancoid = textbancoid.Text.Trim
+                .bancoid = cbobanco.Value
                 .empresaid = txtempresaid.Text.Trim
                 .numero = txtnumero.Text.Trim
                 .abreviatura = txtAbreviatura.Text.Trim

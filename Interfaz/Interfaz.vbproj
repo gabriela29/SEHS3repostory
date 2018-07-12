@@ -459,10 +459,10 @@
     <Compile Include="Mantenimiento\Basic\FrmRegistrar_VentaLis.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Mantenimiento\Catalogo\FrmCuentaCo.Designer.vb">
+    <Compile Include="Mantenimiento\Basic\FrmCuentaCo.Designer.vb">
       <DependentUpon>FrmCuentaCo.vb</DependentUpon>
     </Compile>
-    <Compile Include="Mantenimiento\Catalogo\FrmCuentaCo.vb">
+    <Compile Include="Mantenimiento\Basic\FrmCuentaCo.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Mantenimiento\Catalogo\FrmCatalogo_Almacen.Designer.vb">
@@ -2079,7 +2079,7 @@
     <EmbeddedResource Include="Mantenimiento\Catalogo\FrmCatalogo_Almacen.resx">
       <DependentUpon>FrmCatalogo_Almacen.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Mantenimiento\Catalogo\FrmCuentaCo.resx">
+    <EmbeddedResource Include="Mantenimiento\Basic\FrmCuentaCo.resx">
       <DependentUpon>FrmCuentaCo.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Mantenimiento\Catalogo\FrmProducto_Precio.resx">

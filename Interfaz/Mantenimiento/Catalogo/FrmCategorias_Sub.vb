@@ -77,7 +77,6 @@ Public Class FrmCategorias_Sub
     End Function
 
     Public Function Eliminar_Categoria() As Boolean
-
         Try
             If dgvListado.Rows.Count > 0 Then
                 If dgvListado.Selected.Rows.Count > 0 Then
@@ -113,6 +112,9 @@ Public Class FrmCategorias_Sub
             MsgBox(ex.Message)
         End Try
     End Function
+
+
+
 
     Private Sub dgvListado_BeforeSelectChange(ByVal sender As Object, ByVal e As Infragistics.Win.UltraWinGrid.BeforeSelectChangeEventArgs) Handles dgvListado.BeforeSelectChange
         If dgvListado.Rows.Count > 0 Then
