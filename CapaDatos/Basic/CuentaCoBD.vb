@@ -37,13 +37,13 @@ Namespace Dal
             Return objsc
         End Function
 
-        Public Shared Function GetList(ByVal vCategoriaId As Integer, ByVal vNombre As String) As DataTable
+        Public Shared Function GetList(ByVal vbancoId As Integer, ByVal vnombre As String) As DataTable
             Dim TempList As New DataTable
             Dim oSP As New clsStored_Procedure("basic.pactacte_leer")
             Dim oConexion As New clsConexion
             Try
-                oSP.addParameter("inctacteid", vCategoriaId, NpgsqlTypes.NpgsqlDbType.Integer, 2, ParameterDirection.Input)
-                oSP.addParameter("innumero", vNombre, NpgsqlTypes.NpgsqlDbType.Integer, 50, ParameterDirection.Input)
+                oSP.addParameter("inbancoid", vbancoId, NpgsqlTypes.NpgsqlDbType.Integer, 2, ParameterDirection.Input)
+                oSP.addParameter("innombre", vnombre, NpgsqlTypes.NpgsqlDbType.Varchar, 50, ParameterDirection.Input)
 
                 TempList = oConexion.Ejecutar_Consulta(oSP)
                 oConexion.Cerrar_Conexion()
@@ -72,33 +72,43 @@ Namespace Dal
 
         Public Shared Function Grabar(ByRef objc As cuentaCorriente) As DataTable
             Dim oSP As New clsStored_Procedure("basic.pactacte_actualizar")
-            'Try
-            '    If objc.ctacteid = -1 Then
-            '        oSP.addParameter("innew", True, NpgsqlTypes.NpgsqlDbType.Boolean, 0, ParameterDirection.Input)
-            '    Else
-            '        oSP.addParameter("innew", False, NpgsqlTypes.NpgsqlDbType.Boolean, 0, ParameterDirection.Input)
-            '    End If
-            '    oSP.addParameter("inctacteid", objc.ctacteid, NpgsqlTypes.NpgsqlDbType.Integer, 2, ParameterDirection.Input)
+            Try
+                If objc.ctacteid = -1 Then
+                    oSP.addParameter("innew", True, NpgsqlTypes.NpgsqlDbType.Boolean, 0, ParameterDirection.Input)
+                Else
+                    oSP.addParameter("innew", False, NpgsqlTypes.NpgsqlDbType.Boolean, 0, ParameterDirection.Input)
+                End If
+                oSP.addParameter("inctacteid", objc.ctacteid, NpgsqlTypes.NpgsqlDbType.Integer, 2, ParameterDirection.Input)
 
-            '    oSP.addParameter("inbancoid", objc.ctacteid, NpgsqlTypes.NpgsqlDbType.Integer, 2, ParameterDirection.Input)
+                oSP.addParameter("inbancoid", objc.bancoid, NpgsqlTypes.NpgsqlDbType.Integer, 2, ParameterDirection.Input)
 
-            '    oSP.addParameter("innumero", objc.numero, NpgsqlTypes.NpgsqlDbType.Varchar, 50, ParameterDirection.Input)
+                oSP.addParameter("inempresaid", objc.empresaid, NpgsqlTypes.NpgsqlDbType.Integer, 2, ParameterDirection.Input)
 
-            '    oSP.addParameter("inabreviatura", objc.abreviatura, NpgsqlTypes.NpgsqlDbType.Varchar, 50, ParameterDirection.Input)
+                oSP.addParameter("innumero", objc.numero, NpgsqlTypes.NpgsqlDbType.Varchar, 2, ParameterDirection.Input)
 
-            '    Dim oConexion As New clsConexion
-            '    Grabar = oConexion.Ejecutar_Consulta(oSP)
-            '    oConexion.Cerrar_Conexion()
-            '    oConexion = Nothing
-            'Finally
-            '    oSP = Nothing
-            'End Try
+                oSP.addParameter("inabreviatura", objc.abreviatura, NpgsqlTypes.NpgsqlDbType.Varchar, 2, ParameterDirection.Input)
+
+                oSP.addParameter("insucursal", objc.sucursal, NpgsqlTypes.NpgsqlDbType.Varchar, 2, ParameterDirection.Input)
+
+                oSP.addParameter("inreferencia", objc.referencia, NpgsqlTypes.NpgsqlDbType.Varchar, 50, ParameterDirection.Input)
+
+                oSP.addParameter("inmoneda", objc.moneda, NpgsqlTypes.NpgsqlDbType.Varchar, 50, ParameterDirection.Input)
+
+                oSP.addParameter("inempresa", objc.empresa, NpgsqlTypes.NpgsqlDbType.Boolean, 0, ParameterDirection.Input)
+
+                Dim oConexion As New clsConexion
+                Grabar = oConexion.Ejecutar_Consulta(oSP)
+                oConexion.Cerrar_Conexion()
+                oConexion = Nothing
+            Finally
+                oSP = Nothing
+            End Try
         End Function
 
         Public Shared Function Eliminar(ByVal ctacteid As Integer) As DataTable
             Dim oSP As New clsStored_Procedure("basic.pactacte_eliminar")
             Try
-                oSP.addParameter("inctacte", ctacteid, NpgsqlTypes.NpgsqlDbType.Integer, 4, ParameterDirection.Input)
+                oSP.addParameter("inctacteid", ctacteid, NpgsqlTypes.NpgsqlDbType.Integer, 4, ParameterDirection.Input)
                 Dim oConexion As New clsConexion
                 Eliminar = oConexion.Ejecutar_Consulta(oSP)
                 oConexion.Cerrar_Conexion()

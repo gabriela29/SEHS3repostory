@@ -91,10 +91,6 @@ Namespace Dal
                 vCadena = vCadena & " " & Trim(Str(objc.categoriaid)) & ","
                 vCadena = vCadena & " '" & Trim(objc.nombre) & "', "
                 vCadena = vCadena & " '" & Trim(objc.abrev) & "' "
-
-
-
-
                 vCadena = vCadena & ")"
 
                 Dim oConexion As New clsConexion
@@ -111,7 +107,7 @@ Namespace Dal
         Public Shared Function Eliminar(ByVal vCategoriaId As Integer) As DataTable
             Dim oSP As New clsStored_Procedure("catalogo.pacategoria_eliminar")
             Try
-                oSP.addParameter("incategoria", vCategoriaId, NpgsqlTypes.NpgsqlDbType.Integer, 4, ParameterDirection.Input)
+                oSP.addParameter("incategoriaid", vCategoriaId, NpgsqlTypes.NpgsqlDbType.Integer, 4, ParameterDirection.Input)
                 Dim oConexion As New clsConexion
                 Eliminar = oConexion.Ejecutar_Consulta(oSP)
                 oConexion.Cerrar_Conexion()

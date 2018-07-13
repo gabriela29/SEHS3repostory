@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class FrmCuentaCo
     Inherits System.Windows.Forms.Form
 
     'Form reemplaza a Dispose para limpiar la lista de componentes.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,7 +20,7 @@ Partial Class FrmCuentaCo
     'NOTA: el Diseñador de Windows Forms necesita el siguiente procedimiento
     'Se puede modificar usando el Diseñador de Windows Forms.  
     'No lo modifique con el editor de código.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Dim Appearance1 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
         Dim Appearance2 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
@@ -29,17 +29,17 @@ Partial Class FrmCuentaCo
         Dim Appearance4 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
         Dim Appearance5 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
         Dim Appearance6 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
-        Dim Appearance13 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
-        Dim Appearance14 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
-        Dim Appearance15 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
-        Dim Appearance16 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
-        Dim Appearance17 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
         Dim Appearance7 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
         Dim Appearance8 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
         Dim Appearance9 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
         Dim Appearance10 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
         Dim Appearance11 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
         Dim Appearance12 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
+        Dim Appearance13 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
+        Dim Appearance14 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
+        Dim Appearance15 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
+        Dim Appearance16 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
+        Dim Appearance17 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
         Me.UltraLabel4 = New Infragistics.Win.Misc.UltraLabel()
         Me.btnCerrar = New Infragistics.Win.Misc.UltraButton()
         Me.BtnGrabar = New Infragistics.Win.Misc.UltraButton()
@@ -48,6 +48,8 @@ Partial Class FrmCuentaCo
         Me.txtnumero = New System.Windows.Forms.TextBox()
         Me.UltraLabel5 = New Infragistics.Win.Misc.UltraLabel()
         Me.UgbMCliente = New Infragistics.Win.Misc.UltraGroupBox()
+        Me.cbobanco = New Infragistics.Win.UltraWinGrid.UltraCombo()
+        Me.UltraLabel10 = New Infragistics.Win.Misc.UltraLabel()
         Me.UltraLabel9 = New Infragistics.Win.Misc.UltraLabel()
         Me.txtempresaid = New System.Windows.Forms.TextBox()
         Me.txtempresa = New System.Windows.Forms.TextBox()
@@ -58,8 +60,6 @@ Partial Class FrmCuentaCo
         Me.UltraLabel2 = New Infragistics.Win.Misc.UltraLabel()
         Me.txtsucursal = New System.Windows.Forms.TextBox()
         Me.UltraLabel1 = New Infragistics.Win.Misc.UltraLabel()
-        Me.cbobanco = New Infragistics.Win.UltraWinGrid.UltraCombo()
-        Me.UltraLabel10 = New Infragistics.Win.Misc.UltraLabel()
         CType(Me.UgbMCliente, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.UgbMCliente.SuspendLayout()
         CType(Me.cbobanco, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -175,6 +175,48 @@ Partial Class FrmCuentaCo
         Me.UgbMCliente.Size = New System.Drawing.Size(303, 305)
         Me.UgbMCliente.TabIndex = 32
         '
+        'cbobanco
+        '
+        Appearance7.BackColor = System.Drawing.Color.White
+        Me.cbobanco.DisplayLayout.Appearance = Appearance7
+        Appearance8.BackColor = System.Drawing.Color.Transparent
+        Me.cbobanco.DisplayLayout.Override.CardAreaAppearance = Appearance8
+        Appearance9.BackColor = System.Drawing.Color.White
+        Appearance9.BackColor2 = System.Drawing.Color.CornflowerBlue
+        Appearance9.BackGradientStyle = Infragistics.Win.GradientStyle.Vertical
+        Appearance9.FontData.BoldAsString = "True"
+        Appearance9.FontData.Name = "Arial"
+        Appearance9.FontData.SizeInPoints = 10.0!
+        Appearance9.ForeColor = System.Drawing.Color.White
+        Appearance9.ThemedElementAlpha = Infragistics.Win.Alpha.Transparent
+        Me.cbobanco.DisplayLayout.Override.HeaderAppearance = Appearance9
+        Appearance10.BackColor = System.Drawing.Color.FromArgb(CType(CType(168, Byte), Integer), CType(CType(167, Byte), Integer), CType(CType(191, Byte), Integer))
+        Appearance10.BackColor2 = System.Drawing.Color.FromArgb(CType(CType(112, Byte), Integer), CType(CType(111, Byte), Integer), CType(CType(145, Byte), Integer))
+        Appearance10.BackGradientStyle = Infragistics.Win.GradientStyle.Vertical
+        Me.cbobanco.DisplayLayout.Override.RowSelectorAppearance = Appearance10
+        Appearance11.BackColor = System.Drawing.Color.FromArgb(CType(CType(251, Byte), Integer), CType(CType(230, Byte), Integer), CType(CType(148, Byte), Integer))
+        Appearance11.BackColor2 = System.Drawing.Color.FromArgb(CType(CType(238, Byte), Integer), CType(CType(149, Byte), Integer), CType(CType(21, Byte), Integer))
+        Appearance11.BackGradientStyle = Infragistics.Win.GradientStyle.Vertical
+        Me.cbobanco.DisplayLayout.Override.SelectedRowAppearance = Appearance11
+        Me.cbobanco.DisplayStyle = Infragistics.Win.EmbeddableElementDisplayStyle.Office2007
+        Me.cbobanco.DropDownStyle = Infragistics.Win.UltraWinGrid.UltraComboStyle.DropDownList
+        Me.cbobanco.Location = New System.Drawing.Point(104, 27)
+        Me.cbobanco.Name = "cbobanco"
+        Me.cbobanco.Size = New System.Drawing.Size(182, 22)
+        Me.cbobanco.TabIndex = 65
+        '
+        'UltraLabel10
+        '
+        Appearance12.BackColorAlpha = Infragistics.Win.Alpha.Transparent
+        Appearance12.ForeColor = System.Drawing.Color.Navy
+        Me.UltraLabel10.Appearance = Appearance12
+        Me.UltraLabel10.Font = New System.Drawing.Font("Arial", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.UltraLabel10.Location = New System.Drawing.Point(12, 29)
+        Me.UltraLabel10.Name = "UltraLabel10"
+        Me.UltraLabel10.Size = New System.Drawing.Size(72, 20)
+        Me.UltraLabel10.TabIndex = 66
+        Me.UltraLabel10.Text = "Banco:"
+        '
         'UltraLabel9
         '
         Appearance13.BackColorAlpha = Infragistics.Win.Alpha.Transparent
@@ -274,48 +316,6 @@ Partial Class FrmCuentaCo
         Me.UltraLabel1.Size = New System.Drawing.Size(86, 20)
         Me.UltraLabel1.TabIndex = 55
         Me.UltraLabel1.Text = "Sucursal:"
-        '
-        'cbobanco
-        '
-        Appearance7.BackColor = System.Drawing.Color.White
-        Me.cbobanco.DisplayLayout.Appearance = Appearance7
-        Appearance8.BackColor = System.Drawing.Color.Transparent
-        Me.cbobanco.DisplayLayout.Override.CardAreaAppearance = Appearance8
-        Appearance9.BackColor = System.Drawing.Color.White
-        Appearance9.BackColor2 = System.Drawing.Color.CornflowerBlue
-        Appearance9.BackGradientStyle = Infragistics.Win.GradientStyle.Vertical
-        Appearance9.FontData.BoldAsString = "True"
-        Appearance9.FontData.Name = "Arial"
-        Appearance9.FontData.SizeInPoints = 10.0!
-        Appearance9.ForeColor = System.Drawing.Color.White
-        Appearance9.ThemedElementAlpha = Infragistics.Win.Alpha.Transparent
-        Me.cbobanco.DisplayLayout.Override.HeaderAppearance = Appearance9
-        Appearance10.BackColor = System.Drawing.Color.FromArgb(CType(CType(168, Byte), Integer), CType(CType(167, Byte), Integer), CType(CType(191, Byte), Integer))
-        Appearance10.BackColor2 = System.Drawing.Color.FromArgb(CType(CType(112, Byte), Integer), CType(CType(111, Byte), Integer), CType(CType(145, Byte), Integer))
-        Appearance10.BackGradientStyle = Infragistics.Win.GradientStyle.Vertical
-        Me.cbobanco.DisplayLayout.Override.RowSelectorAppearance = Appearance10
-        Appearance11.BackColor = System.Drawing.Color.FromArgb(CType(CType(251, Byte), Integer), CType(CType(230, Byte), Integer), CType(CType(148, Byte), Integer))
-        Appearance11.BackColor2 = System.Drawing.Color.FromArgb(CType(CType(238, Byte), Integer), CType(CType(149, Byte), Integer), CType(CType(21, Byte), Integer))
-        Appearance11.BackGradientStyle = Infragistics.Win.GradientStyle.Vertical
-        Me.cbobanco.DisplayLayout.Override.SelectedRowAppearance = Appearance11
-        Me.cbobanco.DisplayStyle = Infragistics.Win.EmbeddableElementDisplayStyle.Office2007
-        Me.cbobanco.DropDownStyle = Infragistics.Win.UltraWinGrid.UltraComboStyle.DropDownList
-        Me.cbobanco.Location = New System.Drawing.Point(104, 27)
-        Me.cbobanco.Name = "cbobanco"
-        Me.cbobanco.Size = New System.Drawing.Size(182, 22)
-        Me.cbobanco.TabIndex = 65
-        '
-        'UltraLabel10
-        '
-        Appearance12.BackColorAlpha = Infragistics.Win.Alpha.Transparent
-        Appearance12.ForeColor = System.Drawing.Color.Navy
-        Me.UltraLabel10.Appearance = Appearance12
-        Me.UltraLabel10.Font = New System.Drawing.Font("Arial", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.UltraLabel10.Location = New System.Drawing.Point(12, 29)
-        Me.UltraLabel10.Name = "UltraLabel10"
-        Me.UltraLabel10.Size = New System.Drawing.Size(72, 20)
-        Me.UltraLabel10.TabIndex = 66
-        Me.UltraLabel10.Text = "Banco:"
         '
         'FrmCuentaCo
         '

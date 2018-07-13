@@ -47,7 +47,7 @@ Public Class FrmCategorias_Sub
 
     Private Function Listado_SubCategoria() As Boolean
         Dim objetos As New DataTable
-        Dim vIdCat As Integer 
+        Dim vIdCat As Integer
         ContCat.Enabled = False
         ContSub.Enabled = False
         Try
@@ -116,7 +116,7 @@ Public Class FrmCategorias_Sub
 
 
 
-    Private Sub dgvListado_BeforeSelectChange(ByVal sender As Object, ByVal e As Infragistics.Win.UltraWinGrid.BeforeSelectChangeEventArgs) Handles dgvListado.BeforeSelectChange
+    Private Sub dgvListado_BeforeSelectChange(ByVal sender As Object, ByVal e As Infragistics.Win.UltraWinGrid.BeforeSelectChangeEventArgs) Handles dgvListado.BeforeSelectChange '3
         If dgvListado.Rows.Count > 0 Then
             If e.NewSelections.Rows.Count > 0 Then
                 '_codigo = dgvListado.DisplayLayout.ActiveRow.Cells(0).Value
@@ -128,7 +128,7 @@ Public Class FrmCategorias_Sub
         End If
     End Sub
 
-    Private Sub dgvListado_InitializeLayout(ByVal sender As System.Object, ByVal e As Infragistics.Win.UltraWinGrid.InitializeLayoutEventArgs) Handles dgvListado.InitializeLayout
+    Private Sub dgvListado_InitializeLayout(ByVal sender As System.Object, ByVal e As Infragistics.Win.UltraWinGrid.InitializeLayoutEventArgs) Handles dgvListado.InitializeLayout '2
         With dgvListado.DisplayLayout.Bands(0)
             .Columns(0).Width = 20
             .Columns(0).Header.Caption = "ID"

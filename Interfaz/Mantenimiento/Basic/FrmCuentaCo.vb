@@ -15,6 +15,7 @@ Public Class FrmCuentaCo
             Me.cbobanco.DataSource = bancoManager.GetList("")
             Me.cbobanco.DataBind()
             Me.cbobanco.ValueMember = "bancoid"
+            Me.cbobanco.DisplayMember = "nombre"
             Me.cbobanco.MinDropDownItems = 2
             Me.cbobanco.MaxDropDownItems = 4
             If VCodigo = 0 Then
@@ -101,6 +102,14 @@ Public Class FrmCuentaCo
         If e.KeyChar = Chr(Keys.Enter) Then
             SendKeys.Send("{tab}")
         End If
+    End Sub
+
+    Private Sub cbobanco_InitializeLayout(sender As Object, e As Infragistics.Win.UltraWinGrid.InitializeLayoutEventArgs) Handles cbobanco.InitializeLayout
+        With cbobanco.DisplayLayout.Bands(0)
+            .Columns(0).Hidden = True
+            .Columns(1).Width = cbobanco.Width
+            .Columns(2).Hidden = True
+        End With
     End Sub
 
     Private Sub FrmSubCategoriaNM_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load

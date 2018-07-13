@@ -8,12 +8,12 @@ Imports CapaObjetosNegocio
 Namespace BLL
     Public Class CuentaCoManager
 
-        Public Shared Function GetList(ByVal vCategoriaId As Integer, ByVal vNombre As String) As DataTable
-            Return CuentaCoBD.GetList(vCategoriaId, vNombre)
+        Public Shared Function GetList(ByVal vbancoId As Integer, ByVal vnombre As String) As DataTable
+            Return CuentaCoBD.GetList(vbancoId, vnombre)
         End Function
 
-        Public Shared Function GetItem(ByVal SubCategoriaId As Integer) As cuentaCorriente
-            Return CuentaCoBD.GetItem(SubCategoriaId)
+        Public Shared Function GetItem(ByVal ctacteId As Integer) As cuentaCorriente
+            Return CuentaCoBD.GetItem(ctacteId)
         End Function
 
         Public Shared Function Grabar(ByRef objsc As cuentaCorriente) As Long

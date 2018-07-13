@@ -63,7 +63,7 @@ Public Class FrmBancoLis
                 dtlistacuentaCO = CuentaCoManager.GetList(vIDBanco, "")
                 dgvCuentaCo.DataSource = dtlistacuentaCO
 
-                If dgvCuentaCo.Rows.Count() > 0 Then
+                If dgvCuentaCo.Rows.Count() > 0 Then 'kkk
 
                 End If
             Else
