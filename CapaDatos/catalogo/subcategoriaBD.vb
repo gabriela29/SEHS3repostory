@@ -37,7 +37,7 @@ Namespace Dal
             Return objsc
         End Function
 
-        Public Shared Function GetList(ByVal vCategoriaId As Integer, ByVal vNombre As String) As DataTable  '1
+        Public Shared Function GetList(ByVal vCategoriaId As Integer, ByVal vNombre As String) As DataTable
             Dim TempList As New DataTable
             Dim oSP As New clsStored_Procedure("catalogo.pasubcategoria_leer")
             Dim oConexion As New clsConexion

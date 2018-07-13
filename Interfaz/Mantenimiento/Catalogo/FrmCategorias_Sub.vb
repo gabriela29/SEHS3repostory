@@ -292,14 +292,13 @@ Public Class FrmCategorias_Sub
             popupHelperD.ShowPopup(Me, frm, locationD)
 
         Else
-            MsgBox("  Editar form Debe Seleccionar un Registro Primero ", MsgBoxStyle.Exclamation, "DSIAM")
+            MsgBox("Editar form Debe Seleccionar un Registro Primero ", MsgBoxStyle.Exclamation, "DSIAM")
         End If
     End Sub
 
     Private Sub popupHelperD_PopupClosed(ByVal sender As Object, ByVal e As ControlesPersonalizados.Components.Controls.PopupClosedEventArgs) Handles popupHelperD.PopupClosed
         Dim frm As FrmCategoriaNM = e.Popup
         Call ListarCondicion("")
-
         frm = Nothing
     End Sub
 

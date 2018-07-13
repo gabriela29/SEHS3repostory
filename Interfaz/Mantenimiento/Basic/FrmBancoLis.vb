@@ -176,8 +176,8 @@ Public Class FrmBancoLis
     End Sub
 
     Private Sub popupHelperD_PopupClosed(ByVal sender As Object, ByVal e As ControlesPersonalizados.Components.Controls.PopupClosedEventArgs) Handles popupHelperD.PopupClosed
-        Dim frm As FrmCuentaCo = e.Popup
-        Call Listado_CuentaCo()
+        Dim frm As frmBanco = e.Popup
+        Call ListarBanco("")
         frm = Nothing
     End Sub
 
@@ -227,15 +227,35 @@ Public Class FrmBancoLis
         xFrmBanco.ShowDialog()
     End Sub
 
-    Private Sub tsDEditar_Click(sender As Object, e As EventArgs) Handles tsDEditar.Click
-        If dgvListadobanco.Rows.Count > 0 Then
-            Dim xbancoid As Long = 0
-            If dgvListadobanco.Selected.Rows.Count > 0 Then
-                xbancoid = dgvListadobanco.DisplayLayout.ActiveRow.Cells(0).Value
-                Dim xFrmPer As New frmBanco
-                'xFrmPer.vPersonaId = xbancoid
-                xFrmPer.ShowDialog()
-            End If
+    Private Sub tsDEditar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles tsDEditar.Click
+        If Not dgvListadobanco.Rows.Count > 0 Then
+            MsgBox("No hay Documentos Seleccionados que modificar", MsgBoxStyle.Information, "INFORMACIÓN")
+            Exit Sub
+        End If
+
+        If dgvListadobanco.Selected.Rows.Count > 0 Then
+            popupHelperD = New ControlesPersonalizados.Components.Controls.GestorVentanaPopup()
+            Dim frm As frmBanco = New frmBanco()
+            With frm
+                .MaximizeBox = False
+                .MinimizeBox = False
+                .ControlBox = False
+                .ShowInTaskbar = False
+                .FormBorderStyle = Windows.Forms.FormBorderStyle.None
+                .TopMost = True
+                .Text = ""
+                .ModoVentanaFlotante = True
+
+                .pcodigo = CInt(dgvListadobanco.DisplayLayout.ActiveRow.Cells(0).Value)
+                '.pCodigo = dgvListado.DisplayLayout.ActiveRow.Cells(0).Value
+
+            End With
+            Dim locationD As Point = Me.PointToScreen(New Point(Me.txtLocaltionDoc.Left, txtLocaltionDoc.Bottom))
+
+            popupHelperD.ShowPopup(Me, frm, locationD)
+
+        Else
+            MsgBox("  Editar form Debe Seleccionar un Registro Primero ", MsgBoxStyle.Exclamation, "DSIAM")
         End If
     End Sub
 

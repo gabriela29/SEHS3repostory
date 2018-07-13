@@ -25,11 +25,9 @@ Partial Class FrmBancoLis
         Dim Appearance1 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmBancoLis))
         Dim Appearance2 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
-        Dim Appearance3 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
-        Dim Appearance4 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
-        Dim Appearance26 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
         Dim Appearance5 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
         Dim Appearance6 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
+        Dim Appearance30 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
         Dim Appearance7 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
         Dim Appearance8 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
         Dim Appearance9 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
@@ -44,12 +42,18 @@ Partial Class FrmBancoLis
         Dim Appearance18 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
         Dim Appearance19 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
         Dim Appearance20 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
-        Dim ScrollBarLook1 As Infragistics.Win.UltraWinScrollBar.ScrollBarLook = New Infragistics.Win.UltraWinScrollBar.ScrollBarLook()
         Dim Appearance21 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
         Dim Appearance22 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
+        Dim ScrollBarLook1 As Infragistics.Win.UltraWinScrollBar.ScrollBarLook = New Infragistics.Win.UltraWinScrollBar.ScrollBarLook()
         Dim Appearance23 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
         Dim Appearance24 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
         Dim Appearance25 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
+        Dim Appearance26 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
+        Dim Appearance27 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
+        Dim Appearance28 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
+        Dim Appearance29 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
+        Dim Appearance3 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
+        Dim Appearance4 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
         Me.UltraGroupBox4 = New Infragistics.Win.Misc.UltraGroupBox()
         Me.UltraPictureBox1 = New Infragistics.Win.UltraWinEditors.UltraPictureBox()
         Me.ContBancoLis = New Infragistics.Win.Misc.UltraGroupBox()
@@ -70,6 +74,8 @@ Partial Class FrmBancoLis
         Me.ToolStripSeparator1 = New System.Windows.Forms.ToolStripSeparator()
         Me.ToolStripSeparator3 = New System.Windows.Forms.ToolStripSeparator()
         Me.TpNuevoCC = New System.Windows.Forms.ToolStripButton()
+        Me.btnLocation = New Infragistics.Win.Misc.UltraButton()
+        Me.txtLocaltionDoc = New Infragistics.Win.Misc.UltraButton()
         CType(Me.UltraGroupBox4, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.UltraGroupBox4.SuspendLayout()
         CType(Me.ContBancoLis, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -117,10 +123,11 @@ Partial Class FrmBancoLis
         Me.ContBancoLis.ContentAreaAppearance = Appearance2
         Me.ContBancoLis.Controls.Add(Me.dgvListadobanco)
         Me.ContBancoLis.Controls.Add(Me.ToolStrip1)
-        Appearance3.BackColor = System.Drawing.Color.LightBlue
-        Appearance3.BackColor2 = System.Drawing.Color.White
-        Appearance3.BackGradientStyle = Infragistics.Win.GradientStyle.Vertical
-        Me.ContBancoLis.HeaderAppearance = Appearance3
+        Me.ContBancoLis.Controls.Add(Me.txtLocaltionDoc)
+        Appearance5.BackColor = System.Drawing.Color.LightBlue
+        Appearance5.BackColor2 = System.Drawing.Color.White
+        Appearance5.BackGradientStyle = Infragistics.Win.GradientStyle.Vertical
+        Me.ContBancoLis.HeaderAppearance = Appearance5
         Me.ContBancoLis.HeaderPosition = Infragistics.Win.Misc.GroupBoxHeaderPosition.BottomOnBorder
         Me.ContBancoLis.Location = New System.Drawing.Point(3, 72)
         Me.ContBancoLis.Name = "ContBancoLis"
@@ -186,16 +193,17 @@ Partial Class FrmBancoLis
         Me.ContCuentaCo.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Appearance4.BackColor = System.Drawing.Color.White
-        Appearance4.BackColor2 = System.Drawing.Color.White
-        Appearance4.BackGradientStyle = Infragistics.Win.GradientStyle.ForwardDiagonal
-        Me.ContCuentaCo.ContentAreaAppearance = Appearance4
+        Appearance6.BackColor = System.Drawing.Color.White
+        Appearance6.BackColor2 = System.Drawing.Color.White
+        Appearance6.BackGradientStyle = Infragistics.Win.GradientStyle.ForwardDiagonal
+        Me.ContCuentaCo.ContentAreaAppearance = Appearance6
         Me.ContCuentaCo.Controls.Add(Me.dgvCuentaCo)
         Me.ContCuentaCo.Controls.Add(Me.TpCliente)
-        Appearance26.BackColor = System.Drawing.Color.LightBlue
-        Appearance26.BackColor2 = System.Drawing.Color.White
-        Appearance26.BackGradientStyle = Infragistics.Win.GradientStyle.Vertical
-        Me.ContCuentaCo.HeaderAppearance = Appearance26
+        Me.ContCuentaCo.Controls.Add(Me.btnLocation)
+        Appearance30.BackColor = System.Drawing.Color.LightBlue
+        Appearance30.BackColor2 = System.Drawing.Color.White
+        Appearance30.BackGradientStyle = Infragistics.Win.GradientStyle.Vertical
+        Me.ContCuentaCo.HeaderAppearance = Appearance30
         Me.ContCuentaCo.HeaderPosition = Infragistics.Win.Misc.GroupBoxHeaderPosition.BottomOnBorder
         Me.ContCuentaCo.Location = New System.Drawing.Point(330, 72)
         Me.ContCuentaCo.Name = "ContCuentaCo"
@@ -207,107 +215,107 @@ Partial Class FrmBancoLis
         Me.dgvCuentaCo.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Appearance5.BackColor = System.Drawing.Color.White
-        Appearance5.BackColor2 = System.Drawing.Color.FromArgb(CType(CType(221, Byte), Integer), CType(CType(221, Byte), Integer), CType(CType(221, Byte), Integer))
-        Appearance5.BackGradientStyle = Infragistics.Win.GradientStyle.Vertical
-        Appearance5.ForeColor = System.Drawing.Color.FromArgb(CType(CType(21, Byte), Integer), CType(CType(27, Byte), Integer), CType(CType(85, Byte), Integer))
-        Me.dgvCuentaCo.DisplayLayout.AddNewBox.Appearance = Appearance5
+        Appearance7.BackColor = System.Drawing.Color.White
+        Appearance7.BackColor2 = System.Drawing.Color.FromArgb(CType(CType(221, Byte), Integer), CType(CType(221, Byte), Integer), CType(CType(221, Byte), Integer))
+        Appearance7.BackGradientStyle = Infragistics.Win.GradientStyle.Vertical
+        Appearance7.ForeColor = System.Drawing.Color.FromArgb(CType(CType(21, Byte), Integer), CType(CType(27, Byte), Integer), CType(CType(85, Byte), Integer))
+        Me.dgvCuentaCo.DisplayLayout.AddNewBox.Appearance = Appearance7
         Me.dgvCuentaCo.DisplayLayout.AddNewBox.BorderStyle = Infragistics.Win.UIElementBorderStyle.None
-        Appearance6.ForeColor = System.Drawing.Color.FromArgb(CType(CType(21, Byte), Integer), CType(CType(27, Byte), Integer), CType(CType(85, Byte), Integer))
-        Appearance6.ImageBackground = CType(resources.GetObject("Appearance6.ImageBackground"), System.Drawing.Image)
-        Appearance6.ImageBackgroundAlpha = Infragistics.Win.Alpha.UseAlphaLevel
-        Appearance6.ImageBackgroundStretchMargins = New Infragistics.Win.ImageBackgroundStretchMargins(6, 3, 6, 3)
-        Appearance6.ImageBackgroundStyle = Infragistics.Win.ImageBackgroundStyle.Stretched
-        Me.dgvCuentaCo.DisplayLayout.AddNewBox.ButtonAppearance = Appearance6
+        Appearance8.ForeColor = System.Drawing.Color.FromArgb(CType(CType(21, Byte), Integer), CType(CType(27, Byte), Integer), CType(CType(85, Byte), Integer))
+        Appearance8.ImageBackground = CType(resources.GetObject("Appearance8.ImageBackground"), System.Drawing.Image)
+        Appearance8.ImageBackgroundAlpha = Infragistics.Win.Alpha.UseAlphaLevel
+        Appearance8.ImageBackgroundStretchMargins = New Infragistics.Win.ImageBackgroundStretchMargins(6, 3, 6, 3)
+        Appearance8.ImageBackgroundStyle = Infragistics.Win.ImageBackgroundStyle.Stretched
+        Me.dgvCuentaCo.DisplayLayout.AddNewBox.ButtonAppearance = Appearance8
         Me.dgvCuentaCo.DisplayLayout.AddNewBox.ButtonConnectorColor = System.Drawing.Color.FromArgb(CType(CType(21, Byte), Integer), CType(CType(27, Byte), Integer), CType(CType(85, Byte), Integer))
         Me.dgvCuentaCo.DisplayLayout.AddNewBox.ButtonStyle = Infragistics.Win.UIElementButtonStyle.FlatBorderless
-        Appearance7.BackColor = System.Drawing.Color.White
-        Me.dgvCuentaCo.DisplayLayout.Appearance = Appearance7
-        Appearance8.BackColor = System.Drawing.Color.FromArgb(CType(CType(21, Byte), Integer), CType(CType(27, Byte), Integer), CType(CType(85, Byte), Integer))
-        Appearance8.FontData.Name = "Trebuchet MS"
-        Appearance8.FontData.SizeInPoints = 9.0!
-        Appearance8.ForeColor = System.Drawing.Color.White
-        Appearance8.TextHAlignAsString = "Right"
-        Me.dgvCuentaCo.DisplayLayout.CaptionAppearance = Appearance8
+        Appearance9.BackColor = System.Drawing.Color.White
+        Me.dgvCuentaCo.DisplayLayout.Appearance = Appearance9
+        Appearance10.BackColor = System.Drawing.Color.FromArgb(CType(CType(21, Byte), Integer), CType(CType(27, Byte), Integer), CType(CType(85, Byte), Integer))
+        Appearance10.FontData.Name = "Trebuchet MS"
+        Appearance10.FontData.SizeInPoints = 9.0!
+        Appearance10.ForeColor = System.Drawing.Color.White
+        Appearance10.TextHAlignAsString = "Right"
+        Me.dgvCuentaCo.DisplayLayout.CaptionAppearance = Appearance10
         Me.dgvCuentaCo.DisplayLayout.CaptionVisible = Infragistics.Win.DefaultableBoolean.[False]
         Me.dgvCuentaCo.DisplayLayout.FixedHeaderOffImage = CType(resources.GetObject("dgvCuentaCo.DisplayLayout.FixedHeaderOffImage"), System.Drawing.Image)
         Me.dgvCuentaCo.DisplayLayout.FixedHeaderOnImage = CType(resources.GetObject("dgvCuentaCo.DisplayLayout.FixedHeaderOnImage"), System.Drawing.Image)
         Me.dgvCuentaCo.DisplayLayout.FixedRowOffImage = CType(resources.GetObject("dgvCuentaCo.DisplayLayout.FixedRowOffImage"), System.Drawing.Image)
         Me.dgvCuentaCo.DisplayLayout.FixedRowOnImage = CType(resources.GetObject("dgvCuentaCo.DisplayLayout.FixedRowOnImage"), System.Drawing.Image)
-        Appearance9.FontData.BoldAsString = "True"
-        Appearance9.FontData.Name = "Trebuchet MS"
-        Appearance9.FontData.SizeInPoints = 10.0!
-        Appearance9.ForeColor = System.Drawing.Color.FromArgb(CType(CType(60, Byte), Integer), CType(CType(127, Byte), Integer), CType(CType(177, Byte), Integer))
-        Appearance9.ImageBackground = CType(resources.GetObject("Appearance9.ImageBackground"), System.Drawing.Image)
-        Appearance9.ImageBackgroundStretchMargins = New Infragistics.Win.ImageBackgroundStretchMargins(0, 2, 0, 3)
-        Appearance9.ImageBackgroundStyle = Infragistics.Win.ImageBackgroundStyle.Stretched
-        Me.dgvCuentaCo.DisplayLayout.GroupByBox.Appearance = Appearance9
+        Appearance11.FontData.BoldAsString = "True"
+        Appearance11.FontData.Name = "Trebuchet MS"
+        Appearance11.FontData.SizeInPoints = 10.0!
+        Appearance11.ForeColor = System.Drawing.Color.FromArgb(CType(CType(60, Byte), Integer), CType(CType(127, Byte), Integer), CType(CType(177, Byte), Integer))
+        Appearance11.ImageBackground = CType(resources.GetObject("Appearance11.ImageBackground"), System.Drawing.Image)
+        Appearance11.ImageBackgroundStretchMargins = New Infragistics.Win.ImageBackgroundStretchMargins(0, 2, 0, 3)
+        Appearance11.ImageBackgroundStyle = Infragistics.Win.ImageBackgroundStyle.Stretched
+        Me.dgvCuentaCo.DisplayLayout.GroupByBox.Appearance = Appearance11
         Me.dgvCuentaCo.DisplayLayout.GroupByBox.ButtonBorderStyle = Infragistics.Win.UIElementBorderStyle.None
         Me.dgvCuentaCo.DisplayLayout.Override.AllowAddNew = Infragistics.Win.UltraWinGrid.AllowAddNew.No
         Me.dgvCuentaCo.DisplayLayout.Override.BorderStyleCell = Infragistics.Win.UIElementBorderStyle.None
         Me.dgvCuentaCo.DisplayLayout.Override.BorderStyleHeader = Infragistics.Win.UIElementBorderStyle.None
         Me.dgvCuentaCo.DisplayLayout.Override.BorderStyleRow = Infragistics.Win.UIElementBorderStyle.None
         Me.dgvCuentaCo.DisplayLayout.Override.ButtonStyle = Infragistics.Win.UIElementButtonStyle.FlatBorderless
-        Appearance10.BackColor = System.Drawing.Color.Transparent
-        Me.dgvCuentaCo.DisplayLayout.Override.CardAreaAppearance = Appearance10
-        Appearance11.BorderColor = System.Drawing.Color.Transparent
-        Appearance11.FontData.Name = "Verdana"
-        Me.dgvCuentaCo.DisplayLayout.Override.CellAppearance = Appearance11
-        Appearance12.ForeColor = System.Drawing.Color.FromArgb(CType(CType(21, Byte), Integer), CType(CType(27, Byte), Integer), CType(CType(85, Byte), Integer))
-        Appearance12.ImageBackground = CType(resources.GetObject("Appearance12.ImageBackground"), System.Drawing.Image)
-        Appearance12.ImageBackgroundStretchMargins = New Infragistics.Win.ImageBackgroundStretchMargins(6, 3, 6, 3)
-        Appearance12.ImageBackgroundStyle = Infragistics.Win.ImageBackgroundStyle.Stretched
-        Me.dgvCuentaCo.DisplayLayout.Override.CellButtonAppearance = Appearance12
-        Appearance13.BackColor = System.Drawing.Color.FromArgb(CType(CType(240, Byte), Integer), CType(CType(248, Byte), Integer), CType(CType(251, Byte), Integer))
-        Me.dgvCuentaCo.DisplayLayout.Override.FilterCellAppearance = Appearance13
+        Appearance12.BackColor = System.Drawing.Color.Transparent
+        Me.dgvCuentaCo.DisplayLayout.Override.CardAreaAppearance = Appearance12
+        Appearance13.BorderColor = System.Drawing.Color.Transparent
+        Appearance13.FontData.Name = "Verdana"
+        Me.dgvCuentaCo.DisplayLayout.Override.CellAppearance = Appearance13
         Appearance14.ForeColor = System.Drawing.Color.FromArgb(CType(CType(21, Byte), Integer), CType(CType(27, Byte), Integer), CType(CType(85, Byte), Integer))
         Appearance14.ImageBackground = CType(resources.GetObject("Appearance14.ImageBackground"), System.Drawing.Image)
         Appearance14.ImageBackgroundStretchMargins = New Infragistics.Win.ImageBackgroundStretchMargins(6, 3, 6, 3)
-        Me.dgvCuentaCo.DisplayLayout.Override.FilterClearButtonAppearance = Appearance14
-        Appearance15.BackColor = System.Drawing.Color.FromArgb(CType(CType(251, Byte), Integer), CType(CType(251, Byte), Integer), CType(CType(251, Byte), Integer))
-        Appearance15.BackColorAlpha = Infragistics.Win.Alpha.Opaque
-        Me.dgvCuentaCo.DisplayLayout.Override.FilterRowPromptAppearance = Appearance15
-        Appearance16.BackGradientStyle = Infragistics.Win.GradientStyle.None
-        Appearance16.FontData.BoldAsString = "True"
-        Appearance16.FontData.Name = "Trebuchet MS"
-        Appearance16.FontData.SizeInPoints = 10.0!
-        Appearance16.ForeColor = System.Drawing.Color.FromArgb(CType(CType(85, Byte), Integer), CType(CType(85, Byte), Integer), CType(CType(85, Byte), Integer))
+        Appearance14.ImageBackgroundStyle = Infragistics.Win.ImageBackgroundStyle.Stretched
+        Me.dgvCuentaCo.DisplayLayout.Override.CellButtonAppearance = Appearance14
+        Appearance15.BackColor = System.Drawing.Color.FromArgb(CType(CType(240, Byte), Integer), CType(CType(248, Byte), Integer), CType(CType(251, Byte), Integer))
+        Me.dgvCuentaCo.DisplayLayout.Override.FilterCellAppearance = Appearance15
+        Appearance16.ForeColor = System.Drawing.Color.FromArgb(CType(CType(21, Byte), Integer), CType(CType(27, Byte), Integer), CType(CType(85, Byte), Integer))
         Appearance16.ImageBackground = CType(resources.GetObject("Appearance16.ImageBackground"), System.Drawing.Image)
-        Appearance16.ImageBackgroundStyle = Infragistics.Win.ImageBackgroundStyle.Tiled
-        Appearance16.TextHAlignAsString = "Left"
-        Appearance16.ThemedElementAlpha = Infragistics.Win.Alpha.Transparent
-        Me.dgvCuentaCo.DisplayLayout.Override.HeaderAppearance = Appearance16
+        Appearance16.ImageBackgroundStretchMargins = New Infragistics.Win.ImageBackgroundStretchMargins(6, 3, 6, 3)
+        Me.dgvCuentaCo.DisplayLayout.Override.FilterClearButtonAppearance = Appearance16
+        Appearance17.BackColor = System.Drawing.Color.FromArgb(CType(CType(251, Byte), Integer), CType(CType(251, Byte), Integer), CType(CType(251, Byte), Integer))
+        Appearance17.BackColorAlpha = Infragistics.Win.Alpha.Opaque
+        Me.dgvCuentaCo.DisplayLayout.Override.FilterRowPromptAppearance = Appearance17
+        Appearance18.BackGradientStyle = Infragistics.Win.GradientStyle.None
+        Appearance18.FontData.BoldAsString = "True"
+        Appearance18.FontData.Name = "Trebuchet MS"
+        Appearance18.FontData.SizeInPoints = 10.0!
+        Appearance18.ForeColor = System.Drawing.Color.FromArgb(CType(CType(85, Byte), Integer), CType(CType(85, Byte), Integer), CType(CType(85, Byte), Integer))
+        Appearance18.ImageBackground = CType(resources.GetObject("Appearance18.ImageBackground"), System.Drawing.Image)
+        Appearance18.ImageBackgroundStyle = Infragistics.Win.ImageBackgroundStyle.Tiled
+        Appearance18.TextHAlignAsString = "Left"
+        Appearance18.ThemedElementAlpha = Infragistics.Win.Alpha.Transparent
+        Me.dgvCuentaCo.DisplayLayout.Override.HeaderAppearance = Appearance18
         Me.dgvCuentaCo.DisplayLayout.Override.HeaderStyle = Infragistics.Win.HeaderStyle.XPThemed
-        Appearance17.BorderColor = System.Drawing.Color.Transparent
-        Me.dgvCuentaCo.DisplayLayout.Override.RowAppearance = Appearance17
-        Appearance18.BackColor = System.Drawing.Color.White
-        Me.dgvCuentaCo.DisplayLayout.Override.RowSelectorAppearance = Appearance18
         Appearance19.BorderColor = System.Drawing.Color.Transparent
-        Appearance19.ForeColor = System.Drawing.Color.Black
-        Me.dgvCuentaCo.DisplayLayout.Override.SelectedCellAppearance = Appearance19
-        Appearance20.BorderColor = System.Drawing.Color.Transparent
-        Appearance20.ForeColor = System.Drawing.Color.FromArgb(CType(CType(21, Byte), Integer), CType(CType(27, Byte), Integer), CType(CType(85, Byte), Integer))
-        Appearance20.ImageBackground = CType(resources.GetObject("Appearance20.ImageBackground"), System.Drawing.Image)
-        Appearance20.ImageBackgroundStretchMargins = New Infragistics.Win.ImageBackgroundStretchMargins(1, 1, 1, 4)
-        Appearance20.ImageBackgroundStyle = Infragistics.Win.ImageBackgroundStyle.Stretched
-        Me.dgvCuentaCo.DisplayLayout.Override.SelectedRowAppearance = Appearance20
-        Appearance21.ImageBackgroundStretchMargins = New Infragistics.Win.ImageBackgroundStretchMargins(2, 4, 2, 4)
-        Appearance21.ImageBackgroundStyle = Infragistics.Win.ImageBackgroundStyle.Stretched
-        ScrollBarLook1.Appearance = Appearance21
+        Me.dgvCuentaCo.DisplayLayout.Override.RowAppearance = Appearance19
+        Appearance20.BackColor = System.Drawing.Color.White
+        Me.dgvCuentaCo.DisplayLayout.Override.RowSelectorAppearance = Appearance20
+        Appearance21.BorderColor = System.Drawing.Color.Transparent
+        Appearance21.ForeColor = System.Drawing.Color.Black
+        Me.dgvCuentaCo.DisplayLayout.Override.SelectedCellAppearance = Appearance21
+        Appearance22.BorderColor = System.Drawing.Color.Transparent
+        Appearance22.ForeColor = System.Drawing.Color.FromArgb(CType(CType(21, Byte), Integer), CType(CType(27, Byte), Integer), CType(CType(85, Byte), Integer))
         Appearance22.ImageBackground = CType(resources.GetObject("Appearance22.ImageBackground"), System.Drawing.Image)
-        Appearance22.ImageBackgroundStretchMargins = New Infragistics.Win.ImageBackgroundStretchMargins(3, 2, 3, 2)
-        ScrollBarLook1.AppearanceHorizontal = Appearance22
-        Appearance23.ImageBackground = CType(resources.GetObject("Appearance23.ImageBackground"), System.Drawing.Image)
-        Appearance23.ImageBackgroundStretchMargins = New Infragistics.Win.ImageBackgroundStretchMargins(2, 3, 2, 3)
+        Appearance22.ImageBackgroundStretchMargins = New Infragistics.Win.ImageBackgroundStretchMargins(1, 1, 1, 4)
+        Appearance22.ImageBackgroundStyle = Infragistics.Win.ImageBackgroundStyle.Stretched
+        Me.dgvCuentaCo.DisplayLayout.Override.SelectedRowAppearance = Appearance22
+        Appearance23.ImageBackgroundStretchMargins = New Infragistics.Win.ImageBackgroundStretchMargins(2, 4, 2, 4)
         Appearance23.ImageBackgroundStyle = Infragistics.Win.ImageBackgroundStyle.Stretched
-        ScrollBarLook1.AppearanceVertical = Appearance23
+        ScrollBarLook1.Appearance = Appearance23
         Appearance24.ImageBackground = CType(resources.GetObject("Appearance24.ImageBackground"), System.Drawing.Image)
-        Appearance24.ImageBackgroundStretchMargins = New Infragistics.Win.ImageBackgroundStretchMargins(0, 2, 0, 1)
-        ScrollBarLook1.TrackAppearanceHorizontal = Appearance24
+        Appearance24.ImageBackgroundStretchMargins = New Infragistics.Win.ImageBackgroundStretchMargins(3, 2, 3, 2)
+        ScrollBarLook1.AppearanceHorizontal = Appearance24
         Appearance25.ImageBackground = CType(resources.GetObject("Appearance25.ImageBackground"), System.Drawing.Image)
-        Appearance25.ImageBackgroundStretchMargins = New Infragistics.Win.ImageBackgroundStretchMargins(2, 0, 1, 0)
+        Appearance25.ImageBackgroundStretchMargins = New Infragistics.Win.ImageBackgroundStretchMargins(2, 3, 2, 3)
         Appearance25.ImageBackgroundStyle = Infragistics.Win.ImageBackgroundStyle.Stretched
-        ScrollBarLook1.TrackAppearanceVertical = Appearance25
+        ScrollBarLook1.AppearanceVertical = Appearance25
+        Appearance26.ImageBackground = CType(resources.GetObject("Appearance26.ImageBackground"), System.Drawing.Image)
+        Appearance26.ImageBackgroundStretchMargins = New Infragistics.Win.ImageBackgroundStretchMargins(0, 2, 0, 1)
+        ScrollBarLook1.TrackAppearanceHorizontal = Appearance26
+        Appearance27.ImageBackground = CType(resources.GetObject("Appearance27.ImageBackground"), System.Drawing.Image)
+        Appearance27.ImageBackgroundStretchMargins = New Infragistics.Win.ImageBackgroundStretchMargins(2, 0, 1, 0)
+        Appearance27.ImageBackgroundStyle = Infragistics.Win.ImageBackgroundStyle.Stretched
+        ScrollBarLook1.TrackAppearanceVertical = Appearance27
         Me.dgvCuentaCo.DisplayLayout.ScrollBarLook = ScrollBarLook1
         Me.dgvCuentaCo.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
         Me.dgvCuentaCo.Location = New System.Drawing.Point(3, 31)
@@ -385,6 +393,50 @@ Partial Class FrmBancoLis
         Me.TpNuevoCC.Text = "&Nuevo"
         Me.TpNuevoCC.ToolTipText = "Nuevo"
         '
+        'btnLocation
+        '
+        Appearance28.BackColor = System.Drawing.Color.LightBlue
+        Appearance28.BackColor2 = System.Drawing.Color.White
+        Appearance28.BackColorAlpha = Infragistics.Win.Alpha.Transparent
+        Appearance28.BackGradientStyle = Infragistics.Win.GradientStyle.Vertical
+        Appearance28.BorderColor = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(255, Byte), Integer))
+        Appearance28.ForeColor = System.Drawing.Color.Navy
+        Appearance28.ImageHAlign = Infragistics.Win.HAlign.Center
+        Me.btnLocation.Appearance = Appearance28
+        Me.btnLocation.ButtonStyle = Infragistics.Win.UIElementButtonStyle.Flat
+        Me.btnLocation.DialogResult = System.Windows.Forms.DialogResult.Cancel
+        Me.btnLocation.Font = New System.Drawing.Font("Tahoma", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnLocation.Location = New System.Drawing.Point(-1, 26)
+        Me.btnLocation.Name = "btnLocation"
+        Appearance29.BorderAlpha = Infragistics.Win.Alpha.Transparent
+        Me.btnLocation.PressedAppearance = Appearance29
+        Me.btnLocation.Size = New System.Drawing.Size(30, 21)
+        Me.btnLocation.TabIndex = 69
+        Me.btnLocation.Text = "x"
+        Me.btnLocation.UseOsThemes = Infragistics.Win.DefaultableBoolean.[False]
+        '
+        'txtLocaltionDoc
+        '
+        Appearance3.BackColor = System.Drawing.Color.LightBlue
+        Appearance3.BackColor2 = System.Drawing.Color.White
+        Appearance3.BackColorAlpha = Infragistics.Win.Alpha.Transparent
+        Appearance3.BackGradientStyle = Infragistics.Win.GradientStyle.Vertical
+        Appearance3.BorderColor = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(255, Byte), Integer))
+        Appearance3.ForeColor = System.Drawing.Color.Navy
+        Appearance3.ImageHAlign = Infragistics.Win.HAlign.Center
+        Me.txtLocaltionDoc.Appearance = Appearance3
+        Me.txtLocaltionDoc.ButtonStyle = Infragistics.Win.UIElementButtonStyle.Flat
+        Me.txtLocaltionDoc.DialogResult = System.Windows.Forms.DialogResult.Cancel
+        Me.txtLocaltionDoc.Font = New System.Drawing.Font("Tahoma", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtLocaltionDoc.Location = New System.Drawing.Point(0, 0)
+        Me.txtLocaltionDoc.Name = "txtLocaltionDoc"
+        Appearance4.BorderAlpha = Infragistics.Win.Alpha.Transparent
+        Me.txtLocaltionDoc.PressedAppearance = Appearance4
+        Me.txtLocaltionDoc.Size = New System.Drawing.Size(39, 28)
+        Me.txtLocaltionDoc.TabIndex = 70
+        Me.txtLocaltionDoc.Text = "x"
+        Me.txtLocaltionDoc.UseOsThemes = Infragistics.Win.DefaultableBoolean.[False]
+        '
         'FrmBancoLis
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -434,4 +486,6 @@ Partial Class FrmBancoLis
     Friend WithEvents ToolStripSeparator1 As ToolStripSeparator
     Friend WithEvents ToolStripSeparator3 As ToolStripSeparator
     Friend WithEvents TpNuevoCC As ToolStripButton
+    Friend WithEvents btnLocation As Infragistics.Win.Misc.UltraButton
+    Friend WithEvents txtLocaltionDoc As Infragistics.Win.Misc.UltraButton
 End Class
