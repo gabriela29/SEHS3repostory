@@ -15,8 +15,8 @@ Namespace Dal
             Dim objReader As DataRow
 
             Try
-                osP = "select * from banco where bancoid=" & codigo
-                Templist = oCOnexion.Ejecutar_Consulta(osP)
+                osP = "select * from basic.banco where bancoid=" & codigo
+                Templist = oConexion.Ejecutar_Consulta(osP)
                 objReader = Nothing
                 If Templist.Rows.Count > 0 Then
                     objReader = Templist.Rows(0)
@@ -63,6 +63,7 @@ Namespace Dal
         End Function
 
         Public Shared Function Grabar(ByRef objb As banco) As DataTable
+            Dim oSP As New clsStored_Procedure("basic.pabanco_actualizar")
             Dim ncadena As String = ""
             Try
                 ncadena = "select * from basic.pabanco_actualizar("

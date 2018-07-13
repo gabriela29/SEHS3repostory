@@ -445,17 +445,17 @@
   <data name="TpModificarCC.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         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
-        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
+        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
 </value>
   </data>
   <data name="TpNuevoCC.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">

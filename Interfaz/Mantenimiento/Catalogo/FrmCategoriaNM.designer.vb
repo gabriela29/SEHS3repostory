@@ -19,28 +19,28 @@ Partial Class FrmCategoriaNM
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim Appearance1 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
-        Dim Appearance2 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
-        Dim Appearance3 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
-        Dim Appearance4 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
-        Dim Appearance5 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
+        Dim Appearance41 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
+        Dim Appearance42 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
+        Dim Appearance43 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
+        Dim Appearance44 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
+        Dim Appearance45 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmCategoriaNM))
-        Dim Appearance7 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
-        Dim Appearance8 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
-        Dim Appearance9 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
-        Dim Appearance10 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
-        Dim Appearance6 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
+        Dim Appearance46 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
+        Dim Appearance47 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
+        Dim Appearance48 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
+        Dim Appearance49 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
+        Dim Appearance50 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
         Me.UltraGroupBox1 = New Infragistics.Win.Misc.UltraGroupBox()
         Me.LblCodigo = New Infragistics.Win.Misc.UltraLabel()
         Me.UltraLabel4 = New Infragistics.Win.Misc.UltraLabel()
         Me.UltraButton1 = New Infragistics.Win.Misc.UltraButton()
         Me.btnCerrar = New Infragistics.Win.Misc.UltraButton()
+        Me.BtnGrabar = New Infragistics.Win.Misc.UltraButton()
         Me.UgbMCliente = New Infragistics.Win.Misc.UltraGroupBox()
         Me.TxtNombre = New System.Windows.Forms.TextBox()
         Me.txtAbrev = New System.Windows.Forms.TextBox()
         Me.UltraLabel5 = New Infragistics.Win.Misc.UltraLabel()
         Me.UltraLabel8 = New Infragistics.Win.Misc.UltraLabel()
-        Me.BtnGrabar = New Infragistics.Win.Misc.UltraButton()
         CType(Me.UltraGroupBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.UltraGroupBox1.SuspendLayout()
         CType(Me.UgbMCliente, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -57,20 +57,20 @@ Partial Class FrmCategoriaNM
         Me.UltraGroupBox1.Controls.Add(Me.btnCerrar)
         Me.UltraGroupBox1.Controls.Add(Me.BtnGrabar)
         Me.UltraGroupBox1.Controls.Add(Me.UgbMCliente)
-        Me.UltraGroupBox1.Location = New System.Drawing.Point(-1, 0)
+        Me.UltraGroupBox1.Location = New System.Drawing.Point(-1, 12)
         Me.UltraGroupBox1.Name = "UltraGroupBox1"
-        Me.UltraGroupBox1.Size = New System.Drawing.Size(331, 208)
+        Me.UltraGroupBox1.Size = New System.Drawing.Size(331, 196)
         Me.UltraGroupBox1.TabIndex = 6
         Me.UltraGroupBox1.Text = "Actualizanado Categorías"
         Me.UltraGroupBox1.ViewStyle = Infragistics.Win.Misc.GroupBoxViewStyle.Office2007
         '
         'LblCodigo
         '
-        Appearance1.BackColorAlpha = Infragistics.Win.Alpha.Transparent
-        Appearance1.BorderColor = System.Drawing.SystemColors.GradientInactiveCaption
-        Appearance1.TextHAlignAsString = "Right"
-        Appearance1.TextVAlignAsString = "Middle"
-        Me.LblCodigo.Appearance = Appearance1
+        Appearance41.BackColorAlpha = Infragistics.Win.Alpha.Transparent
+        Appearance41.BorderColor = System.Drawing.SystemColors.GradientInactiveCaption
+        Appearance41.TextHAlignAsString = "Right"
+        Appearance41.TextVAlignAsString = "Middle"
+        Me.LblCodigo.Appearance = Appearance41
         Me.LblCodigo.BorderStyleOuter = Infragistics.Win.UIElementBorderStyle.Solid
         Me.LblCodigo.Location = New System.Drawing.Point(103, 19)
         Me.LblCodigo.Name = "LblCodigo"
@@ -79,9 +79,9 @@ Partial Class FrmCategoriaNM
         '
         'UltraLabel4
         '
-        Appearance2.BackColorAlpha = Infragistics.Win.Alpha.Transparent
-        Appearance2.ForeColor = System.Drawing.Color.Navy
-        Me.UltraLabel4.Appearance = Appearance2
+        Appearance42.BackColorAlpha = Infragistics.Win.Alpha.Transparent
+        Appearance42.ForeColor = System.Drawing.Color.Navy
+        Me.UltraLabel4.Appearance = Appearance42
         Me.UltraLabel4.Font = New System.Drawing.Font("Arial", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.UltraLabel4.Location = New System.Drawing.Point(11, 19)
         Me.UltraLabel4.Name = "UltraLabel4"
@@ -92,21 +92,21 @@ Partial Class FrmCategoriaNM
         '
         'UltraButton1
         '
-        Appearance3.BackColor = System.Drawing.Color.LightBlue
-        Appearance3.BackColor2 = System.Drawing.Color.White
-        Appearance3.BackColorAlpha = Infragistics.Win.Alpha.Transparent
-        Appearance3.BackGradientStyle = Infragistics.Win.GradientStyle.Vertical
-        Appearance3.BorderColor = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(255, Byte), Integer))
-        Appearance3.ForeColor = System.Drawing.Color.Navy
-        Appearance3.ImageHAlign = Infragistics.Win.HAlign.Center
-        Me.UltraButton1.Appearance = Appearance3
+        Appearance43.BackColor = System.Drawing.Color.LightBlue
+        Appearance43.BackColor2 = System.Drawing.Color.White
+        Appearance43.BackColorAlpha = Infragistics.Win.Alpha.Transparent
+        Appearance43.BackGradientStyle = Infragistics.Win.GradientStyle.Vertical
+        Appearance43.BorderColor = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(255, Byte), Integer))
+        Appearance43.ForeColor = System.Drawing.Color.Navy
+        Appearance43.ImageHAlign = Infragistics.Win.HAlign.Center
+        Me.UltraButton1.Appearance = Appearance43
         Me.UltraButton1.ButtonStyle = Infragistics.Win.UIElementButtonStyle.Flat
         Me.UltraButton1.DialogResult = System.Windows.Forms.DialogResult.Cancel
         Me.UltraButton1.Font = New System.Drawing.Font("Tahoma", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.UltraButton1.Location = New System.Drawing.Point(296, 0)
         Me.UltraButton1.Name = "UltraButton1"
-        Appearance4.BorderAlpha = Infragistics.Win.Alpha.Transparent
-        Me.UltraButton1.PressedAppearance = Appearance4
+        Appearance44.BorderAlpha = Infragistics.Win.Alpha.Transparent
+        Me.UltraButton1.PressedAppearance = Appearance44
         Me.UltraButton1.Size = New System.Drawing.Size(29, 16)
         Me.UltraButton1.TabIndex = 45
         Me.UltraButton1.Text = "x"
@@ -114,11 +114,11 @@ Partial Class FrmCategoriaNM
         '
         'btnCerrar
         '
-        Appearance5.BackColor = System.Drawing.Color.White
-        Appearance5.BackColor2 = System.Drawing.SystemColors.GradientInactiveCaption
-        Appearance5.BackGradientStyle = Infragistics.Win.GradientStyle.Vertical
-        Appearance5.Image = CType(resources.GetObject("Appearance5.Image"), Object)
-        Me.btnCerrar.Appearance = Appearance5
+        Appearance45.BackColor = System.Drawing.Color.White
+        Appearance45.BackColor2 = System.Drawing.SystemColors.GradientInactiveCaption
+        Appearance45.BackGradientStyle = Infragistics.Win.GradientStyle.Vertical
+        Appearance45.Image = CType(resources.GetObject("Appearance45.Image"), Object)
+        Me.btnCerrar.Appearance = Appearance45
         Me.btnCerrar.ButtonStyle = Infragistics.Win.UIElementButtonStyle.Office2007RibbonButton
         Me.btnCerrar.DialogResult = System.Windows.Forms.DialogResult.Cancel
         Me.btnCerrar.Location = New System.Drawing.Point(179, 172)
@@ -128,14 +128,29 @@ Partial Class FrmCategoriaNM
         Me.btnCerrar.Text = "&Cancelar"
         Me.btnCerrar.UseOsThemes = Infragistics.Win.DefaultableBoolean.[False]
         '
+        'BtnGrabar
+        '
+        Appearance46.BackColor = System.Drawing.Color.White
+        Appearance46.BackColor2 = System.Drawing.SystemColors.GradientInactiveCaption
+        Appearance46.BackGradientStyle = Infragistics.Win.GradientStyle.Vertical
+        Appearance46.Image = CType(resources.GetObject("Appearance46.Image"), Object)
+        Me.BtnGrabar.Appearance = Appearance46
+        Me.BtnGrabar.ButtonStyle = Infragistics.Win.UIElementButtonStyle.Office2007RibbonButton
+        Me.BtnGrabar.Location = New System.Drawing.Point(90, 172)
+        Me.BtnGrabar.Name = "BtnGrabar"
+        Me.BtnGrabar.Size = New System.Drawing.Size(83, 27)
+        Me.BtnGrabar.TabIndex = 1
+        Me.BtnGrabar.Text = "&Grabar"
+        Me.BtnGrabar.UseOsThemes = Infragistics.Win.DefaultableBoolean.[False]
+        '
         'UgbMCliente
         '
-        Appearance7.BackColorAlpha = Infragistics.Win.Alpha.Opaque
-        Me.UgbMCliente.Appearance = Appearance7
-        Appearance8.AlphaLevel = CType(30, Short)
-        Appearance8.BackColor = System.Drawing.Color.RoyalBlue
-        Appearance8.BackColorAlpha = Infragistics.Win.Alpha.UseAlphaLevel
-        Me.UgbMCliente.ContentAreaAppearance = Appearance8
+        Appearance47.BackColorAlpha = Infragistics.Win.Alpha.Opaque
+        Me.UgbMCliente.Appearance = Appearance47
+        Appearance48.AlphaLevel = CType(30, Short)
+        Appearance48.BackColor = System.Drawing.Color.RoyalBlue
+        Appearance48.BackColorAlpha = Infragistics.Win.Alpha.UseAlphaLevel
+        Me.UgbMCliente.ContentAreaAppearance = Appearance48
         Me.UgbMCliente.Controls.Add(Me.TxtNombre)
         Me.UgbMCliente.Controls.Add(Me.txtAbrev)
         Me.UgbMCliente.Controls.Add(Me.UltraLabel5)
@@ -164,9 +179,9 @@ Partial Class FrmCategoriaNM
         '
         'UltraLabel5
         '
-        Appearance9.BackColorAlpha = Infragistics.Win.Alpha.Transparent
-        Appearance9.ForeColor = System.Drawing.Color.Navy
-        Me.UltraLabel5.Appearance = Appearance9
+        Appearance49.BackColorAlpha = Infragistics.Win.Alpha.Transparent
+        Appearance49.ForeColor = System.Drawing.Color.Navy
+        Me.UltraLabel5.Appearance = Appearance49
         Me.UltraLabel5.Font = New System.Drawing.Font("Arial", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.UltraLabel5.Location = New System.Drawing.Point(7, 62)
         Me.UltraLabel5.Name = "UltraLabel5"
@@ -176,30 +191,15 @@ Partial Class FrmCategoriaNM
         '
         'UltraLabel8
         '
-        Appearance10.BackColorAlpha = Infragistics.Win.Alpha.Transparent
-        Appearance10.ForeColor = System.Drawing.Color.Navy
-        Me.UltraLabel8.Appearance = Appearance10
+        Appearance50.BackColorAlpha = Infragistics.Win.Alpha.Transparent
+        Appearance50.ForeColor = System.Drawing.Color.Navy
+        Me.UltraLabel8.Appearance = Appearance50
         Me.UltraLabel8.Font = New System.Drawing.Font("Arial", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.UltraLabel8.Location = New System.Drawing.Point(7, 28)
         Me.UltraLabel8.Name = "UltraLabel8"
         Me.UltraLabel8.Size = New System.Drawing.Size(86, 20)
         Me.UltraLabel8.TabIndex = 41
         Me.UltraLabel8.Text = "Nombre: "
-        '
-        'BtnGrabar
-        '
-        Appearance6.BackColor = System.Drawing.Color.White
-        Appearance6.BackColor2 = System.Drawing.SystemColors.GradientInactiveCaption
-        Appearance6.BackGradientStyle = Infragistics.Win.GradientStyle.Vertical
-        Appearance6.Image = CType(resources.GetObject("Appearance6.Image"), Object)
-        Me.BtnGrabar.Appearance = Appearance6
-        Me.BtnGrabar.ButtonStyle = Infragistics.Win.UIElementButtonStyle.Office2007RibbonButton
-        Me.BtnGrabar.Location = New System.Drawing.Point(90, 172)
-        Me.BtnGrabar.Name = "BtnGrabar"
-        Me.BtnGrabar.Size = New System.Drawing.Size(83, 27)
-        Me.BtnGrabar.TabIndex = 1
-        Me.BtnGrabar.Text = "&Grabar"
-        Me.BtnGrabar.UseOsThemes = Infragistics.Win.DefaultableBoolean.[False]
         '
         'FrmCategoriaNM
         '
@@ -216,7 +216,6 @@ Partial Class FrmCategoriaNM
         Me.MinimizeBox = False
         Me.Name = "FrmCategoriaNM"
         Me.ShowInTaskbar = False
-        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         CType(Me.UltraGroupBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.UltraGroupBox1.ResumeLayout(False)
         CType(Me.UgbMCliente, System.ComponentModel.ISupportInitialize).EndInit()

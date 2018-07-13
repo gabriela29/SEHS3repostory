@@ -77,6 +77,10 @@ Public Class FrmCategoriaNM
         Me.Close()
     End Sub
 
+    Private Sub UltraGroupBox1_Click(sender As Object, e As EventArgs) Handles UltraGroupBox1.Click
+
+    End Sub
+
     Private Sub FrmCategoriaNM_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
         If pCodigo > 0 Then
             Call Mostrar_Datos()

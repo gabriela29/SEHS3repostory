@@ -63,7 +63,7 @@ Public Class FrmBancoLis
                 dtlistacuentaCO = CuentaCoManager.GetList(vIDBanco, "")
                 dgvCuentaCo.DataSource = dtlistacuentaCO
 
-                If dgvCuentaCo.Rows.Count() > 0 Then 'kkk
+                If dgvCuentaCo.Rows.Count() > 0 Then
 
                 End If
             Else
@@ -141,7 +141,7 @@ Public Class FrmBancoLis
         Call formatear_grid()
     End Sub
 
-    Private Sub TpEliminarCC_Click(sender As Object, e As EventArgs) Handles TpEliminarCC.Click
+    Private Sub TpEliminarCC_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles TpEliminarCC.Click
         If MsgBox(" Esta Acción podría Afectar el normal Funncionamiento del Sistema, ¿Desea Continuar?", MsgBoxStyle.YesNo, "Confirme") = MsgBoxResult.Yes Then
             If dgvCuentaCo.Selected.Rows.Count > 0 Then
                 Call Eliminar_CtaCte()
@@ -150,7 +150,7 @@ Public Class FrmBancoLis
         End If
     End Sub
 
-    Private Sub TpNuevoCC_Click(sender As Object, e As EventArgs) Handles TpNuevoCC.Click
+    Private Sub TpNuevoCC_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles TpNuevoCC.Click
         If dgvListadobanco.Rows.Count > 0 Then
             If dgvListadobanco.Selected.Rows.Count > 0 Then
                 popupHelper = New ControlesPersonalizados.Components.Controls.GestorVentanaPopup()
@@ -175,9 +175,10 @@ Public Class FrmBancoLis
         End If
     End Sub
 
-    Private Sub popupHelperD_PopupClosed(ByVal sender As Object, ByVal e As ControlesPersonalizados.Components.Controls.PopupClosedEventArgs) Handles popupHelperD.PopupClosed
-        Dim frm As frmBanco = e.Popup
-        Call ListarBanco("")
+    Private Sub popupHelper_PopupClosed(ByVal sender As Object, ByVal e As ControlesPersonalizados.Components.Controls.PopupClosedEventArgs) Handles popupHelper.PopupClosed
+        Dim frm As FrmCuentaCo = e.Popup
+        Call Listado_CuentaCo()
+
         frm = Nothing
     End Sub
 
@@ -259,7 +260,26 @@ Public Class FrmBancoLis
         End If
     End Sub
 
+    Private Sub dgvCuentaCo_InitializeLayout(sender As Object, e As InitializeLayoutEventArgs) Handles dgvCuentaCo.InitializeLayout
+        With dgvCuentaCo.DisplayLayout.Bands(0)
+            .Columns(0).Width = 20
+            .Columns(0).Header.Caption = "ID"
+            .Columns(1).Header.Caption = "NUMERO"
+            .Columns(2).Header.Caption = "ABREVIATURA"
+            .Columns(1).Width = 220
+            .Columns(2).Hidden = True
+            .Columns(3).Hidden = True
+        End With
+        Me.dgvCuentaCo.DisplayLayout.Override.SelectTypeRow = Infragistics.Win.UltraWinGrid.SelectType.[Single]
+        Me.dgvCuentaCo.DisplayLayout.Override.CellClickAction = Infragistics.Win.UltraWinGrid.CellClickAction.RowSelect
+    End Sub
 
+
+    Private Sub popupHelperD_PopupClosed(ByVal sender As Object, ByVal e As ControlesPersonalizados.Components.Controls.PopupClosedEventArgs) Handles popupHelperD.PopupClosed
+        Dim frm As frmBanco = e.Popup
+        Call ListarBanco("")
+        frm = Nothing
+    End Sub
 
     Private Sub tsDDelete_Click(sender As Object, e As EventArgs) Handles tsDDelete.Click
         If dgvListadobanco.Selected.Rows.Count > 0 Then
@@ -322,6 +342,5 @@ Public Class FrmBancoLis
 
 
     End Sub
-
 
 End Class

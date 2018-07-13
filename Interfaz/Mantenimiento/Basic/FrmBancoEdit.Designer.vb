@@ -59,9 +59,9 @@ Partial Class frmBanco
         Me.UgbMCliente.Controls.Add(Me.txtabreviatura)
         Me.UgbMCliente.Controls.Add(Me.UltraLabel5)
         Me.UgbMCliente.Controls.Add(Me.UltraLabel8)
-        Me.UgbMCliente.Location = New System.Drawing.Point(1, 12)
+        Me.UgbMCliente.Location = New System.Drawing.Point(1, 0)
         Me.UgbMCliente.Name = "UgbMCliente"
-        Me.UgbMCliente.Size = New System.Drawing.Size(388, 177)
+        Me.UgbMCliente.Size = New System.Drawing.Size(388, 189)
         Me.UgbMCliente.TabIndex = 1
         Me.UgbMCliente.ViewStyle = Infragistics.Win.Misc.GroupBoxViewStyle.Office2007
         '
@@ -160,9 +160,17 @@ Partial Class frmBanco
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackColor = System.Drawing.SystemColors.Info
+        Me.CancelButton = Me.btnCerrar
         Me.ClientSize = New System.Drawing.Size(385, 187)
+        Me.ControlBox = False
         Me.Controls.Add(Me.UgbMCliente)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
+        Me.KeyPreview = True
+        Me.MaximizeBox = False
+        Me.MinimizeBox = False
         Me.Name = "frmBanco"
+        Me.ShowInTaskbar = False
         Me.Text = "Banco"
         CType(Me.UgbMCliente, System.ComponentModel.ISupportInitialize).EndInit()
         Me.UgbMCliente.ResumeLayout(False)

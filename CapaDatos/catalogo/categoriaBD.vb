@@ -64,25 +64,6 @@ Namespace Dal
 
         Public Shared Function Grabar(ByRef objc As categoria) As DataTable
             Dim oSP As New clsStored_Procedure("catalogo.pacategoria_actualizar2")
-            'Try
-            '    If objc.categoriaid = -1 Then
-            '        oSP.addParameter("innew", True, NpgsqlTypes.NpgsqlDbType.Boolean, 0, ParameterDirection.Input)
-            '    Else
-            '        oSP.addParameter("innew", False, NpgsqlTypes.NpgsqlDbType.Boolean, 0, ParameterDirection.Input)
-            '    End If
-            '    oSP.addParameter("incategoriaid", objc.categoriaid, NpgsqlTypes.NpgsqlDbType.Integer, 2, ParameterDirection.Input)
-
-            '    oSP.addParameter("innombre", objc.nombre, NpgsqlTypes.NpgsqlDbType.Varchar, 50, ParameterDirection.Input)
-
-            '    oSP.addParameter("inabrev", objc.abrev, NpgsqlTypes.NpgsqlDbType.Varchar, 50, ParameterDirection.Input)
-
-            '    Dim oConexion As New clsConexion
-            '    Grabar = oConexion.Ejecutar_Consulta(oSP)
-            '    oConexion.Cerrar_Conexion()
-            '    oConexion = Nothing
-            'Finally
-            '    oSP = Nothing
-            'End Try
             Dim vCadena As String = ""
             Try
 

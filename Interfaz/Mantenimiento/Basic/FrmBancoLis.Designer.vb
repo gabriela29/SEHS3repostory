@@ -26,6 +26,8 @@ Partial Class FrmBancoLis
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmBancoLis))
         Dim Appearance2 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
         Dim Appearance5 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
+        Dim Appearance3 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
+        Dim Appearance4 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
         Dim Appearance6 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
         Dim Appearance30 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
         Dim Appearance7 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
@@ -52,8 +54,6 @@ Partial Class FrmBancoLis
         Dim Appearance27 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
         Dim Appearance28 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
         Dim Appearance29 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
-        Dim Appearance3 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
-        Dim Appearance4 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
         Me.UltraGroupBox4 = New Infragistics.Win.Misc.UltraGroupBox()
         Me.UltraPictureBox1 = New Infragistics.Win.UltraWinEditors.UltraPictureBox()
         Me.ContBancoLis = New Infragistics.Win.Misc.UltraGroupBox()
@@ -63,6 +63,7 @@ Partial Class FrmBancoLis
         Me.tsDEditar = New System.Windows.Forms.ToolStripButton()
         Me.tsDDelete = New System.Windows.Forms.ToolStripButton()
         Me.tsCerrar = New System.Windows.Forms.ToolStripButton()
+        Me.txtLocaltionDoc = New Infragistics.Win.Misc.UltraButton()
         Me.ContCuentaCo = New Infragistics.Win.Misc.UltraGroupBox()
         Me.dgvCuentaCo = New Infragistics.Win.UltraWinGrid.UltraGrid()
         Me.TpCliente = New System.Windows.Forms.ToolStrip()
@@ -75,7 +76,6 @@ Partial Class FrmBancoLis
         Me.ToolStripSeparator3 = New System.Windows.Forms.ToolStripSeparator()
         Me.TpNuevoCC = New System.Windows.Forms.ToolStripButton()
         Me.btnLocation = New Infragistics.Win.Misc.UltraButton()
-        Me.txtLocaltionDoc = New Infragistics.Win.Misc.UltraButton()
         CType(Me.UltraGroupBox4, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.UltraGroupBox4.SuspendLayout()
         CType(Me.ContBancoLis, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -187,6 +187,28 @@ Partial Class FrmBancoLis
         Me.tsCerrar.Name = "tsCerrar"
         Me.tsCerrar.Size = New System.Drawing.Size(59, 22)
         Me.tsCerrar.Text = "Cerrar"
+        '
+        'txtLocaltionDoc
+        '
+        Appearance3.BackColor = System.Drawing.Color.LightBlue
+        Appearance3.BackColor2 = System.Drawing.Color.White
+        Appearance3.BackColorAlpha = Infragistics.Win.Alpha.Transparent
+        Appearance3.BackGradientStyle = Infragistics.Win.GradientStyle.Vertical
+        Appearance3.BorderColor = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(255, Byte), Integer))
+        Appearance3.ForeColor = System.Drawing.Color.Navy
+        Appearance3.ImageHAlign = Infragistics.Win.HAlign.Center
+        Me.txtLocaltionDoc.Appearance = Appearance3
+        Me.txtLocaltionDoc.ButtonStyle = Infragistics.Win.UIElementButtonStyle.Flat
+        Me.txtLocaltionDoc.DialogResult = System.Windows.Forms.DialogResult.Cancel
+        Me.txtLocaltionDoc.Font = New System.Drawing.Font("Tahoma", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtLocaltionDoc.Location = New System.Drawing.Point(0, 0)
+        Me.txtLocaltionDoc.Name = "txtLocaltionDoc"
+        Appearance4.BorderAlpha = Infragistics.Win.Alpha.Transparent
+        Me.txtLocaltionDoc.PressedAppearance = Appearance4
+        Me.txtLocaltionDoc.Size = New System.Drawing.Size(39, 28)
+        Me.txtLocaltionDoc.TabIndex = 70
+        Me.txtLocaltionDoc.Text = "x"
+        Me.txtLocaltionDoc.UseOsThemes = Infragistics.Win.DefaultableBoolean.[False]
         '
         'ContCuentaCo
         '
@@ -414,28 +436,6 @@ Partial Class FrmBancoLis
         Me.btnLocation.TabIndex = 69
         Me.btnLocation.Text = "x"
         Me.btnLocation.UseOsThemes = Infragistics.Win.DefaultableBoolean.[False]
-        '
-        'txtLocaltionDoc
-        '
-        Appearance3.BackColor = System.Drawing.Color.LightBlue
-        Appearance3.BackColor2 = System.Drawing.Color.White
-        Appearance3.BackColorAlpha = Infragistics.Win.Alpha.Transparent
-        Appearance3.BackGradientStyle = Infragistics.Win.GradientStyle.Vertical
-        Appearance3.BorderColor = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(255, Byte), Integer))
-        Appearance3.ForeColor = System.Drawing.Color.Navy
-        Appearance3.ImageHAlign = Infragistics.Win.HAlign.Center
-        Me.txtLocaltionDoc.Appearance = Appearance3
-        Me.txtLocaltionDoc.ButtonStyle = Infragistics.Win.UIElementButtonStyle.Flat
-        Me.txtLocaltionDoc.DialogResult = System.Windows.Forms.DialogResult.Cancel
-        Me.txtLocaltionDoc.Font = New System.Drawing.Font("Tahoma", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtLocaltionDoc.Location = New System.Drawing.Point(0, 0)
-        Me.txtLocaltionDoc.Name = "txtLocaltionDoc"
-        Appearance4.BorderAlpha = Infragistics.Win.Alpha.Transparent
-        Me.txtLocaltionDoc.PressedAppearance = Appearance4
-        Me.txtLocaltionDoc.Size = New System.Drawing.Size(39, 28)
-        Me.txtLocaltionDoc.TabIndex = 70
-        Me.txtLocaltionDoc.Text = "x"
-        Me.txtLocaltionDoc.UseOsThemes = Infragistics.Win.DefaultableBoolean.[False]
         '
         'FrmBancoLis
         '
