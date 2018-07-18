@@ -367,7 +367,7 @@ Partial Class FrmCategorias_Sub
         Me.TpEliminar.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.TpEliminar.Name = "TpEliminar"
         Me.TpEliminar.Size = New System.Drawing.Size(23, 22)
-        Me.TpEliminar.Text = "&Eliminar"
+        Me.TpEliminar.Text = " "
         '
         'ToolStripSeparator2
         '

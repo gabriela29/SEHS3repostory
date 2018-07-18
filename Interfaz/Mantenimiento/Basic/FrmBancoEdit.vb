@@ -71,6 +71,16 @@ Public Class frmBanco
         End If
     End Sub
 
+    Private Sub frmBanco_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles MyBase.Load
+        If pcodigo > 0 Then
+            Call Mostrar_Datos()
+        End If
+    End Sub
+
+    Private Sub Btncerrar1_Click(sender As Object, e As EventArgs) Handles Btncerrar1.Click
+        Me.Close()
+    End Sub
+
     Private Sub FrmBancoEdiNM_KeyPress(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles Me.KeyPress
         If e.KeyChar = Chr(Keys.Enter) Then
             SendKeys.Send("{tab}")

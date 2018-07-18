@@ -82,7 +82,7 @@ Public Class FrmBancoLis
             If dgvListadobanco.Rows.Count > 0 Then
                 If dgvListadobanco.Selected.Rows.Count > 0 Then
                     If MessageBox.Show("¿Está seguro de eliminar Registro?", "CONFIRMAR", MessageBoxButtons.YesNo, MessageBoxIcon.Question) = Windows.Forms.DialogResult.Yes Then
-                        If categoriaManager.Eliminar(dgvListadobanco.DisplayLayout.ActiveRow.Cells(0).Value) Then
+                        If bancoManager.Eliminar(dgvListadobanco.DisplayLayout.ActiveRow.Cells(0).Value) Then
                             MessageBox.Show("Registro Eliminado con Éxito", "AVISO")
                             Call ListarBanco("")
                         End If
@@ -282,11 +282,9 @@ Public Class FrmBancoLis
     End Sub
 
     Private Sub tsDDelete_Click(sender As Object, e As EventArgs) Handles tsDDelete.Click
-        If dgvListadobanco.Selected.Rows.Count > 0 Then
-            If MessageBox.Show("¿Está seguro de eliminar este registro?", "CONFIRMAR", MessageBoxButtons.YesNo, MessageBoxIcon.Question) = Windows.Forms.DialogResult.Yes Then
-
-                Call ListarBanco("")
-
+        If MsgBox(" Esta Acción podría Afectar el normal Funncionamiento del Sistema, ¿Desea Continuar?", MsgBoxStyle.YesNo, "Confirme") = MsgBoxResult.Yes Then
+            If dgvListadobanco.Selected.Rows.Count > 0 Then
+                Call ELiminar_Banco()
             End If
         End If
     End Sub

@@ -41,7 +41,7 @@ Namespace Dal
             Dim oSP As New clsStored_Procedure("basic.pabanco_leer")
             Dim oConexion As New clsConexion
             Try
-                oSP.addParameter("innombre", vNombre, NpgsqlTypes.NpgsqlDbType.Varchar, 50, ParameterDirection.Input)
+                oSP.addParameter("bnombre", vNombre, NpgsqlTypes.NpgsqlDbType.Varchar, 50, ParameterDirection.Input)
 
                 TempList = oConexion.Ejecutar_Consulta(oSP)
                 oConexion.Cerrar_Conexion()

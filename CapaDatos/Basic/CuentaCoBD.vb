@@ -43,7 +43,7 @@ Namespace Dal
             Dim oConexion As New clsConexion
             Try
                 oSP.addParameter("inbancoid", vbancoId, NpgsqlTypes.NpgsqlDbType.Integer, 2, ParameterDirection.Input)
-                oSP.addParameter("innombre", vnombre, NpgsqlTypes.NpgsqlDbType.Varchar, 50, ParameterDirection.Input)
+                oSP.addParameter("inbombre", vnombre, NpgsqlTypes.NpgsqlDbType.Varchar, 50, ParameterDirection.Input)
 
                 TempList = oConexion.Ejecutar_Consulta(oSP)
                 oConexion.Cerrar_Conexion()

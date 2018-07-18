@@ -69,11 +69,11 @@ Partial Class FrmSubCategoriaNM
         Me.UltraGroupBox1.Controls.Add(Me.LblCodigo)
         Me.UltraGroupBox1.Controls.Add(Me.UltraLabel4)
         Me.UltraGroupBox1.Font = New System.Drawing.Font("Verdana", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.UltraGroupBox1.Location = New System.Drawing.Point(-1, 0)
+        Me.UltraGroupBox1.Location = New System.Drawing.Point(-1, -4)
         Me.UltraGroupBox1.Name = "UltraGroupBox1"
-        Me.UltraGroupBox1.Size = New System.Drawing.Size(393, 233)
+        Me.UltraGroupBox1.Size = New System.Drawing.Size(393, 237)
         Me.UltraGroupBox1.TabIndex = 7
-        Me.UltraGroupBox1.Text = "Actualizanado Sub Categorias..."
+        Me.UltraGroupBox1.Text = "Actualizando Sub Categorias..."
         Me.UltraGroupBox1.ViewStyle = Infragistics.Win.Misc.GroupBoxViewStyle.Office2007
         '
         'UltraButton1
@@ -109,7 +109,7 @@ Partial Class FrmSubCategoriaNM
         Me.btnCerrar.DialogResult = System.Windows.Forms.DialogResult.Cancel
         Me.btnCerrar.Location = New System.Drawing.Point(242, 198)
         Me.btnCerrar.Name = "btnCerrar"
-        Me.btnCerrar.Size = New System.Drawing.Size(83, 27)
+        Me.btnCerrar.Size = New System.Drawing.Size(89, 27)
         Me.btnCerrar.TabIndex = 2
         Me.btnCerrar.Text = "&Cancelar"
         Me.btnCerrar.UseOsThemes = Infragistics.Win.DefaultableBoolean.[False]

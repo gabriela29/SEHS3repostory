@@ -39,7 +39,7 @@ Public Class FrmCuentaCo
             cbobanco.Value = Objc.bancoid
             ' textbancoid.Text = Objc.bancoid
             txtnumero.Text = Objc.numero
-            txtempresaid.Text = Objc.numero
+            txtempresaid.Text = Objc.empresaid
             txtAbreviatura.Text = Objc.abreviatura
             txtsucursal.Text = Objc.sucursal
             txtreferencia.Text = Objc.referencia
@@ -50,6 +50,41 @@ Public Class FrmCuentaCo
         Objc = Nothing
 
     End Sub
+
+
+
+
+
+    Public Function Actualizar() As Boolean
+        Dim Objeto As New cuentaCorriente
+        Try
+            With Objeto
+                If VCodigo > 0 Then
+                    .ctacteid = VCodigo
+                Else
+                    .ctacteid = -1
+
+                End If
+
+                .bancoid = cbobanco.Value
+                .empresaid = txtempresaid.Text.Trim
+                .numero = txtnumero.Text.Trim
+                .abreviatura = txtAbreviatura.Text.Trim
+                .sucursal = txtsucursal.Text.Trim
+                .referencia = txtreferencia.Text.Trim
+                .moneda = txtmoneda.Text.Trim
+                .empresa = txtempresa.Text.Trim
+
+            End With
+            rCodigo = CuentaCoManager.Grabar(Objeto)
+            If rCodigo > 0 Then
+                Me.Close()
+            End If
+
+        Catch ex As Exception
+            MsgBox(ex.Message)
+        End Try
+    End Function
 
     Private Sub btnCerrar_Click(sender As Object, e As EventArgs) Handles btnCerrar.Click
         Me.Close()
@@ -67,44 +102,7 @@ Public Class FrmCuentaCo
         End If
     End Sub
 
-    Public Function Actualizar() As Boolean
-        Dim Objeto As New cuentaCorriente
-        Try
-            With Objeto
-                If VCodigo > 0 Then
-                    .ctacteid = VCodigo
-                Else
-                    .ctacteid = -1
-
-                End If
-                '  .bancoid = textbancoid.Text.Trim
-                .bancoid = cbobanco.Value
-                .empresaid = txtempresaid.Text.Trim
-                .numero = txtnumero.Text.Trim
-                .abreviatura = txtAbreviatura.Text.Trim
-                .sucursal = txtsucursal.Text.Trim
-                .referencia = txtnumero.Text.Trim
-                .moneda = txtmoneda.Text.Trim
-                .empresa = txtempresa.Text.Trim
-
-            End With
-            rCodigo = CuentaCoManager.Grabar(Objeto)
-            If rCodigo > 0 Then
-                Me.Close()
-            End If
-
-        Catch ex As Exception
-
-        End Try
-    End Function
-
-    Private Sub FrmSubCategoriaNM_KeyPress(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles Me.KeyPress
-        If e.KeyChar = Chr(Keys.Enter) Then
-            SendKeys.Send("{tab}")
-        End If
-    End Sub
-
-    Private Sub cbobanco_InitializeLayout(sender As Object, e As Infragistics.Win.UltraWinGrid.InitializeLayoutEventArgs) Handles cbobanco.InitializeLayout
+    Private Sub cbobanco_InitializeLayout(ByVal sender As System.Object, ByVal e As Infragistics.Win.UltraWinGrid.InitializeLayoutEventArgs) Handles cbobanco.InitializeLayout
         With cbobanco.DisplayLayout.Bands(0)
             .Columns(0).Hidden = True
             .Columns(1).Width = cbobanco.Width
@@ -112,11 +110,24 @@ Public Class FrmCuentaCo
         End With
     End Sub
 
-    Private Sub FrmSubCategoriaNM_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
-        Call Mostrar_Datos()
-
+    Private Sub FrmCuentaCo_KeyPress(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles Me.KeyPress
+        If e.KeyChar = Chr(Keys.Enter) Then
+            SendKeys.Send("{tab}")
+        End If
     End Sub
 
+
+    Private Sub UltraButton1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles UltraButton1.Click
+        Me.Close()
+    End Sub
+
+    Private Sub FrmCuentaCo_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
+        Call llenar_Combos()
+
+        If VCodigo > 0 Then
+            Call Mostrar_Datos()
+        End If
+    End Sub
 
 
 

@@ -80,6 +80,7 @@ Namespace Dal
                 oConexion = Nothing
             Finally
                 vCadena = ""
+
             End Try
         End Function
 

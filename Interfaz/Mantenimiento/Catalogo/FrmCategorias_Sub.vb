@@ -259,15 +259,10 @@ Public Class FrmCategorias_Sub
     End Sub
 
     Private Sub tsDEditar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles tsDEditar.Click
-
         If Not dgvListado.Rows.Count > 0 Then
             MsgBox("No hay Documentos Seleccionados que modificar", MsgBoxStyle.Information, "INFORMACIÓN")
             Exit Sub
         End If
-
-        'If Not _codigo = 0 And dgvListado.Selected.Rows.Count > 0 Then
-        '    popupHelperD = New ControlesPersonalizados.Components.Controls.GestorVentanaPopup()
-        '    Dim frm As FrmCategoriaNM = New FrmCategoriaNM()
 
         If dgvListado.Selected.Rows.Count > 0 Then
             popupHelperD = New ControlesPersonalizados.Components.Controls.GestorVentanaPopup()
