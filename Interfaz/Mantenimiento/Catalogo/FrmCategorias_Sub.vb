@@ -170,7 +170,7 @@ Public Class FrmCategorias_Sub
                     .pCodigo = 0
                     .pCodigo_Cat = dgvListado.DisplayLayout.ActiveRow.Cells(0).Value
                 End With
-                Dim location As Point = Me.PointToScreen(New Point(Me.btnLocation.Left, btnLocation.Bottom))
+                Dim location As Point = Me.PointToScreen(New Point(Me.btnLocation1.Left, btnLocation1.Bottom))
 
                 popupHelper.ShowPopup(Me, frm, location)
             End If
@@ -210,7 +210,7 @@ Public Class FrmCategorias_Sub
                 .pCodigo_Cat = dgvListado.DisplayLayout.ActiveRow.Cells(0).Value
 
             End With
-            Dim location As Point = Me.PointToScreen(New Point(Me.btnLocation.Left, btnLocation.Bottom))
+            Dim location As Point = Me.PointToScreen(New Point(Me.btnLocation1.Left, btnLocation1.Bottom))
 
             popupHelper.ShowPopup(Me, frm, location)
 

@@ -76,7 +76,7 @@ Partial Class FrmCategorias_Sub
         Me.ToolStripSeparator1 = New System.Windows.Forms.ToolStripSeparator()
         Me.ToolStripSeparator3 = New System.Windows.Forms.ToolStripSeparator()
         Me.TpNuevo = New System.Windows.Forms.ToolStripButton()
-        Me.btnLocation = New Infragistics.Win.Misc.UltraButton()
+        Me.btnLocation1 = New Infragistics.Win.Misc.UltraButton()
         Me.txtLocaltionDoc = New Infragistics.Win.Misc.UltraButton()
         CType(Me.UltraGroupBox4, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.UltraGroupBox4.SuspendLayout()
@@ -409,7 +409,7 @@ Partial Class FrmCategorias_Sub
         Me.TpNuevo.Text = "&Nuevo"
         Me.TpNuevo.ToolTipText = "Nuevo"
         '
-        'btnLocation
+        'btnLocation1
         '
         Appearance28.BackColor = System.Drawing.Color.LightBlue
         Appearance28.BackColor2 = System.Drawing.Color.White
@@ -418,18 +418,18 @@ Partial Class FrmCategorias_Sub
         Appearance28.BorderColor = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(255, Byte), Integer))
         Appearance28.ForeColor = System.Drawing.Color.Navy
         Appearance28.ImageHAlign = Infragistics.Win.HAlign.Center
-        Me.btnLocation.Appearance = Appearance28
-        Me.btnLocation.ButtonStyle = Infragistics.Win.UIElementButtonStyle.Flat
-        Me.btnLocation.DialogResult = System.Windows.Forms.DialogResult.Cancel
-        Me.btnLocation.Font = New System.Drawing.Font("Tahoma", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnLocation.Location = New System.Drawing.Point(378, 91)
-        Me.btnLocation.Name = "btnLocation"
+        Me.btnLocation1.Appearance = Appearance28
+        Me.btnLocation1.ButtonStyle = Infragistics.Win.UIElementButtonStyle.Flat
+        Me.btnLocation1.DialogResult = System.Windows.Forms.DialogResult.Cancel
+        Me.btnLocation1.Font = New System.Drawing.Font("Tahoma", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnLocation1.Location = New System.Drawing.Point(378, 91)
+        Me.btnLocation1.Name = "btnLocation1"
         Appearance29.BorderAlpha = Infragistics.Win.Alpha.Transparent
-        Me.btnLocation.PressedAppearance = Appearance29
-        Me.btnLocation.Size = New System.Drawing.Size(29, 17)
-        Me.btnLocation.TabIndex = 68
-        Me.btnLocation.Text = "x"
-        Me.btnLocation.UseOsThemes = Infragistics.Win.DefaultableBoolean.[False]
+        Me.btnLocation1.PressedAppearance = Appearance29
+        Me.btnLocation1.Size = New System.Drawing.Size(29, 17)
+        Me.btnLocation1.TabIndex = 68
+        Me.btnLocation1.Text = "x"
+        Me.btnLocation1.UseOsThemes = Infragistics.Win.DefaultableBoolean.[False]
         '
         'txtLocaltionDoc
         '
@@ -462,7 +462,7 @@ Partial Class FrmCategorias_Sub
         Me.Controls.Add(Me.ContCat)
         Me.Controls.Add(Me.txtLocaltionDoc)
         Me.Controls.Add(Me.ContSub)
-        Me.Controls.Add(Me.btnLocation)
+        Me.Controls.Add(Me.btnLocation1)
         Me.Controls.Add(Me.UltraGroupBox4)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.KeyPreview = True
@@ -507,6 +507,6 @@ Partial Class FrmCategorias_Sub
     Friend WithEvents ToolStripSeparator1 As System.Windows.Forms.ToolStripSeparator
     Friend WithEvents ToolStripSeparator3 As System.Windows.Forms.ToolStripSeparator
     Friend WithEvents TpNuevo As System.Windows.Forms.ToolStripButton
-    Friend WithEvents btnLocation As Infragistics.Win.Misc.UltraButton
+    Friend WithEvents btnLocation1 As Infragistics.Win.Misc.UltraButton
     Friend WithEvents txtLocaltionDoc As Infragistics.Win.Misc.UltraButton
 End Class

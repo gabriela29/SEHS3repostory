@@ -84,11 +84,12 @@ Partial Class FrmCuentaCo
         Me.UltraGroupBox1.Controls.Add(Me.LblCodigo)
         Me.UltraGroupBox1.Controls.Add(Me.UltraLabel13)
         Me.UltraGroupBox1.Font = New System.Drawing.Font("Verdana", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.UltraGroupBox1.Location = New System.Drawing.Point(1, 12)
+        Me.UltraGroupBox1.Location = New System.Drawing.Point(-2, 0)
+        Me.UltraGroupBox1.Margin = New System.Windows.Forms.Padding(2)
         Me.UltraGroupBox1.Name = "UltraGroupBox1"
-        Me.UltraGroupBox1.Size = New System.Drawing.Size(387, 412)
+        Me.UltraGroupBox1.Size = New System.Drawing.Size(370, 409)
         Me.UltraGroupBox1.TabIndex = 36
-        Me.UltraGroupBox1.Text = "Actualizanado Nombres"
+        Me.UltraGroupBox1.Text = "Actualizando Información"
         Me.UltraGroupBox1.ViewStyle = Infragistics.Win.Misc.GroupBoxViewStyle.Office2007
         '
         'UltraButton1
@@ -104,7 +105,7 @@ Partial Class FrmCuentaCo
         Me.UltraButton1.ButtonStyle = Infragistics.Win.UIElementButtonStyle.Flat
         Me.UltraButton1.DialogResult = System.Windows.Forms.DialogResult.Cancel
         Me.UltraButton1.Font = New System.Drawing.Font("Tahoma", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.UltraButton1.Location = New System.Drawing.Point(354, 0)
+        Me.UltraButton1.Location = New System.Drawing.Point(341, 0)
         Me.UltraButton1.Name = "UltraButton1"
         Appearance2.BorderAlpha = Infragistics.Win.Alpha.Transparent
         Me.UltraButton1.PressedAppearance = Appearance2
@@ -134,14 +135,14 @@ Partial Class FrmCuentaCo
         Me.UltraGroupBox2.Controls.Add(Me.txtnumero)
         Me.UltraGroupBox2.Controls.Add(Me.UltraLabel1)
         Me.UltraGroupBox2.Controls.Add(Me.UltraLabel5)
-        Me.UltraGroupBox2.Location = New System.Drawing.Point(5, 55)
+        Me.UltraGroupBox2.Location = New System.Drawing.Point(20, 55)
         Me.UltraGroupBox2.Name = "UltraGroupBox2"
-        Me.UltraGroupBox2.Size = New System.Drawing.Size(359, 310)
+        Me.UltraGroupBox2.Size = New System.Drawing.Size(327, 310)
         Me.UltraGroupBox2.TabIndex = 0
         '
         'txtempresa
         '
-        Me.txtempresa.Location = New System.Drawing.Point(113, 273)
+        Me.txtempresa.Location = New System.Drawing.Point(128, 273)
         Me.txtempresa.MaxLength = 10
         Me.txtempresa.Name = "txtempresa"
         Me.txtempresa.Size = New System.Drawing.Size(181, 23)
@@ -172,9 +173,10 @@ Partial Class FrmCuentaCo
         Me.cbobanco.DisplayLayout.Override.SelectedRowAppearance = Appearance8
         Me.cbobanco.DisplayStyle = Infragistics.Win.EmbeddableElementDisplayStyle.Office2007
         Me.cbobanco.DropDownStyle = Infragistics.Win.UltraWinGrid.UltraComboStyle.DropDownList
-        Me.cbobanco.Location = New System.Drawing.Point(111, 26)
+        Me.cbobanco.Location = New System.Drawing.Point(126, 26)
+        Me.cbobanco.Margin = New System.Windows.Forms.Padding(8)
         Me.cbobanco.Name = "cbobanco"
-        Me.cbobanco.Size = New System.Drawing.Size(182, 26)
+        Me.cbobanco.Size = New System.Drawing.Size(108, 26)
         Me.cbobanco.TabIndex = 73
         '
         'UltraLabel7
@@ -183,7 +185,7 @@ Partial Class FrmCuentaCo
         Appearance9.ForeColor = System.Drawing.Color.Navy
         Me.UltraLabel7.Appearance = Appearance9
         Me.UltraLabel7.Font = New System.Drawing.Font("Arial", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.UltraLabel7.Location = New System.Drawing.Point(21, 275)
+        Me.UltraLabel7.Location = New System.Drawing.Point(36, 275)
         Me.UltraLabel7.Name = "UltraLabel7"
         Me.UltraLabel7.Size = New System.Drawing.Size(86, 20)
         Me.UltraLabel7.TabIndex = 61
@@ -195,7 +197,7 @@ Partial Class FrmCuentaCo
         Appearance10.ForeColor = System.Drawing.Color.Navy
         Me.UltraLabel10.Appearance = Appearance10
         Me.UltraLabel10.Font = New System.Drawing.Font("Arial", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.UltraLabel10.Location = New System.Drawing.Point(19, 28)
+        Me.UltraLabel10.Location = New System.Drawing.Point(34, 28)
         Me.UltraLabel10.Name = "UltraLabel10"
         Me.UltraLabel10.Size = New System.Drawing.Size(72, 20)
         Me.UltraLabel10.TabIndex = 74
@@ -203,7 +205,7 @@ Partial Class FrmCuentaCo
         '
         'txtmoneda
         '
-        Me.txtmoneda.Location = New System.Drawing.Point(112, 237)
+        Me.txtmoneda.Location = New System.Drawing.Point(127, 237)
         Me.txtmoneda.MaxLength = 10
         Me.txtmoneda.Name = "txtmoneda"
         Me.txtmoneda.Size = New System.Drawing.Size(182, 23)
@@ -215,7 +217,7 @@ Partial Class FrmCuentaCo
         Appearance11.ForeColor = System.Drawing.Color.Navy
         Me.UltraLabel9.Appearance = Appearance11
         Me.UltraLabel9.Font = New System.Drawing.Font("Arial", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.UltraLabel9.Location = New System.Drawing.Point(20, 64)
+        Me.UltraLabel9.Location = New System.Drawing.Point(35, 64)
         Me.UltraLabel9.Name = "UltraLabel9"
         Me.UltraLabel9.Size = New System.Drawing.Size(86, 20)
         Me.UltraLabel9.TabIndex = 71
@@ -227,7 +229,7 @@ Partial Class FrmCuentaCo
         Appearance12.ForeColor = System.Drawing.Color.Navy
         Me.UltraLabel3.Appearance = Appearance12
         Me.UltraLabel3.Font = New System.Drawing.Font("Arial", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.UltraLabel3.Location = New System.Drawing.Point(20, 238)
+        Me.UltraLabel3.Location = New System.Drawing.Point(35, 238)
         Me.UltraLabel3.Name = "UltraLabel3"
         Me.UltraLabel3.Size = New System.Drawing.Size(86, 20)
         Me.UltraLabel3.TabIndex = 59
@@ -235,7 +237,7 @@ Partial Class FrmCuentaCo
         '
         'txtempresaid
         '
-        Me.txtempresaid.Location = New System.Drawing.Point(111, 62)
+        Me.txtempresaid.Location = New System.Drawing.Point(126, 62)
         Me.txtempresaid.MaxLength = 50
         Me.txtempresaid.Name = "txtempresaid"
         Me.txtempresaid.Size = New System.Drawing.Size(182, 23)
@@ -243,7 +245,7 @@ Partial Class FrmCuentaCo
         '
         'txtreferencia
         '
-        Me.txtreferencia.Location = New System.Drawing.Point(112, 200)
+        Me.txtreferencia.Location = New System.Drawing.Point(127, 200)
         Me.txtreferencia.MaxLength = 10
         Me.txtreferencia.Name = "txtreferencia"
         Me.txtreferencia.Size = New System.Drawing.Size(182, 23)
@@ -251,7 +253,7 @@ Partial Class FrmCuentaCo
         '
         'txtAbreviatura
         '
-        Me.txtAbreviatura.Location = New System.Drawing.Point(112, 127)
+        Me.txtAbreviatura.Location = New System.Drawing.Point(127, 127)
         Me.txtAbreviatura.MaxLength = 10
         Me.txtAbreviatura.Name = "txtAbreviatura"
         Me.txtAbreviatura.Size = New System.Drawing.Size(181, 23)
@@ -263,7 +265,7 @@ Partial Class FrmCuentaCo
         Appearance13.ForeColor = System.Drawing.Color.Navy
         Me.UltraLabel2.Appearance = Appearance13
         Me.UltraLabel2.Font = New System.Drawing.Font("Arial", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.UltraLabel2.Location = New System.Drawing.Point(20, 201)
+        Me.UltraLabel2.Location = New System.Drawing.Point(35, 201)
         Me.UltraLabel2.Name = "UltraLabel2"
         Me.UltraLabel2.Size = New System.Drawing.Size(86, 20)
         Me.UltraLabel2.TabIndex = 57
@@ -275,7 +277,7 @@ Partial Class FrmCuentaCo
         Appearance14.ForeColor = System.Drawing.Color.Navy
         Me.UltraLabel6.Appearance = Appearance14
         Me.UltraLabel6.Font = New System.Drawing.Font("Arial", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.UltraLabel6.Location = New System.Drawing.Point(20, 128)
+        Me.UltraLabel6.Location = New System.Drawing.Point(35, 128)
         Me.UltraLabel6.Name = "UltraLabel6"
         Me.UltraLabel6.Size = New System.Drawing.Size(86, 20)
         Me.UltraLabel6.TabIndex = 70
@@ -283,7 +285,7 @@ Partial Class FrmCuentaCo
         '
         'txtsucursal
         '
-        Me.txtsucursal.Location = New System.Drawing.Point(113, 165)
+        Me.txtsucursal.Location = New System.Drawing.Point(128, 165)
         Me.txtsucursal.MaxLength = 10
         Me.txtsucursal.Name = "txtsucursal"
         Me.txtsucursal.Size = New System.Drawing.Size(181, 23)
@@ -291,7 +293,7 @@ Partial Class FrmCuentaCo
         '
         'txtnumero
         '
-        Me.txtnumero.Location = New System.Drawing.Point(112, 96)
+        Me.txtnumero.Location = New System.Drawing.Point(127, 96)
         Me.txtnumero.MaxLength = 50
         Me.txtnumero.Name = "txtnumero"
         Me.txtnumero.Size = New System.Drawing.Size(181, 23)
@@ -303,7 +305,7 @@ Partial Class FrmCuentaCo
         Appearance15.ForeColor = System.Drawing.Color.Navy
         Me.UltraLabel1.Appearance = Appearance15
         Me.UltraLabel1.Font = New System.Drawing.Font("Arial", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.UltraLabel1.Location = New System.Drawing.Point(20, 167)
+        Me.UltraLabel1.Location = New System.Drawing.Point(35, 167)
         Me.UltraLabel1.Name = "UltraLabel1"
         Me.UltraLabel1.Size = New System.Drawing.Size(86, 20)
         Me.UltraLabel1.TabIndex = 55
@@ -315,7 +317,7 @@ Partial Class FrmCuentaCo
         Appearance16.ForeColor = System.Drawing.Color.Navy
         Me.UltraLabel5.Appearance = Appearance16
         Me.UltraLabel5.Font = New System.Drawing.Font("Arial", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.UltraLabel5.Location = New System.Drawing.Point(20, 97)
+        Me.UltraLabel5.Location = New System.Drawing.Point(35, 97)
         Me.UltraLabel5.Name = "UltraLabel5"
         Me.UltraLabel5.Size = New System.Drawing.Size(86, 20)
         Me.UltraLabel5.TabIndex = 69
@@ -330,7 +332,7 @@ Partial Class FrmCuentaCo
         Me.btnCerrar.Appearance = Appearance17
         Me.btnCerrar.ButtonStyle = Infragistics.Win.UIElementButtonStyle.Office2007RibbonButton
         Me.btnCerrar.DialogResult = System.Windows.Forms.DialogResult.Cancel
-        Me.btnCerrar.Location = New System.Drawing.Point(194, 380)
+        Me.btnCerrar.Location = New System.Drawing.Point(196, 371)
         Me.btnCerrar.Name = "btnCerrar"
         Me.btnCerrar.Size = New System.Drawing.Size(90, 27)
         Me.btnCerrar.TabIndex = 34
@@ -345,7 +347,7 @@ Partial Class FrmCuentaCo
         Appearance18.Image = CType(resources.GetObject("Appearance18.Image"), Object)
         Me.BtnGrabar.Appearance = Appearance18
         Me.BtnGrabar.ButtonStyle = Infragistics.Win.UIElementButtonStyle.Office2007RibbonButton
-        Me.BtnGrabar.Location = New System.Drawing.Point(79, 380)
+        Me.BtnGrabar.Location = New System.Drawing.Point(80, 371)
         Me.BtnGrabar.Name = "BtnGrabar"
         Me.BtnGrabar.Size = New System.Drawing.Size(83, 27)
         Me.BtnGrabar.TabIndex = 33
@@ -371,7 +373,7 @@ Partial Class FrmCuentaCo
         Appearance20.ForeColor = System.Drawing.Color.Navy
         Me.UltraLabel13.Appearance = Appearance20
         Me.UltraLabel13.Font = New System.Drawing.Font("Arial", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.UltraLabel13.Location = New System.Drawing.Point(12, 29)
+        Me.UltraLabel13.Location = New System.Drawing.Point(55, 29)
         Me.UltraLabel13.Name = "UltraLabel13"
         Me.UltraLabel13.Size = New System.Drawing.Size(77, 20)
         Me.UltraLabel13.TabIndex = 31
@@ -382,15 +384,21 @@ Partial Class FrmCuentaCo
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(384, 422)
+        Me.AutoScroll = True
+        Me.AutoScrollMinSize = New System.Drawing.Size(1, 2)
+        Me.AutoValidate = System.Windows.Forms.AutoValidate.EnablePreventFocusChange
+        Me.BackColor = System.Drawing.Color.White
+        Me.ClientSize = New System.Drawing.Size(368, 410)
         Me.ControlBox = False
         Me.Controls.Add(Me.UltraGroupBox1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
         Me.KeyPreview = True
+        Me.Location = New System.Drawing.Point(3, 5)
         Me.MaximizeBox = False
         Me.MinimizeBox = False
         Me.Name = "FrmCuentaCo"
-        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
+        Me.ShowIcon = False
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.Manual
         CType(Me.UltraGroupBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.UltraGroupBox1.ResumeLayout(False)
         CType(Me.UltraGroupBox2, System.ComponentModel.ISupportInitialize).EndInit()

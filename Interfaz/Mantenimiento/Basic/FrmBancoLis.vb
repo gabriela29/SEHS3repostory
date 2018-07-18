@@ -101,7 +101,7 @@ Public Class FrmBancoLis
             If dgvCuentaCo.Rows.Count > 0 Then
                 If dgvCuentaCo.Selected.Rows.Count > 0 Then
                     If MessageBox.Show("¿Está seguro de eliminar Registro?", "CONFIRMAR", MessageBoxButtons.YesNo, MessageBoxIcon.Question) = Windows.Forms.DialogResult.Yes Then
-                        If subcategoriaManager.Eliminar(dgvCuentaCo.DisplayLayout.ActiveRow.Cells(0).Value) Then
+                        If CuentaCoManager.Eliminar(dgvCuentaCo.DisplayLayout.ActiveRow.Cells(0).Value) Then
                             MessageBox.Show("Registro Eliminado con Éxito", "AVISO")
                             Call Listado_CuentaCo()
                         End If
@@ -132,17 +132,17 @@ Public Class FrmBancoLis
             .Columns(0).Width = 35
             .Columns(0).Header.Caption = "ID"
             .Columns(1).Header.Caption = "NOMBRE"
-            ' .Columns(2).Header.Caption = "NOMBRE CORTO"
-            ' .Columns(3).Header.Caption = "REFERENCIA"
+            .Columns(2).Header.Caption = "ABREVIATURA"
+            .Columns(3).Header.Caption = "REFERENCIA"
             .Columns(1).Width = dgvListadobanco.Width - 80
-            .Columns(2).Hidden = True
+            .Columns(3).Hidden = True
         End With
 
         Call formatear_grid()
     End Sub
 
     Private Sub TpEliminarCC_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles TpEliminarCC.Click
-        If MsgBox(" Esta Acción podría Afectar el normal Funncionamiento del Sistema, ¿Desea Continuar?", MsgBoxStyle.YesNo, "Confirme") = MsgBoxResult.Yes Then
+        If MsgBox(" Esta Acción podría Afectar el normal Funcionamiento del Sistema, ¿Desea Continuar?", MsgBoxStyle.YesNo, "Confirme") = MsgBoxResult.Yes Then
             If dgvCuentaCo.Selected.Rows.Count > 0 Then
                 Call Eliminar_CtaCte()
                 Call Listado_CuentaCo()
@@ -168,7 +168,7 @@ Public Class FrmBancoLis
                     .VCodigo = 0
                     .pCodigo_banco = dgvListadobanco.DisplayLayout.ActiveRow.Cells(0).Value
                 End With
-                'Dim location As Point = Me.PointToScreen(New Point(Me..Left, btnLocation.Bottom))
+                Dim location As Point = Me.PointToScreen(New Point(Me.btnLocation2.Left, btnLocation2.Bottom))
 
                 popupHelper.ShowPopup(Me, frm, Location)
             End If
@@ -207,7 +207,7 @@ Public Class FrmBancoLis
                 .pCodigo_banco = dgvListadobanco.DisplayLayout.ActiveRow.Cells(0).Value
 
             End With
-            ' Dim location As Point = Me.PointToScreen(New Point(Me.btnLocation.Left, btnLocation.Bottom))
+            Dim location As Point = Me.PointToScreen(New Point(Me.btnLocation2.Left, btnLocation2.Bottom))
 
             popupHelper.ShowPopup(Me, frm, Location)
 
@@ -251,7 +251,7 @@ Public Class FrmBancoLis
                 '.pCodigo = dgvListado.DisplayLayout.ActiveRow.Cells(0).Value
 
             End With
-            Dim locationD As Point = Me.PointToScreen(New Point(Me.txtLocaltionDoc.Left, txtLocaltionDoc.Bottom))
+            Dim locationD As Point = Me.PointToScreen(New Point(Me.txtLocaltionDoc2.Left, txtLocaltionDoc2.Bottom))
 
             popupHelperD.ShowPopup(Me, frm, locationD)
 
@@ -266,9 +266,16 @@ Public Class FrmBancoLis
             .Columns(0).Header.Caption = "ID"
             .Columns(1).Header.Caption = "NUMERO"
             .Columns(2).Header.Caption = "ABREVIATURA"
-            .Columns(1).Width = 220
-            .Columns(2).Hidden = True
-            .Columns(3).Hidden = True
+            .Columns(3).Header.Caption = "MONEDA"
+            .Columns(4).Header.Caption = "EMPRESA"
+            .Columns(5).Header.Caption = "BANCOID"
+            .Columns(6).Header.Caption = "NOMBRE DE BANCO"
+            .Columns(7).Header.Caption = "ID-EMPRESA"
+            .Columns(8).Header.Caption = "NOMBRE DE EMPRESA"
+            .Columns(1).Width = 240
+            .Columns(8).Width = 200
+            .Columns(7).Hidden = True
+            ' .Columns(8).Hidden = True
         End With
         Me.dgvCuentaCo.DisplayLayout.Override.SelectTypeRow = Infragistics.Win.UltraWinGrid.SelectType.[Single]
         Me.dgvCuentaCo.DisplayLayout.Override.CellClickAction = Infragistics.Win.UltraWinGrid.CellClickAction.RowSelect

@@ -14,7 +14,7 @@ Public Class frmBanco
 
 
     Private Sub Mostrar_Datos()
-        Dim Objc As banco
+        Dim Objc As CapaObjetosNegocio.banco
 
         Objc = bancoManager.GetItem(pcodigo)
 
@@ -29,7 +29,7 @@ Public Class frmBanco
     End Sub
 
     Public Function Actualizar() As Boolean
-        Dim Objeto As New banco
+        Dim Objeto As New CapaObjetosNegocio.banco
         Try
             With Objeto
                 If pcodigo > 0 Then
