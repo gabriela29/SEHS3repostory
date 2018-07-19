@@ -423,6 +423,12 @@
     <Compile Include="Inventario\Ingreso\Importacion\FrmIngreso_Importacion.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Mantenimiento\Basic\FrmEmpresaEdit.Designer.vb">
+      <DependentUpon>FrmEmpresaEdit.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimiento\Basic\FrmEmpresaEdit.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Mantenimiento\Basic\FrmEmpresaLis.Designer.vb">
       <DependentUpon>FrmEmpresaLis.vb</DependentUpon>
     </Compile>
@@ -2045,6 +2051,9 @@
     <EmbeddedResource Include="Finanzas\FrmRegistro_MBNM.resx">
       <DependentUpon>FrmRegistro_MBNM.vb</DependentUpon>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mantenimiento\Basic\FrmEmpresaEdit.resx">
+      <DependentUpon>FrmEmpresaEdit.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Mantenimiento\Basic\FrmEmpresaLis.resx">
       <DependentUpon>FrmEmpresaLis.vb</DependentUpon>

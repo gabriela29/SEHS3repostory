@@ -95,7 +95,7 @@
     <Compile Include="rucdni\datos_ruc.vb" />
     <Compile Include="inventarios\det_mov_mercaderia.vb" />
     <Compile Include="distrito.vb" />
-    <Compile Include="empresa.vb" />
+    <Compile Include="basic\empresa.vb" />
     <Compile Include="inventarios\ingreso\ingreso_mercaderia.vb" />
     <Compile Include="finanzas\movimiento_bancario.vb" />
     <Compile Include="permisos_impresion.vb" />

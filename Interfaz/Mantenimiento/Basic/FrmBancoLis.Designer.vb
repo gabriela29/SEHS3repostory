@@ -77,7 +77,7 @@ Partial Class FrmBancoLis
         Me.ToolStripSeparator3 = New System.Windows.Forms.ToolStripSeparator()
         Me.TpNuevoCC = New System.Windows.Forms.ToolStripButton()
         Me.btnLocation2 = New Infragistics.Win.Misc.UltraButton()
-        Me.UltraLabel12 = New Infragistics.Win.Misc.UltraLabel()
+        Me.UltraLabel1 = New Infragistics.Win.Misc.UltraLabel()
         CType(Me.UltraGroupBox4, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.UltraGroupBox4.SuspendLayout()
         CType(Me.ContBancoLis, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -97,7 +97,7 @@ Partial Class FrmBancoLis
         Appearance1.BackColor2 = System.Drawing.Color.White
         Appearance1.BackGradientStyle = Infragistics.Win.GradientStyle.Vertical
         Me.UltraGroupBox4.ContentAreaAppearance = Appearance1
-        Me.UltraGroupBox4.Controls.Add(Me.UltraLabel12)
+        Me.UltraGroupBox4.Controls.Add(Me.UltraLabel1)
         Me.UltraGroupBox4.Controls.Add(Me.UltraPictureBox1)
         Me.UltraGroupBox4.Location = New System.Drawing.Point(-8, -1)
         Me.UltraGroupBox4.Name = "UltraGroupBox4"
@@ -107,6 +107,7 @@ Partial Class FrmBancoLis
         '
         'UltraPictureBox1
         '
+        Me.UltraPictureBox1.BackColor = System.Drawing.SystemColors.ButtonFace
         Me.UltraPictureBox1.BorderShadowColor = System.Drawing.Color.Empty
         Me.UltraPictureBox1.Image = CType(resources.GetObject("UltraPictureBox1.Image"), Object)
         Me.UltraPictureBox1.ImageTransparentColor = System.Drawing.Color.Transparent
@@ -439,18 +440,22 @@ Partial Class FrmBancoLis
         Me.btnLocation2.Text = "x"
         Me.btnLocation2.UseOsThemes = Infragistics.Win.DefaultableBoolean.[False]
         '
-        'UltraLabel12
+        'UltraLabel1
         '
-        Appearance2.BackColorAlpha = Infragistics.Win.Alpha.Transparent
-        Appearance2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.UltraLabel1.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Appearance2.BackColor = System.Drawing.Color.LightBlue
+        Appearance2.BackColor2 = System.Drawing.Color.White
+        Appearance2.BackGradientStyle = Infragistics.Win.GradientStyle.Vertical
+        Appearance2.ForeColor = System.Drawing.Color.SteelBlue
         Appearance2.TextVAlignAsString = "Top"
-        Me.UltraLabel12.Appearance = Appearance2
-        Me.UltraLabel12.Font = New System.Drawing.Font("Verdana", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.UltraLabel12.Location = New System.Drawing.Point(93, 13)
-        Me.UltraLabel12.Name = "UltraLabel12"
-        Me.UltraLabel12.Size = New System.Drawing.Size(461, 42)
-        Me.UltraLabel12.TabIndex = 32
-        Me.UltraLabel12.Text = "REGISTRO DE BANCO Y CUENTAS CORRIENTES"
+        Me.UltraLabel1.Appearance = Appearance2
+        Me.UltraLabel1.Font = New System.Drawing.Font("Verdana", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.UltraLabel1.Location = New System.Drawing.Point(93, 4)
+        Me.UltraLabel1.Name = "UltraLabel1"
+        Me.UltraLabel1.Size = New System.Drawing.Size(622, 27)
+        Me.UltraLabel1.TabIndex = 90
+        Me.UltraLabel1.Text = "REGISTRO DE BANCO Y CUENTAS CORRIENTES"
         '
         'FrmBancoLis
         '
@@ -503,5 +508,5 @@ Partial Class FrmBancoLis
     Friend WithEvents TpNuevoCC As ToolStripButton
     Friend WithEvents btnLocation2 As Infragistics.Win.Misc.UltraButton
     Friend WithEvents txtLocaltionDoc2 As Infragistics.Win.Misc.UltraButton
-    Friend WithEvents UltraLabel12 As Infragistics.Win.Misc.UltraLabel
+    Friend WithEvents UltraLabel1 As Infragistics.Win.Misc.UltraLabel
 End Class

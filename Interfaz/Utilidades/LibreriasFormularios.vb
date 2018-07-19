@@ -461,26 +461,26 @@ Public Class LibreriasFormularios
     End If
   End Function
 
-  Public Shared Function Obtener_Empresa(ByVal vCodigo As Integer) As String
-    Obtener_Empresa = ""
-    Dim ObjE As empresa
-    ObjE = empresaManager.GetItem_x_UNeg(vCodigo)
-    If Not ObjE Is Nothing Then
-      Obtener_Empresa = ObjE.nombre
-    End If
-    ObjE = Nothing
-    Return Obtener_Empresa
-  End Function
+    'Public Shared Function Obtener_Empresa(ByVal vCodigo As Integer) As String
+    '  Obtener_Empresa = ""
+    '  Dim ObjE As empresa
+    '  ObjE = empresaManager.GetItem_x_UNeg(vCodigo)
+    '  If Not ObjE Is Nothing Then
+    '    Obtener_Empresa = ObjE.nombre
+    '  End If
+    '  ObjE = Nothing
+    '  Return Obtener_Empresa
+    'End Function
 
-  Public Shared Function Obtener_Empresa_y_RUC(ByVal vCodigo As Integer) As empresa
+    '  Public Shared Function Obtener_Empresa_y_RUC(ByVal vCodigo As Integer) As empresa
 
 
-    Obtener_Empresa_y_RUC = empresaManager.GetItem_x_UNeg(vCodigo)
+    '  Obtener_Empresa_y_RUC = empresaManager.GetItem_x_UNeg(vCodigo)
 
-    Return Obtener_Empresa_y_RUC
-  End Function
+    '  Return Obtener_Empresa_y_RUC
+    'End Function
 
-  Public Shared Function Formato_Fecha(ByVal vFecha As Date) As String
+    Public Shared Function Formato_Fecha(ByVal vFecha As Date) As String
     Formato_Fecha = ""
     Formato_Fecha = (vFecha.Year) & "/" & Format(vFecha.Month, "00") & "/" & Format(vFecha.Day, "00")
     Return Formato_Fecha

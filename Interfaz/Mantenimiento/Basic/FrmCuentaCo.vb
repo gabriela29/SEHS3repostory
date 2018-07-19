@@ -10,7 +10,6 @@ Public Class FrmCuentaCo
     Public ModoVentanaFlotante As Boolean
 
     Private Sub llenar_Combos()
-
         Try
             Me.cbobanco.DataSource = bancoManager.GetList("")
             Me.cbobanco.DataBind()

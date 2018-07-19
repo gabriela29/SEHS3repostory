@@ -223,9 +223,28 @@ Public Class FrmBancoLis
     End Sub
 
     Private Sub tsDNuevo_Click(sender As Object, e As EventArgs) Handles tsDNuevo.Click
-        Dim xFrmBanco As New frmBanco
-        xFrmBanco.vBancoid = 0
-        xFrmBanco.ShowDialog()
+        ' Dim xFrmBanco As New frmBanco
+        ' xFrmBanco.vBancoid = 0
+        ' xFrmBanco.ShowDialog()
+
+        popupHelperD = New ControlesPersonalizados.Components.Controls.GestorVentanaPopup()
+
+        Dim frm As frmBanco = New frmBanco()
+
+        With frm
+            .MaximizeBox = False
+            .MinimizeBox = False
+            .ControlBox = False
+            .ShowInTaskbar = False
+            .FormBorderStyle = Windows.Forms.FormBorderStyle.None
+            .TopMost = True
+            .Text = ""
+            .ModoVentanaFlotante = True
+        End With
+        Dim locationD As Point = Me.PointToScreen(New Point(Me.txtLocaltionDoc2.Left, Me.txtLocaltionDoc2.Bottom))
+
+        popupHelperD.ShowPopup(Me, frm, locationD)
+
     End Sub
 
     Private Sub tsDEditar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles tsDEditar.Click
@@ -275,7 +294,7 @@ Public Class FrmBancoLis
             .Columns(1).Width = 240
             .Columns(8).Width = 200
             .Columns(7).Hidden = True
-            ' .Columns(8).Hidden = True
+            '.Columns(8).Hidden = True
         End With
         Me.dgvCuentaCo.DisplayLayout.Override.SelectTypeRow = Infragistics.Win.UltraWinGrid.SelectType.[Single]
         Me.dgvCuentaCo.DisplayLayout.Override.CellClickAction = Infragistics.Win.UltraWinGrid.CellClickAction.RowSelect

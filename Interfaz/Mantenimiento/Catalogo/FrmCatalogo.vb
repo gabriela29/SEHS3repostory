@@ -366,6 +366,12 @@ Public Class FrmCatalogo
         frm.ShowDialog()
     End Sub
 
+    Private Sub btnempresa_Click(sender As Object, e As EventArgs) Handles btnempresa.Click
+        Dim frm As FrmEmpresaLis = New FrmEmpresaLis
+        frm.swNuevoempresa = True
+        frm.ShowDialog()
+    End Sub
+
     Private Sub tsReporte_Click(sender As Object, e As EventArgs) Handles tsReporte.Click
         Call LibreriasFormularios.Exportar_UltraGrid_Excel(dgvListado, utExcel, "Asistente.xls")
     End Sub

@@ -1,19 +1,21 @@
 ﻿Imports System
 Imports System.ComponentModel
 Imports System.Diagnostics
-Namespace BO
-    Public Class empresa
-        Private mcodigo As Long = -1
 
+Public Class empresa
+        Private mempresaid As Long = -1
         Private mnombre As String
         Private mruc As String
+        Private mdireccion As String
+        Private murl As String
 
-        Public Property codigo() As Long
+
+        Public Property empresaid() As Long
             Get
-                Return mcodigo
+                Return mempresaid
             End Get
             Set(ByVal value As Long)
-                mcodigo = value
+                mempresaid = value
             End Set
         End Property
         Public Property nombre() As String
@@ -32,5 +34,28 @@ Namespace BO
                 mruc = value
             End Set
         End Property
+
+        Public Property direccion() As String
+            Get
+                Return mdireccion
+            End Get
+            Set(ByVal value As String)
+                mdireccion = value
+            End Set
+        End Property
+
+        Public Property url() As String
+            Get
+                Return murl
+            End Get
+            Set(ByVal value As String)
+                murl = value
+            End Set
+        End Property
+
+
     End Class
-End Namespace
+
+
+
+
