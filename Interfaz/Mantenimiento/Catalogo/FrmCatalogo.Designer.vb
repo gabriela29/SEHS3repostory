@@ -46,18 +46,18 @@ Partial Class FrmCatalogo
         Dim Appearance19 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
         Dim Appearance20 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
         Dim Appearance21 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
-        Dim Appearance39 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
+        Dim Appearance22 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
         Dim UltraTab1 As Infragistics.Win.UltraWinTabControl.UltraTab = New Infragistics.Win.UltraWinTabControl.UltraTab()
         Dim Appearance23 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
         Dim Appearance24 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
         Dim Appearance25 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
-        Dim Appearance40 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
-        Dim Appearance41 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
-        Dim Appearance43 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
-        Dim Appearance42 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
+        Dim Appearance26 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
+        Dim Appearance27 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
+        Dim Appearance30 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
+        Dim Appearance28 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
         Dim Appearance29 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
         Dim UltraGridBand1 As Infragistics.Win.UltraWinGrid.UltraGridBand = New Infragistics.Win.UltraWinGrid.UltraGridBand("", -1)
-        Dim Appearance44 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
+        Dim Appearance31 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
         Dim Appearance32 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
         Me.UltraTabPageControl1 = New Infragistics.Win.UltraWinTabControl.UltraTabPageControl()
         Me.dgvCondicion = New Infragistics.Win.UltraWinGrid.UltraGrid()
@@ -92,6 +92,7 @@ Partial Class FrmCatalogo
         Me.btncategoria = New System.Windows.Forms.Button()
         Me.btn_Banco = New System.Windows.Forms.Button()
         Me.btnempresa = New System.Windows.Forms.Button()
+        Me.btnregistro_ventas = New System.Windows.Forms.Button()
         Me.UltraTabPageControl1.SuspendLayout()
         CType(Me.dgvCondicion, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.UltraGroupBox4, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -234,10 +235,10 @@ Partial Class FrmCatalogo
         '
         Me.UltraGroupBox4.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Appearance39.BackColor = System.Drawing.Color.White
-        Appearance39.BackColor2 = System.Drawing.Color.White
-        Appearance39.BackGradientStyle = Infragistics.Win.GradientStyle.Vertical
-        Me.UltraGroupBox4.ContentAreaAppearance = Appearance39
+        Appearance22.BackColor = System.Drawing.Color.White
+        Appearance22.BackColor2 = System.Drawing.Color.White
+        Appearance22.BackGradientStyle = Infragistics.Win.GradientStyle.Vertical
+        Me.UltraGroupBox4.ContentAreaAppearance = Appearance22
         Me.UltraGroupBox4.Controls.Add(Me.UltraTabControl1)
         Me.UltraGroupBox4.Location = New System.Drawing.Point(-1, 65)
         Me.UltraGroupBox4.Name = "UltraGroupBox4"
@@ -288,11 +289,11 @@ Partial Class FrmCatalogo
         '
         'lblBuscar
         '
-        Appearance40.BackColorAlpha = Infragistics.Win.Alpha.Transparent
-        Appearance40.ForeColor = System.Drawing.Color.SteelBlue
-        Appearance40.TextHAlignAsString = "Right"
-        Appearance40.TextVAlignAsString = "Top"
-        Me.lblBuscar.Appearance = Appearance40
+        Appearance26.BackColorAlpha = Infragistics.Win.Alpha.Transparent
+        Appearance26.ForeColor = System.Drawing.Color.SteelBlue
+        Appearance26.TextHAlignAsString = "Right"
+        Appearance26.TextVAlignAsString = "Top"
+        Me.lblBuscar.Appearance = Appearance26
         Me.lblBuscar.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblBuscar.Location = New System.Drawing.Point(135, 43)
         Me.lblBuscar.Name = "lblBuscar"
@@ -305,18 +306,18 @@ Partial Class FrmCatalogo
         Me.UltraGroupBox1.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Appearance41.BackColor = System.Drawing.Color.White
-        Appearance41.BackColor2 = System.Drawing.Color.White
-        Appearance41.BackGradientStyle = Infragistics.Win.GradientStyle.ForwardDiagonal
-        Me.UltraGroupBox1.ContentAreaAppearance = Appearance41
+        Appearance27.BackColor = System.Drawing.Color.White
+        Appearance27.BackColor2 = System.Drawing.Color.White
+        Appearance27.BackGradientStyle = Infragistics.Win.GradientStyle.ForwardDiagonal
+        Me.UltraGroupBox1.ContentAreaAppearance = Appearance27
         Me.UltraGroupBox1.Controls.Add(Me.lbl)
         Me.UltraGroupBox1.Controls.Add(Me.dgvListado)
         Me.UltraGroupBox1.Controls.Add(Me.TpCliente)
         Me.UltraGroupBox1.Controls.Add(Me.picAjaxBig)
-        Appearance43.BackColor = System.Drawing.Color.LightBlue
-        Appearance43.BackColor2 = System.Drawing.Color.White
-        Appearance43.BackGradientStyle = Infragistics.Win.GradientStyle.Vertical
-        Me.UltraGroupBox1.HeaderAppearance = Appearance43
+        Appearance30.BackColor = System.Drawing.Color.LightBlue
+        Appearance30.BackColor2 = System.Drawing.Color.White
+        Appearance30.BackGradientStyle = Infragistics.Win.GradientStyle.Vertical
+        Me.UltraGroupBox1.HeaderAppearance = Appearance30
         Me.UltraGroupBox1.HeaderPosition = Infragistics.Win.Misc.GroupBoxHeaderPosition.BottomOnBorder
         Me.UltraGroupBox1.Location = New System.Drawing.Point(265, 65)
         Me.UltraGroupBox1.Name = "UltraGroupBox1"
@@ -326,10 +327,10 @@ Partial Class FrmCatalogo
         'lbl
         '
         Me.lbl.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Appearance42.BackColorAlpha = Infragistics.Win.Alpha.Transparent
-        Appearance42.ForeColor = System.Drawing.Color.LightBlue
-        Appearance42.TextVAlignAsString = "Top"
-        Me.lbl.Appearance = Appearance42
+        Appearance28.BackColorAlpha = Infragistics.Win.Alpha.Transparent
+        Appearance28.ForeColor = System.Drawing.Color.LightBlue
+        Appearance28.TextVAlignAsString = "Top"
+        Me.lbl.Appearance = Appearance28
         Me.lbl.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lbl.Location = New System.Drawing.Point(12, 374)
         Me.lbl.Name = "lbl"
@@ -473,12 +474,12 @@ Partial Class FrmCatalogo
         '
         Me.UltraLabel1.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Appearance44.BackColor = System.Drawing.Color.LightBlue
-        Appearance44.BackColor2 = System.Drawing.Color.White
-        Appearance44.BackGradientStyle = Infragistics.Win.GradientStyle.Vertical
-        Appearance44.ForeColor = System.Drawing.Color.SteelBlue
-        Appearance44.TextVAlignAsString = "Top"
-        Me.UltraLabel1.Appearance = Appearance44
+        Appearance31.BackColor = System.Drawing.Color.LightBlue
+        Appearance31.BackColor2 = System.Drawing.Color.White
+        Appearance31.BackGradientStyle = Infragistics.Win.GradientStyle.Vertical
+        Appearance31.ForeColor = System.Drawing.Color.SteelBlue
+        Appearance31.TextVAlignAsString = "Top"
+        Me.UltraLabel1.Appearance = Appearance31
         Me.UltraLabel1.Font = New System.Drawing.Font("Verdana", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.UltraLabel1.Location = New System.Drawing.Point(87, 1)
         Me.UltraLabel1.Name = "UltraLabel1"
@@ -528,7 +529,7 @@ Partial Class FrmCatalogo
         '
         Me.btncategoria.BackColor = System.Drawing.Color.Maroon
         Me.btncategoria.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.btncategoria.Location = New System.Drawing.Point(523, 4)
+        Me.btncategoria.Location = New System.Drawing.Point(397, 4)
         Me.btncategoria.Name = "btncategoria"
         Me.btncategoria.Size = New System.Drawing.Size(84, 32)
         Me.btncategoria.TabIndex = 91
@@ -539,7 +540,7 @@ Partial Class FrmCatalogo
         '
         Me.btn_Banco.BackColor = System.Drawing.Color.Salmon
         Me.btn_Banco.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.btn_Banco.Location = New System.Drawing.Point(613, 4)
+        Me.btn_Banco.Location = New System.Drawing.Point(487, 4)
         Me.btn_Banco.Name = "btn_Banco"
         Me.btn_Banco.Size = New System.Drawing.Size(84, 32)
         Me.btn_Banco.TabIndex = 92
@@ -550,12 +551,23 @@ Partial Class FrmCatalogo
         '
         Me.btnempresa.BackColor = System.Drawing.Color.Gold
         Me.btnempresa.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.btnempresa.Location = New System.Drawing.Point(703, 4)
+        Me.btnempresa.Location = New System.Drawing.Point(577, 4)
         Me.btnempresa.Name = "btnempresa"
         Me.btnempresa.Size = New System.Drawing.Size(84, 32)
         Me.btnempresa.TabIndex = 93
         Me.btnempresa.Text = "EMPRESA"
         Me.btnempresa.UseVisualStyleBackColor = False
+        '
+        'btnregistro_ventas
+        '
+        Me.btnregistro_ventas.BackColor = System.Drawing.Color.MediumSeaGreen
+        Me.btnregistro_ventas.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.btnregistro_ventas.Location = New System.Drawing.Point(667, 4)
+        Me.btnregistro_ventas.Name = "btnregistro_ventas"
+        Me.btnregistro_ventas.Size = New System.Drawing.Size(119, 32)
+        Me.btnregistro_ventas.TabIndex = 94
+        Me.btnregistro_ventas.Text = "REGISTRO-VENTAS"
+        Me.btnregistro_ventas.UseVisualStyleBackColor = False
         '
         'FrmCatalogo
         '
@@ -563,6 +575,7 @@ Partial Class FrmCatalogo
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(839, 464)
+        Me.Controls.Add(Me.btnregistro_ventas)
         Me.Controls.Add(Me.btnempresa)
         Me.Controls.Add(Me.btn_Banco)
         Me.Controls.Add(Me.btncategoria)
@@ -632,4 +645,5 @@ Partial Class FrmCatalogo
     Friend WithEvents btncategoria As Button
     Friend WithEvents btn_Banco As Button
     Friend WithEvents btnempresa As Button
+    Friend WithEvents btnregistro_ventas As Button
 End Class

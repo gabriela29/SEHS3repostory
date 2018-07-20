@@ -63,11 +63,11 @@ Namespace Dal
         End Function
 
         Public Shared Function Grabar(ByRef objc As categoria) As DataTable
-            Dim oSP As New clsStored_Procedure("catalogo.pacategoria_actualizar2")
+            Dim oSP As New clsStored_Procedure("catalogo.pacategoria_actualizar")
             Dim vCadena As String = ""
             Try
 
-                vCadena = "select * from catalogo.pacategoria_actualizar2( "
+                vCadena = "select * from catalogo.pacategoria_actualizar( "
                 vCadena = vCadena & " " & IIf(objc.categoriaid > 0, "false", "true") & ", "
                 vCadena = vCadena & " " & Trim(Str(objc.categoriaid)) & ","
                 vCadena = vCadena & " '" & Trim(objc.nombre) & "', "

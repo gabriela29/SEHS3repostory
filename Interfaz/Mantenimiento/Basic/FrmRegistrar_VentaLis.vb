@@ -4,97 +4,80 @@ Imports CapaLogicaNegocio.BLL
 Imports Infragistics.Win.UltraWinGrid
 
 Public Class FrmRegistrar_VentaLis
-    Public pregistrarvId As Long, swNuevo As Boolean
     Public _codigo As Integer
-    Public ListadoRegistros As DataTable
+    Public dtlistaregistrov As DataTable
+    Public ListadoRegistros As DataTableClearEventArgs
+    Public IdUsuario As Long
+    Public swNuevoregistro_venta As Boolean
 
+    Private WithEvents popupHelperD As ControlesPersonalizados.Components.Controls.GestorVentanaPopup = Nothing
+    Private WithEvents popupHelper As ControlesPersonalizados.Components.Controls.GestorVentanaPopup = Nothing
 
-    Private Sub FrmRegistrar_VentaLis_KeyPress(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles Me.KeyPress
+    Private Sub FrmSeriesDocumento_KeyPress(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles Me.KeyPress
         If e.KeyChar = Chr(Keys.Enter) Then
             SendKeys.Send("{tab}")
         End If
     End Sub
+    Private Sub FrmSeriesDocumento_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+        IdUsuario = GestionSeguridadManager.idUsuario
 
+        Call ListarRegistrov("")
 
+    End Sub
 
-    Public Function ListarCondiciones() As Boolean
-        Dim xLimit As Integer
-        Dim vArray As String = "", vTiene As Boolean = False
-        Dim dgvRw As UltraGridRow
-        xLimit = Integer.Parse(txtLimite.Text)
-        Dim mesentero As Integer
-        Dim anioentero As Integer
-        Dim almacenentero As Integer
-
-        If vTiene Then
-            vArray = Mid(vArray, 1, Len(vArray) - 1)
-            vArray = "array[" & vArray & "]"
-        Else
-            vArray = "null"
-        End If
-
-        If txtalmacen.Text = "" Then
-            ' txtmes.Text = 0
-            almacenentero = 0
-        Else
-            almacenentero = Integer.Parse(txtalmacen.Text)
-        End If
-
-        If txtmes.Text = "" Then
-            ' txtmes.Text = 0
-            mesentero = 0
-        Else
-            mesentero = Integer.Parse(txtmes.Text)
-        End If
-
-        If txtanio.Text = "" Then
-            'txtanio.Text = 0
-            anioentero = 0
-
-        Else
-            anioentero = Integer.Parse(txtanio.Text)
-        End If
-
+    Public Function ListarRegistrov(ByVal Descripcion As String) As Boolean
+        Dim objetos As New DataTable
         Try
+            dtlistaregistrov = registrarvManager.GetList(Descripcion)
+            dgvListadoregis.DataSource = dtlistaregistrov
 
-            ListadoRegistros = registrarvManager.GetList(almacenentero, mesentero, anioentero, "", vArray, xLimit, 0)
-            dgvListadoregis.DataSource = ListadoRegistros
-            'dgvListado.DataBind()
+            dgvListadoregis.DataBind()
             If dgvListadoregis.Rows.Count() > 0 Then
-                'dgvListado.Rows(0).Selected = True
+                dgvListadoregis.Rows(0).Selected = True
+                dgvListadoregis.Focus()
+
             End If
 
         Catch ex As Exception
             MsgBox(ex.Message)
+        End Try
+    End Function
 
+    Public Function ELiminar_Registro_venta() As Boolean
+        Try
+            If dgvListadoregis.Rows.Count > 0 Then
+                If dgvListadoregis.Selected.Rows.Count > 0 Then
+                    If MessageBox.Show("¿Está seguro de eliminar Registro?", "CONFIRMAR", MessageBoxButtons.YesNo, MessageBoxIcon.Question) = Windows.Forms.DialogResult.Yes Then
+                        If empresaManager.Eliminar(dgvListadoregis.DisplayLayout.ActiveRow.Cells(0).Value) Then
+                            MessageBox.Show("Registro Eliminado con Éxito", "AVISO")
+                            Call ListarRegistrov("")
+                        End If
+                    End If
+                End If
+            End If
+
+        Catch ex As Exception
+            MsgBox(ex.Message)
         End Try
     End Function
 
 
-    Private Sub dgvListado_AfterRowsDeleted(ByVal sender As Object, ByVal e As System.EventArgs) Handles dgvListadoregis.AfterRowsDeleted
-        Call Eliminar(CInt(_codigo))
-        Call ListarCondiciones()
+    Private Sub dgvListadoregis_BeforeSelectChange(ByVal sender As Object, ByVal e As Infragistics.Win.UltraWinGrid.BeforeSelectChangeEventArgs) Handles dgvListadoregis.BeforeSelectChange
+        If dgvListadoregis.Rows.Count > 0 Then
+            If e.NewSelections.Rows.Count > 0 Then
+                'codigo = dgvListado.DisplayLayout.ActiveRow.Cells(0).Value
+
+            Else
+                _codigo = 0
+
+            End If
+        End If
+
     End Sub
-
-    Private Sub dgvListadoregis_AfterRowUpdate(ByVal sender As Object, ByVal e As Infragistics.Win.UltraWinGrid.RowEventArgs) Handles dgvListadoregis.AfterRowUpdate
-        Call ListarCondiciones()
-    End Sub
-
-
 
     Public Function Eliminar(ByVal _id As Integer) As Boolean
         'Eliminar = personaManager.Eliminar(_id, GestionSeguridadManager.idUsuario, GestionSeguridadManager.miIP)
     End Function
-
-    Private Sub dgvListadoregis_BeforeSelectChange(ByVal sender As Object, ByVal e As Infragistics.Win.UltraWinGrid.BeforeSelectChangeEventArgs) Handles dgvListadoregis.BeforeSelectChange
-        If dgvListadoregis.Rows.Count > 0 Then
-            If e.NewSelections.Rows.Count > 0 Then
-                _codigo = Long.Parse((dgvListadoregis.DisplayLayout.ActiveRow.Cells(0).Value))
-            Else
-                _codigo = 0
-            End If
-        End If
-    End Sub
 
     Private Sub dgvListadoregis_InitializeLayout(ByVal sender As System.Object, ByVal e As Infragistics.Win.UltraWinGrid.InitializeLayoutEventArgs) Handles dgvListadoregis.InitializeLayout
         With dgvListadoregis.DisplayLayout.Bands(0)
@@ -132,7 +115,7 @@ Public Class FrmRegistrar_VentaLis
         If dgvListadoregis.Selected.Rows.Count > 0 Then
             If MessageBox.Show("¿Está seguro de eliminar este registro?", "CONFIRMAR", MessageBoxButtons.YesNo, MessageBoxIcon.Question) = Windows.Forms.DialogResult.Yes Then
                 Call Eliminar(CInt(dgvListadoregis.DisplayLayout.ActiveRow.Cells(0).Value))
-                Call ListarCondiciones()
+                '  Call ListarCondiciones()
             End If
         End If
     End Sub
@@ -195,7 +178,7 @@ Public Class FrmRegistrar_VentaLis
     End Sub
 
     Private Sub btnBuscar_Click(sender As Object, e As EventArgs) Handles btnBuscar.Click
-        Call ListarCondiciones()
+        '  Call ListarCondiciones()
 
     End Sub
 

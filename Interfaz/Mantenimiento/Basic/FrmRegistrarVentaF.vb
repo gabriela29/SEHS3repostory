@@ -322,7 +322,7 @@ Public Class FrmRegistrarVentaF
                 .anio = labelaño.Text.Trim & ""
 
             End With
-            ok = registrarvManager.Actualizar(objR, vacodigo_per)
+            ok = registrarvManager.Grabar(objR)
 
             If ok > 0 Then
                 GrabarRegistroDoc = True

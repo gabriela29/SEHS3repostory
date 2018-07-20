@@ -11,7 +11,9 @@ Imports CapaObjetosNegocio
 Namespace BO
 
     Public Class registrarv
+        Private malmacenaid As Integer
         Private mcodigo_per As Long = -1
+        Private mcodigo_doc As Integer
         Private memision As Date
         Private mnombre_corto As String
         Private mcodigo_sunat As String
@@ -33,15 +35,29 @@ Namespace BO
         Private msigno As String
         Private mserie_int As String
         Private mnumero_int As String
-        Private mcodigo_doc As Integer
-        Private malmacenaid As Integer
         Private mtabla As String
         Private midtabla As String
         Private mcod_ass As Integer
         Private mmes As Integer
         Private manio As Integer
 
+        Public Property almacenaid() As Integer
+            Get
+                Return malmacenaid
+            End Get
+            Set(ByVal value As Integer)
+                malmacenaid = value
+            End Set
+        End Property
 
+        Public Property codigo_doc() As Integer
+            Get
+                Return mcodigo_doc
+            End Get
+            Set(ByVal value As Integer)
+                mcodigo_doc = value
+            End Set
+        End Property
 
         Public Property codigo_per() As Long
             Get
@@ -240,24 +256,6 @@ Namespace BO
             End Get
             Set(ByVal value As String)
                 mnumero_int = value
-            End Set
-        End Property
-
-        Public Property codigo_doc() As Integer
-            Get
-                Return mcodigo_doc
-            End Get
-            Set(ByVal value As Integer)
-                mcodigo_doc = value
-            End Set
-        End Property
-
-        Public Property almacenaid() As Integer
-            Get
-                Return malmacenaid
-            End Get
-            Set(ByVal value As Integer)
-                malmacenaid = value
             End Set
         End Property
 

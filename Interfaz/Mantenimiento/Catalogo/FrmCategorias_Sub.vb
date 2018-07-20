@@ -298,7 +298,7 @@ Public Class FrmCategorias_Sub
     End Sub
 
     Private Sub tsDDelete_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles tsDDelete.Click
-        If MsgBox(" Esta Acción podría Afectar el normal Funncionamiento del Sistema, ¿Desea Continuar?", MsgBoxStyle.YesNo, "Confirme") = MsgBoxResult.Yes Then
+        If MsgBox(" Esta Acción podría Afectar el normal Funcionamiento del Sistema, ¿Desea Continuar?", MsgBoxStyle.YesNo, "Confirme") = MsgBoxResult.Yes Then
             If dgvListado.Selected.Rows.Count > 0 Then
                 Call Eliminar_Categoria()
             End If

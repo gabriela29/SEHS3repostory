@@ -372,6 +372,12 @@ Public Class FrmCatalogo
         frm.ShowDialog()
     End Sub
 
+    Private Sub btnregistro_ventas_Click(sender As Object, e As EventArgs) Handles btnregistro_ventas.Click
+        Dim frm As FrmRegistrar_VentaLis = New FrmRegistrar_VentaLis
+        frm.swNuevoregistro_venta = True
+        frm.ShowDialog()
+    End Sub
+
     Private Sub tsReporte_Click(sender As Object, e As EventArgs) Handles tsReporte.Click
         Call LibreriasFormularios.Exportar_UltraGrid_Excel(dgvListado, utExcel, "Asistente.xls")
     End Sub

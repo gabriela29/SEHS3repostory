@@ -36,6 +36,7 @@ Namespace Bll
             End Try
             Return vCodigo
         End Function
+
         Public Shared Function Eliminar(ByVal Objempresa As Integer) As Boolean
             Dim rs As DataTable
             Try
