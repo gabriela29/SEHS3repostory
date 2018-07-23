@@ -1,15 +1,14 @@
-﻿
-Imports System
+﻿Imports System
 Imports System.ComponentModel
-Imports CapaObjetosNegocio.BO
 Imports CapaDatos.Dal
+Imports CapaObjetosNegocio
 
 Namespace BLL
 
     Public Class registrarvManager
 
-        Public Shared Function GetList(ByVal vidalmacen As Integer, ByVal vmes As Integer, ByVal vanio As Integer) As DataTable
-            Return registrarVBD.GetList(vidalmacen, vmes, vanio)
+        Public Shared Function GetList(ByVal nombre_corto As String) As DataTable
+            Return registrarVBD.GetList(nombre_corto)
         End Function
 
         Public Shared Function GetItem(ByVal codigo_registrarv As Long) As registrarv

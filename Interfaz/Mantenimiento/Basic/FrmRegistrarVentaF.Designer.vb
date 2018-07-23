@@ -56,14 +56,17 @@ Partial Class FrmRegistrarVentaF
         Dim Appearance31 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmRegistrarVentaF))
         Dim Appearance32 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
+        Dim Appearance35 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
+        Dim Appearance36 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
         Dim Appearance33 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
         Dim Appearance34 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
         Me.bwdatos = New System.ComponentModel.BackgroundWorker()
         Me.UgvDatos = New Infragistics.Win.Misc.UltraGroupBox()
+        Me.Textcodigo_doc = New Infragistics.Win.UltraWinEditors.UltraTextEditor()
         Me.label = New Infragistics.Win.Misc.UltraLabel()
         Me.almacenText = New Infragistics.Win.UltraWinEditors.UltraTextEditor()
         Me.almacen_id = New Infragistics.Win.Misc.UltraLabel()
-        Me.labelaño = New Infragistics.Win.Misc.UltraLabel()
+        Me.labelanio = New Infragistics.Win.Misc.UltraLabel()
         Me.labeltablaid = New Infragistics.Win.Misc.UltraLabel()
         Me.labelmes = New Infragistics.Win.Misc.UltraLabel()
         Me.labeltabla = New Infragistics.Win.Misc.UltraLabel()
@@ -115,9 +118,10 @@ Partial Class FrmRegistrarVentaF
         Me.ErrorProvider1 = New System.Windows.Forms.ErrorProvider(Me.components)
         Me.lblErrorR = New Infragistics.Win.Misc.UltraLabel()
         Me.BtnGuardar = New Infragistics.Win.Misc.UltraButton()
-        Me.Textcodigo_doc = New Infragistics.Win.UltraWinEditors.UltraTextEditor()
+        Me.btncerrar = New Infragistics.Win.Misc.UltraButton()
         CType(Me.UgvDatos, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.UgvDatos.SuspendLayout()
+        CType(Me.Textcodigo_doc, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.almacenText, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.datefechao, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.txtnumeroint, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -139,7 +143,6 @@ Partial Class FrmRegistrarVentaF
         CType(Me.txtnombrec, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.datefechae, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.Textcodigo_doc, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'UgvDatos
@@ -150,7 +153,7 @@ Partial Class FrmRegistrarVentaF
         Me.UgvDatos.Controls.Add(Me.label)
         Me.UgvDatos.Controls.Add(Me.almacenText)
         Me.UgvDatos.Controls.Add(Me.almacen_id)
-        Me.UgvDatos.Controls.Add(Me.labelaño)
+        Me.UgvDatos.Controls.Add(Me.labelanio)
         Me.UgvDatos.Controls.Add(Me.labeltablaid)
         Me.UgvDatos.Controls.Add(Me.labelmes)
         Me.UgvDatos.Controls.Add(Me.labeltabla)
@@ -202,6 +205,14 @@ Partial Class FrmRegistrarVentaF
         Me.UgvDatos.Size = New System.Drawing.Size(816, 467)
         Me.UgvDatos.TabIndex = 0
         '
+        'Textcodigo_doc
+        '
+        Me.Textcodigo_doc.DisplayStyle = Infragistics.Win.EmbeddableElementDisplayStyle.Office2007
+        Me.Textcodigo_doc.Location = New System.Drawing.Point(182, 43)
+        Me.Textcodigo_doc.Name = "Textcodigo_doc"
+        Me.Textcodigo_doc.Size = New System.Drawing.Size(189, 21)
+        Me.Textcodigo_doc.TabIndex = 109
+        '
         'label
         '
         Appearance2.BackColorAlpha = Infragistics.Win.Alpha.Transparent
@@ -234,17 +245,17 @@ Partial Class FrmRegistrarVentaF
         Me.almacen_id.TabIndex = 101
         Me.almacen_id.Text = "Almacen Id:"
         '
-        'labelaño
+        'labelanio
         '
         Appearance4.BackColorAlpha = Infragistics.Win.Alpha.Transparent
         Appearance4.ForeColor = System.Drawing.Color.DodgerBlue
-        Me.labelaño.Appearance = Appearance4
-        Me.labelaño.Font = New System.Drawing.Font("Arial", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.labelaño.Location = New System.Drawing.Point(728, 376)
-        Me.labelaño.Name = "labelaño"
-        Me.labelaño.Size = New System.Drawing.Size(73, 25)
-        Me.labelaño.TabIndex = 100
-        Me.labelaño.Text = "2017"
+        Me.labelanio.Appearance = Appearance4
+        Me.labelanio.Font = New System.Drawing.Font("Arial", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.labelanio.Location = New System.Drawing.Point(728, 376)
+        Me.labelanio.Name = "labelanio"
+        Me.labelanio.Size = New System.Drawing.Size(73, 25)
+        Me.labelanio.TabIndex = 100
+        Me.labelanio.Text = "2017"
         '
         'labeltablaid
         '
@@ -757,10 +768,10 @@ Partial Class FrmRegistrarVentaF
         '
         'lblErrorR
         '
-        Appearance33.BackColorAlpha = Infragistics.Win.Alpha.Transparent
-        Appearance33.ForeColor = System.Drawing.Color.Navy
-        Appearance33.TextVAlignAsString = "Middle"
-        Me.lblErrorR.Appearance = Appearance33
+        Appearance35.BackColorAlpha = Infragistics.Win.Alpha.Transparent
+        Appearance35.ForeColor = System.Drawing.Color.Navy
+        Appearance35.TextVAlignAsString = "Middle"
+        Me.lblErrorR.Appearance = Appearance35
         Me.lblErrorR.Font = New System.Drawing.Font("Arial", 8.25!)
         Me.lblErrorR.Location = New System.Drawing.Point(34, 520)
         Me.lblErrorR.Name = "lblErrorR"
@@ -769,11 +780,11 @@ Partial Class FrmRegistrarVentaF
         '
         'BtnGuardar
         '
-        Appearance34.BackColor = System.Drawing.Color.White
-        Appearance34.BackColor2 = System.Drawing.SystemColors.GradientInactiveCaption
-        Appearance34.BackGradientStyle = Infragistics.Win.GradientStyle.Vertical
-        Appearance34.Image = CType(resources.GetObject("Appearance34.Image"), Object)
-        Me.BtnGuardar.Appearance = Appearance34
+        Appearance36.BackColor = System.Drawing.Color.White
+        Appearance36.BackColor2 = System.Drawing.SystemColors.GradientInactiveCaption
+        Appearance36.BackGradientStyle = Infragistics.Win.GradientStyle.Vertical
+        Appearance36.Image = CType(resources.GetObject("Appearance36.Image"), Object)
+        Me.BtnGuardar.Appearance = Appearance36
         Me.BtnGuardar.ButtonStyle = Infragistics.Win.UIElementButtonStyle.Office2007RibbonButton
         Me.BtnGuardar.Location = New System.Drawing.Point(426, 520)
         Me.BtnGuardar.Name = "BtnGuardar"
@@ -782,13 +793,27 @@ Partial Class FrmRegistrarVentaF
         Me.BtnGuardar.Text = "&Guardar"
         Me.BtnGuardar.UseOsThemes = Infragistics.Win.DefaultableBoolean.[False]
         '
-        'Textcodigo_doc
+        'btncerrar
         '
-        Me.Textcodigo_doc.DisplayStyle = Infragistics.Win.EmbeddableElementDisplayStyle.Office2007
-        Me.Textcodigo_doc.Location = New System.Drawing.Point(182, 43)
-        Me.Textcodigo_doc.Name = "Textcodigo_doc"
-        Me.Textcodigo_doc.Size = New System.Drawing.Size(189, 21)
-        Me.Textcodigo_doc.TabIndex = 109
+        Appearance33.BackColor = System.Drawing.Color.LightBlue
+        Appearance33.BackColor2 = System.Drawing.Color.White
+        Appearance33.BackColorAlpha = Infragistics.Win.Alpha.Transparent
+        Appearance33.BackGradientStyle = Infragistics.Win.GradientStyle.Vertical
+        Appearance33.BorderColor = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(255, Byte), Integer))
+        Appearance33.ForeColor = System.Drawing.Color.Navy
+        Appearance33.ImageHAlign = Infragistics.Win.HAlign.Center
+        Me.btncerrar.Appearance = Appearance33
+        Me.btncerrar.ButtonStyle = Infragistics.Win.UIElementButtonStyle.Flat
+        Me.btncerrar.DialogResult = System.Windows.Forms.DialogResult.Cancel
+        Me.btncerrar.Font = New System.Drawing.Font("Tahoma", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btncerrar.Location = New System.Drawing.Point(776, 4)
+        Me.btncerrar.Name = "btncerrar"
+        Appearance34.BorderAlpha = Infragistics.Win.Alpha.Transparent
+        Me.btncerrar.PressedAppearance = Appearance34
+        Me.btncerrar.Size = New System.Drawing.Size(29, 16)
+        Me.btncerrar.TabIndex = 102
+        Me.btncerrar.Text = "x"
+        Me.btncerrar.UseOsThemes = Infragistics.Win.DefaultableBoolean.[False]
         '
         'FrmRegistrarVentaF
         '
@@ -796,6 +821,7 @@ Partial Class FrmRegistrarVentaF
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.LightSteelBlue
         Me.ClientSize = New System.Drawing.Size(817, 558)
+        Me.Controls.Add(Me.btncerrar)
         Me.Controls.Add(Me.lblErrorR)
         Me.Controls.Add(Me.UltraPictureBox1)
         Me.Controls.Add(Me.labelTitulo)
@@ -804,10 +830,12 @@ Partial Class FrmRegistrarVentaF
         Me.Controls.Add(Me.UgvDatos)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "FrmRegistrarVentaF"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "FrmRegistrarVentaF"
         CType(Me.UgvDatos, System.ComponentModel.ISupportInitialize).EndInit()
         Me.UgvDatos.ResumeLayout(False)
         Me.UgvDatos.PerformLayout()
+        CType(Me.Textcodigo_doc, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.almacenText, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.datefechao, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.txtnumeroint, System.ComponentModel.ISupportInitialize).EndInit()
@@ -829,7 +857,6 @@ Partial Class FrmRegistrarVentaF
         CType(Me.txtnombrec, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.datefechae, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.Textcodigo_doc, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -878,7 +905,7 @@ Partial Class FrmRegistrarVentaF
     Friend WithEvents txtcodigosu As Infragistics.Win.UltraWinEditors.UltraTextEditor
     Friend WithEvents txtnombrec As Infragistics.Win.UltraWinEditors.UltraTextEditor
     Friend WithEvents datefechae As Infragistics.Win.UltraWinEditors.UltraDateTimeEditor
-    Friend WithEvents labelaño As Infragistics.Win.Misc.UltraLabel
+    Friend WithEvents labelanio As Infragistics.Win.Misc.UltraLabel
     Friend WithEvents labeltablaid As Infragistics.Win.Misc.UltraLabel
     Friend WithEvents labelmes As Infragistics.Win.Misc.UltraLabel
     Friend WithEvents labeltabla As Infragistics.Win.Misc.UltraLabel
@@ -892,4 +919,5 @@ Partial Class FrmRegistrarVentaF
     Friend WithEvents label As Infragistics.Win.Misc.UltraLabel
     Friend WithEvents almacenText As Infragistics.Win.UltraWinEditors.UltraTextEditor
     Friend WithEvents Textcodigo_doc As Infragistics.Win.UltraWinEditors.UltraTextEditor
+    Friend WithEvents btncerrar As Infragistics.Win.Misc.UltraButton
 End Class

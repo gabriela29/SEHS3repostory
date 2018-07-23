@@ -59,9 +59,9 @@ Public Class FrmPlan_Ctacte
     '    frm.ShowDialog()
     'End Sub
 
-    Private Sub btnRegistroV_Click(sender As Object, e As EventArgs) Handles btnRegistroV.Click
+    Private Sub btnRegistroV_Click(sender As Object, e As EventArgs)
         Dim frm As FrmRegistrar_VentaLis = New FrmRegistrar_VentaLis
-        frm.swNuevo = True
+        frm.swNuevoregistro_venta = True
         frm.ShowDialog()
 
     End Sub

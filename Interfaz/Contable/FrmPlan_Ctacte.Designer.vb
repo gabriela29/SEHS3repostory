@@ -39,7 +39,6 @@ Partial Class FrmPlan_Ctacte
         Dim Appearance14 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
         Dim Appearance15 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
         Me.gpConsulta = New Infragistics.Win.Misc.UltraGroupBox()
-        Me.btnRegistroV = New System.Windows.Forms.Button()
         Me.txtNombre = New Infragistics.Win.UltraWinEditors.UltraTextEditor()
         Me.cboEntidad = New System.Windows.Forms.ComboBox()
         Me.cboTipo = New Infragistics.Win.UltraWinGrid.UltraCombo()
@@ -77,7 +76,6 @@ Partial Class FrmPlan_Ctacte
         Appearance1.BackColor = System.Drawing.Color.White
         Appearance1.BackColor2 = System.Drawing.Color.White
         Me.gpConsulta.ContentAreaAppearance = Appearance1
-        Me.gpConsulta.Controls.Add(Me.btnRegistroV)
         Me.gpConsulta.Controls.Add(Me.txtNombre)
         Me.gpConsulta.Controls.Add(Me.cboEntidad)
         Me.gpConsulta.Controls.Add(Me.cboTipo)
@@ -89,20 +87,6 @@ Partial Class FrmPlan_Ctacte
         Me.gpConsulta.Size = New System.Drawing.Size(664, 87)
         Me.gpConsulta.TabIndex = 3
         Me.gpConsulta.Text = "         Entidad                     Tipo"
-        '
-        'btnRegistroV
-        '
-        Me.btnRegistroV.AccessibleRole = System.Windows.Forms.AccessibleRole.None
-        Me.btnRegistroV.BackColor = System.Drawing.Color.MistyRose
-        Me.btnRegistroV.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
-        Me.btnRegistroV.FlatAppearance.BorderColor = System.Drawing.Color.Maroon
-        Me.btnRegistroV.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.btnRegistroV.Location = New System.Drawing.Point(356, 21)
-        Me.btnRegistroV.Name = "btnRegistroV"
-        Me.btnRegistroV.Size = New System.Drawing.Size(121, 37)
-        Me.btnRegistroV.TabIndex = 92
-        Me.btnRegistroV.Text = "Registro Venta"
-        Me.btnRegistroV.UseVisualStyleBackColor = False
         '
         'txtNombre
         '
@@ -399,5 +383,4 @@ Partial Class FrmPlan_Ctacte
     Friend WithEvents cboEntidad As ComboBox
     Friend WithEvents txtNombre As Infragistics.Win.UltraWinEditors.UltraTextEditor
     Friend WithEvents bwLlenar_Grid As System.ComponentModel.BackgroundWorker
-    Friend WithEvents btnRegistroV As Button
 End Class

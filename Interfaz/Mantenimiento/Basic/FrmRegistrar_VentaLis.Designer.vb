@@ -24,10 +24,10 @@ Partial Class FrmRegistrar_VentaLis
     Private Sub InitializeComponent()
         Dim Appearance1 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
         Dim Appearance2 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
-        Dim Appearance3 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmRegistrar_VentaLis))
-        Dim Appearance4 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
         Dim Appearance5 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
+        Dim Appearance3 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
+        Dim Appearance4 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmRegistrar_VentaLis))
         Dim Appearance6 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
         Dim Appearance7 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
         Dim Appearance8 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
@@ -37,6 +37,8 @@ Partial Class FrmRegistrar_VentaLis
         Dim Appearance12 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
         Dim Appearance13 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
         Dim Appearance14 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
+        Dim Appearance15 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
+        Dim Appearance16 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
         Me.lbl = New Infragistics.Win.Misc.UltraLabel()
         Me.TpCliente = New System.Windows.Forms.ToolStrip()
         Me.TpNuevo = New System.Windows.Forms.ToolStripButton()
@@ -48,6 +50,7 @@ Partial Class FrmRegistrar_VentaLis
         Me.tpCerrar = New System.Windows.Forms.ToolStripButton()
         Me.dgvListadoregis = New Infragistics.Win.UltraWinGrid.UltraGrid()
         Me.UltraGroupBox1 = New Infragistics.Win.Misc.UltraGroupBox()
+        Me.txtLocaltionDoc3 = New Infragistics.Win.Misc.UltraButton()
         Me.UltraPictureBox1 = New Infragistics.Win.UltraWinEditors.UltraPictureBox()
         Me.btnBuscar = New Infragistics.Win.Misc.UltraButton()
         Me.lblBuscar = New Infragistics.Win.Misc.UltraLabel()
@@ -167,15 +170,37 @@ Partial Class FrmRegistrar_VentaLis
         Me.UltraGroupBox1.Controls.Add(Me.dgvListadoregis)
         Me.UltraGroupBox1.Controls.Add(Me.lbl)
         Me.UltraGroupBox1.Controls.Add(Me.TpCliente)
-        Appearance3.BackColor = System.Drawing.Color.LightBlue
-        Appearance3.BackColor2 = System.Drawing.Color.White
-        Appearance3.BackGradientStyle = Infragistics.Win.GradientStyle.Vertical
-        Me.UltraGroupBox1.HeaderAppearance = Appearance3
+        Me.UltraGroupBox1.Controls.Add(Me.txtLocaltionDoc3)
+        Appearance5.BackColor = System.Drawing.Color.LightBlue
+        Appearance5.BackColor2 = System.Drawing.Color.White
+        Appearance5.BackGradientStyle = Infragistics.Win.GradientStyle.Vertical
+        Me.UltraGroupBox1.HeaderAppearance = Appearance5
         Me.UltraGroupBox1.HeaderPosition = Infragistics.Win.Misc.GroupBoxHeaderPosition.BottomOnBorder
         Me.UltraGroupBox1.Location = New System.Drawing.Point(1, 74)
         Me.UltraGroupBox1.Name = "UltraGroupBox1"
         Me.UltraGroupBox1.Size = New System.Drawing.Size(738, 397)
         Me.UltraGroupBox1.TabIndex = 74
+        '
+        'txtLocaltionDoc3
+        '
+        Appearance3.BackColor = System.Drawing.Color.LightBlue
+        Appearance3.BackColor2 = System.Drawing.Color.White
+        Appearance3.BackColorAlpha = Infragistics.Win.Alpha.Transparent
+        Appearance3.BackGradientStyle = Infragistics.Win.GradientStyle.Vertical
+        Appearance3.BorderColor = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(255, Byte), Integer))
+        Appearance3.ForeColor = System.Drawing.Color.Navy
+        Appearance3.ImageHAlign = Infragistics.Win.HAlign.Center
+        Me.txtLocaltionDoc3.Appearance = Appearance3
+        Me.txtLocaltionDoc3.ButtonStyle = Infragistics.Win.UIElementButtonStyle.Flat
+        Me.txtLocaltionDoc3.DialogResult = System.Windows.Forms.DialogResult.Cancel
+        Me.txtLocaltionDoc3.Font = New System.Drawing.Font("Tahoma", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtLocaltionDoc3.Location = New System.Drawing.Point(6, 15)
+        Me.txtLocaltionDoc3.Name = "txtLocaltionDoc3"
+        Appearance4.BorderAlpha = Infragistics.Win.Alpha.Transparent
+        Me.txtLocaltionDoc3.PressedAppearance = Appearance4
+        Me.txtLocaltionDoc3.Size = New System.Drawing.Size(48, 38)
+        Me.txtLocaltionDoc3.TabIndex = 98
+        Me.txtLocaltionDoc3.UseOsThemes = Infragistics.Win.DefaultableBoolean.[False]
         '
         'UltraPictureBox1
         '
@@ -190,15 +215,15 @@ Partial Class FrmRegistrar_VentaLis
         '
         'btnBuscar
         '
-        Appearance4.BackColor = System.Drawing.Color.LightBlue
-        Appearance4.BackColor2 = System.Drawing.Color.White
-        Appearance4.BackGradientStyle = Infragistics.Win.GradientStyle.Vertical
-        Me.btnBuscar.Appearance = Appearance4
+        Appearance6.BackColor = System.Drawing.Color.LightBlue
+        Appearance6.BackColor2 = System.Drawing.Color.White
+        Appearance6.BackGradientStyle = Infragistics.Win.GradientStyle.Vertical
+        Me.btnBuscar.Appearance = Appearance6
         Me.btnBuscar.ButtonStyle = Infragistics.Win.UIElementButtonStyle.Office2007RibbonButton
         Me.btnBuscar.Location = New System.Drawing.Point(515, 45)
         Me.btnBuscar.Name = "btnBuscar"
-        Appearance5.BorderAlpha = Infragistics.Win.Alpha.Transparent
-        Me.btnBuscar.PressedAppearance = Appearance5
+        Appearance7.BorderAlpha = Infragistics.Win.Alpha.Transparent
+        Me.btnBuscar.PressedAppearance = Appearance7
         Me.btnBuscar.Size = New System.Drawing.Size(80, 23)
         Me.btnBuscar.TabIndex = 83
         Me.btnBuscar.Text = "&Buscar"
@@ -206,11 +231,11 @@ Partial Class FrmRegistrar_VentaLis
         '
         'lblBuscar
         '
-        Appearance6.BackColorAlpha = Infragistics.Win.Alpha.Transparent
-        Appearance6.ForeColor = System.Drawing.Color.SteelBlue
-        Appearance6.TextHAlignAsString = "Right"
-        Appearance6.TextVAlignAsString = "Top"
-        Me.lblBuscar.Appearance = Appearance6
+        Appearance8.BackColorAlpha = Infragistics.Win.Alpha.Transparent
+        Appearance8.ForeColor = System.Drawing.Color.SteelBlue
+        Appearance8.TextHAlignAsString = "Right"
+        Appearance8.TextVAlignAsString = "Top"
+        Me.lblBuscar.Appearance = Appearance8
         Me.lblBuscar.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblBuscar.Location = New System.Drawing.Point(63, 49)
         Me.lblBuscar.Name = "lblBuscar"
@@ -222,12 +247,12 @@ Partial Class FrmRegistrar_VentaLis
         '
         Me.UltraLabel1.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Appearance7.BackColor = System.Drawing.Color.LightBlue
-        Appearance7.BackColor2 = System.Drawing.Color.White
-        Appearance7.BackGradientStyle = Infragistics.Win.GradientStyle.Vertical
-        Appearance7.ForeColor = System.Drawing.Color.SteelBlue
-        Appearance7.TextVAlignAsString = "Top"
-        Me.UltraLabel1.Appearance = Appearance7
+        Appearance9.BackColor = System.Drawing.Color.LightBlue
+        Appearance9.BackColor2 = System.Drawing.Color.White
+        Appearance9.BackGradientStyle = Infragistics.Win.GradientStyle.Vertical
+        Appearance9.ForeColor = System.Drawing.Color.SteelBlue
+        Appearance9.TextVAlignAsString = "Top"
+        Me.UltraLabel1.Appearance = Appearance9
         Me.UltraLabel1.Font = New System.Drawing.Font("Verdana", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.UltraLabel1.Location = New System.Drawing.Point(63, -2)
         Me.UltraLabel1.Name = "UltraLabel1"
@@ -237,39 +262,39 @@ Partial Class FrmRegistrar_VentaLis
         '
         'txtmes
         '
-        Appearance8.ForeColor = System.Drawing.Color.Navy
-        Me.txtmes.Appearance = Appearance8
+        Appearance10.ForeColor = System.Drawing.Color.Navy
+        Me.txtmes.Appearance = Appearance10
         Me.txtmes.DisplayStyle = Infragistics.Win.EmbeddableElementDisplayStyle.Office2007
         Me.txtmes.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtmes.Location = New System.Drawing.Point(261, 45)
         Me.txtmes.MaxLength = 50
         Me.txtmes.Name = "txtmes"
         Me.txtmes.NullText = "Mes"
-        Appearance9.ForeColor = System.Drawing.Color.DarkGray
-        Me.txtmes.NullTextAppearance = Appearance9
+        Appearance11.ForeColor = System.Drawing.Color.DarkGray
+        Me.txtmes.NullTextAppearance = Appearance11
         Me.txtmes.Size = New System.Drawing.Size(118, 22)
         Me.txtmes.TabIndex = 85
         '
         'txtanio
         '
-        Appearance10.ForeColor = System.Drawing.Color.Navy
-        Me.txtanio.Appearance = Appearance10
+        Appearance12.ForeColor = System.Drawing.Color.Navy
+        Me.txtanio.Appearance = Appearance12
         Me.txtanio.DisplayStyle = Infragistics.Win.EmbeddableElementDisplayStyle.Office2007
         Me.txtanio.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtanio.Location = New System.Drawing.Point(383, 44)
         Me.txtanio.MaxLength = 50
         Me.txtanio.Name = "txtanio"
         Me.txtanio.NullText = "Año"
-        Appearance11.ForeColor = System.Drawing.Color.DarkGray
-        Me.txtanio.NullTextAppearance = Appearance11
+        Appearance13.ForeColor = System.Drawing.Color.DarkGray
+        Me.txtanio.NullTextAppearance = Appearance13
         Me.txtanio.Size = New System.Drawing.Size(118, 22)
         Me.txtanio.TabIndex = 86
         '
         'txtLimite
         '
-        Appearance12.ForeColor = System.Drawing.Color.Navy
-        Appearance12.TextHAlignAsString = "Right"
-        Me.txtLimite.Appearance = Appearance12
+        Appearance14.ForeColor = System.Drawing.Color.Navy
+        Appearance14.TextHAlignAsString = "Right"
+        Me.txtLimite.Appearance = Appearance14
         Me.txtLimite.DisplayStyle = Infragistics.Win.EmbeddableElementDisplayStyle.Office2007
         Me.txtLimite.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtLimite.Location = New System.Drawing.Point(623, 44)
@@ -281,16 +306,16 @@ Partial Class FrmRegistrar_VentaLis
         '
         'txtalmacen
         '
-        Appearance13.ForeColor = System.Drawing.Color.Navy
-        Me.txtalmacen.Appearance = Appearance13
+        Appearance15.ForeColor = System.Drawing.Color.Navy
+        Me.txtalmacen.Appearance = Appearance15
         Me.txtalmacen.DisplayStyle = Infragistics.Win.EmbeddableElementDisplayStyle.Office2007
         Me.txtalmacen.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtalmacen.Location = New System.Drawing.Point(139, 46)
         Me.txtalmacen.MaxLength = 50
         Me.txtalmacen.Name = "txtalmacen"
         Me.txtalmacen.NullText = "Almacen"
-        Appearance14.ForeColor = System.Drawing.Color.DarkGray
-        Me.txtalmacen.NullTextAppearance = Appearance14
+        Appearance16.ForeColor = System.Drawing.Color.DarkGray
+        Me.txtalmacen.NullTextAppearance = Appearance16
         Me.txtalmacen.Size = New System.Drawing.Size(118, 22)
         Me.txtalmacen.TabIndex = 80
         '
@@ -312,6 +337,7 @@ Partial Class FrmRegistrar_VentaLis
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "FrmRegistrar_VentaLis"
         Me.Text = "Registro de Ventas"
+        Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         Me.TpCliente.ResumeLayout(False)
         Me.TpCliente.PerformLayout()
         CType(Me.dgvListadoregis, System.ComponentModel.ISupportInitialize).EndInit()
@@ -345,4 +371,5 @@ Partial Class FrmRegistrar_VentaLis
     Friend WithEvents txtanio As Infragistics.Win.UltraWinEditors.UltraTextEditor
     Friend WithEvents txtLimite As Infragistics.Win.UltraWinEditors.UltraTextEditor
     Friend WithEvents txtalmacen As Infragistics.Win.UltraWinEditors.UltraTextEditor
+    Friend WithEvents txtLocaltionDoc3 As Infragistics.Win.Misc.UltraButton
 End Class

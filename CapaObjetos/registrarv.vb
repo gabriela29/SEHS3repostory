@@ -6,11 +6,11 @@
 
 
 
-Imports CapaObjetosNegocio
+Imports System
+Imports System.ComponentModel
+Imports System.Diagnostics
 
-Namespace BO
-
-    Public Class registrarv
+Public Class registrarv
         Private malmacenaid As Integer
         Private mcodigo_per As Long = -1
         Private mcodigo_doc As Integer
@@ -306,7 +306,7 @@ Namespace BO
 
 
     End Class
-End Namespace
+
 
 
 

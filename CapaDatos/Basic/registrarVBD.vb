@@ -1,8 +1,9 @@
-﻿
-Imports CapaObjetosNegocio.BO
-
-
-
+﻿Imports CapaObjetosNegocio
+Imports System
+Imports System.Data
+Imports System.Configuration
+Imports System.Data.Common
+Imports Npgsql
 
 Namespace Dal
 
@@ -39,36 +40,16 @@ Namespace Dal
             Return objregistrarv
         End Function
 
-        'Public Shared Function GetList(ByVal vidalmacen As Integer,
-        '                               ByVal vmes As Integer, ByVal vanio As Integer) As DataTable
-        '    Dim TempList As New DataTable
-        '    Dim vConsulta As String
-        '    Dim oConexion As New clsConexion
 
 
-
-        '    Try
-        '        vConsulta = "select * from contable.paregistro_venta_consulta ( "
-        '        vConsulta = vConsulta & " " & vidalmacen & ","
-        '        vConsulta = vConsulta & " " & vmes & ","
-        '        vConsulta = vConsulta & " " & vanio & ");"
-
-        '        TempList = oConexion.Ejecutar_Consulta(vConsulta)
-        '        oConexion.Cerrar_Conexion()
-        '    Finally
-        '        oConexion = Nothing
-        '    End Try
-        '    Return TempList
-        'End Function
-
-        Public Shared Function GetList(ByVal valmacenid As Integer, ByVal vmes As Integer, ByVal vanio As Integer) As DataTable
+        Public Shared Function GetList(ByVal descripcion As String) As DataTable
             Dim TempList As New DataTable
             Dim oSP As New clsStored_Procedure("contable.paregistro_venta_leer")
             Dim oConexion As New clsConexion
             Try
-                oSP.addParameter("almacenid", valmacenid, NpgsqlTypes.NpgsqlDbType.Integer, 4, ParameterDirection.Input)
-                oSP.addParameter("mes", vmes, NpgsqlTypes.NpgsqlDbType.Integer, 4, ParameterDirection.Input)
-                oSP.addParameter("anio", vanio, NpgsqlTypes.NpgsqlDbType.Integer, 4, ParameterDirection.Input)
+                oSP.addParameter("nombre_corto", descripcion, NpgsqlTypes.NpgsqlDbType.Varchar, 4, ParameterDirection.Input)
+                ' oSP.addParameter("mes", vmes, NpgsqlTypes.NpgsqlDbType.Integer, 4, ParameterDirection.Input)
+                ' oSP.addParameter("anio", vanio, NpgsqlTypes.NpgsqlDbType.Integer, 4, ParameterDirection.Input)
 
                 TempList = oConexion.Ejecutar_Consulta(oSP)
                 oConexion.Cerrar_Conexion()
@@ -119,14 +100,14 @@ Namespace Dal
 
 
         Public Shared Function Grabar(ByVal objR As registrarv) As DataTable
-            Dim oSP As New clsStored_Procedure("contable_paregistro_venta_actualizarF")
+            Dim oSP As New clsStored_Procedure("contable_paregistro_venta_actualizar")
             Dim vCadena As String = ""
             Try
-                vCadena = "select * from contable_paregistro_venta_actualizarF( "
+                vCadena = "select * from contable.paregistro_venta_actualizar( "
                 vCadena = vCadena & " " & IIf(objR.almacenaid > 0, "false", "true") & ", "
                 vCadena = vCadena & " " & Trim(Str(objR.almacenaid)) & ","
                 vCadena = vCadena & " " & Trim(objR.codigo_doc) & ","
-                vCadena = vCadena & " " & Trim(Str(objR.codigo_per)) & ", "
+                vCadena = vCadena & " " & Trim(objR.codigo_per) & ", "
                 vCadena = vCadena & " '" & Trim(objR.emision) & "',"
                 vCadena = vCadena & " '" & Trim(objR.nombre_corto) & "',"
                 vCadena = vCadena & " '" & Trim(objR.codigo_sunat) & "',"
@@ -140,7 +121,7 @@ Namespace Dal
                 vCadena = vCadena & " " & Trim(objR.descuento) & ","
                 vCadena = vCadena & " " & Trim(objR.total) & ","
                 vCadena = vCadena & " " & Trim(objR.cambio) & " ,"
-                vCadena = vCadena & " '" & Trim(objR.estado) & "'," 'boolean
+                vCadena = vCadena & " " & Trim(objR.estado) & "," 'boolean
                 vCadena = vCadena & " '" & Trim(objR.fecha_doc_ori) & "',"
                 vCadena = vCadena & " '" & Trim(objR.cod_doc_ori) & "',"
                 vCadena = vCadena & " '" & Trim(objR.serie_doc_ori) & "',"

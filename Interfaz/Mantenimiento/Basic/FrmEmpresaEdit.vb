@@ -13,11 +13,11 @@ Imports Infragistics.Win.UltraWinGrid
 Public Class FrmEmpresaEdit
     Public vEmpresaid
     Public vcodigo As Integer
-    Public ModoVentanaFlotante As Boolean, swNuevo As Boolean
+    Public ModoVentanaFlotante As Boolean
+    Public swNuevo As Boolean
 
     Private Sub Mostrar_Datos()
         Dim Objc As CapaObjetosNegocio.empresa
-
 
         Objc = empresaManager.GetItem(vcodigo)
 

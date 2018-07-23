@@ -91,8 +91,7 @@ Public Class FrmEmpresaLis
             .Columns(1).Width = 245
             .Columns(3).Width = 400
             .Columns(4).Width = 180
-            '.Columns(1).Width = dgvListadoempresa.Width  80
-            '  .Columns(3).Hidden = True
+
         End With
 
         Call formatear_grid()

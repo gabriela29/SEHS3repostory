@@ -54,8 +54,8 @@ Partial Class FrmEmpresaLis
         Me.tpCerrar = New System.Windows.Forms.ToolStripButton()
         Me.dgvListadoempresa = New Infragistics.Win.UltraWinGrid.UltraGrid()
         Me.UltraGroupBox1 = New Infragistics.Win.Misc.UltraGroupBox()
-        Me.UltraPictureBox1 = New Infragistics.Win.UltraWinEditors.UltraPictureBox()
         Me.txtLocaltionDoc2 = New Infragistics.Win.Misc.UltraButton()
+        Me.UltraPictureBox1 = New Infragistics.Win.UltraWinEditors.UltraPictureBox()
         CType(Me.txtApe_Mat, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RUC, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TpCliente.SuspendLayout()
@@ -267,24 +267,13 @@ Partial Class FrmEmpresaLis
         Me.UltraGroupBox1.Size = New System.Drawing.Size(604, 381)
         Me.UltraGroupBox1.TabIndex = 95
         '
-        'UltraPictureBox1
-        '
-        Me.UltraPictureBox1.BackColor = System.Drawing.Color.Transparent
-        Me.UltraPictureBox1.BorderShadowColor = System.Drawing.Color.Empty
-        Me.UltraPictureBox1.Image = CType(resources.GetObject("UltraPictureBox1.Image"), Object)
-        Me.UltraPictureBox1.ImageTransparentColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.UltraPictureBox1.Location = New System.Drawing.Point(2, 1)
-        Me.UltraPictureBox1.Name = "UltraPictureBox1"
-        Me.UltraPictureBox1.Size = New System.Drawing.Size(58, 50)
-        Me.UltraPictureBox1.TabIndex = 96
-        '
         'txtLocaltionDoc2
         '
         Appearance12.BackColor = System.Drawing.Color.LightBlue
         Appearance12.BackColor2 = System.Drawing.Color.White
         Appearance12.BackColorAlpha = Infragistics.Win.Alpha.Transparent
         Appearance12.BackGradientStyle = Infragistics.Win.GradientStyle.Vertical
-        Appearance12.BorderColor = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(255, Byte), Integer))
+        Appearance12.BorderColor = System.Drawing.Color.White
         Appearance12.ForeColor = System.Drawing.Color.Navy
         Appearance12.ImageHAlign = Infragistics.Win.HAlign.Center
         Me.txtLocaltionDoc2.Appearance = Appearance12
@@ -298,6 +287,17 @@ Partial Class FrmEmpresaLis
         Me.txtLocaltionDoc2.Size = New System.Drawing.Size(39, 28)
         Me.txtLocaltionDoc2.TabIndex = 97
         Me.txtLocaltionDoc2.UseOsThemes = Infragistics.Win.DefaultableBoolean.[False]
+        '
+        'UltraPictureBox1
+        '
+        Me.UltraPictureBox1.BackColor = System.Drawing.Color.Transparent
+        Me.UltraPictureBox1.BorderShadowColor = System.Drawing.Color.Empty
+        Me.UltraPictureBox1.Image = CType(resources.GetObject("UltraPictureBox1.Image"), Object)
+        Me.UltraPictureBox1.ImageTransparentColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.UltraPictureBox1.Location = New System.Drawing.Point(2, 1)
+        Me.UltraPictureBox1.Name = "UltraPictureBox1"
+        Me.UltraPictureBox1.Size = New System.Drawing.Size(58, 50)
+        Me.UltraPictureBox1.TabIndex = 96
         '
         'FrmEmpresaLis
         '
