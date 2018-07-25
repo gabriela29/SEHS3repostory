@@ -24,23 +24,23 @@ Partial Class FrmConsulta_Productos
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim Appearance1 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
-        Dim Appearance13 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
-        Dim Appearance34 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmConsulta_Productos))
-        Dim Appearance11 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
-        Dim Appearance78 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
-        Dim Appearance31 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
-        Dim Appearance32 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
-        Dim Appearance45 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
-        Dim Appearance47 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
-        Dim Appearance48 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
         Dim Appearance2 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
         Dim Appearance3 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
-        Dim Appearance10 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
-        Dim Appearance15 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmConsulta_Productos))
+        Dim Appearance17 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
         Dim Appearance4 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
+        Dim Appearance5 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
+        Dim Appearance6 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
+        Dim Appearance7 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
+        Dim Appearance8 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
+        Dim Appearance9 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
+        Dim Appearance10 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
+        Dim Appearance11 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
         Dim Appearance12 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
+        Dim Appearance13 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
         Dim Appearance14 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
+        Dim Appearance15 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
+        Dim Appearance16 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
         Me.UltraGroupBox4 = New Infragistics.Win.Misc.UltraGroupBox()
         Me.lblRegistros = New Infragistics.Win.Misc.UltraLabel()
         Me.UltraLabel12 = New Infragistics.Win.Misc.UltraLabel()
@@ -89,11 +89,11 @@ Partial Class FrmConsulta_Productos
         'lblRegistros
         '
         Me.lblRegistros.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Appearance13.BackColorAlpha = Infragistics.Win.Alpha.Transparent
-        Appearance13.ForeColor = System.Drawing.Color.SteelBlue
-        Appearance13.TextHAlignAsString = "Right"
-        Appearance13.TextVAlignAsString = "Top"
-        Me.lblRegistros.Appearance = Appearance13
+        Appearance2.BackColorAlpha = Infragistics.Win.Alpha.Transparent
+        Appearance2.ForeColor = System.Drawing.Color.SteelBlue
+        Appearance2.TextHAlignAsString = "Right"
+        Appearance2.TextVAlignAsString = "Top"
+        Me.lblRegistros.Appearance = Appearance2
         Me.lblRegistros.Font = New System.Drawing.Font("Tahoma", 8.25!)
         Me.lblRegistros.Location = New System.Drawing.Point(431, 13)
         Me.lblRegistros.Name = "lblRegistros"
@@ -103,10 +103,10 @@ Partial Class FrmConsulta_Productos
         '
         'UltraLabel12
         '
-        Appearance34.BackColorAlpha = Infragistics.Win.Alpha.Transparent
-        Appearance34.ForeColor = System.Drawing.Color.Navy
-        Appearance34.TextVAlignAsString = "Top"
-        Me.UltraLabel12.Appearance = Appearance34
+        Appearance3.BackColorAlpha = Infragistics.Win.Alpha.Transparent
+        Appearance3.ForeColor = System.Drawing.Color.Navy
+        Appearance3.TextVAlignAsString = "Top"
+        Me.UltraLabel12.Appearance = Appearance3
         Me.UltraLabel12.Font = New System.Drawing.Font("Verdana", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.UltraLabel12.Location = New System.Drawing.Point(80, 10)
         Me.UltraLabel12.Name = "UltraLabel12"
@@ -134,8 +134,8 @@ Partial Class FrmConsulta_Productos
         Me.ExpanGroup.ExpansionIndicator = Infragistics.Win.Misc.GroupBoxExpansionIndicator.None
         Me.ExpanGroup.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ExpanGroup.ForeColor = System.Drawing.Color.Black
-        Appearance11.ForeColor = System.Drawing.Color.Blue
-        Me.ExpanGroup.HeaderAppearance = Appearance11
+        Appearance17.ForeColor = System.Drawing.Color.Blue
+        Me.ExpanGroup.HeaderAppearance = Appearance17
         Me.ExpanGroup.Location = New System.Drawing.Point(-2, 48)
         Me.ExpanGroup.Name = "ExpanGroup"
         Me.ExpanGroup.Size = New System.Drawing.Size(696, 385)
@@ -177,11 +177,11 @@ Partial Class FrmConsulta_Productos
         '
         'lblBuscarpor
         '
-        Appearance78.BackColorAlpha = Infragistics.Win.Alpha.Transparent
-        Appearance78.ForeColor = System.Drawing.Color.Navy
-        Appearance78.TextHAlignAsString = "Right"
-        Appearance78.TextVAlignAsString = "Top"
-        Me.lblBuscarpor.Appearance = Appearance78
+        Appearance4.BackColorAlpha = Infragistics.Win.Alpha.Transparent
+        Appearance4.ForeColor = System.Drawing.Color.Navy
+        Appearance4.TextHAlignAsString = "Right"
+        Appearance4.TextVAlignAsString = "Top"
+        Me.lblBuscarpor.Appearance = Appearance4
         Me.lblBuscarpor.Font = New System.Drawing.Font("Tahoma", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblBuscarpor.Location = New System.Drawing.Point(11, 7)
         Me.lblBuscarpor.Name = "lblBuscarpor"
@@ -194,30 +194,30 @@ Partial Class FrmConsulta_Productos
         Me.dgvListado.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Appearance31.BackColor = System.Drawing.Color.WhiteSmoke
-        Me.dgvListado.DisplayLayout.Appearance = Appearance31
+        Appearance5.BackColor = System.Drawing.Color.WhiteSmoke
+        Me.dgvListado.DisplayLayout.Appearance = Appearance5
         Me.dgvListado.DisplayLayout.CaptionVisible = Infragistics.Win.DefaultableBoolean.[False]
         Me.dgvListado.DisplayLayout.Override.AllowColMoving = Infragistics.Win.UltraWinGrid.AllowColMoving.NotAllowed
-        Appearance32.BackColor = System.Drawing.Color.Transparent
-        Me.dgvListado.DisplayLayout.Override.CardAreaAppearance = Appearance32
-        Appearance45.BackColor = System.Drawing.Color.FromArgb(CType(CType(168, Byte), Integer), CType(CType(167, Byte), Integer), CType(CType(191, Byte), Integer))
-        Appearance45.BackColor2 = System.Drawing.Color.FromArgb(CType(CType(112, Byte), Integer), CType(CType(111, Byte), Integer), CType(CType(145, Byte), Integer))
-        Appearance45.BackGradientStyle = Infragistics.Win.GradientStyle.Vertical
-        Appearance45.FontData.BoldAsString = "True"
-        Appearance45.FontData.Name = "Arial"
-        Appearance45.FontData.SizeInPoints = 10.0!
-        Appearance45.ForeColor = System.Drawing.Color.White
-        Appearance45.ThemedElementAlpha = Infragistics.Win.Alpha.Transparent
-        Me.dgvListado.DisplayLayout.Override.HeaderAppearance = Appearance45
+        Appearance6.BackColor = System.Drawing.Color.Transparent
+        Me.dgvListado.DisplayLayout.Override.CardAreaAppearance = Appearance6
+        Appearance7.BackColor = System.Drawing.Color.FromArgb(CType(CType(168, Byte), Integer), CType(CType(167, Byte), Integer), CType(CType(191, Byte), Integer))
+        Appearance7.BackColor2 = System.Drawing.Color.FromArgb(CType(CType(112, Byte), Integer), CType(CType(111, Byte), Integer), CType(CType(145, Byte), Integer))
+        Appearance7.BackGradientStyle = Infragistics.Win.GradientStyle.Vertical
+        Appearance7.FontData.BoldAsString = "True"
+        Appearance7.FontData.Name = "Arial"
+        Appearance7.FontData.SizeInPoints = 10.0!
+        Appearance7.ForeColor = System.Drawing.Color.White
+        Appearance7.ThemedElementAlpha = Infragistics.Win.Alpha.Transparent
+        Me.dgvListado.DisplayLayout.Override.HeaderAppearance = Appearance7
         Me.dgvListado.DisplayLayout.Override.HeaderClickAction = Infragistics.Win.UltraWinGrid.HeaderClickAction.SortSingle
-        Appearance47.BackColor = System.Drawing.Color.FromArgb(CType(CType(168, Byte), Integer), CType(CType(167, Byte), Integer), CType(CType(191, Byte), Integer))
-        Appearance47.BackColor2 = System.Drawing.Color.FromArgb(CType(CType(112, Byte), Integer), CType(CType(111, Byte), Integer), CType(CType(145, Byte), Integer))
-        Appearance47.BackGradientStyle = Infragistics.Win.GradientStyle.Vertical
-        Me.dgvListado.DisplayLayout.Override.RowSelectorAppearance = Appearance47
-        Appearance48.BackColor = System.Drawing.Color.FromArgb(CType(CType(251, Byte), Integer), CType(CType(230, Byte), Integer), CType(CType(148, Byte), Integer))
-        Appearance48.BackColor2 = System.Drawing.Color.FromArgb(CType(CType(238, Byte), Integer), CType(CType(149, Byte), Integer), CType(CType(21, Byte), Integer))
-        Appearance48.BackGradientStyle = Infragistics.Win.GradientStyle.Vertical
-        Me.dgvListado.DisplayLayout.Override.SelectedRowAppearance = Appearance48
+        Appearance8.BackColor = System.Drawing.Color.FromArgb(CType(CType(168, Byte), Integer), CType(CType(167, Byte), Integer), CType(CType(191, Byte), Integer))
+        Appearance8.BackColor2 = System.Drawing.Color.FromArgb(CType(CType(112, Byte), Integer), CType(CType(111, Byte), Integer), CType(CType(145, Byte), Integer))
+        Appearance8.BackGradientStyle = Infragistics.Win.GradientStyle.Vertical
+        Me.dgvListado.DisplayLayout.Override.RowSelectorAppearance = Appearance8
+        Appearance9.BackColor = System.Drawing.Color.FromArgb(CType(CType(251, Byte), Integer), CType(CType(230, Byte), Integer), CType(CType(148, Byte), Integer))
+        Appearance9.BackColor2 = System.Drawing.Color.FromArgb(CType(CType(238, Byte), Integer), CType(CType(149, Byte), Integer), CType(CType(21, Byte), Integer))
+        Appearance9.BackGradientStyle = Infragistics.Win.GradientStyle.Vertical
+        Me.dgvListado.DisplayLayout.Override.SelectedRowAppearance = Appearance9
         Me.dgvListado.DisplayLayout.Override.SelectTypeRow = Infragistics.Win.UltraWinGrid.SelectType.[Single]
         Me.dgvListado.Location = New System.Drawing.Point(-3, 32)
         Me.dgvListado.Name = "dgvListado"
@@ -227,16 +227,16 @@ Partial Class FrmConsulta_Productos
         '
         'btnEditar
         '
-        Appearance2.BackColorAlpha = Infragistics.Win.Alpha.Transparent
-        Appearance2.Image = CType(resources.GetObject("Appearance2.Image"), Object)
-        Appearance2.ImageHAlign = Infragistics.Win.HAlign.Center
-        Me.btnEditar.Appearance = Appearance2
+        Appearance10.BackColorAlpha = Infragistics.Win.Alpha.Transparent
+        Appearance10.Image = CType(resources.GetObject("Appearance10.Image"), Object)
+        Appearance10.ImageHAlign = Infragistics.Win.HAlign.Center
+        Me.btnEditar.Appearance = Appearance10
         Me.btnEditar.ButtonStyle = Infragistics.Win.UIElementButtonStyle.Office2007RibbonButton
         Me.btnEditar.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnEditar.Location = New System.Drawing.Point(528, 5)
         Me.btnEditar.Name = "btnEditar"
-        Appearance3.BorderAlpha = Infragistics.Win.Alpha.Transparent
-        Me.btnEditar.PressedAppearance = Appearance3
+        Appearance11.BorderAlpha = Infragistics.Win.Alpha.Transparent
+        Me.btnEditar.PressedAppearance = Appearance11
         Me.btnEditar.Size = New System.Drawing.Size(36, 24)
         Me.btnEditar.TabIndex = 59
         Me.btnEditar.UseOsThemes = Infragistics.Win.DefaultableBoolean.[False]
@@ -244,15 +244,15 @@ Partial Class FrmConsulta_Productos
         '
         'btnAgregar
         '
-        Appearance10.BackColorAlpha = Infragistics.Win.Alpha.Transparent
-        Appearance10.Image = CType(resources.GetObject("Appearance10.Image"), Object)
-        Me.btnAgregar.Appearance = Appearance10
+        Appearance12.BackColorAlpha = Infragistics.Win.Alpha.Transparent
+        Appearance12.Image = CType(resources.GetObject("Appearance12.Image"), Object)
+        Me.btnAgregar.Appearance = Appearance12
         Me.btnAgregar.ButtonStyle = Infragistics.Win.UIElementButtonStyle.Office2007RibbonButton
         Me.btnAgregar.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnAgregar.Location = New System.Drawing.Point(451, 5)
         Me.btnAgregar.Name = "btnAgregar"
-        Appearance15.BorderAlpha = Infragistics.Win.Alpha.Transparent
-        Me.btnAgregar.PressedAppearance = Appearance15
+        Appearance13.BorderAlpha = Infragistics.Win.Alpha.Transparent
+        Me.btnAgregar.PressedAppearance = Appearance13
         Me.btnAgregar.Size = New System.Drawing.Size(71, 23)
         Me.btnAgregar.TabIndex = 58
         Me.btnAgregar.Text = "&Agregar"
@@ -261,8 +261,8 @@ Partial Class FrmConsulta_Productos
         '
         'txtLimite
         '
-        Appearance4.TextHAlignAsString = "Right"
-        Me.txtLimite.Appearance = Appearance4
+        Appearance14.TextHAlignAsString = "Right"
+        Me.txtLimite.Appearance = Appearance14
         Me.txtLimite.DisplayStyle = Infragistics.Win.EmbeddableElementDisplayStyle.Office2007
         Me.txtLimite.Font = New System.Drawing.Font("Calibri", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtLimite.Location = New System.Drawing.Point(299, 5)
@@ -273,14 +273,14 @@ Partial Class FrmConsulta_Productos
         '
         'btnMostrar
         '
-        Appearance12.BackColorAlpha = Infragistics.Win.Alpha.Transparent
-        Me.btnMostrar.Appearance = Appearance12
+        Appearance15.BackColorAlpha = Infragistics.Win.Alpha.Transparent
+        Me.btnMostrar.Appearance = Appearance15
         Me.btnMostrar.ButtonStyle = Infragistics.Win.UIElementButtonStyle.Office2007RibbonButton
         Me.btnMostrar.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnMostrar.Location = New System.Drawing.Point(338, 6)
         Me.btnMostrar.Name = "btnMostrar"
-        Appearance14.BorderAlpha = Infragistics.Win.Alpha.Transparent
-        Me.btnMostrar.PressedAppearance = Appearance14
+        Appearance16.BorderAlpha = Infragistics.Win.Alpha.Transparent
+        Me.btnMostrar.PressedAppearance = Appearance16
         Me.btnMostrar.Size = New System.Drawing.Size(68, 23)
         Me.btnMostrar.TabIndex = 3
         Me.btnMostrar.Text = "&Mostrar"

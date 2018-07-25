@@ -10,7 +10,7 @@ Imports Infragistics.Win.UltraWinGrid
 
 
 
-Public Class FrmRegistrarVentaF
+Public Class Registrar_Ventas
     Public pregistrarvId
     Public ModoVentanaFlotante As Boolean
     Public vcodigo As Integer
@@ -26,6 +26,7 @@ Public Class FrmRegistrarVentaF
         If Not Objc Is Nothing Then
             almacenText.Text = Objc.almacenaid
             Textcodigo_doc.Text = Objc.codigo_doc
+            txtcod_persona.Text = Objc.codigo_per
             datefechae.Value = Objc.emision
             txtnombrec.Text = Objc.nombre_corto
             txtcodigosu.Text = Objc.codigo_sunat
@@ -38,10 +39,10 @@ Public Class FrmRegistrarVentaF
             txtigv.Text = Objc.igv
             txtdescuento.Text = Objc.descuento
             txtcantidadtotal.Text = Objc.total
-            datefechao.Value = Objc.fecha_doc_ori
-            txtcodigoo.Text = Objc.cod_doc_ori
-            txtserieo.Text = Objc.serie_doc_ori
-            txtnumeror.Text = Objc.numero_doc_ori
+            'datefechao.Value = Objc.fecha_doc_ori
+            ' txtcodigoo.Text = Objc.cod_doc_ori
+            ' txtserieo.Text = Objc.serie_doc_ori
+            ' txtnumeror.Text = Objc.numero_doc_ori
             txtsigno.Text = Objc.signo
             txtserieint.Text = Objc.serie_int
             txtnumeroint.Text = Objc.numero_int
@@ -68,10 +69,11 @@ Public Class FrmRegistrarVentaF
                 If vcodigo > 0 Then
                     .almacenaid = vcodigo
                 Else
-                    .almacenaid = -1
+                    '.almacenaid = -1
                 End If
+                .almacenaid = almacenText.Text.Trim
                 .codigo_doc = Textcodigo_doc.Text.Trim
-
+                .codigo_per = txtcod_persona.Text.Trim
                 .emision = fechae
                 .nombre_corto = txtnombrec.Text.Trim
                 .codigo_sunat = txtcodigosu.Text.Trim

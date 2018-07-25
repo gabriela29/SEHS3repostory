@@ -8,8 +8,6 @@ Imports Infragistics.Win
 Imports Infragistics.Win.UltraWinGrid
 
 
-
-
 Public Class FrmEmpresaEdit
     Public vEmpresaid
     Public vcodigo As Integer

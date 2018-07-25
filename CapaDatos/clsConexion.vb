@@ -72,7 +72,7 @@ Public Class clsConexion
         'Cadena = "Server=localhost;Port=5432;Database=nt;Uid=postgres;Pwd=postgres;CommandTimeout=0; pooling=false;"
         'Cadena = "Server=sehs.org.pe;Port=5432;Database=sehsorgp_copy;Uid=sehsorgp;Pwd=e8TDKURoR4;"
 
-        Cadena = "Server=localhost;Port=5432;Database=sehs3;Uid=postgres;Pwd=postgres;CommandTimeout=0; pooling=false;"
+        Cadena = "Server=localhost;Port=5432;Database=sehs8;Uid=postgres;Pwd=postgres;CommandTimeout=0; pooling=false;"
 
         Return Cadena
   End Function
