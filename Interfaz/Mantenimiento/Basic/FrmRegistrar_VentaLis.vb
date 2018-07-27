@@ -32,8 +32,8 @@ Public Class FrmRegistrar_VentaLis
     Public Function ListarRegistrov() As Boolean
         Dim objetos As New DataTable
         Try
-            Dim codigo_per As Integer = Nothing 'prueba
-            dtlistaregistrov = registrarvManager.GetList(codigo_per)
+            Dim codigo As Integer = Nothing 'prueba
+            dtlistaregistrov = registrarvManager.GetList(codigo)
             dgvListadoregis.DataSource = dtlistaregistrov
 
             dgvListadoregis.DataBind()
@@ -162,7 +162,7 @@ Public Class FrmRegistrar_VentaLis
                 .ModoVentanaFlotante = True
 
 
-                .vcodigo = dgvListadoregis.DisplayLayout.ActiveRow.Cells(0).Value
+                .vcodigo = CInt(dgvListadoregis.DisplayLayout.ActiveRow.Cells(1).Value)
 
             End With
             Dim locationD As Point = Me.PointToScreen(New Point(Me.txtLocaltionDoc3.Left, txtLocaltionDoc3.Bottom))

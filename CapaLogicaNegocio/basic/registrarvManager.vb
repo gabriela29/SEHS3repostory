@@ -11,8 +11,8 @@ Namespace BLL
             Return registrarVBD.GetList(numerov)
         End Function
 
-        Public Shared Function GetItem(ByVal codigo_registrarv As Long) As registrarv
-            Return registrarVBD.GetItem(codigo_registrarv)
+        Public Shared Function GetItem(ByVal vcodigo As Integer) As registrarv
+            Return registrarVBD.GetItem(vcodigo)
         End Function
 
         Public Shared Function Grabar(ByVal objR As registrarv) As Long

@@ -63,7 +63,7 @@ Public Class Registrar_Ventas
 
         Try
             fechae = LibreriasFormularios.Formato_Fecha(datefechae.Value)
-            fechao = LibreriasFormularios.Formato_Fecha(datefechao.Value)
+            ' fechao = LibreriasFormularios.Formato_Fecha(datefechao.Value)
 
             With Objeto
                 If vcodigo > 0 Then
@@ -87,10 +87,10 @@ Public Class Registrar_Ventas
                 .descuento = txtdescuento.Text.Trim
                 .total = txtcantidadtotal.Text.Trim
                 .codigo_doc = Textcodigo_doc.Text.Trim
-                .fecha_doc_ori = fechao
-                .cod_doc_ori = txtcodigoo.Text.Trim
-                .serie_doc_ori = txtserieo.Text.Trim
-                .numero_doc_ori = txtnumeror.Text.Trim
+                '.fecha_doc_ori = fechao
+                ' .cod_doc_ori = txtcodigoo.Text.Trim
+                ' .serie_doc_ori = txtserieo.Text.Trim
+                ' .numero_doc_ori = txtnumeror.Text.Trim
                 .signo = txtsigno.Text.Trim
                 .serie_int = txtserieint.Text.Trim
                 .numero_int = txtnumeroint.Text.Trim

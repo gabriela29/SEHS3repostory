@@ -10,7 +10,7 @@ Namespace Dal
 
     Public Class registrarVBD
 
-        Public Shared Function GetItem(ByVal codigo As Long) As registrarv
+        Public Shared Function GetItem(ByVal codigo As Integer) As registrarv
             Dim objregistrarv As registrarv = Nothing
             Dim TempList As New DataTable
             Dim oSP As String = ""
