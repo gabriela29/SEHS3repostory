@@ -42,7 +42,7 @@ Namespace Dal
             Dim oSP As New clsStored_Procedure("basic.paempresa_leer")
             Dim oConexion As New clsConexion
             Try
-                oSP.addParameter("empresaid", descripcion, NpgsqlTypes.NpgsqlDbType.Varchar, 50, ParameterDirection.Input)
+                oSP.addParameter("innombre", descripcion, NpgsqlTypes.NpgsqlDbType.Varchar, 50, ParameterDirection.Input)
                 TempList = oConexion.Ejecutar_Consulta(oSP)
                 oConexion.Cerrar_Conexion()
             Finally

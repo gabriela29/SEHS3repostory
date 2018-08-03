@@ -7,8 +7,8 @@ Namespace BLL
 
     Public Class registrarvManager
 
-        Public Shared Function GetList(ByVal numerov As String) As DataTable
-            Return registrarVBD.GetList(numerov)
+        Public Shared Function GetList(ByVal descripcion As String) As DataTable
+            Return registrarVBD.GetList(descripcion)
         End Function
 
         Public Shared Function GetItem(ByVal vcodigo As Integer) As registrarv
@@ -36,11 +36,11 @@ Namespace BLL
             Return vCodigo
         End Function
 
-        Public Shared Function Eliminar_Registrar(ByVal numero As String) As Boolean
+        Public Shared Function Eliminar_Registrar(ByVal vcodigo_per As Integer) As Boolean
 
             Dim rs As DataTable
             Try
-                rs = registrarVBD.Eliminar(numero)
+                rs = registrarVBD.Eliminar(vcodigo_per)
                 If Not rs Is Nothing Then
                     If rs.DataSet.Tables(0).Rows.Count > 0 Then
                         If rs.DataSet.Tables(0).Rows(0).Item("outstate") Then

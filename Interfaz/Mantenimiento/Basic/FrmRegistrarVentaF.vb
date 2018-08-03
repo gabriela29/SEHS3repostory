@@ -39,7 +39,7 @@ Public Class Registrar_Ventas
             txtigv.Text = Objc.igv
             txtdescuento.Text = Objc.descuento
             txtcantidadtotal.Text = Objc.total
-            'datefechao.Value = Objc.fecha_doc_ori
+            datefechao.Value = Objc.fecha_doc_ori
             ' txtcodigoo.Text = Objc.cod_doc_ori
             ' txtserieo.Text = Objc.serie_doc_ori
             ' txtnumeror.Text = Objc.numero_doc_ori
@@ -63,11 +63,11 @@ Public Class Registrar_Ventas
 
         Try
             fechae = LibreriasFormularios.Formato_Fecha(datefechae.Value)
-            ' fechao = LibreriasFormularios.Formato_Fecha(datefechao.Value)
+            fechao = LibreriasFormularios.Formato_Fecha(datefechao.Value)
 
             With Objeto
                 If vcodigo > 0 Then
-                    .almacenaid = vcodigo
+                    .codigo_per = vcodigo
                 Else
                     '.almacenaid = -1
                 End If
@@ -87,7 +87,7 @@ Public Class Registrar_Ventas
                 .descuento = txtdescuento.Text.Trim
                 .total = txtcantidadtotal.Text.Trim
                 .codigo_doc = Textcodigo_doc.Text.Trim
-                '.fecha_doc_ori = fechao
+                .fecha_doc_ori = fechao
                 ' .cod_doc_ori = txtcodigoo.Text.Trim
                 ' .serie_doc_ori = txtserieo.Text.Trim
                 ' .numero_doc_ori = txtnumeror.Text.Trim

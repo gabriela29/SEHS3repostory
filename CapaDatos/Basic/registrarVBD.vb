@@ -42,12 +42,12 @@ Namespace Dal
 
 
 
-        Public Shared Function GetList(ByVal numero As String) As DataTable
+        Public Shared Function GetList(ByVal descripcion As String) As DataTable
             Dim TempList As New DataTable
             Dim oSP As New clsStored_Procedure("contable.paregistro_venta_leer")
             Dim oConexion As New clsConexion
             Try
-                oSP.addParameter("numero", numero, NpgsqlTypes.NpgsqlDbType.Varchar, 4, ParameterDirection.Input)
+                oSP.addParameter("nnumero", descripcion, NpgsqlTypes.NpgsqlDbType.Varchar, 4, ParameterDirection.Input)
                 ' oSP.addParameter("mes", vmes, NpgsqlTypes.NpgsqlDbType.Integer, 4, ParameterDirection.Input)
                 ' oSP.addParameter("anio", vanio, NpgsqlTypes.NpgsqlDbType.Integer, 4, ParameterDirection.Input)
 
@@ -64,7 +64,6 @@ Namespace Dal
 
         Public Shared Function LlenarDatosRegistro(ByVal objData As DataRow) As registrarv
             Dim objeto As registrarv = New registrarv
-
             objeto.almacenaid = objData.Item("almacenid")
             objeto.codigo_doc = objData.Item("codigo_doc")
             objeto.codigo_per = objData.Item("codigo_per")
@@ -82,10 +81,7 @@ Namespace Dal
             objeto.total = objData.Item("total")
             objeto.cambio = objData.Item("cambio")
             objeto.estado = objData.Item("estado")
-            'objeto.fecha_doc_ori = objData.Item("fecha_doc_ori")
-            'objeto.cod_doc_ori = objData.Item("cod_doc_ori")
-            'objeto.serie_doc_ori = objData.Item("serie_doc_ori")
-            'objeto.numero_doc_ori = objData.Item("numero_doc_ori")
+            objeto.fecha_doc_ori = objData.Item("fecha_doc_ori")
             objeto.signo = objData.Item("signo")
             objeto.serie_int = objData.Item("serie_int")
             objeto.numero_int = objData.Item("numero_int")
@@ -104,7 +100,7 @@ Namespace Dal
             Dim vCadena As String = ""
             Try
                 vCadena = "select * from contable.paregistro_venta_actualizar( "
-                vCadena = vCadena & " " & IIf(objR.almacenaid < 0, "false", "true") & ", "
+                vCadena = vCadena & " " & IIf(objR.almacenaid > 0, "false", "true") & ", "
                 vCadena = vCadena & " " & Trim(Str(objR.almacenaid)) & ","
                 vCadena = vCadena & " " & Trim(objR.codigo_doc) & ","
                 vCadena = vCadena & " " & Trim(objR.codigo_per) & ", "
@@ -148,10 +144,10 @@ Namespace Dal
         End Function
 
 
-        Public Shared Function Eliminar(ByVal numero As String) As DataTable
+        Public Shared Function Eliminar(ByVal codigo_per As Integer) As DataTable
             Dim oSP As New clsStored_Procedure("contable.paregistro_venta_eliminar")
             Try
-                oSP.addParameter("numero", numero, NpgsqlTypes.NpgsqlDbType.Varchar, 4, ParameterDirection.Input)
+                oSP.addParameter("ncodigo_per", codigo_per, NpgsqlTypes.NpgsqlDbType.Integer, 4, ParameterDirection.Input)
                 Dim oConexion As New clsConexion
                 Eliminar = oConexion.Ejecutar_Consulta(oSP)
                 oConexion.Cerrar_Conexion()
