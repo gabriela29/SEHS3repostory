@@ -100,10 +100,8 @@ Namespace Dal
             Dim vCadena As String = ""
             Try
                 vCadena = "select * from contable.paregistro_venta_actualizar( "
-                vCadena = vCadena & " " & IIf(objR.almacenaid > 0, "false", "true") & ", "
-                vCadena = vCadena & " " & Trim(Str(objR.almacenaid)) & ","
-                vCadena = vCadena & " " & Trim(objR.codigo_doc) & ","
-                vCadena = vCadena & " " & Trim(objR.codigo_per) & ", "
+                vCadena = vCadena & " " & IIf(objR.codigo_per < 0, "false", "true") & ", "
+                vCadena = vCadena & " " & Trim(Str(objR.codigo_per)) & ","
                 vCadena = vCadena & " '" & Trim(objR.emision) & "',"
                 vCadena = vCadena & " '" & Trim(objR.nombre_corto) & "',"
                 vCadena = vCadena & " '" & Trim(objR.codigo_sunat) & "',"
@@ -125,6 +123,8 @@ Namespace Dal
                 vCadena = vCadena & " '" & Trim(objR.signo) & "',"
                 vCadena = vCadena & " '" & Trim(objR.serie_int) & "',"
                 vCadena = vCadena & " '" & Trim(objR.numero_int) & "',"
+                vCadena = vCadena & " " & Trim(objR.codigo_doc) & ","
+                vCadena = vCadena & " " & Trim(objR.almacenaid) & ", "
                 vCadena = vCadena & " '" & Trim(objR.tabla) & "',"
                 vCadena = vCadena & " " & Trim(objR.idtabla) & ","
                 vCadena = vCadena & " " & Trim(objR.cod_ass) & ","
@@ -148,6 +148,8 @@ Namespace Dal
             Dim oSP As New clsStored_Procedure("contable.paregistro_venta_eliminar")
             Try
                 oSP.addParameter("ncodigo_per", codigo_per, NpgsqlTypes.NpgsqlDbType.Integer, 4, ParameterDirection.Input)
+                ' oSP.addParameter("nnumero", nnumero, NpgsqlTypes.NpgsqlDbType.Varchar, 4, ParameterDirection.Input)
+
                 Dim oConexion As New clsConexion
                 Eliminar = oConexion.Ejecutar_Consulta(oSP)
                 oConexion.Cerrar_Conexion()

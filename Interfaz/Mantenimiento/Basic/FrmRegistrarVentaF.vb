@@ -69,7 +69,7 @@ Public Class Registrar_Ventas
                 If vcodigo > 0 Then
                     .codigo_per = vcodigo
                 Else
-                    '.almacenaid = -1
+                    .codigo_per = -1
                 End If
                 .almacenaid = almacenText.Text.Trim
                 .codigo_doc = Textcodigo_doc.Text.Trim
