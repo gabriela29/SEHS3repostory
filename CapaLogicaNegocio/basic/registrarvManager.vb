@@ -7,12 +7,14 @@ Namespace BLL
 
     Public Class registrarvManager
 
+        Public vnumero As String
+
         Public Shared Function GetList(ByVal descripcion As String) As DataTable
             Return registrarVBD.GetList(descripcion)
         End Function
 
-        Public Shared Function GetItem(ByVal vcodigo As Integer) As registrarv
-            Return registrarVBD.GetItem(vcodigo)
+        Public Shared Function GetItem(ByVal vcodigo As Integer, ByVal vnumero As String) As registrarv
+            Return registrarVBD.GetItem(vcodigo, vnumero)
         End Function
 
         Public Shared Function Grabar(ByVal objR As registrarv) As Long
@@ -36,14 +38,15 @@ Namespace BLL
             Return vCodigo
         End Function
 
-        Public Shared Function Eliminar_Registrar(ByVal vcodigo_per As Integer) As Boolean
-
+        Public Shared Function Eliminar_Registrar(vcodigo_per As Integer) As Boolean
             Dim rs As DataTable
+            Dim vnumero As String
             Try
-                rs = registrarVBD.Eliminar(vcodigo_per)
+                rs = registrarVBD.Eliminar(vcodigo_per, vnumero)
                 If Not rs Is Nothing Then
-                    If rs.DataSet.Tables(0).Rows.Count > 0 Then
-                        If rs.DataSet.Tables(0).Rows(0).Item("outstate") Then
+                    If rs.DataSet.Tables(0).Rows.Count > 0 & rs.DataSet.Tables(7).Rows.Count > 0 Then
+
+                        If rs.DataSet.Tables(0).Rows(0).Item("outstate") & rs.DataSet.Tables(7).Rows(7).Item("outstate") Then
                             Eliminar_Registrar = True
                         Else
                             Eliminar_Registrar = False
@@ -57,6 +60,6 @@ Namespace BLL
             End Try
             Return Eliminar_Registrar
         End Function
+
     End Class
 End Namespace
-

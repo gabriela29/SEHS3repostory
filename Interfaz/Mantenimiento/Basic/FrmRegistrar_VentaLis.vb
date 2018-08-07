@@ -52,7 +52,8 @@ Public Class FrmRegistrar_VentaLis
             If dgvListadoregis.Rows.Count > 0 Then
                 If dgvListadoregis.Selected.Rows.Count > 0 Then
                     If MessageBox.Show("¿Está seguro de eliminar Registro?", "CONFIRMAR", MessageBoxButtons.YesNo, MessageBoxIcon.Question) = Windows.Forms.DialogResult.Yes Then
-                        If registrarvManager.Eliminar_Registrar(dgvListadoregis.DisplayLayout.ActiveRow.Cells(0).Value) Then
+                        If registrarvManager.Eliminar_Registrar(dgvListadoregis.DisplayLayout.ActiveRow.Cells(0).Value & (Convert.ToInt32(dgvListadoregis.DisplayLayout.ActiveRow.Cells(7).Value))) Then
+
                             MessageBox.Show("Registro Eliminado con Éxito", "AVISO")
                             Call ListarRegistrov("")
                         End If

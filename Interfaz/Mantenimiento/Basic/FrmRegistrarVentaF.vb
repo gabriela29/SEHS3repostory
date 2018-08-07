@@ -14,6 +14,7 @@ Public Class Registrar_Ventas
     Public pregistrarvId
     Public ModoVentanaFlotante As Boolean
     Public vcodigo As Integer
+    Public numero As String
     Public swNuevo As Boolean
 
 
@@ -21,7 +22,7 @@ Public Class Registrar_Ventas
 
         Dim Objc As CapaObjetosNegocio.registrarv
 
-        Objc = registrarvManager.GetItem(vcodigo)
+        Objc = registrarvManager.GetItem(vcodigo, numero)
 
         If Not Objc Is Nothing Then
             almacenText.Text = Objc.almacenaid

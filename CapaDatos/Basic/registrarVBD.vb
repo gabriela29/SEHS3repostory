@@ -10,7 +10,7 @@ Namespace Dal
 
     Public Class registrarVBD
 
-        Public Shared Function GetItem(ByVal codigo As Integer) As registrarv
+        Public Shared Function GetItem(ByVal codigo As Integer, ByVal numero As String) As registrarv
             Dim objregistrarv As registrarv = Nothing
             Dim TempList As New DataTable
             Dim oSP As String = ""
@@ -144,22 +144,21 @@ Namespace Dal
         End Function
 
 
-        Public Shared Function Eliminar(ByVal codigo_per As Integer) As DataTable
+        Public Shared Function Eliminar(ByVal codigo_per As Integer, ByVal vnumero As String) As DataTable
             Dim oSP As New clsStored_Procedure("contable.paregistro_venta_eliminar")
             Try
                 oSP.addParameter("ncodigo_per", codigo_per, NpgsqlTypes.NpgsqlDbType.Integer, 4, ParameterDirection.Input)
-                ' oSP.addParameter("nnumero", nnumero, NpgsqlTypes.NpgsqlDbType.Varchar, 4, ParameterDirection.Input)
+                oSP.addParameter("nnumero", vnumero, NpgsqlTypes.NpgsqlDbType.Varchar, 4, ParameterDirection.Input)
 
                 Dim oConexion As New clsConexion
                 Eliminar = oConexion.Ejecutar_Consulta(oSP)
                 oConexion.Cerrar_Conexion()
                 oConexion = Nothing
+
             Finally
                 oSP = Nothing
             End Try
         End Function
     End Class
-
-
 
 End Namespace
