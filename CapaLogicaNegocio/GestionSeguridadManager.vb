@@ -42,10 +42,13 @@ Namespace Bll
     Public Shared mTesoreria As Integer = 2
     Public Shared Serie As String
     Public Shared NombrePC As String
-    Public Shared miIP As String
-    Public Shared vConexion As String
+        Public Shared miIP As String
+        Public Shared gnumero As String
+        Public Shared vConexion As String
 
-  End Class
+
+
+    End Class
 
   Public Class Gestion_Permisos_Especiales
 

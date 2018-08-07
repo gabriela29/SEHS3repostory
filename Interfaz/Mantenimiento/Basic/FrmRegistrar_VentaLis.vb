@@ -47,23 +47,8 @@ Public Class FrmRegistrar_VentaLis
         End Try
     End Function
 
-    Public Function ELiminar_Registro_venta() As Boolean
-        Try
-            If dgvListadoregis.Rows.Count > 0 Then
-                If dgvListadoregis.Selected.Rows.Count > 0 Then
-                    If MessageBox.Show("¿Está seguro de eliminar Registro?", "CONFIRMAR", MessageBoxButtons.YesNo, MessageBoxIcon.Question) = Windows.Forms.DialogResult.Yes Then
-                        If registrarvManager.Eliminar_Registrar(dgvListadoregis.DisplayLayout.ActiveRow.Cells(0).Value & (Convert.ToInt32(dgvListadoregis.DisplayLayout.ActiveRow.Cells(7).Value))) Then
-
-                            MessageBox.Show("Registro Eliminado con Éxito", "AVISO")
-                            Call ListarRegistrov("")
-                        End If
-                    End If
-                End If
-            End If
-
-        Catch ex As Exception
-            MsgBox(ex.Message)
-        End Try
+    Public Function ELiminar_Registro_venta(ByVal _cod As Integer) As Boolean
+        ELiminar_Registro_venta = registrarvManager.Eliminar_Registrar(_cod, GestionSeguridadManager.gnumero)
     End Function
 
 
@@ -183,9 +168,16 @@ Public Class FrmRegistrar_VentaLis
     End Sub
 
     Private Sub TpEliminar_Click(sender As Object, e As EventArgs) Handles TpEliminar.Click
-        If MsgBox(" Esta Acción podría Afectar el normal Funcionamiento del Sistema, ¿Desea Continuar?", MsgBoxStyle.YesNo, "Confirme") = MsgBoxResult.Yes Then
-            If dgvListadoregis.Selected.Rows.Count > 0 Then
-                Call ELiminar_Registro_venta()
+        'If MsgBox(" Esta Acción podría Afectar el normal Funcionamiento del Sistema, ¿Desea Continuar?", MsgBoxStyle.YesNo, "Confirme") = MsgBoxResult.Yes Then
+        '    If dgvListadoregis.Selected.Rows.Count > 0 Then
+        '        Call ELiminar_Registro_venta()
+        '    End If
+        'End If
+
+        If dgvListadoregis.Selected.Rows.Count > 0 Then
+            If MessageBox.Show("¿Está seguro de eliminar este registro?", "CONFIRMAR", MessageBoxButtons.YesNo, MessageBoxIcon.Question) = Windows.Forms.DialogResult.Yes Then
+                Call ELiminar_Registro_venta(CInt(dgvListadoregis.DisplayLayout.ActiveRow.Cells(0).Value))
+
             End If
         End If
     End Sub

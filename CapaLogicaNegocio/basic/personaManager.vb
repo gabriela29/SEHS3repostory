@@ -6,13 +6,15 @@ Imports CapaDatos.Dal
 Namespace Bll
 
     Public Class personaManager
-        Public Shared Function GetItem(ByVal codigo As Long) As persona
-            Return personaBD.GetItem(codigo)
-        End Function
 
-        Public Shared Function GetList(ByVal vapepat As String, ByVal vapemat As String, ByVal vnombre As String, ByVal vproceso As String, _
+
+        Public Shared Function GetList(ByVal vapepat As String, ByVal vapemat As String, ByVal vnombre As String, ByVal vproceso As String,
                                         ByVal varrrol As String, ByVal vfilas As Long, ByVal vpersonaid As Long) As DataTable
             Return personaBD.GetList(vapepat, vapemat, vnombre, vproceso, varrrol, vfilas, vpersonaid)
+        End Function
+
+        Public Shared Function GetItem(ByVal codigo As Long) As persona
+            Return personaBD.GetItem(codigo)
         End Function
 
         Public Shared Function Datos_Persona_Basic(ByVal vTipo As String, ByVal vNroDoc As String, ByVal vpersona As Long) As persona
@@ -54,7 +56,7 @@ Namespace Bll
                     If rs.DataSet.Tables(0).Rows.Count > 0 Then
 
                         vCodigo = rs.DataSet.Tables(0).Rows(0).Item("papersonaid_bydocumento")
-                    
+
                     End If
                 End If
 
