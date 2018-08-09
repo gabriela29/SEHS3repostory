@@ -24,7 +24,7 @@ Public Class FrmRegistrar_VentaLis
     Private Sub FrmSeriesDocumento_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         IdUsuario = GestionSeguridadManager.idUsuario
 
-        'Call ListarRegistrov()
+        Call ListarRegistrov()
 
     End Sub
 
@@ -59,10 +59,10 @@ Public Class FrmRegistrar_VentaLis
     Private Sub dgvListadoregis_BeforeSelectChange(ByVal sender As Object, ByVal e As Infragistics.Win.UltraWinGrid.BeforeSelectChangeEventArgs) Handles dgvListadoregis.BeforeSelectChange
         If dgvListadoregis.Rows.Count > 0 Then
             If e.NewSelections.Rows.Count > 0 Then
-                'codigo = dgvListado.DisplayLayout.ActiveRow.Cells(0).Value
+
 
             Else
-                _codigo = 0
+                _codigo = 0 ''''aqui
 
             End If
         End If
@@ -153,7 +153,7 @@ Public Class FrmRegistrar_VentaLis
                 .ModoVentanaFlotante = True
 
 
-                .vcodigo = CInt(dgvListadoregis.DisplayLayout.ActiveRow.Cells(0).Value)
+                .vcodigo = dgvListadoregis.DisplayLayout.ActiveRow.Cells(0).Text
 
             End With
             Dim locationD As Point = Me.PointToScreen(New Point(Me.txtLocaltionDoc3.Left, txtLocaltionDoc3.Bottom))

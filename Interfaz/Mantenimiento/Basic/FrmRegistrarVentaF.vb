@@ -41,9 +41,6 @@ Public Class Registrar_Ventas
             txtdescuento.Text = Objc.descuento
             txtcantidadtotal.Text = Objc.total
             datefechao.Value = Objc.fecha_doc_ori
-            ' txtcodigoo.Text = Objc.cod_doc_ori
-            ' txtserieo.Text = Objc.serie_doc_ori
-            ' txtnumeror.Text = Objc.numero_doc_ori
             txtsigno.Text = Objc.signo
             txtserieint.Text = Objc.serie_int
             txtnumeroint.Text = Objc.numero_int
@@ -68,9 +65,9 @@ Public Class Registrar_Ventas
 
             With Objeto
                 If vcodigo > 0 Then
-                    .codigo_per = vcodigo
+                    ' .codigo_per = vcodigo
                 Else
-                    .codigo_per = -1
+                    ' .codigo_per = -1
                 End If
                 .almacenaid = almacenText.Text.Trim
                 .codigo_doc = Textcodigo_doc.Text.Trim
@@ -89,9 +86,6 @@ Public Class Registrar_Ventas
                 .total = txtcantidadtotal.Text.Trim
                 .codigo_doc = Textcodigo_doc.Text.Trim
                 .fecha_doc_ori = fechao
-                ' .cod_doc_ori = txtcodigoo.Text.Trim
-                ' .serie_doc_ori = txtserieo.Text.Trim
-                ' .numero_doc_ori = txtnumeror.Text.Trim
                 .signo = txtsigno.Text.Trim
                 .serie_int = txtserieint.Text.Trim
                 .numero_int = txtnumeroint.Text.Trim
@@ -115,7 +109,7 @@ Public Class Registrar_Ventas
     Private Sub BtnGuardar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BtnGuardar.Click
         If MessageBox.Show("¿Desea grabar los datos?", "Confirmar", MessageBoxButtons.YesNo) = Windows.Forms.DialogResult.Yes Then
             Try
-                If Not almacenText.Text.Trim = "" Then
+                If Not txtnumerop.Text.Trim = "" Then
                     If Actualizar() Then
                         Me.Close()
                     End If

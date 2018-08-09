@@ -146,7 +146,6 @@ Public Class FrmEmpresaLis
                 .ModoVentanaFlotante = True
 
                 .vcodigo = CInt(dgvListadoempresa.DisplayLayout.ActiveRow.Cells(0).Value)
-                '.pCodigo = dgvListado.DisplayLayout.ActiveRow.Cells(0).Value
 
             End With
             Dim locationD As Point = Me.PointToScreen(New Point(Me.txtLocaltionDoc2.Left, txtLocaltionDoc2.Bottom))
