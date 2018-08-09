@@ -9,8 +9,8 @@ Namespace BLL
 
 
 
-        Public Shared Function GetList(ByVal descripcion As String, ByVal nalmacenid As Integer, nanio As Integer, ByVal nmes As Integer) As DataTable
-            Return registrarVBD.GetList(descripcion, nalmacenid, nanio, nmes)
+        Public Shared Function GetList(ByVal ncodigo_per As Integer, ByVal nalmacenid As Integer, nanio As Integer, ByVal nmes As Integer) As DataTable
+            Return registrarVBD.GetList(ncodigo_per, nalmacenid, nanio, nmes)
         End Function
 
         Public Shared Function GetItem(ByVal vcodigo As Integer) As registrarv
@@ -38,11 +38,12 @@ Namespace BLL
             Return vCodigo
         End Function
 
-        Public Shared Function Eliminar_Registrar(ByVal ncodigo_per As Integer, ByVal nnumero As String) As Boolean
+        Public Shared Function Eliminar_Registrar(ByVal objregistrarv As Integer, ByVal objnumero As String) As Boolean
             Dim rs As DataTable
 
             Try
-                rs = registrarVBD.Eliminar(ncodigo_per, nnumero)
+
+                rs = registrarVBD.Eliminar_bd(objregistrarv, objnumero)
                 If Not rs Is Nothing Then
                     If rs.DataSet.Tables(0).Rows.Count > 0 Then
 
@@ -60,6 +61,5 @@ Namespace BLL
             End Try
             Return Eliminar_Registrar
         End Function
-
     End Class
 End Namespace

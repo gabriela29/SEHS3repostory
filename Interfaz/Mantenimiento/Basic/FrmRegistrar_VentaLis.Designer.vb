@@ -39,6 +39,8 @@ Partial Class FrmRegistrar_VentaLis
         Dim Appearance14 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
         Dim Appearance15 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
         Dim Appearance16 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
+        Dim Appearance17 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
+        Dim Appearance18 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
         Me.lbl = New Infragistics.Win.Misc.UltraLabel()
         Me.TpCliente = New System.Windows.Forms.ToolStrip()
         Me.TpNuevo = New System.Windows.Forms.ToolStripButton()
@@ -59,6 +61,7 @@ Partial Class FrmRegistrar_VentaLis
         Me.txtanio = New Infragistics.Win.UltraWinEditors.UltraTextEditor()
         Me.txtLimite = New Infragistics.Win.UltraWinEditors.UltraTextEditor()
         Me.txtalmacen = New Infragistics.Win.UltraWinEditors.UltraTextEditor()
+        Me.txtcodigo_per = New Infragistics.Win.UltraWinEditors.UltraTextEditor()
         Me.TpCliente.SuspendLayout()
         CType(Me.dgvListadoregis, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.UltraGroupBox1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -67,6 +70,7 @@ Partial Class FrmRegistrar_VentaLis
         CType(Me.txtanio, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.txtLimite, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.txtalmacen, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.txtcodigo_per, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'lbl
@@ -153,7 +157,7 @@ Partial Class FrmRegistrar_VentaLis
         Me.dgvListadoregis.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.dgvListadoregis.Location = New System.Drawing.Point(4, 31)
+        Me.dgvListadoregis.Location = New System.Drawing.Point(11, 31)
         Me.dgvListadoregis.Name = "dgvListadoregis"
         Me.dgvListadoregis.Size = New System.Drawing.Size(734, 333)
         Me.dgvListadoregis.TabIndex = 1
@@ -220,7 +224,7 @@ Partial Class FrmRegistrar_VentaLis
         Appearance6.BackGradientStyle = Infragistics.Win.GradientStyle.Vertical
         Me.btnBuscar.Appearance = Appearance6
         Me.btnBuscar.ButtonStyle = Infragistics.Win.UIElementButtonStyle.Office2007RibbonButton
-        Me.btnBuscar.Location = New System.Drawing.Point(515, 45)
+        Me.btnBuscar.Location = New System.Drawing.Point(481, 46)
         Me.btnBuscar.Name = "btnBuscar"
         Appearance7.BorderAlpha = Infragistics.Win.Alpha.Transparent
         Me.btnBuscar.PressedAppearance = Appearance7
@@ -237,7 +241,7 @@ Partial Class FrmRegistrar_VentaLis
         Appearance8.TextVAlignAsString = "Top"
         Me.lblBuscar.Appearance = Appearance8
         Me.lblBuscar.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblBuscar.Location = New System.Drawing.Point(63, 49)
+        Me.lblBuscar.Location = New System.Drawing.Point(12, 49)
         Me.lblBuscar.Name = "lblBuscar"
         Me.lblBuscar.Size = New System.Drawing.Size(70, 17)
         Me.lblBuscar.TabIndex = 79
@@ -266,13 +270,13 @@ Partial Class FrmRegistrar_VentaLis
         Me.txtmes.Appearance = Appearance10
         Me.txtmes.DisplayStyle = Infragistics.Win.EmbeddableElementDisplayStyle.Office2007
         Me.txtmes.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtmes.Location = New System.Drawing.Point(261, 45)
+        Me.txtmes.Location = New System.Drawing.Point(281, 45)
         Me.txtmes.MaxLength = 50
         Me.txtmes.Name = "txtmes"
         Me.txtmes.NullText = "Mes"
         Appearance11.ForeColor = System.Drawing.Color.DarkGray
         Me.txtmes.NullTextAppearance = Appearance11
-        Me.txtmes.Size = New System.Drawing.Size(118, 22)
+        Me.txtmes.Size = New System.Drawing.Size(102, 22)
         Me.txtmes.TabIndex = 85
         '
         'txtanio
@@ -281,13 +285,13 @@ Partial Class FrmRegistrar_VentaLis
         Me.txtanio.Appearance = Appearance12
         Me.txtanio.DisplayStyle = Infragistics.Win.EmbeddableElementDisplayStyle.Office2007
         Me.txtanio.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtanio.Location = New System.Drawing.Point(383, 44)
+        Me.txtanio.Location = New System.Drawing.Point(389, 44)
         Me.txtanio.MaxLength = 50
         Me.txtanio.Name = "txtanio"
         Me.txtanio.NullText = "Año"
         Appearance13.ForeColor = System.Drawing.Color.DarkGray
         Me.txtanio.NullTextAppearance = Appearance13
-        Me.txtanio.Size = New System.Drawing.Size(118, 22)
+        Me.txtanio.Size = New System.Drawing.Size(86, 22)
         Me.txtanio.TabIndex = 86
         '
         'txtLimite
@@ -297,7 +301,7 @@ Partial Class FrmRegistrar_VentaLis
         Me.txtLimite.Appearance = Appearance14
         Me.txtLimite.DisplayStyle = Infragistics.Win.EmbeddableElementDisplayStyle.Office2007
         Me.txtLimite.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtLimite.Location = New System.Drawing.Point(623, 44)
+        Me.txtLimite.Location = New System.Drawing.Point(578, 44)
         Me.txtLimite.MaxLength = 50
         Me.txtLimite.Name = "txtLimite"
         Me.txtLimite.Size = New System.Drawing.Size(63, 22)
@@ -310,14 +314,29 @@ Partial Class FrmRegistrar_VentaLis
         Me.txtalmacen.Appearance = Appearance15
         Me.txtalmacen.DisplayStyle = Infragistics.Win.EmbeddableElementDisplayStyle.Office2007
         Me.txtalmacen.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtalmacen.Location = New System.Drawing.Point(139, 46)
+        Me.txtalmacen.Location = New System.Drawing.Point(178, 46)
         Me.txtalmacen.MaxLength = 50
         Me.txtalmacen.Name = "txtalmacen"
         Me.txtalmacen.NullText = "Almacen"
         Appearance16.ForeColor = System.Drawing.Color.DarkGray
         Me.txtalmacen.NullTextAppearance = Appearance16
-        Me.txtalmacen.Size = New System.Drawing.Size(118, 22)
+        Me.txtalmacen.Size = New System.Drawing.Size(97, 22)
         Me.txtalmacen.TabIndex = 80
+        '
+        'txtcodigo_per
+        '
+        Appearance17.ForeColor = System.Drawing.Color.Navy
+        Me.txtcodigo_per.Appearance = Appearance17
+        Me.txtcodigo_per.DisplayStyle = Infragistics.Win.EmbeddableElementDisplayStyle.Office2007
+        Me.txtcodigo_per.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtcodigo_per.Location = New System.Drawing.Point(88, 46)
+        Me.txtcodigo_per.MaxLength = 50
+        Me.txtcodigo_per.Name = "txtcodigo_per"
+        Me.txtcodigo_per.NullText = "Codigo"
+        Appearance18.ForeColor = System.Drawing.Color.DarkGray
+        Me.txtcodigo_per.NullTextAppearance = Appearance18
+        Me.txtcodigo_per.Size = New System.Drawing.Size(84, 22)
+        Me.txtcodigo_per.TabIndex = 88
         '
         'FrmRegistrar_VentaLis
         '
@@ -325,6 +344,7 @@ Partial Class FrmRegistrar_VentaLis
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.ButtonHighlight
         Me.ClientSize = New System.Drawing.Size(738, 472)
+        Me.Controls.Add(Me.txtcodigo_per)
         Me.Controls.Add(Me.txtLimite)
         Me.Controls.Add(Me.txtanio)
         Me.Controls.Add(Me.txtmes)
@@ -348,6 +368,7 @@ Partial Class FrmRegistrar_VentaLis
         CType(Me.txtanio, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.txtLimite, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.txtalmacen, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.txtcodigo_per, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -372,4 +393,5 @@ Partial Class FrmRegistrar_VentaLis
     Friend WithEvents txtLimite As Infragistics.Win.UltraWinEditors.UltraTextEditor
     Friend WithEvents txtalmacen As Infragistics.Win.UltraWinEditors.UltraTextEditor
     Friend WithEvents txtLocaltionDoc3 As Infragistics.Win.Misc.UltraButton
+    Friend WithEvents txtcodigo_per As Infragistics.Win.UltraWinEditors.UltraTextEditor
 End Class

@@ -22,7 +22,7 @@ Public Class Registrar_Ventas
 
         Dim Objc As CapaObjetosNegocio.registrarv
 
-        Objc = registrarvManager.GetItem(vcodigo, numero)
+        Objc = registrarvManager.GetItem(vcodigo)
 
         If Not Objc Is Nothing Then
             almacenText.Text = Objc.almacenaid

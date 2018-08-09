@@ -42,35 +42,23 @@ Namespace Dal
 
 
 
-        Public Shared Function GetList(ByVal descripcion As String, ByVal nalmacenid As Integer, nanio As Integer, ByVal nmes As Integer) As DataTable
+        Public Shared Function GetList(ByVal ncodigo_per As Integer, ByVal nalmacenid As Integer, nanio As Integer, ByVal nmes As Integer) As DataTable
             Dim TempList As New DataTable
             Dim vCadena As String
             Dim oConexion As New clsConexion
 
             Try
                 vCadena = "select * from contable.paregistro_venta_leer( "
-                vCadena = vCadena & " " & Trim(Str(nalmacenid)) & ", "
+                vCadena = vCadena & " " & ncodigo_per & ", "
+                vCadena = vCadena & " " & nalmacenid & ","
                 vCadena = vCadena & " " & nanio & ","
                 vCadena = vCadena & " " & nmes & ");"
 
-            Catch ex As Exception
-
+                TempList = oConexion.Ejecutar_Consulta(vCadena)
+                oConexion.Cerrar_Conexion()
+            Finally
+                oConexion = Nothing
             End Try
-
-
-
-
-            'Try
-            '    oSP.addParameter("nnumero", descripcion, NpgsqlTypes.NpgsqlDbType.Varchar, 4, ParameterDirection.Input)
-            '    ' oSP.addParameter("mes", vmes, NpgsqlTypes.NpgsqlDbType.Integer, 4, ParameterDirection.Input)
-            '    ' oSP.addParameter("anio", vanio, NpgsqlTypes.NpgsqlDbType.Integer, 4, ParameterDirection.Input)
-
-            '    TempList = oConexion.Ejecutar_Consulta(oSP)
-            '    oConexion.Cerrar_Conexion()
-            'Finally
-            '    oConexion = Nothing
-            '    oSP = Nothing
-            'End Try
             Return TempList
         End Function
 
@@ -158,25 +146,37 @@ Namespace Dal
         End Function
 
 
-        Public Shared Function Eliminar(ByVal ncodigo_per As Integer, ByVal nnumero As String) As DataTable
+        Public Shared Function Eliminar_bd(ByVal ncodigop As Integer, ByVal nnum As String) As DataTable
+            '    Dim vCadena As String = ""
 
-            Dim vCadena As String = ""
+            '    Try
 
+            '        vCadena = "select * from contable.paregistro_venta_eliminar( "
+            '        vCadena = vCadena & " " & Trim(Str(ncodigo_per)) & ", "
+            '        vCadena = vCadena & " '" & Trim(nnumero) & "');"
+
+            '        Dim oConexion As New clsConexion
+            '        Eliminar_bd = oConexion.Ejecutar_Consulta(vCadena)
+            '        oConexion.Cerrar_Conexion()
+            '        oConexion = Nothing
+            '    Finally
+            '        vCadena = ""
+            '    End Try
+
+
+            'End Function
+
+            Dim oSP As New clsStored_Procedure("contable.paregistro_venta_eliminar")
             Try
-
-                vCadena = "select * from contable.paregistro_venta_eliminar( "
-                vCadena = vCadena & " " & Trim(Str(ncodigo_per)) & ", "
-                vCadena = vCadena & " '" & Trim(nnumero) & "');"
-
+                oSP.addParameter("ncodigo_per", ncodigop, NpgsqlTypes.NpgsqlDbType.Integer, 4, ParameterDirection.Input)
+                oSP.addParameter("nnumero", nnum, NpgsqlTypes.NpgsqlDbType.Varchar, 4, ParameterDirection.Input)
                 Dim oConexion As New clsConexion
-                Eliminar = oConexion.Ejecutar_Consulta(vCadena)
+                Eliminar_bd = oConexion.Ejecutar_Consulta(oSP)
                 oConexion.Cerrar_Conexion()
                 oConexion = Nothing
             Finally
-                vCadena = ""
+                oSP = Nothing
             End Try
-
-
         End Function
     End Class
 

@@ -24,21 +24,22 @@ Public Class FrmRegistrar_VentaLis
     Private Sub FrmSeriesDocumento_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         IdUsuario = GestionSeguridadManager.idUsuario
 
-        Call ListarRegistrov("")
+        'Call ListarRegistrov()
 
     End Sub
 
-    Public Function ListarRegistrov(ByVal Descripcion As String) As Boolean
+    Public Function ListarRegistrov() As Boolean
+        Dim vArray As String = ""
         Dim objetos As New DataTable
         Try
 
-            dtlistaregistrov = registrarvManager.GetList(Descripcion)
+            dtlistaregistrov = registrarvManager.GetList(txtcodigo_per.Value, txtalmacen.Value, txtmes.Value, txtanio.Value)
             dgvListadoregis.DataSource = dtlistaregistrov
 
             dgvListadoregis.DataBind()
             If dgvListadoregis.Rows.Count() > 0 Then
                 dgvListadoregis.Rows(0).Selected = True
-                dgvListadoregis.Focus()
+                 dgvListadoregis.Focus()
 
             End If
 
@@ -47,8 +48,11 @@ Public Class FrmRegistrar_VentaLis
         End Try
     End Function
 
-    Public Function ELiminar_Registro_venta(ByVal _cod As Integer) As Boolean
-        ELiminar_Registro_venta = registrarvManager.Eliminar_Registrar(_cod, GestionSeguridadManager.gnumero)
+    Public Function ELiminar_Registro_venta(ByVal _cod As Integer, ByVal nnumero As String) As Boolean
+        ELiminar_Registro_venta = registrarvManager.Eliminar_Registrar(_cod, nnumero)
+        MessageBox.Show("Registro Eliminado con Éxito", "AVISO")
+            Call ListarRegistrov()
+
     End Function
 
 
@@ -163,27 +167,22 @@ Public Class FrmRegistrar_VentaLis
 
     Private Sub popupHelperD_PopupClosed(ByVal sender As Object, ByVal e As ControlesPersonalizados.Components.Controls.PopupClosedEventArgs) Handles popupHelperD.PopupClosed
         Dim frm As Registrar_Ventas = e.Popup
-        Call ListarRegistrov("")
+        Call ListarRegistrov()
         frm = Nothing
     End Sub
 
     Private Sub TpEliminar_Click(sender As Object, e As EventArgs) Handles TpEliminar.Click
-        'If MsgBox(" Esta Acción podría Afectar el normal Funcionamiento del Sistema, ¿Desea Continuar?", MsgBoxStyle.YesNo, "Confirme") = MsgBoxResult.Yes Then
-        '    If dgvListadoregis.Selected.Rows.Count > 0 Then
-        '        Call ELiminar_Registro_venta()
-        '    End If
-        'End If
 
         If dgvListadoregis.Selected.Rows.Count > 0 Then
             If MessageBox.Show("¿Está seguro de eliminar este registro?", "CONFIRMAR", MessageBoxButtons.YesNo, MessageBoxIcon.Question) = Windows.Forms.DialogResult.Yes Then
-                Call ELiminar_Registro_venta(CInt(dgvListadoregis.DisplayLayout.ActiveRow.Cells(0).Value))
+                Call ELiminar_Registro_venta(CInt(dgvListadoregis.DisplayLayout.ActiveRow.Cells(0).Value), (dgvListadoregis.DisplayLayout.ActiveRow.Cells(7).Text))
 
             End If
         End If
     End Sub
 
     Private Sub btnBuscar_Click(sender As Object, e As EventArgs) Handles btnBuscar.Click
-        '  Call ListarCondiciones()
+        Call ListarRegistrov()
 
     End Sub
 
