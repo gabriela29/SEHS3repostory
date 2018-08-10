@@ -69,9 +69,10 @@ Public Class Registrar_Ventas
                 Else
                     ' .codigo_per = -1
                 End If
+                .codigo_per = txtcod_persona.Text.Trim
+
                 .almacenaid = almacenText.Text.Trim
                 .codigo_doc = Textcodigo_doc.Text.Trim
-                .codigo_per = txtcod_persona.Text.Trim
                 .emision = fechae
                 .nombre_corto = txtnombrec.Text.Trim
                 .codigo_sunat = txtcodigosu.Text.Trim

@@ -19,7 +19,8 @@ Namespace Dal
 
             Try
 
-                oSP = "select * from contable.registro_venta where codigo_per=" & codigo
+                oSP = "Select * from contable.registro_venta where tablaid= " & codigo
+
                 TempList = oConexion.Ejecutar_Consulta(oSP)
                 objReader = Nothing
                 If TempList.Rows.Count > 0 Then
@@ -102,7 +103,7 @@ Namespace Dal
             Dim vCadena As String = ""
             Try
                 vCadena = "select * from contable.paregistro_venta_actualizar( "
-                vCadena = vCadena & " " & IIf(objR.codigo_per < 0, "false", "true") & ", "
+                vCadena = vCadena & " " & IIf(objR.codigo_per > 0, "false", "true") & ", "
                 vCadena = vCadena & " " & Trim(Str(objR.codigo_per)) & ","
                 vCadena = vCadena & " '" & Trim(objR.emision) & "',"
                 vCadena = vCadena & " '" & Trim(objR.nombre_corto) & "',"

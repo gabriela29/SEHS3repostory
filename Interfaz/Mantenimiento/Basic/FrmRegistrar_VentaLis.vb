@@ -153,7 +153,7 @@ Public Class FrmRegistrar_VentaLis
                 .ModoVentanaFlotante = True
 
 
-                .vcodigo = dgvListadoregis.DisplayLayout.ActiveRow.Cells(0).Text
+                .vcodigo = dgvListadoregis.DisplayLayout.ActiveRow.Cells(20).Text
 
             End With
             Dim locationD As Point = Me.PointToScreen(New Point(Me.txtLocaltionDoc3.Left, txtLocaltionDoc3.Bottom))
