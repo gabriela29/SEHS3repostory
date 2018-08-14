@@ -103,7 +103,7 @@ Namespace Dal
             Dim vCadena As String = ""
             Try
                 vCadena = "select * from contable.paregistro_venta_actualizar( "
-                vCadena = vCadena & " " & IIf(objR.codigo_per > 0, "false", "true") & ", "
+                vCadena = vCadena & " " & IIf(objR.codigo_per < 0, "false", "true") & ", "
                 vCadena = vCadena & " " & Trim(Str(objR.codigo_per)) & ","
                 vCadena = vCadena & " '" & Trim(objR.emision) & "',"
                 vCadena = vCadena & " '" & Trim(objR.nombre_corto) & "',"

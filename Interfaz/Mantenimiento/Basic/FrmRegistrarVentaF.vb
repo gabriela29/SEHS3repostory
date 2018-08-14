@@ -70,7 +70,6 @@ Public Class Registrar_Ventas
                     ' .codigo_per = -1
                 End If
                 .codigo_per = txtcod_persona.Text.Trim
-
                 .almacenaid = almacenText.Text.Trim
                 .codigo_doc = Textcodigo_doc.Text.Trim
                 .emision = fechae
@@ -141,4 +140,6 @@ Public Class Registrar_Ventas
         End If
 
     End Sub
+
+
 End Class

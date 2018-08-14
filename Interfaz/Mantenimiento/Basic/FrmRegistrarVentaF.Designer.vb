@@ -24,16 +24,13 @@ Partial Class Registrar_Ventas
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim Appearance1 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
+        Dim Appearance2 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
         Dim Appearance3 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
         Dim Appearance4 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
         Dim Appearance5 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
-        Dim Appearance6 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
-        Dim Appearance7 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
         Dim Appearance8 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
         Dim Appearance9 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
-        Dim Appearance10 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
         Dim Appearance11 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
-        Dim Appearance12 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
         Dim Appearance13 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
         Dim Appearance14 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
         Dim Appearance15 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
@@ -57,17 +54,20 @@ Partial Class Registrar_Ventas
         Dim Appearance34 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
         Dim Appearance31 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
         Dim Appearance32 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
-        Dim Appearance2 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
+        Dim Appearance6 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
+        Dim Appearance10 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
+        Dim Appearance7 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
+        Dim Appearance12 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
         Me.bwdatos = New System.ComponentModel.BackgroundWorker()
         Me.UgvDatos = New Infragistics.Win.Misc.UltraGroupBox()
+        Me.datefechao = New Infragistics.Win.UltraWinEditors.UltraDateTimeEditor()
+        Me.fecha_doc_ori = New Infragistics.Win.Misc.UltraLabel()
         Me.txtcod_persona = New Infragistics.Win.UltraWinEditors.UltraTextEditor()
         Me.UltraLabel20 = New Infragistics.Win.Misc.UltraLabel()
         Me.Textcodigo_doc = New Infragistics.Win.UltraWinEditors.UltraTextEditor()
         Me.label = New Infragistics.Win.Misc.UltraLabel()
         Me.almacenText = New Infragistics.Win.UltraWinEditors.UltraTextEditor()
         Me.almacen_id = New Infragistics.Win.Misc.UltraLabel()
-        Me.labelanio = New Infragistics.Win.Misc.UltraLabel()
-        Me.labeltablaid = New Infragistics.Win.Misc.UltraLabel()
         Me.labelmes = New Infragistics.Win.Misc.UltraLabel()
         Me.labeltabla = New Infragistics.Win.Misc.UltraLabel()
         Me.txtnumeroint = New Infragistics.Win.UltraWinEditors.UltraTextEditor()
@@ -85,9 +85,7 @@ Partial Class Registrar_Ventas
         Me.txtcodigosu = New Infragistics.Win.UltraWinEditors.UltraTextEditor()
         Me.txtnombrec = New Infragistics.Win.UltraWinEditors.UltraTextEditor()
         Me.datefechae = New Infragistics.Win.UltraWinEditors.UltraDateTimeEditor()
-        Me.UltraLabel24 = New Infragistics.Win.Misc.UltraLabel()
         Me.UltraLabel23 = New Infragistics.Win.Misc.UltraLabel()
-        Me.UltraLabel22 = New Infragistics.Win.Misc.UltraLabel()
         Me.UltraLabel21 = New Infragistics.Win.Misc.UltraLabel()
         Me.UltraLabel19 = New Infragistics.Win.Misc.UltraLabel()
         Me.UltraLabel18 = New Infragistics.Win.Misc.UltraLabel()
@@ -111,10 +109,13 @@ Partial Class Registrar_Ventas
         Me.lblErrorR = New Infragistics.Win.Misc.UltraLabel()
         Me.BtnGuardar = New Infragistics.Win.Misc.UltraButton()
         Me.btncerrar = New Infragistics.Win.Misc.UltraButton()
-        Me.datefechao = New Infragistics.Win.UltraWinEditors.UltraDateTimeEditor()
-        Me.fecha_doc_ori = New Infragistics.Win.Misc.UltraLabel()
+        Me.labelanio = New Infragistics.Win.Misc.UltraLabel()
+        Me.UltraLabel24 = New Infragistics.Win.Misc.UltraLabel()
+        Me.labeltablaid = New Infragistics.Win.Misc.UltraLabel()
+        Me.UltraLabel22 = New Infragistics.Win.Misc.UltraLabel()
         CType(Me.UgvDatos, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.UgvDatos.SuspendLayout()
+        CType(Me.datefechao, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.txtcod_persona, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Textcodigo_doc, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.almacenText, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -134,7 +135,6 @@ Partial Class Registrar_Ventas
         CType(Me.txtnombrec, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.datefechae, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.datefechao, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'UgvDatos
@@ -192,6 +192,26 @@ Partial Class Registrar_Ventas
         Me.UgvDatos.Name = "UgvDatos"
         Me.UgvDatos.Size = New System.Drawing.Size(816, 467)
         Me.UgvDatos.TabIndex = 0
+        '
+        'datefechao
+        '
+        Me.datefechao.DisplayStyle = Infragistics.Win.EmbeddableElementDisplayStyle.Office2007
+        Me.datefechao.Location = New System.Drawing.Point(586, 17)
+        Me.datefechao.Name = "datefechao"
+        Me.datefechao.Size = New System.Drawing.Size(144, 21)
+        Me.datefechao.TabIndex = 113
+        '
+        'fecha_doc_ori
+        '
+        Appearance2.BackColorAlpha = Infragistics.Win.Alpha.Transparent
+        Appearance2.ForeColor = System.Drawing.Color.Navy
+        Me.fecha_doc_ori.Appearance = Appearance2
+        Me.fecha_doc_ori.Font = New System.Drawing.Font("Arial", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.fecha_doc_ori.Location = New System.Drawing.Point(464, 20)
+        Me.fecha_doc_ori.Name = "fecha_doc_ori"
+        Me.fecha_doc_ori.Size = New System.Drawing.Size(99, 37)
+        Me.fecha_doc_ori.TabIndex = 112
+        Me.fecha_doc_ori.Text = "Fecha de Doc. Origen: "
         '
         'txtcod_persona
         '
@@ -252,30 +272,6 @@ Partial Class Registrar_Ventas
         Me.almacen_id.Size = New System.Drawing.Size(75, 18)
         Me.almacen_id.TabIndex = 101
         Me.almacen_id.Text = "Almacen Id:"
-        '
-        'labelanio
-        '
-        Appearance6.BackColorAlpha = Infragistics.Win.Alpha.Transparent
-        Appearance6.ForeColor = System.Drawing.Color.DodgerBlue
-        Me.labelanio.Appearance = Appearance6
-        Me.labelanio.Font = New System.Drawing.Font("Arial", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.labelanio.Location = New System.Drawing.Point(731, 288)
-        Me.labelanio.Name = "labelanio"
-        Me.labelanio.Size = New System.Drawing.Size(73, 25)
-        Me.labelanio.TabIndex = 100
-        Me.labelanio.Text = "2017"
-        '
-        'labeltablaid
-        '
-        Appearance7.BackColorAlpha = Infragistics.Win.Alpha.Transparent
-        Appearance7.ForeColor = System.Drawing.Color.DodgerBlue
-        Me.labeltablaid.Appearance = Appearance7
-        Me.labeltablaid.Font = New System.Drawing.Font("Arial", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.labeltablaid.Location = New System.Drawing.Point(731, 240)
-        Me.labeltablaid.Name = "labeltablaid"
-        Me.labeltablaid.Size = New System.Drawing.Size(73, 25)
-        Me.labeltablaid.TabIndex = 99
-        Me.labeltablaid.Text = "4"
         '
         'labelmes
         '
@@ -421,18 +417,6 @@ Partial Class Registrar_Ventas
         Me.datefechae.Size = New System.Drawing.Size(144, 21)
         Me.datefechae.TabIndex = 78
         '
-        'UltraLabel24
-        '
-        Appearance10.BackColorAlpha = Infragistics.Win.Alpha.Transparent
-        Appearance10.ForeColor = System.Drawing.Color.Navy
-        Me.UltraLabel24.Appearance = Appearance10
-        Me.UltraLabel24.Font = New System.Drawing.Font("Arial", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.UltraLabel24.Location = New System.Drawing.Point(692, 289)
-        Me.UltraLabel24.Name = "UltraLabel24"
-        Me.UltraLabel24.Size = New System.Drawing.Size(38, 24)
-        Me.UltraLabel24.TabIndex = 77
-        Me.UltraLabel24.Text = "Año:"
-        '
         'UltraLabel23
         '
         Appearance11.BackColorAlpha = Infragistics.Win.Alpha.Transparent
@@ -444,18 +428,6 @@ Partial Class Registrar_Ventas
         Me.UltraLabel23.Size = New System.Drawing.Size(36, 39)
         Me.UltraLabel23.TabIndex = 76
         Me.UltraLabel23.Text = "Mes:"
-        '
-        'UltraLabel22
-        '
-        Appearance12.BackColorAlpha = Infragistics.Win.Alpha.Transparent
-        Appearance12.ForeColor = System.Drawing.Color.Navy
-        Me.UltraLabel22.Appearance = Appearance12
-        Me.UltraLabel22.Font = New System.Drawing.Font("Arial", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.UltraLabel22.Location = New System.Drawing.Point(671, 240)
-        Me.UltraLabel22.Name = "UltraLabel22"
-        Me.UltraLabel22.Size = New System.Drawing.Size(59, 39)
-        Me.UltraLabel22.TabIndex = 75
-        Me.UltraLabel22.Text = "Tabla Id:"
         '
         'UltraLabel21
         '
@@ -743,25 +715,56 @@ Partial Class Registrar_Ventas
         Me.btncerrar.Text = "x"
         Me.btncerrar.UseOsThemes = Infragistics.Win.DefaultableBoolean.[False]
         '
-        'datefechao
+        'labelanio
         '
-        Me.datefechao.DisplayStyle = Infragistics.Win.EmbeddableElementDisplayStyle.Office2007
-        Me.datefechao.Location = New System.Drawing.Point(586, 17)
-        Me.datefechao.Name = "datefechao"
-        Me.datefechao.Size = New System.Drawing.Size(144, 21)
-        Me.datefechao.TabIndex = 113
+        Appearance6.BackColorAlpha = Infragistics.Win.Alpha.Transparent
+        Appearance6.ForeColor = System.Drawing.Color.DodgerBlue
+        Me.labelanio.Appearance = Appearance6
+        Me.labelanio.Font = New System.Drawing.Font("Arial", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.labelanio.Location = New System.Drawing.Point(731, 288)
+        Me.labelanio.Name = "labelanio"
+        Me.labelanio.Size = New System.Drawing.Size(73, 25)
+        Me.labelanio.TabIndex = 100
+        Me.labelanio.Text = "2017"
         '
-        'fecha_doc_ori
+        'UltraLabel24
         '
-        Appearance2.BackColorAlpha = Infragistics.Win.Alpha.Transparent
-        Appearance2.ForeColor = System.Drawing.Color.Navy
-        Me.fecha_doc_ori.Appearance = Appearance2
-        Me.fecha_doc_ori.Font = New System.Drawing.Font("Arial", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.fecha_doc_ori.Location = New System.Drawing.Point(464, 20)
-        Me.fecha_doc_ori.Name = "fecha_doc_ori"
-        Me.fecha_doc_ori.Size = New System.Drawing.Size(99, 37)
-        Me.fecha_doc_ori.TabIndex = 112
-        Me.fecha_doc_ori.Text = "Fecha de Doc. Origen: "
+        Appearance10.BackColorAlpha = Infragistics.Win.Alpha.Transparent
+        Appearance10.ForeColor = System.Drawing.Color.Navy
+        Me.UltraLabel24.Appearance = Appearance10
+        Me.UltraLabel24.Font = New System.Drawing.Font("Arial", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.UltraLabel24.Location = New System.Drawing.Point(692, 289)
+        Me.UltraLabel24.Name = "UltraLabel24"
+        Me.UltraLabel24.Size = New System.Drawing.Size(38, 24)
+        Me.UltraLabel24.TabIndex = 77
+        Me.UltraLabel24.Text = "Año:"
+        '
+        'labeltablaid
+        '
+        Appearance7.BackColorAlpha = Infragistics.Win.Alpha.Transparent
+        Appearance7.ForeColor = System.Drawing.Color.DodgerBlue
+        Me.labeltablaid.Appearance = Appearance7
+        Me.labeltablaid.AutoSize = True
+        Me.labeltablaid.Font = New System.Drawing.Font("Arial", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.labeltablaid.Location = New System.Drawing.Point(731, 240)
+        Me.labeltablaid.Name = "labeltablaid"
+        Me.labeltablaid.Size = New System.Drawing.Size(11, 15)
+        Me.labeltablaid.TabIndex = 99
+        Me.labeltablaid.Text = "0"
+        Me.labeltablaid.Visible = False
+        '
+        'UltraLabel22
+        '
+        Appearance12.BackColorAlpha = Infragistics.Win.Alpha.Transparent
+        Appearance12.ForeColor = System.Drawing.Color.Navy
+        Me.UltraLabel22.Appearance = Appearance12
+        Me.UltraLabel22.Font = New System.Drawing.Font("Arial", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.UltraLabel22.Location = New System.Drawing.Point(671, 240)
+        Me.UltraLabel22.Name = "UltraLabel22"
+        Me.UltraLabel22.Size = New System.Drawing.Size(59, 39)
+        Me.UltraLabel22.TabIndex = 75
+        Me.UltraLabel22.Text = "Tabla Id:"
+        Me.UltraLabel22.Visible = False
         '
         'Registrar_Ventas
         '
@@ -783,6 +786,7 @@ Partial Class Registrar_Ventas
         CType(Me.UgvDatos, System.ComponentModel.ISupportInitialize).EndInit()
         Me.UgvDatos.ResumeLayout(False)
         Me.UgvDatos.PerformLayout()
+        CType(Me.datefechao, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.txtcod_persona, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Textcodigo_doc, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.almacenText, System.ComponentModel.ISupportInitialize).EndInit()
@@ -802,7 +806,6 @@ Partial Class Registrar_Ventas
         CType(Me.txtnombrec, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.datefechae, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.datefechao, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -825,9 +828,7 @@ Partial Class Registrar_Ventas
     Friend WithEvents UltraLabel18 As Infragistics.Win.Misc.UltraLabel
     Friend WithEvents UltraLabel17 As Infragistics.Win.Misc.UltraLabel
     Friend WithEvents UltraLabel19 As Infragistics.Win.Misc.UltraLabel
-    Friend WithEvents UltraLabel24 As Infragistics.Win.Misc.UltraLabel
     Friend WithEvents UltraLabel23 As Infragistics.Win.Misc.UltraLabel
-    Friend WithEvents UltraLabel22 As Infragistics.Win.Misc.UltraLabel
     Friend WithEvents UltraLabel21 As Infragistics.Win.Misc.UltraLabel
     Friend WithEvents txtnumeroint As Infragistics.Win.UltraWinEditors.UltraTextEditor
     Friend WithEvents txtserieint As Infragistics.Win.UltraWinEditors.UltraTextEditor
@@ -844,8 +845,6 @@ Partial Class Registrar_Ventas
     Friend WithEvents txtcodigosu As Infragistics.Win.UltraWinEditors.UltraTextEditor
     Friend WithEvents txtnombrec As Infragistics.Win.UltraWinEditors.UltraTextEditor
     Friend WithEvents datefechae As Infragistics.Win.UltraWinEditors.UltraDateTimeEditor
-    Friend WithEvents labelanio As Infragistics.Win.Misc.UltraLabel
-    Friend WithEvents labeltablaid As Infragistics.Win.Misc.UltraLabel
     Friend WithEvents labelmes As Infragistics.Win.Misc.UltraLabel
     Friend WithEvents labeltabla As Infragistics.Win.Misc.UltraLabel
     Friend WithEvents labelTitulo As Infragistics.Win.Misc.UltraLabel
@@ -862,4 +861,8 @@ Partial Class Registrar_Ventas
     Friend WithEvents UltraLabel20 As Infragistics.Win.Misc.UltraLabel
     Friend WithEvents datefechao As Infragistics.Win.UltraWinEditors.UltraDateTimeEditor
     Friend WithEvents fecha_doc_ori As Infragistics.Win.Misc.UltraLabel
+    Friend WithEvents labelanio As Infragistics.Win.Misc.UltraLabel
+    Friend WithEvents UltraLabel24 As Infragistics.Win.Misc.UltraLabel
+    Friend WithEvents labeltablaid As Infragistics.Win.Misc.UltraLabel
+    Friend WithEvents UltraLabel22 As Infragistics.Win.Misc.UltraLabel
 End Class
