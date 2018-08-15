@@ -109,15 +109,7 @@ Public Class FrmSeriesDocumentoNM
                 cboTipoDoc.Value = id_tipoDoc
             End If
 
-            Me.cboEmpresa.DataSource = empresaManager.GetList("%%")
-            Me.cboEmpresa.DataBind()
-            Me.cboEmpresa.ValueMember = "empresaid"
-            Me.cboEmpresa.DisplayMember = "nombre"
-            Me.cboEmpresa.MinDropDownItems = 2
-            Me.cboEmpresa.MaxDropDownItems = 4
-            If id_almacen > 0 Then
-                cboEmpresa.Value = id_almacen
-            End If
+
 
         Catch ex As Exception
             MsgBox(ex.Message)

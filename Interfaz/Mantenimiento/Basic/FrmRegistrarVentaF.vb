@@ -13,7 +13,7 @@ Imports Infragistics.Win.UltraWinGrid
 Public Class Registrar_Ventas
     Public pregistrarvId
     Public ModoVentanaFlotante As Boolean
-    Public vcodigo As Integer
+    Public vtablad As Integer
     Public numero As String
     Public swNuevo As Boolean
 
@@ -22,7 +22,7 @@ Public Class Registrar_Ventas
 
         Dim Objc As CapaObjetosNegocio.registrarv
 
-        Objc = registrarvManager.GetItem(vcodigo)
+        Objc = registrarvManager.GetItem(vtablad)
 
         If Not Objc Is Nothing Then
             almacenText.Text = Objc.almacenaid
@@ -64,10 +64,10 @@ Public Class Registrar_Ventas
             fechao = LibreriasFormularios.Formato_Fecha(datefechao.Value)
 
             With Objeto
-                If vcodigo > 0 Then
-                    ' .codigo_per = vcodigo
+                If vtablad < 0 Then
+                    .idtabla = vtablad
                 Else
-                    ' .codigo_per = -1
+                    .idtabla = -1
                 End If
                 .codigo_per = txtcod_persona.Text.Trim
                 .almacenaid = almacenText.Text.Trim
@@ -125,7 +125,7 @@ Public Class Registrar_Ventas
     End Sub
 
     Private Sub FrmRegistrarVentaF_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        If vcodigo > 0 Then
+        If vtablad > 0 Then
             Call Mostrar_Datos()
         End If
     End Sub

@@ -6,8 +6,8 @@ Namespace Bll
 
     Public Class empresaManager
 
-        Public Shared Function GetList(ByVal descripcion As String) As DataTable
-            Return empresaBD.GetList(descripcion)
+        Public Shared Function GetList(ByVal nruc As String, ByVal apell As String) As DataTable
+            Return empresaBD.GetList(nruc, apell)
         End Function
 
         Public Shared Function GetItem(ByVal codigo As Integer) As empresa

@@ -24,16 +24,18 @@ Public Class FrmRegistrar_VentaLis
     Private Sub FrmSeriesDocumento_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         IdUsuario = GestionSeguridadManager.idUsuario
 
-        Call ListarRegistrov()
+        'Call ListarRegistrov()
 
     End Sub
 
     Public Function ListarRegistrov() As Boolean
+        Dim xlimit As Integer
         Dim vArray As String = ""
         Dim objetos As New DataTable
+        xlimit = Integer.Parse(txtLimite.Text)
         Try
 
-            dtlistaregistrov = registrarvManager.GetList(txtcodigo_per.Value, txtalmacen.Value, txtmes.Value, txtanio.Value)
+            dtlistaregistrov = registrarvManager.GetList(txtcodigo_per.Value, txtalmacen.Value, txtmes.Value, txtanio.Value, xlimit)
             dgvListadoregis.DataSource = dtlistaregistrov
 
             dgvListadoregis.DataBind()
@@ -48,10 +50,10 @@ Public Class FrmRegistrar_VentaLis
         End Try
     End Function
 
-    Public Function ELiminar_Registro_venta(ByVal _cod As Integer, ByVal nnumero As String) As Boolean
-        ELiminar_Registro_venta = registrarvManager.Eliminar_Registrar(_cod, nnumero)
+    Public Function ELiminar_Registro_venta(ByVal _cod As Integer) As Boolean
+        ELiminar_Registro_venta = registrarvManager.Eliminar_Registrar(_cod)
         MessageBox.Show("Registro Eliminado con Éxito", "AVISO")
-            Call ListarRegistrov()
+        Call ListarRegistrov()
 
     End Function
 
@@ -73,35 +75,34 @@ Public Class FrmRegistrar_VentaLis
 
     Private Sub dgvListadoregis_InitializeLayout(ByVal sender As System.Object, ByVal e As Infragistics.Win.UltraWinGrid.InitializeLayoutEventArgs) Handles dgvListadoregis.InitializeLayout
         With dgvListadoregis.DisplayLayout.Bands(0)
-            .Columns(0).Width = 100
-            .Columns(1).Width = 70
+            .Columns(0).Width = 40
+            .Columns(1).Width = 250
+            .Columns(2).Width = 60
             .Columns(0).Header.Caption = "ID"
-            ' .Columns(1).Header.Caption = "COD PERSONA"
             .Columns(1).Header.Caption = "PERSONA"
-            .Columns(2).Header.Caption = "ALMACEN"
-            .Columns(3).Header.Caption = "COD DOCUMENTO"
-            .Columns(4).Header.Caption = "FECHA DE EMISIÓN"
-            .Columns(5).Header.Caption = "NOMBRE CORTO"
-            .Columns(6).Header.Caption = "CODIGO SUNAT"
-            .Columns(7).Header.Caption = "NÚMERO"
-            .Columns(8).Header.Caption = "N° DOC"
-            .Columns(9).Header.Caption = "TIPO DE DOC"
-            .Columns(10).Header.Caption = "AFECTO"
-            .Columns(11).Header.Caption = "NOAFECTO"
-            .Columns(12).Header.Caption = "IGV"
-            .Columns(13).Header.Caption = "DSCTO"
-            .Columns(14).Header.Caption = "TOTAL"
-            .Columns(15).Header.Caption = "FECHA-DOC"
-            .Columns(16).Header.Caption = "SIGNO"
-            .Columns(17).Header.Caption = "SERIE INT"
-            .Columns(18).Header.Caption = "NÚMERO INT"
-            .Columns(19).Header.Caption = "TABLA"
-            .Columns(20).Header.Caption = "TABLA ID"
+            .Columns(2).Header.Caption = "C. PER"
+            .Columns(3).Header.Caption = "ALMACEN"
+            .Columns(4).Header.Caption = "COD DOCUMENTO"
+            .Columns(5).Header.Caption = "FECHA DE EMISIÓN"
+            .Columns(6).Header.Caption = "NOMBRE CORTO"
+            .Columns(7).Header.Caption = "CODIGO SUNAT"
+            .Columns(8).Header.Caption = "NÚMERO"
+            .Columns(9).Header.Caption = "N° DOC"
+            .Columns(10).Header.Caption = "TIPO DE DOC"
+            .Columns(11).Header.Caption = "AFECTO"
+            .Columns(12).Header.Caption = "NOAFECTO"
+            .Columns(13).Header.Caption = "IGV"
+            .Columns(14).Header.Caption = "DSCTO"
+            .Columns(15).Header.Caption = "TOTAL"
+            .Columns(16).Header.Caption = "FECHA-DOC"
+            .Columns(17).Header.Caption = "SIGNO"
+            .Columns(18).Header.Caption = "SERIE INT"
+            .Columns(19).Header.Caption = "NÚMERO INT"
+            .Columns(20).Header.Caption = "TABLA"
             .Columns(21).Header.Caption = "MES"
             .Columns(22).Header.Caption = "AÑO"
-            .Columns(1).Width = 250
-            ' .Columns(14).Width = 400
-            ' .Columns(15).Width = 180
+
+
         End With
 
         Call formatear_grid()
@@ -153,7 +154,7 @@ Public Class FrmRegistrar_VentaLis
                 .ModoVentanaFlotante = True
 
 
-                .vcodigo = dgvListadoregis.DisplayLayout.ActiveRow.Cells(20).Text
+                .vtablad = dgvListadoregis.DisplayLayout.ActiveRow.Cells(0).Text
 
             End With
             Dim locationD As Point = Me.PointToScreen(New Point(Me.txtLocaltionDoc3.Left, txtLocaltionDoc3.Bottom))
@@ -175,7 +176,7 @@ Public Class FrmRegistrar_VentaLis
 
         If dgvListadoregis.Selected.Rows.Count > 0 Then
             If MessageBox.Show("¿Está seguro de eliminar este registro?", "CONFIRMAR", MessageBoxButtons.YesNo, MessageBoxIcon.Question) = Windows.Forms.DialogResult.Yes Then
-                Call ELiminar_Registro_venta(CInt(dgvListadoregis.DisplayLayout.ActiveRow.Cells(0).Value), (dgvListadoregis.DisplayLayout.ActiveRow.Cells(7).Text))
+                Call ELiminar_Registro_venta(CInt(dgvListadoregis.DisplayLayout.ActiveRow.Cells(0).Value))
 
             End If
         End If

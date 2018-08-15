@@ -10,7 +10,7 @@ Namespace Dal
 
     Public Class registrarVBD
 
-        Public Shared Function GetItem(ByVal codigo As Integer) As registrarv
+        Public Shared Function GetItem(ByVal tablaid As Integer) As registrarv
             Dim objregistrarv As registrarv = Nothing
             Dim TempList As New DataTable
             Dim oSP As String = ""
@@ -19,7 +19,7 @@ Namespace Dal
 
             Try
 
-                oSP = "Select * from contable.registro_venta where tablaid= " & codigo
+                oSP = "Select * from contable.registro_venta where tablaid= " & tablaid
 
                 TempList = oConexion.Ejecutar_Consulta(oSP)
                 objReader = Nothing
@@ -43,7 +43,7 @@ Namespace Dal
 
 
 
-        Public Shared Function GetList(ByVal ncodigo_per As Integer, ByVal nalmacenid As Integer, nanio As Integer, ByVal nmes As Integer) As DataTable
+        Public Shared Function GetList(ByVal ncodigo_per As Integer, ByVal nalmacenid As Integer, nanio As Integer, ByVal nmes As Integer, ByVal vfilas As Integer) As DataTable
             Dim TempList As New DataTable
             Dim vCadena As String
             Dim oConexion As New clsConexion
@@ -53,7 +53,9 @@ Namespace Dal
                 vCadena = vCadena & " " & ncodigo_per & ", "
                 vCadena = vCadena & " " & nalmacenid & ","
                 vCadena = vCadena & " " & nanio & ","
-                vCadena = vCadena & " " & nmes & ");"
+                vCadena = vCadena & " " & nmes & " , "
+                vCadena = vCadena & " " & vfilas & ");"
+
 
                 TempList = oConexion.Ejecutar_Consulta(vCadena)
                 oConexion.Cerrar_Conexion()
@@ -103,8 +105,8 @@ Namespace Dal
             Dim vCadena As String = ""
             Try
                 vCadena = "select * from contable.paregistro_venta_actualizar( "
-                vCadena = vCadena & " " & IIf(objR.codigo_per < 0, "false", "true") & ", "
-                vCadena = vCadena & " " & Trim(Str(objR.codigo_per)) & ","
+                vCadena = vCadena & " " & IIf(objR.idtabla > 0, "false", "true") & ", "
+                vCadena = vCadena & " " & Trim(objR.codigo_per) & ","
                 vCadena = vCadena & " '" & Trim(objR.emision) & "',"
                 vCadena = vCadena & " '" & Trim(objR.nombre_corto) & "',"
                 vCadena = vCadena & " '" & Trim(objR.codigo_sunat) & "',"
@@ -147,11 +149,10 @@ Namespace Dal
         End Function
 
 
-        Public Shared Function Eliminar_bd(ByVal ncodigop As Integer, ByVal nnum As String) As DataTable
+        Public Shared Function Eliminar_bd(ByVal ntablaid As Integer) As DataTable
             Dim oSP As New clsStored_Procedure("contable.paregistro_venta_eliminar")
             Try
-                oSP.addParameter("ncodigo_per", ncodigop, NpgsqlTypes.NpgsqlDbType.Integer, 4, ParameterDirection.Input)
-                oSP.addParameter("nnumero", nnum, NpgsqlTypes.NpgsqlDbType.Varchar, 4, ParameterDirection.Input)
+                oSP.addParameter("ntablaid", ntablaid, NpgsqlTypes.NpgsqlDbType.Integer, 4, ParameterDirection.Input)
                 Dim oConexion As New clsConexion
                 Eliminar_bd = oConexion.Ejecutar_Consulta(oSP)
                 oConexion.Cerrar_Conexion()

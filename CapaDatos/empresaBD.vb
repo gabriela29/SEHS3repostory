@@ -37,17 +37,20 @@ Namespace Dal
             Return objempresa
         End Function
 
-        Public Shared Function GetList(ByVal descripcion As String) As DataTable
+        Public Shared Function GetList(ByVal nruc As String, ByVal nnom As String) As DataTable
             Dim TempList As New DataTable
-            Dim oSP As New clsStored_Procedure("basic.paempresa_leer")
+            Dim vCadena As String
             Dim oConexion As New clsConexion
             Try
-                oSP.addParameter("innombre", descripcion, NpgsqlTypes.NpgsqlDbType.Varchar, 50, ParameterDirection.Input)
-                TempList = oConexion.Ejecutar_Consulta(oSP)
+                vCadena = "select * from basic.paempresa_leer("
+                vCadena = vCadena & " '" & nruc & "',"
+                vCadena = vCadena & " '" & nnom & "');"
+
+                TempList = oConexion.Ejecutar_Consulta(vCadena)
                 oConexion.Cerrar_Conexion()
             Finally
                 oConexion = Nothing
-                oSP = Nothing
+
             End Try
             Return TempList
         End Function

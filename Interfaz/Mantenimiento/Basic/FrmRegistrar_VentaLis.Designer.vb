@@ -205,6 +205,7 @@ Partial Class FrmRegistrar_VentaLis
         Me.txtLocaltionDoc3.Size = New System.Drawing.Size(48, 38)
         Me.txtLocaltionDoc3.TabIndex = 98
         Me.txtLocaltionDoc3.UseOsThemes = Infragistics.Win.DefaultableBoolean.[False]
+        Me.txtLocaltionDoc3.Visible = False
         '
         'UltraPictureBox1
         '

@@ -40,8 +40,8 @@ Partial Class FrmEmpresaLis
         Me.lbl = New Infragistics.Win.Misc.UltraLabel()
         Me.UltraLabel1 = New Infragistics.Win.Misc.UltraLabel()
         Me.btnBuscar = New Infragistics.Win.Misc.UltraButton()
-        Me.txtApe_Mat = New Infragistics.Win.UltraWinEditors.UltraTextEditor()
-        Me.RUC = New Infragistics.Win.UltraWinEditors.UltraTextEditor()
+        Me.txtnombre = New Infragistics.Win.UltraWinEditors.UltraTextEditor()
+        Me.txtruc = New Infragistics.Win.UltraWinEditors.UltraTextEditor()
         Me.lblBuscar = New Infragistics.Win.Misc.UltraLabel()
         Me.UltraLabel2 = New Infragistics.Win.Misc.UltraLabel()
         Me.TpCliente = New System.Windows.Forms.ToolStrip()
@@ -56,8 +56,8 @@ Partial Class FrmEmpresaLis
         Me.UltraGroupBox1 = New Infragistics.Win.Misc.UltraGroupBox()
         Me.txtLocaltionDoc2 = New Infragistics.Win.Misc.UltraButton()
         Me.UltraPictureBox1 = New Infragistics.Win.UltraWinEditors.UltraPictureBox()
-        CType(Me.txtApe_Mat, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.RUC, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.txtnombre, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.txtruc, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TpCliente.SuspendLayout()
         CType(Me.dgvListadoempresa, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.UltraGroupBox1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -93,7 +93,7 @@ Partial Class FrmEmpresaLis
         Me.UltraLabel1.Name = "UltraLabel1"
         Me.UltraLabel1.Size = New System.Drawing.Size(542, 27)
         Me.UltraLabel1.TabIndex = 89
-        Me.UltraLabel1.Text = "ADMINISTRACIÓN DE EMPRESAS"
+        Me.UltraLabel1.Text = "EMPRESA"
         '
         'btnBuscar
         '
@@ -111,35 +111,35 @@ Partial Class FrmEmpresaLis
         Me.btnBuscar.Text = "&Buscar"
         Me.btnBuscar.UseOsThemes = Infragistics.Win.DefaultableBoolean.[False]
         '
-        'txtApe_Mat
+        'txtnombre
         '
         Appearance5.ForeColor = System.Drawing.Color.Navy
-        Me.txtApe_Mat.Appearance = Appearance5
-        Me.txtApe_Mat.DisplayStyle = Infragistics.Win.EmbeddableElementDisplayStyle.Office2007
-        Me.txtApe_Mat.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtApe_Mat.Location = New System.Drawing.Point(294, 29)
-        Me.txtApe_Mat.MaxLength = 50
-        Me.txtApe_Mat.Name = "txtApe_Mat"
-        Me.txtApe_Mat.NullText = "Nombre"
+        Me.txtnombre.Appearance = Appearance5
+        Me.txtnombre.DisplayStyle = Infragistics.Win.EmbeddableElementDisplayStyle.Office2007
+        Me.txtnombre.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtnombre.Location = New System.Drawing.Point(294, 29)
+        Me.txtnombre.MaxLength = 50
+        Me.txtnombre.Name = "txtnombre"
+        Me.txtnombre.NullText = "Nombre"
         Appearance6.ForeColor = System.Drawing.Color.DarkGray
-        Me.txtApe_Mat.NullTextAppearance = Appearance6
-        Me.txtApe_Mat.Size = New System.Drawing.Size(225, 22)
-        Me.txtApe_Mat.TabIndex = 92
+        Me.txtnombre.NullTextAppearance = Appearance6
+        Me.txtnombre.Size = New System.Drawing.Size(225, 22)
+        Me.txtnombre.TabIndex = 92
         '
-        'RUC
+        'txtruc
         '
         Appearance7.ForeColor = System.Drawing.Color.Navy
-        Me.RUC.Appearance = Appearance7
-        Me.RUC.DisplayStyle = Infragistics.Win.EmbeddableElementDisplayStyle.Office2007
-        Me.RUC.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RUC.Location = New System.Drawing.Point(143, 29)
-        Me.RUC.MaxLength = 50
-        Me.RUC.Name = "RUC"
-        Me.RUC.NullText = "RUC"
+        Me.txtruc.Appearance = Appearance7
+        Me.txtruc.DisplayStyle = Infragistics.Win.EmbeddableElementDisplayStyle.Office2007
+        Me.txtruc.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtruc.Location = New System.Drawing.Point(143, 29)
+        Me.txtruc.MaxLength = 50
+        Me.txtruc.Name = "txtruc"
+        Me.txtruc.NullText = "RUC"
         Appearance8.ForeColor = System.Drawing.Color.DarkGray
-        Me.RUC.NullTextAppearance = Appearance8
-        Me.RUC.Size = New System.Drawing.Size(145, 22)
-        Me.RUC.TabIndex = 91
+        Me.txtruc.NullTextAppearance = Appearance8
+        Me.txtruc.Size = New System.Drawing.Size(145, 22)
+        Me.txtruc.TabIndex = 91
         '
         'lblBuscar
         '
@@ -308,8 +308,8 @@ Partial Class FrmEmpresaLis
         Me.Controls.Add(Me.UltraPictureBox1)
         Me.Controls.Add(Me.UltraGroupBox1)
         Me.Controls.Add(Me.btnBuscar)
-        Me.Controls.Add(Me.txtApe_Mat)
-        Me.Controls.Add(Me.RUC)
+        Me.Controls.Add(Me.txtnombre)
+        Me.Controls.Add(Me.txtruc)
         Me.Controls.Add(Me.lblBuscar)
         Me.Controls.Add(Me.UltraLabel1)
         Me.Controls.Add(Me.lbl)
@@ -317,8 +317,8 @@ Partial Class FrmEmpresaLis
         Me.Name = "FrmEmpresaLis"
         Me.Text = "Empresa"
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
-        CType(Me.txtApe_Mat, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.RUC, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.txtnombre, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.txtruc, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TpCliente.ResumeLayout(False)
         Me.TpCliente.PerformLayout()
         CType(Me.dgvListadoempresa, System.ComponentModel.ISupportInitialize).EndInit()
@@ -332,8 +332,8 @@ Partial Class FrmEmpresaLis
     Friend WithEvents lbl As Infragistics.Win.Misc.UltraLabel
     Friend WithEvents UltraLabel1 As Infragistics.Win.Misc.UltraLabel
     Friend WithEvents btnBuscar As Infragistics.Win.Misc.UltraButton
-    Friend WithEvents txtApe_Mat As Infragistics.Win.UltraWinEditors.UltraTextEditor
-    Friend WithEvents RUC As Infragistics.Win.UltraWinEditors.UltraTextEditor
+    Friend WithEvents txtnombre As Infragistics.Win.UltraWinEditors.UltraTextEditor
+    Friend WithEvents txtruc As Infragistics.Win.UltraWinEditors.UltraTextEditor
     Friend WithEvents lblBuscar As Infragistics.Win.Misc.UltraLabel
     Friend WithEvents UltraLabel2 As Infragistics.Win.Misc.UltraLabel
     Friend WithEvents TpCliente As ToolStrip

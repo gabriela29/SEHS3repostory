@@ -34,7 +34,7 @@ Public Class FrmEmpresaLis
     Public Function ListarEmpresa(ByVal Descripcion As String) As Boolean
         Dim objetos As New DataTable
         Try
-            dtlistaempresa = empresaManager.GetList(Descripcion)
+            dtlistaempresa = empresaManager.GetList(txtruc.Text, txtnombre.Text)
             dgvListadoempresa.DataSource = dtlistaempresa
 
             dgvListadoempresa.DataBind()
@@ -220,5 +220,7 @@ Public Class FrmEmpresaLis
 
     End Sub
 
-
+    Private Sub btnBuscar_Click(sender As Object, e As EventArgs) Handles btnBuscar.Click
+        Call ListarEmpresa("")
+    End Sub
 End Class

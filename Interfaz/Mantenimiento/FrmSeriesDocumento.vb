@@ -20,29 +20,11 @@ Public Class FrmSeriesDocumento
         End If
     End Sub
 
-    Private Sub llenar_combos()
-        Try
-            With cboEmpresa
-                .DataSource = Nothing
-                .DataSource = empresaManager.GetList("")
-                .DataBind()
-                .ValueMember = "empresaid"
-                .DisplayMember = "nombre"
-                .MinDropDownItems = 2
-                .MaxDropDownItems = 4
-                If .Rows.Count > 0 Then
-                    .SelectedRow = cboEmpresa.GetRow(UltraWinGrid.ChildRow.First)
-                End If
-            End With
-        Catch ex As Exception
-            MsgBox(ex.Message, MsgBoxStyle.Exclamation, "DSIAM")
-        End Try
 
-    End Sub
 
     Private Sub FrmSeriesDocumento_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         IdUsuario = GestionSeguridadManager.idUsuario
-        Call llenar_combos()
+
         Call ListarCondicion("")
 
     End Sub
