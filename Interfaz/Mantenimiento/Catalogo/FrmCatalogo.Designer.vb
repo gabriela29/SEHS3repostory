@@ -93,6 +93,7 @@ Partial Class FrmCatalogo
         Me.btn_Banco = New System.Windows.Forms.Button()
         Me.btnempresa = New System.Windows.Forms.Button()
         Me.btnregistro_ventas = New System.Windows.Forms.Button()
+        Me.btnim = New System.Windows.Forms.Button()
         Me.UltraTabPageControl1.SuspendLayout()
         CType(Me.dgvCondicion, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.UltraGroupBox4, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -321,7 +322,7 @@ Partial Class FrmCatalogo
         Me.UltraGroupBox1.HeaderPosition = Infragistics.Win.Misc.GroupBoxHeaderPosition.BottomOnBorder
         Me.UltraGroupBox1.Location = New System.Drawing.Point(265, 65)
         Me.UltraGroupBox1.Name = "UltraGroupBox1"
-        Me.UltraGroupBox1.Size = New System.Drawing.Size(575, 397)
+        Me.UltraGroupBox1.Size = New System.Drawing.Size(594, 397)
         Me.UltraGroupBox1.TabIndex = 66
         '
         'lbl
@@ -349,7 +350,7 @@ Partial Class FrmCatalogo
         Me.dgvListado.DisplayLayout.BandsSerializer.Add(UltraGridBand1)
         Me.dgvListado.Location = New System.Drawing.Point(6, 30)
         Me.dgvListado.Name = "dgvListado"
-        Me.dgvListado.Size = New System.Drawing.Size(562, 340)
+        Me.dgvListado.Size = New System.Drawing.Size(581, 340)
         Me.dgvListado.TabIndex = 22
         Me.dgvListado.UpdateMode = Infragistics.Win.UltraWinGrid.UpdateMode.OnCellChangeOrLostFocus
         '
@@ -361,7 +362,7 @@ Partial Class FrmCatalogo
         Me.TpCliente.Location = New System.Drawing.Point(3, 3)
         Me.TpCliente.Name = "TpCliente"
         Me.TpCliente.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional
-        Me.TpCliente.Size = New System.Drawing.Size(569, 25)
+        Me.TpCliente.Size = New System.Drawing.Size(588, 25)
         Me.TpCliente.TabIndex = 21
         Me.TpCliente.Text = "ToolStrip2"
         '
@@ -461,7 +462,7 @@ Partial Class FrmCatalogo
         Me.picAjaxBig.Image = CType(resources.GetObject("picAjaxBig.Image"), System.Drawing.Image)
         Me.picAjaxBig.Location = New System.Drawing.Point(11, 6)
         Me.picAjaxBig.Name = "picAjaxBig"
-        Me.picAjaxBig.Size = New System.Drawing.Size(551, 359)
+        Me.picAjaxBig.Size = New System.Drawing.Size(570, 359)
         Me.picAjaxBig.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage
         Me.picAjaxBig.TabIndex = 85
         Me.picAjaxBig.TabStop = False
@@ -483,7 +484,7 @@ Partial Class FrmCatalogo
         Me.UltraLabel1.Font = New System.Drawing.Font("Verdana", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.UltraLabel1.Location = New System.Drawing.Point(87, 1)
         Me.UltraLabel1.Name = "UltraLabel1"
-        Me.UltraLabel1.Size = New System.Drawing.Size(753, 35)
+        Me.UltraLabel1.Size = New System.Drawing.Size(772, 35)
         Me.UltraLabel1.TabIndex = 67
         Me.UltraLabel1.Text = "CATALOGO DE PRODUCTOS"
         '
@@ -529,7 +530,7 @@ Partial Class FrmCatalogo
         '
         Me.btncategoria.BackColor = System.Drawing.Color.Maroon
         Me.btncategoria.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.btncategoria.Location = New System.Drawing.Point(397, 4)
+        Me.btncategoria.Location = New System.Drawing.Point(381, 4)
         Me.btncategoria.Name = "btncategoria"
         Me.btncategoria.Size = New System.Drawing.Size(84, 32)
         Me.btncategoria.TabIndex = 91
@@ -540,7 +541,7 @@ Partial Class FrmCatalogo
         '
         Me.btn_Banco.BackColor = System.Drawing.Color.Salmon
         Me.btn_Banco.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.btn_Banco.Location = New System.Drawing.Point(487, 4)
+        Me.btn_Banco.Location = New System.Drawing.Point(471, 4)
         Me.btn_Banco.Name = "btn_Banco"
         Me.btn_Banco.Size = New System.Drawing.Size(84, 32)
         Me.btn_Banco.TabIndex = 92
@@ -551,7 +552,7 @@ Partial Class FrmCatalogo
         '
         Me.btnempresa.BackColor = System.Drawing.Color.Gold
         Me.btnempresa.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.btnempresa.Location = New System.Drawing.Point(577, 4)
+        Me.btnempresa.Location = New System.Drawing.Point(561, 4)
         Me.btnempresa.Name = "btnempresa"
         Me.btnempresa.Size = New System.Drawing.Size(84, 32)
         Me.btnempresa.TabIndex = 93
@@ -562,19 +563,31 @@ Partial Class FrmCatalogo
         '
         Me.btnregistro_ventas.BackColor = System.Drawing.Color.MediumSeaGreen
         Me.btnregistro_ventas.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.btnregistro_ventas.Location = New System.Drawing.Point(667, 4)
+        Me.btnregistro_ventas.Location = New System.Drawing.Point(651, 4)
         Me.btnregistro_ventas.Name = "btnregistro_ventas"
         Me.btnregistro_ventas.Size = New System.Drawing.Size(119, 32)
         Me.btnregistro_ventas.TabIndex = 94
         Me.btnregistro_ventas.Text = "REGISTRO-VENTAS"
         Me.btnregistro_ventas.UseVisualStyleBackColor = False
         '
+        'btnim
+        '
+        Me.btnim.BackColor = System.Drawing.Color.DarkSlateGray
+        Me.btnim.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.btnim.Location = New System.Drawing.Point(776, 4)
+        Me.btnim.Name = "btnim"
+        Me.btnim.Size = New System.Drawing.Size(76, 32)
+        Me.btnim.TabIndex = 95
+        Me.btnim.Text = "IMPORTAR"
+        Me.btnim.UseVisualStyleBackColor = False
+        '
         'FrmCatalogo
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
-        Me.ClientSize = New System.Drawing.Size(839, 464)
+        Me.ClientSize = New System.Drawing.Size(858, 464)
+        Me.Controls.Add(Me.btnim)
         Me.Controls.Add(Me.btnregistro_ventas)
         Me.Controls.Add(Me.btnempresa)
         Me.Controls.Add(Me.btn_Banco)
@@ -646,4 +659,5 @@ Partial Class FrmCatalogo
     Friend WithEvents btn_Banco As Button
     Friend WithEvents btnempresa As Button
     Friend WithEvents btnregistro_ventas As Button
+    Friend WithEvents btnim As Button
 End Class

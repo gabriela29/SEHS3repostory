@@ -23,30 +23,30 @@ Partial Class FrmStocConsolidado
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim Appearance4 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
-        Dim Appearance11 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
-        Dim Appearance12 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
-        Dim Appearance24 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
-        Dim Appearance5 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
-        Dim Appearance23 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
-        Dim Appearance16 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
-        Dim Appearance17 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
+        Dim Appearance1 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
+        Dim Appearance2 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
         Dim Appearance3 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
-        Dim Appearance18 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
+        Dim Appearance4 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
+        Dim Appearance5 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
+        Dim Appearance6 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
+        Dim Appearance7 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
         Dim Appearance8 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
         Dim Appearance9 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
-        Dim Appearance22 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
-        Dim Appearance6 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
         Dim Appearance10 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
-        Dim Appearance2 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
+        Dim Appearance11 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
+        Dim Appearance12 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
+        Dim Appearance13 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
+        Dim Appearance14 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
         Dim Appearance15 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
+        Dim Appearance16 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
+        Dim Appearance17 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
+        Dim Appearance18 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
         Dim Appearance19 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
         Dim Appearance20 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
-        Dim Appearance21 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmStocConsolidado))
-        Dim Appearance7 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
-        Dim Appearance1 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
-        Dim Appearance14 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
+        Dim Appearance21 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
+        Dim Appearance23 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
+        Dim Appearance22 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
         Me.gpCriterios = New Infragistics.Win.Misc.UltraGroupBox()
         Me.cboMes = New Infragistics.Win.UltraWinGrid.UltraCombo()
         Me.btnPDF = New System.Windows.Forms.Button()
@@ -78,9 +78,9 @@ Partial Class FrmStocConsolidado
         '
         Me.gpCriterios.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Appearance4.BackColor = System.Drawing.Color.White
-        Appearance4.BackGradientStyle = Infragistics.Win.GradientStyle.GlassBottom20
-        Me.gpCriterios.ContentAreaAppearance = Appearance4
+        Appearance1.BackColor = System.Drawing.Color.White
+        Appearance1.BackGradientStyle = Infragistics.Win.GradientStyle.GlassBottom20
+        Me.gpCriterios.ContentAreaAppearance = Appearance1
         Me.gpCriterios.Controls.Add(Me.cboMes)
         Me.gpCriterios.Controls.Add(Me.btnPDF)
         Me.gpCriterios.Controls.Add(Me.Button1)
@@ -97,14 +97,13 @@ Partial Class FrmStocConsolidado
         '
         'cboMes
         '
-        Appearance11.BackColor = System.Drawing.Color.White
-        Me.cboMes.Appearance = Appearance11
+        Appearance2.BackColor = System.Drawing.Color.White
+        Me.cboMes.Appearance = Appearance2
         Me.cboMes.AutoCompleteMode = Infragistics.Win.AutoCompleteMode.None
-        Me.cboMes.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal
-        Appearance12.BackColor = System.Drawing.Color.White
-        Me.cboMes.DisplayLayout.Appearance = Appearance12
-        Appearance24.BackColor = System.Drawing.Color.Transparent
-        Me.cboMes.DisplayLayout.Override.CardAreaAppearance = Appearance24
+        Appearance3.BackColor = System.Drawing.Color.White
+        Me.cboMes.DisplayLayout.Appearance = Appearance3
+        Appearance4.BackColor = System.Drawing.Color.Transparent
+        Me.cboMes.DisplayLayout.Override.CardAreaAppearance = Appearance4
         Appearance5.BackColor = System.Drawing.Color.White
         Appearance5.BackColor2 = System.Drawing.Color.CornflowerBlue
         Appearance5.BackGradientStyle = Infragistics.Win.GradientStyle.Vertical
@@ -114,14 +113,14 @@ Partial Class FrmStocConsolidado
         Appearance5.ForeColor = System.Drawing.Color.White
         Appearance5.ThemedElementAlpha = Infragistics.Win.Alpha.Transparent
         Me.cboMes.DisplayLayout.Override.HeaderAppearance = Appearance5
-        Appearance23.BackColor = System.Drawing.Color.FromArgb(CType(CType(168, Byte), Integer), CType(CType(167, Byte), Integer), CType(CType(191, Byte), Integer))
-        Appearance23.BackColor2 = System.Drawing.Color.FromArgb(CType(CType(112, Byte), Integer), CType(CType(111, Byte), Integer), CType(CType(145, Byte), Integer))
-        Appearance23.BackGradientStyle = Infragistics.Win.GradientStyle.Vertical
-        Me.cboMes.DisplayLayout.Override.RowSelectorAppearance = Appearance23
-        Appearance16.BackColor = System.Drawing.Color.FromArgb(CType(CType(251, Byte), Integer), CType(CType(230, Byte), Integer), CType(CType(148, Byte), Integer))
-        Appearance16.BackColor2 = System.Drawing.Color.FromArgb(CType(CType(238, Byte), Integer), CType(CType(149, Byte), Integer), CType(CType(21, Byte), Integer))
-        Appearance16.BackGradientStyle = Infragistics.Win.GradientStyle.Vertical
-        Me.cboMes.DisplayLayout.Override.SelectedRowAppearance = Appearance16
+        Appearance6.BackColor = System.Drawing.Color.FromArgb(CType(CType(168, Byte), Integer), CType(CType(167, Byte), Integer), CType(CType(191, Byte), Integer))
+        Appearance6.BackColor2 = System.Drawing.Color.FromArgb(CType(CType(112, Byte), Integer), CType(CType(111, Byte), Integer), CType(CType(145, Byte), Integer))
+        Appearance6.BackGradientStyle = Infragistics.Win.GradientStyle.Vertical
+        Me.cboMes.DisplayLayout.Override.RowSelectorAppearance = Appearance6
+        Appearance7.BackColor = System.Drawing.Color.FromArgb(CType(CType(251, Byte), Integer), CType(CType(230, Byte), Integer), CType(CType(148, Byte), Integer))
+        Appearance7.BackColor2 = System.Drawing.Color.FromArgb(CType(CType(238, Byte), Integer), CType(CType(149, Byte), Integer), CType(CType(21, Byte), Integer))
+        Appearance7.BackGradientStyle = Infragistics.Win.GradientStyle.Vertical
+        Me.cboMes.DisplayLayout.Override.SelectedRowAppearance = Appearance7
         Me.cboMes.DisplayStyle = Infragistics.Win.EmbeddableElementDisplayStyle.Office2007
         Me.cboMes.DropDownStyle = Infragistics.Win.UltraWinGrid.UltraComboStyle.DropDownList
         Me.cboMes.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -160,31 +159,30 @@ Partial Class FrmStocConsolidado
         '
         'cboAnio
         '
-        Appearance17.BackColor = System.Drawing.Color.White
-        Me.cboAnio.Appearance = Appearance17
-        Me.cboAnio.AutoCompleteMode = Infragistics.Win.AutoCompleteMode.None
-        Me.cboAnio.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal
-        Appearance3.BackColor = System.Drawing.Color.White
-        Me.cboAnio.DisplayLayout.Appearance = Appearance3
-        Appearance18.BackColor = System.Drawing.Color.Transparent
-        Me.cboAnio.DisplayLayout.Override.CardAreaAppearance = Appearance18
         Appearance8.BackColor = System.Drawing.Color.White
-        Appearance8.BackColor2 = System.Drawing.Color.CornflowerBlue
-        Appearance8.BackGradientStyle = Infragistics.Win.GradientStyle.Vertical
-        Appearance8.FontData.BoldAsString = "True"
-        Appearance8.FontData.Name = "Arial"
-        Appearance8.FontData.SizeInPoints = 10.0!
-        Appearance8.ForeColor = System.Drawing.Color.White
-        Appearance8.ThemedElementAlpha = Infragistics.Win.Alpha.Transparent
-        Me.cboAnio.DisplayLayout.Override.HeaderAppearance = Appearance8
-        Appearance9.BackColor = System.Drawing.Color.FromArgb(CType(CType(168, Byte), Integer), CType(CType(167, Byte), Integer), CType(CType(191, Byte), Integer))
-        Appearance9.BackColor2 = System.Drawing.Color.FromArgb(CType(CType(112, Byte), Integer), CType(CType(111, Byte), Integer), CType(CType(145, Byte), Integer))
-        Appearance9.BackGradientStyle = Infragistics.Win.GradientStyle.Vertical
-        Me.cboAnio.DisplayLayout.Override.RowSelectorAppearance = Appearance9
-        Appearance22.BackColor = System.Drawing.Color.FromArgb(CType(CType(251, Byte), Integer), CType(CType(230, Byte), Integer), CType(CType(148, Byte), Integer))
-        Appearance22.BackColor2 = System.Drawing.Color.FromArgb(CType(CType(238, Byte), Integer), CType(CType(149, Byte), Integer), CType(CType(21, Byte), Integer))
-        Appearance22.BackGradientStyle = Infragistics.Win.GradientStyle.Vertical
-        Me.cboAnio.DisplayLayout.Override.SelectedRowAppearance = Appearance22
+        Me.cboAnio.Appearance = Appearance8
+        Me.cboAnio.AutoCompleteMode = Infragistics.Win.AutoCompleteMode.None
+        Appearance9.BackColor = System.Drawing.Color.White
+        Me.cboAnio.DisplayLayout.Appearance = Appearance9
+        Appearance10.BackColor = System.Drawing.Color.Transparent
+        Me.cboAnio.DisplayLayout.Override.CardAreaAppearance = Appearance10
+        Appearance11.BackColor = System.Drawing.Color.White
+        Appearance11.BackColor2 = System.Drawing.Color.CornflowerBlue
+        Appearance11.BackGradientStyle = Infragistics.Win.GradientStyle.Vertical
+        Appearance11.FontData.BoldAsString = "True"
+        Appearance11.FontData.Name = "Arial"
+        Appearance11.FontData.SizeInPoints = 10.0!
+        Appearance11.ForeColor = System.Drawing.Color.White
+        Appearance11.ThemedElementAlpha = Infragistics.Win.Alpha.Transparent
+        Me.cboAnio.DisplayLayout.Override.HeaderAppearance = Appearance11
+        Appearance12.BackColor = System.Drawing.Color.FromArgb(CType(CType(168, Byte), Integer), CType(CType(167, Byte), Integer), CType(CType(191, Byte), Integer))
+        Appearance12.BackColor2 = System.Drawing.Color.FromArgb(CType(CType(112, Byte), Integer), CType(CType(111, Byte), Integer), CType(CType(145, Byte), Integer))
+        Appearance12.BackGradientStyle = Infragistics.Win.GradientStyle.Vertical
+        Me.cboAnio.DisplayLayout.Override.RowSelectorAppearance = Appearance12
+        Appearance13.BackColor = System.Drawing.Color.FromArgb(CType(CType(251, Byte), Integer), CType(CType(230, Byte), Integer), CType(CType(148, Byte), Integer))
+        Appearance13.BackColor2 = System.Drawing.Color.FromArgb(CType(CType(238, Byte), Integer), CType(CType(149, Byte), Integer), CType(CType(21, Byte), Integer))
+        Appearance13.BackGradientStyle = Infragistics.Win.GradientStyle.Vertical
+        Me.cboAnio.DisplayLayout.Override.SelectedRowAppearance = Appearance13
         Me.cboAnio.DisplayStyle = Infragistics.Win.EmbeddableElementDisplayStyle.Office2007
         Me.cboAnio.DropDownStyle = Infragistics.Win.UltraWinGrid.UltraComboStyle.DropDownList
         Me.cboAnio.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -209,46 +207,45 @@ Partial Class FrmStocConsolidado
         '
         'UltraLabel12
         '
-        Appearance6.BackColorAlpha = Infragistics.Win.Alpha.Transparent
-        Appearance6.ForeColor = System.Drawing.SystemColors.Desktop
-        Appearance6.TextVAlignAsString = "Top"
-        Me.UltraLabel12.Appearance = Appearance6
+        Appearance14.BackColorAlpha = Infragistics.Win.Alpha.Transparent
+        Appearance14.ForeColor = System.Drawing.SystemColors.Desktop
+        Appearance14.TextVAlignAsString = "Top"
+        Me.UltraLabel12.Appearance = Appearance14
         Me.UltraLabel12.Font = New System.Drawing.Font("Arial", 9.0!, System.Drawing.FontStyle.Bold)
         Me.UltraLabel12.Location = New System.Drawing.Point(68, 5)
         Me.UltraLabel12.Name = "UltraLabel12"
         Me.UltraLabel12.Size = New System.Drawing.Size(497, 15)
         Me.UltraLabel12.TabIndex = 31
-        Me.UltraLabel12.Text = "   Unidad Negocio                                            Mes                 " & _
+        Me.UltraLabel12.Text = "   Unidad Negocio                                            Mes                 " &
     "        Año"
         '
         'cboUnidad
         '
-        Appearance10.BackColor = System.Drawing.Color.LemonChiffon
-        Appearance10.BackColor2 = System.Drawing.Color.White
-        Appearance10.BackGradientStyle = Infragistics.Win.GradientStyle.GlassBottom20Bright
-        Me.cboUnidad.Appearance = Appearance10
-        Me.cboUnidad.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal
-        Appearance2.BackColor = System.Drawing.Color.White
-        Me.cboUnidad.DisplayLayout.Appearance = Appearance2
-        Appearance15.BackColor = System.Drawing.Color.Transparent
-        Me.cboUnidad.DisplayLayout.Override.CardAreaAppearance = Appearance15
-        Appearance19.BackColor = System.Drawing.Color.White
-        Appearance19.BackColor2 = System.Drawing.Color.CornflowerBlue
+        Appearance15.BackColor = System.Drawing.Color.LemonChiffon
+        Appearance15.BackColor2 = System.Drawing.Color.White
+        Appearance15.BackGradientStyle = Infragistics.Win.GradientStyle.GlassBottom20Bright
+        Me.cboUnidad.Appearance = Appearance15
+        Appearance16.BackColor = System.Drawing.Color.White
+        Me.cboUnidad.DisplayLayout.Appearance = Appearance16
+        Appearance17.BackColor = System.Drawing.Color.Transparent
+        Me.cboUnidad.DisplayLayout.Override.CardAreaAppearance = Appearance17
+        Appearance18.BackColor = System.Drawing.Color.White
+        Appearance18.BackColor2 = System.Drawing.Color.CornflowerBlue
+        Appearance18.BackGradientStyle = Infragistics.Win.GradientStyle.Vertical
+        Appearance18.FontData.BoldAsString = "True"
+        Appearance18.FontData.Name = "Arial"
+        Appearance18.FontData.SizeInPoints = 10.0!
+        Appearance18.ForeColor = System.Drawing.Color.White
+        Appearance18.ThemedElementAlpha = Infragistics.Win.Alpha.Transparent
+        Me.cboUnidad.DisplayLayout.Override.HeaderAppearance = Appearance18
+        Appearance19.BackColor = System.Drawing.Color.FromArgb(CType(CType(168, Byte), Integer), CType(CType(167, Byte), Integer), CType(CType(191, Byte), Integer))
+        Appearance19.BackColor2 = System.Drawing.Color.FromArgb(CType(CType(112, Byte), Integer), CType(CType(111, Byte), Integer), CType(CType(145, Byte), Integer))
         Appearance19.BackGradientStyle = Infragistics.Win.GradientStyle.Vertical
-        Appearance19.FontData.BoldAsString = "True"
-        Appearance19.FontData.Name = "Arial"
-        Appearance19.FontData.SizeInPoints = 10.0!
-        Appearance19.ForeColor = System.Drawing.Color.White
-        Appearance19.ThemedElementAlpha = Infragistics.Win.Alpha.Transparent
-        Me.cboUnidad.DisplayLayout.Override.HeaderAppearance = Appearance19
-        Appearance20.BackColor = System.Drawing.Color.FromArgb(CType(CType(168, Byte), Integer), CType(CType(167, Byte), Integer), CType(CType(191, Byte), Integer))
-        Appearance20.BackColor2 = System.Drawing.Color.FromArgb(CType(CType(112, Byte), Integer), CType(CType(111, Byte), Integer), CType(CType(145, Byte), Integer))
+        Me.cboUnidad.DisplayLayout.Override.RowSelectorAppearance = Appearance19
+        Appearance20.BackColor = System.Drawing.Color.FromArgb(CType(CType(251, Byte), Integer), CType(CType(230, Byte), Integer), CType(CType(148, Byte), Integer))
+        Appearance20.BackColor2 = System.Drawing.Color.FromArgb(CType(CType(238, Byte), Integer), CType(CType(149, Byte), Integer), CType(CType(21, Byte), Integer))
         Appearance20.BackGradientStyle = Infragistics.Win.GradientStyle.Vertical
-        Me.cboUnidad.DisplayLayout.Override.RowSelectorAppearance = Appearance20
-        Appearance21.BackColor = System.Drawing.Color.FromArgb(CType(CType(251, Byte), Integer), CType(CType(230, Byte), Integer), CType(CType(148, Byte), Integer))
-        Appearance21.BackColor2 = System.Drawing.Color.FromArgb(CType(CType(238, Byte), Integer), CType(CType(149, Byte), Integer), CType(CType(21, Byte), Integer))
-        Appearance21.BackGradientStyle = Infragistics.Win.GradientStyle.Vertical
-        Me.cboUnidad.DisplayLayout.Override.SelectedRowAppearance = Appearance21
+        Me.cboUnidad.DisplayLayout.Override.SelectedRowAppearance = Appearance20
         Me.cboUnidad.DisplayStyle = Infragistics.Win.EmbeddableElementDisplayStyle.Office2007
         Me.cboUnidad.DropDownStyle = Infragistics.Win.UltraWinGrid.UltraComboStyle.DropDownList
         Me.cboUnidad.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -274,17 +271,17 @@ Partial Class FrmStocConsolidado
         Me.UltraGroupBox1.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Appearance7.BackColor = System.Drawing.Color.White
-        Appearance7.BackColor2 = System.Drawing.Color.White
-        Appearance7.BackGradientStyle = Infragistics.Win.GradientStyle.ForwardDiagonal
-        Me.UltraGroupBox1.ContentAreaAppearance = Appearance7
+        Appearance21.BackColor = System.Drawing.Color.White
+        Appearance21.BackColor2 = System.Drawing.Color.White
+        Appearance21.BackGradientStyle = Infragistics.Win.GradientStyle.ForwardDiagonal
+        Me.UltraGroupBox1.ContentAreaAppearance = Appearance21
         Me.UltraGroupBox1.Controls.Add(Me.lbl)
         Me.UltraGroupBox1.Controls.Add(Me.picAjaxBig)
         Me.UltraGroupBox1.Controls.Add(Me.dgvListado)
-        Appearance1.BackColor = System.Drawing.Color.LightBlue
-        Appearance1.BackColor2 = System.Drawing.Color.White
-        Appearance1.BackGradientStyle = Infragistics.Win.GradientStyle.Vertical
-        Me.UltraGroupBox1.HeaderAppearance = Appearance1
+        Appearance23.BackColor = System.Drawing.Color.LightBlue
+        Appearance23.BackColor2 = System.Drawing.Color.White
+        Appearance23.BackGradientStyle = Infragistics.Win.GradientStyle.Vertical
+        Me.UltraGroupBox1.HeaderAppearance = Appearance23
         Me.UltraGroupBox1.HeaderPosition = Infragistics.Win.Misc.GroupBoxHeaderPosition.BottomOnBorder
         Me.UltraGroupBox1.Location = New System.Drawing.Point(-6, 121)
         Me.UltraGroupBox1.Name = "UltraGroupBox1"
@@ -294,10 +291,10 @@ Partial Class FrmStocConsolidado
         'lbl
         '
         Me.lbl.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Appearance14.BackColorAlpha = Infragistics.Win.Alpha.Transparent
-        Appearance14.ForeColor = System.Drawing.Color.LightBlue
-        Appearance14.TextVAlignAsString = "Top"
-        Me.lbl.Appearance = Appearance14
+        Appearance22.BackColorAlpha = Infragistics.Win.Alpha.Transparent
+        Appearance22.ForeColor = System.Drawing.Color.LightBlue
+        Appearance22.TextVAlignAsString = "Top"
+        Me.lbl.Appearance = Appearance22
         Me.lbl.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lbl.Location = New System.Drawing.Point(12, 328)
         Me.lbl.Name = "lbl"
@@ -329,6 +326,9 @@ Partial Class FrmStocConsolidado
         Me.dgvListado.Name = "dgvListado"
         Me.dgvListado.Size = New System.Drawing.Size(727, 316)
         Me.dgvListado.TabIndex = 87
+        '
+        'bwListado
+        '
         '
         'FrmStocConsolidado
         '

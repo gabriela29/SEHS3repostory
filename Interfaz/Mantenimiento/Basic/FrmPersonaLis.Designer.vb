@@ -88,6 +88,7 @@ Partial Class FrmPersonaLis
         Me.lbl = New Infragistics.Win.Misc.UltraLabel()
         Me.UltraGroupBox1 = New Infragistics.Win.Misc.UltraGroupBox()
         Me.TpCliente = New System.Windows.Forms.ToolStrip()
+        Me.ToolStripButton1 = New System.Windows.Forms.ToolStripButton()
         Me.UltraTabPageControl1.SuspendLayout()
         CType(Me.dgvCondicion, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.txtBuscar, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -507,13 +508,22 @@ Partial Class FrmPersonaLis
         '
         Me.TpCliente.BackColor = System.Drawing.Color.White
         Me.TpCliente.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden
-        Me.TpCliente.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.TpNuevo, Me.TpModificar, Me.TpEliminar, Me.ToolStripSeparator1, Me.tsReporte, Me.ToolStripSeparator3, Me.tpCerrar})
+        Me.TpCliente.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.TpNuevo, Me.TpModificar, Me.TpEliminar, Me.ToolStripSeparator1, Me.tsReporte, Me.ToolStripSeparator3, Me.tpCerrar, Me.ToolStripButton1})
         Me.TpCliente.Location = New System.Drawing.Point(3, 3)
         Me.TpCliente.Name = "TpCliente"
         Me.TpCliente.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional
         Me.TpCliente.Size = New System.Drawing.Size(515, 25)
         Me.TpCliente.TabIndex = 21
         Me.TpCliente.Text = "ToolStrip2"
+        '
+        'ToolStripButton1
+        '
+        Me.ToolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.ToolStripButton1.Image = CType(resources.GetObject("ToolStripButton1.Image"), System.Drawing.Image)
+        Me.ToolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.ToolStripButton1.Name = "ToolStripButton1"
+        Me.ToolStripButton1.Size = New System.Drawing.Size(23, 22)
+        Me.ToolStripButton1.Text = "ToolStripButton1"
         '
         'FrmPersonaLis
         '
@@ -583,4 +593,5 @@ Partial Class FrmPersonaLis
     Friend WithEvents lbl As Infragistics.Win.Misc.UltraLabel
     Friend WithEvents UltraGroupBox1 As Infragistics.Win.Misc.UltraGroupBox
     Friend WithEvents TpCliente As ToolStrip
+    Friend WithEvents ToolStripButton1 As ToolStripButton
 End Class

@@ -189,9 +189,7 @@ Public Class FrmPersonaLis
         Call ListarCondicion()
     End Sub
 
-    Private Sub tsReporte_Click(sender As Object, e As EventArgs) Handles tsReporte.Click
 
-    End Sub
 
     Private Sub TpModificar_Click(sender As Object, e As EventArgs) Handles TpModificar.Click
         If dgvListado.Rows.Count > 0 Then

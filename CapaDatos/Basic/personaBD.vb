@@ -50,7 +50,7 @@ Namespace Dal
                 vConsulta = vConsulta & " '" & vnombre & "',"
                 vConsulta = vConsulta & " '" & vproceso & "',"
                 vConsulta = vConsulta & " " & IIf(varrrol.Trim = "", "null", varrrol) & ","
-                vConsulta = vConsulta & " " & vfilas & ","
+                vConsulta = vConsulta & " " & vfilas & ",gab"
                 vConsulta = vConsulta & " " & vpersonaid & ");"
 
                 TempList = oConexion.Ejecutar_Consulta(vConsulta)

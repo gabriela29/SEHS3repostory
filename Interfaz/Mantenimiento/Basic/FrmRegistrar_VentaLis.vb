@@ -64,7 +64,7 @@ Public Class FrmRegistrar_VentaLis
 
 
             Else
-                _codigo = 0 ''''aqui
+                _codigo = 0
 
             End If
         End If

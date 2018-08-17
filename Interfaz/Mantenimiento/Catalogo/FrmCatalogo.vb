@@ -378,6 +378,12 @@ Public Class FrmCatalogo
         frm.ShowDialog()
     End Sub
 
+    Private Sub btnim_Click(sender As Object, e As EventArgs) Handles btnim.Click
+        Dim frm As importar = New importar
+        frm.swNuevoimport = True
+        frm.ShowDialog()
+    End Sub
+
     Private Sub tsReporte_Click(sender As Object, e As EventArgs) Handles tsReporte.Click
         Call LibreriasFormularios.Exportar_UltraGrid_Excel(dgvListado, utExcel, "Asistente.xls")
     End Sub

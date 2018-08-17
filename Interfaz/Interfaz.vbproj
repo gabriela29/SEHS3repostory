@@ -489,6 +489,12 @@
     <Compile Include="Mantenimiento\Catalogo\FrmProducto_Ubicacion.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Prueba\importar.Designer.vb">
+      <DependentUpon>importar.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Prueba\importar.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Reportes\caja\test.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -2141,6 +2147,9 @@
       <DependentUpon>FrmRegistro_MB.vb</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="Prueba\importar.resx">
+      <DependentUpon>importar.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Reportes\caja\rptDemo.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>rptDemo.vb</LastGenOutput>
@@ -2722,6 +2731,10 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\CapaDatos\CapaDatosPostgresql.vbproj">
+      <Project>{69942C33-CC16-4620-85F8-BD3B13BE7B2C}</Project>
+      <Name>CapaDatosPostgresql</Name>
+    </ProjectReference>
     <ProjectReference Include="..\CapaObjetos\CapaObjetosNegocio.vbproj">
       <Project>{4CD8BDF4-7EF1-4958-9150-245D208A072C}</Project>
       <Name>CapaObjetosNegocio</Name>
