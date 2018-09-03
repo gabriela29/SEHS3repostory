@@ -292,7 +292,6 @@ Namespace Dal
                 oSP.addParameter("vano", vAno, NpgsqlTypes.NpgsqlDbType.Integer, 4, ParameterDirection.Input)
                 oSP.addParameter("valmacen", vCodigo_Almacen, NpgsqlTypes.NpgsqlDbType.Integer, 4, ParameterDirection.Input)
                 oSP.addParameter("vlimite", vlimite, NpgsqlTypes.NpgsqlDbType.Integer, 4, ParameterDirection.Input)
-
                 oSP.addParameter("vnombre_presentacion", vNombre_Presentacion, NpgsqlTypes.NpgsqlDbType.Varchar, 50, ParameterDirection.Input)
                 oSP.addParameter("vnombre_categoria", vNombre_Categoria, NpgsqlTypes.NpgsqlDbType.Varchar, 50, ParameterDirection.Input)
                 oSP.addParameter("vcodigo_producto", vCodigo_Producto, NpgsqlTypes.NpgsqlDbType.Integer, 4, ParameterDirection.Input)

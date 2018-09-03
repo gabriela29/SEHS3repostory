@@ -75,6 +75,7 @@ Partial Class MDIMenu
         Me.DocumentContainer1 = New Telerik.WinControls.UI.Docking.DocumentContainer()
         Me.RadDropDownButton1 = New Telerik.WinControls.UI.RadDropDownButton()
         Me.ToolTabStrip2 = New Telerik.WinControls.UI.Docking.ToolTabStrip()
+        Me.ContextMenuStrip1 = New System.Windows.Forms.ContextMenuStrip(Me.components)
         Me.StatusStrip.SuspendLayout()
         CType(Me.UTBManager1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadDock1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -351,7 +352,7 @@ Partial Class MDIMenu
         '
         Me.RadDock1.RootElement.AccessibleDescription = Nothing
         Me.RadDock1.RootElement.AccessibleName = Nothing
-        Me.RadDock1.RootElement.ControlBounds = New System.Drawing.Rectangle(0, 0, 200, 200)
+        Me.RadDock1.RootElement.ControlBounds = New System.Drawing.Rectangle(4, 160, 200, 200)
         Me.RadDock1.RootElement.MinSize = New System.Drawing.Size(25, 25)
         Me.RadDock1.RootElement.Padding = New System.Windows.Forms.Padding(5)
         Me.RadDock1.Size = New System.Drawing.Size(914, 388)
@@ -437,7 +438,7 @@ Partial Class MDIMenu
         '
         Me.ToolTabStrip1.RootElement.AccessibleDescription = Nothing
         Me.ToolTabStrip1.RootElement.AccessibleName = Nothing
-        Me.ToolTabStrip1.RootElement.ControlBounds = New System.Drawing.Rectangle(0, 0, 200, 200)
+        Me.ToolTabStrip1.RootElement.ControlBounds = New System.Drawing.Rectangle(5, 5, 200, 200)
         Me.ToolTabStrip1.RootElement.MinSize = New System.Drawing.Size(25, 25)
         Me.ToolTabStrip1.SelectedIndex = 0
         Me.ToolTabStrip1.Size = New System.Drawing.Size(250, 378)
@@ -457,7 +458,7 @@ Partial Class MDIMenu
         '
         Me.DocumentContainer1.RootElement.AccessibleDescription = Nothing
         Me.DocumentContainer1.RootElement.AccessibleName = Nothing
-        Me.DocumentContainer1.RootElement.ControlBounds = New System.Drawing.Rectangle(0, 0, 200, 200)
+        Me.DocumentContainer1.RootElement.ControlBounds = New System.Drawing.Rectangle(259, 5, 200, 200)
         Me.DocumentContainer1.RootElement.MinSize = New System.Drawing.Size(25, 25)
         Me.DocumentContainer1.RootElement.Padding = New System.Windows.Forms.Padding(5)
         Me.DocumentContainer1.Size = New System.Drawing.Size(650, 378)
@@ -478,7 +479,7 @@ Partial Class MDIMenu
         '
         Me.RadDropDownButton1.RootElement.AccessibleDescription = Nothing
         Me.RadDropDownButton1.RootElement.AccessibleName = Nothing
-        Me.RadDropDownButton1.RootElement.ControlBounds = New System.Drawing.Rectangle(0, 0, 140, 24)
+        Me.RadDropDownButton1.RootElement.ControlBounds = New System.Drawing.Rectangle(125, 31, 140, 24)
         Me.RadDropDownButton1.Size = New System.Drawing.Size(123, 25)
         Me.RadDropDownButton1.TabIndex = 2
         Me.RadDropDownButton1.Text = "Opciones"
@@ -498,6 +499,11 @@ Partial Class MDIMenu
         Me.ToolTabStrip2.Size = New System.Drawing.Size(292, 266)
         Me.ToolTabStrip2.TabIndex = 0
         Me.ToolTabStrip2.TabStop = False
+        '
+        'ContextMenuStrip1
+        '
+        Me.ContextMenuStrip1.Name = "ContextMenuStrip1"
+        Me.ContextMenuStrip1.Size = New System.Drawing.Size(61, 4)
         '
         'MDIMenu
         '
@@ -566,17 +572,18 @@ Partial Class MDIMenu
     Friend WithEvents lblUsuario As System.Windows.Forms.ToolStripStatusLabel
     Friend WithEvents lblEquipo As System.Windows.Forms.ToolStripStatusLabel
     Friend WithEvents lblUnidad As System.Windows.Forms.ToolStripStatusLabel
-    Friend WithEvents RadDock1 As Telerik.WinControls.UI.Docking.RadDock
-    Friend WithEvents ToolWindow1 As Telerik.WinControls.UI.Docking.ToolWindow
-    Friend WithEvents ToolTabStrip1 As Telerik.WinControls.UI.Docking.ToolTabStrip
-    Friend WithEvents DocumentContainer1 As Telerik.WinControls.UI.Docking.DocumentContainer
-    Friend WithEvents ToolTabStrip2 As Telerik.WinControls.UI.Docking.ToolTabStrip
-    Friend WithEvents pgOpciones As Telerik.WinControls.UI.RadPageView
-    Friend WithEvents gpMenu As Telerik.WinControls.UI.RadPageViewPage
-    Friend WithEvents gpConf As Telerik.WinControls.UI.RadPageViewPage
-    Friend WithEvents rTreeMenu As Telerik.WinControls.UI.RadTreeView
-    Friend WithEvents RadDropDownButton1 As Telerik.WinControls.UI.RadDropDownButton
     Friend WithEvents lblBuild As System.Windows.Forms.ToolStripStatusLabel
-  Friend WithEvents lblMoneda As ToolStripStatusLabel
-  Friend WithEvents lblIGV As ToolStripStatusLabel
+    Friend WithEvents lblMoneda As ToolStripStatusLabel
+    Friend WithEvents lblIGV As ToolStripStatusLabel
+    Private WithEvents RadDock1 As Telerik.WinControls.UI.Docking.RadDock
+    Private WithEvents ToolWindow1 As Telerik.WinControls.UI.Docking.ToolWindow
+    Private WithEvents ToolTabStrip1 As Telerik.WinControls.UI.Docking.ToolTabStrip
+    Private WithEvents DocumentContainer1 As Telerik.WinControls.UI.Docking.DocumentContainer
+    Private WithEvents ToolTabStrip2 As Telerik.WinControls.UI.Docking.ToolTabStrip
+    Private WithEvents pgOpciones As Telerik.WinControls.UI.RadPageView
+    Private WithEvents gpMenu As Telerik.WinControls.UI.RadPageViewPage
+    Private WithEvents gpConf As Telerik.WinControls.UI.RadPageViewPage
+    Private WithEvents rTreeMenu As Telerik.WinControls.UI.RadTreeView
+    Private WithEvents RadDropDownButton1 As Telerik.WinControls.UI.RadDropDownButton
+    Friend WithEvents ContextMenuStrip1 As ContextMenuStrip
 End Class

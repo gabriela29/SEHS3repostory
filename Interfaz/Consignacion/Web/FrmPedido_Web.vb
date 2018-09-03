@@ -11,8 +11,8 @@ Public Class FrmPedido_Web
 
       With Me.cboAlmacen
         .DataSource = GestionTablas.dtFAlmacen
-        '.DataBind()
-        .ValueMember = "almacenid"
+                '.DataBind()
+                .ValueMember = "almacenid"
         .DisplayMember = "nombre"
         .MinDropDownItems = 2
         .MaxDropDownItems = 4

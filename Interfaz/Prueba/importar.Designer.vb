@@ -32,14 +32,14 @@ Partial Class importar
         '
         Me.DGV1.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight
         Me.DGV1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DGV1.Location = New System.Drawing.Point(67, 85)
+        Me.DGV1.Location = New System.Drawing.Point(23, 104)
         Me.DGV1.Name = "DGV1"
-        Me.DGV1.Size = New System.Drawing.Size(600, 291)
+        Me.DGV1.Size = New System.Drawing.Size(765, 291)
         Me.DGV1.TabIndex = 1
         '
         'btnimportar
         '
-        Me.btnimportar.Location = New System.Drawing.Point(244, 31)
+        Me.btnimportar.Location = New System.Drawing.Point(279, 31)
         Me.btnimportar.Name = "btnimportar"
         Me.btnimportar.Size = New System.Drawing.Size(75, 48)
         Me.btnimportar.TabIndex = 2
@@ -48,7 +48,7 @@ Partial Class importar
         '
         'btnexportar
         '
-        Me.btnexportar.Location = New System.Drawing.Point(457, 31)
+        Me.btnexportar.Location = New System.Drawing.Point(399, 31)
         Me.btnexportar.Name = "btnexportar"
         Me.btnexportar.Size = New System.Drawing.Size(75, 48)
         Me.btnexportar.TabIndex = 4
@@ -59,7 +59,7 @@ Partial Class importar
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.ClientSize = New System.Drawing.Size(800, 417)
         Me.Controls.Add(Me.btnexportar)
         Me.Controls.Add(Me.btnimportar)
         Me.Controls.Add(Me.DGV1)

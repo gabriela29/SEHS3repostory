@@ -58,8 +58,8 @@ Public Class importar
             Dim osp As New NpgsqlCommand
             connection.Open()
             For i As Integer = 0 To DGV1.Rows.Count - 2 Step +1
-                osp = New NpgsqlCommand("insert into basic.persona_prueba  values (@persona_pid, @dni, @ruc, @ape_paterno, @ape_materno, @nombre, @direccion) ", connection)
-                osp.Parameters.Add("@persona_pid", NpgsqlTypes.NpgsqlDbType.Integer).Value = DGV1.Rows(i).Cells(0).Value
+                osp = New NpgsqlCommand("insert into basic.persona_prueba  values (default, @dni, @ruc, @ape_paterno, @ape_materno, @nombre, @direccion) ", connection)
+                'osp.Parameters.Add("@persona_pid", NpgsqlTypes.NpgsqlDbType.Integer).Value = DGV1.Rows(i).Cells(0).Value
                 osp.Parameters.Add("@dni", NpgsqlTypes.NpgsqlDbType.Varchar).Value = DGV1.Rows(i).Cells(1).Value.ToString()
                 osp.Parameters.Add("@ruc", NpgsqlTypes.NpgsqlDbType.Varchar).Value = DGV1.Rows(i).Cells(2).Value.ToString()
                 osp.Parameters.Add("@ape_paterno", NpgsqlTypes.NpgsqlDbType.Varchar).Value = DGV1.Rows(i).Cells(3).Value.ToString()
@@ -82,7 +82,7 @@ Public Class importar
     Sub viewDGV1()
         posg.Connection = connection
         connection.Open()
-        posg.CommandText = "select persona_pid, dni, ruc, ape_paterno, ape_materno, nombre, direccion from basic.persona_prueba"
+        posg.CommandText = "select persona_pid, dni, ruc, ape_paterno, ape_materno, nombre, direccion from basic.persona_prueba order by persona_pid"
         dadapter = New NpgsqlDataAdapter(posg)
         dtable.Rows.Clear()
         dadapter.Fill(dtable)
